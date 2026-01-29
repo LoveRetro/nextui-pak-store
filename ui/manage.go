@@ -1,74 +1,103 @@
 package ui
 
 import (
+	"errors"
 	"slices"
 	"strings"
 
-	"github.com/UncleJunVIP/gabagool/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/state"
-	"qlova.tech/sum"
+	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/state"
 )
 
-type ManageInstalledScreen struct {
-	AppState state.AppState
+type ManageInstalledInput struct {
+	Storefront           models.Storefront
+	LastSelectedIndex    int
+	LastSelectedPosition int
 }
 
-func InitManageInstalledScreen(appState state.AppState) ManageInstalledScreen {
-	return ManageInstalledScreen{
-		AppState: appState,
+type ManageInstalledOutput struct {
+	SelectedPak          models.Pak
+	LastSelectedIndex    int
+	LastSelectedPosition int
+}
+
+type ManageInstalledScreen struct{}
+
+func NewManageInstalledScreen() *ManageInstalledScreen {
+	return &ManageInstalledScreen{}
+}
+
+func (s *ManageInstalledScreen) Draw(input ManageInstalledInput) (ScreenResult[ManageInstalledOutput], error) {
+	output := ManageInstalledOutput{
+		LastSelectedIndex:    input.LastSelectedIndex,
+		LastSelectedPosition: input.LastSelectedPosition,
 	}
-}
 
-func (mis ManageInstalledScreen) Name() sum.Int[models.ScreenName] {
-	return models.ScreenNames.ManageInstalled
-}
-
-func (mis ManageInstalledScreen) Draw() (selection interface{}, exitCode int, e error) {
-	if len(mis.AppState.InstalledPaks) == 0 {
-		return nil, 2, nil
+	// Get installed paks from database
+	installedPaks, err := state.GetInstalledPaks()
+	if err != nil {
+		return withAction(output, ActionError), err
 	}
 
-	var menuItems []gabagool.MenuItem
+	if len(installedPaks) == 0 {
+		return back(output), nil
+	}
 
-	for _, installed := range mis.AppState.InstalledPaks {
+	var menuItems []gaba.MenuItem
+
+	for _, installed := range installedPaks {
 		var pak models.Pak
 
-		for _, p := range mis.AppState.Storefront.Paks {
-			if p.RepoURL == installed.RepoUrl.String {
+		for _, p := range input.Storefront.Paks {
+			// Match by pak_id first, then fall back to repo_url
+			matched := false
+			if installed.PakID.Valid && installed.PakID.String != "" && p.ID == installed.PakID.String {
+				matched = true
+			} else if installed.RepoUrl.Valid && p.RepoURL == installed.RepoUrl.String {
+				matched = true
+			}
+
+			if matched {
 				pak = p
+				break
 			}
 		}
 
-		menuItems = append(menuItems, gabagool.MenuItem{
-			Text:     pak.StorefrontName,
-			Selected: false,
-			Focused:  false,
-			Metadata: pak,
-		})
+		if pak.StorefrontName != "" {
+			menuItems = append(menuItems, gaba.MenuItem{
+				Text:     pak.StorefrontName,
+				Selected: false,
+				Focused:  false,
+				Metadata: pak,
+			})
+		}
 	}
 
-	slices.SortFunc(menuItems, func(a, b gabagool.MenuItem) int {
+	slices.SortFunc(menuItems, func(a, b gaba.MenuItem) int {
 		return strings.Compare(a.Text, b.Text)
 	})
 
-	options := gabagool.DefaultListOptions("Manage Installed Paks", menuItems)
-	options.EnableAction = true
-	options.FooterHelpItems = []gabagool.FooterHelpItem{
-		{ButtonName: "B", HelpText: "Back"},
-		{ButtonName: "A", HelpText: "Select"},
-	}
+	options := gaba.DefaultListOptions("Manage Installed Paks", menuItems)
+	options.SelectedIndex = input.LastSelectedIndex
+	options.VisibleStartIndex = max(0, input.LastSelectedIndex-input.LastSelectedPosition)
+	options.FooterHelpItems = BackSelectFooter()
 
-	sel, err := gabagool.List(options)
+	sel, err := gaba.List(options)
 	if err != nil {
-		return nil, -1, err
+		if errors.Is(err, gaba.ErrCancelled) {
+			return back(output), nil
+		}
+		return withAction(output, ActionError), err
 	}
 
-	if sel.IsNone() || sel.Unwrap().SelectedIndex == -1 {
-		return nil, 2, nil
+	if len(sel.Selected) == 0 {
+		return back(output), nil
 	}
 
-	selectedPak := sel.Unwrap().SelectedItem.Metadata.(models.Pak)
+	output.SelectedPak = sel.Items[sel.Selected[0]].Metadata.(models.Pak)
+	output.LastSelectedIndex = sel.Selected[0]
+	output.LastSelectedPosition = sel.VisiblePosition
 
-	return selectedPak, 0, nil
+	return success(output), nil
 }

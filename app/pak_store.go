@@ -2,31 +2,32 @@ package main
 
 import (
 	_ "embed"
-	"os"
+	"log/slog"
 	"time"
 
-	_ "github.com/UncleJunVIP/certifiable"
-	gaba "github.com/UncleJunVIP/gabagool/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-shared-functions/common"
-	"github.com/UncleJunVIP/nextui-pak-store/database"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/state"
-	"github.com/UncleJunVIP/nextui-pak-store/ui"
-	"github.com/UncleJunVIP/nextui-pak-store/utils"
+	_ "github.com/BrandonKowalski/certifiable"
+	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/LoveRetro/nextui-pak-store/database"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/state"
+	"github.com/LoveRetro/nextui-pak-store/utils"
 	_ "modernc.org/sqlite"
 )
 
-var appState state.AppState
+var storefront models.Storefront
 
 func init() {
 	gaba.Init(gaba.Options{
 		WindowTitle:    "Pak Store",
 		ShowBackground: true,
 		LogFilename:    "pak_store.log",
+		IsNextUI:       true,
 	})
 
+	gaba.SetLogLevel(slog.LevelDebug)
+
 	sf, err := gaba.ProcessMessage("",
-		gaba.ProcessMessageOptions{Image: "resources/splash.png", ImageWidth: 1024, ImageHeight: 768}, func() (interface{}, error) {
+		gaba.ProcessMessageOptions{Image: "resources/splash.png", ImageWidth: 1024, ImageHeight: 768}, func() (models.Storefront, error) {
 			time.Sleep(1250 * time.Millisecond)
 			return utils.FetchStorefront()
 		})
@@ -36,12 +37,20 @@ func init() {
 			{ButtonName: "B", HelpText: "Quit"},
 		}, gaba.MessageOptions{})
 		defer gaba.Close()
-		common.LogStandardFatal("Could not load Storefront!", err)
+		utils.LogStandardFatal("Could not load Storefront!", err)
 	}
 
 	database.Init()
 
-	appState = state.NewAppState(sf.Result.(models.Storefront))
+	if err := state.MigratePreID(sf); err != nil {
+		gaba.GetLogger().Error("Failed to migrate installed paks to use Pak ID", "error", err)
+	}
+
+	if err := state.SyncInstalledMetadataFromStorefront(sf); err != nil {
+		gaba.GetLogger().Error("Failed to sync installed metadata with storefront", "error", err)
+	}
+
+	storefront = sf
 }
 
 func cleanup() {
@@ -52,127 +61,11 @@ func cleanup() {
 func main() {
 	defer cleanup()
 
-	logger := common.GetLoggerInstance()
+	logger := gaba.GetLogger()
 
 	logger.Info("Starting Pak Store")
 
-	var screen models.Screen
-	screen = ui.InitMainMenu(appState)
-
-	for {
-		res, code, _ := screen.Draw()
-
-		if code == 23 {
-			gaba.ProcessMessage("Pak Store Updated! Exiting...", gaba.ProcessMessageOptions{}, func() (interface{}, error) {
-				time.Sleep(3 * time.Second)
-				return nil, nil
-			})
-			os.Exit(0)
-		}
-
-		switch screen.Name() {
-		case models.ScreenNames.MainMenu:
-			switch code {
-			case 0:
-				switch res.(string) {
-				case "Browse":
-					screen = ui.InitBrowseScreen(appState)
-				case "Available Updates":
-					screen = ui.InitUpdatesScreen(appState)
-				case "Manage Installed":
-					screen = ui.InitManageInstalledScreen(appState)
-				}
-			case 4:
-				appState = appState.Refresh()
-				screen = ui.InitMainMenu(appState)
-			case 1, 2:
-				os.Exit(0)
-			}
-
-		case models.ScreenNames.Browse:
-			switch code {
-			case 0:
-				state.LastSelectedIndex = 0
-				state.LastSelectedPosition = 0
-				screen = ui.InitPakList(appState, res.(string))
-			case 1, 2:
-				screen = ui.InitMainMenu(appState)
-			}
-
-		case models.ScreenNames.PakList:
-			switch code {
-			case 0:
-				screen = ui.InitPakInfoScreen([]models.Pak{res.(models.Pak)}, screen.(ui.PakList).Category, false, false)
-			case 1, 2:
-				screen = ui.InitBrowseScreen(appState)
-			}
-
-		case models.ScreenNames.PakInfo:
-			switch code {
-			case 0, 1, 2, 4:
-				appState = appState.Refresh()
-
-				if screen.(ui.PakInfoScreen).IsInstalled {
-					screen = ui.InitManageInstalledScreen(appState)
-					break
-				}
-
-				if res.(bool) {
-					if len(appState.UpdatesAvailable) == 0 {
-						screen = ui.InitMainMenu(appState)
-						break
-					}
-
-					screen = ui.InitUpdatesScreen(appState)
-				} else {
-					if len(appState.AvailablePaks) == 0 {
-						screen = ui.InitBrowseScreen(appState)
-						break
-					}
-
-					if len(appState.BrowsePaks[screen.(ui.PakInfoScreen).Category]) == 0 {
-						screen = ui.InitBrowseScreen(appState)
-						break
-					}
-					screen = ui.InitPakList(appState, screen.(ui.PakInfoScreen).Category)
-				}
-			case -1:
-				gaba.ProcessMessage("Unable to Download Pak!", gaba.ProcessMessageOptions{ShowThemeBackground: true}, func() (interface{}, error) {
-					time.Sleep(1750 * time.Millisecond)
-					return nil, nil
-				})
-				break
-			case 12:
-			// Action confirmation cancel
-			case 33:
-				// User canceled multiple downloads
-				appState = appState.Refresh()
-				screen = ui.InitUpdatesScreen(appState)
-			case 86:
-				appState = appState.Refresh()
-				screen = ui.InitManageInstalledScreen(appState)
-			}
-
-		case models.ScreenNames.Updates:
-			switch code {
-			case 0:
-				appState = appState.Refresh()
-				screen = ui.InitPakInfoScreen(res.([]models.Pak), "", true, false)
-			case 1, 2:
-				appState = appState.Refresh()
-				screen = ui.InitMainMenu(appState)
-			}
-
-		case models.ScreenNames.ManageInstalled:
-			switch code {
-			case 0:
-				screen = ui.InitPakInfoScreen([]models.Pak{res.(models.Pak)}, "", false, true)
-			case 1, 2:
-				appState = appState.Refresh()
-				screen = ui.InitMainMenu(appState)
-			}
-
-		}
+	if err := runApp(storefront); err != nil {
+		logger.Error("Router error", "error", err)
 	}
-
 }

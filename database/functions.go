@@ -10,10 +10,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/UncleJunVIP/nextui-pak-shared-functions/common"
-	pakstore "github.com/UncleJunVIP/nextui-pak-store"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/utils"
+	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	pakstore "github.com/LoveRetro/nextui-pak-store"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/utils"
 	_ "modernc.org/sqlite"
 )
 
@@ -21,40 +21,48 @@ var dbc *sql.DB
 var queries *Queries
 
 func Init() {
-	logger := common.GetLoggerInstance()
+	logger := gabagool.GetLogger()
 	ctx := context.Background()
 
 	var err error
-	dbPath := filepath.Join(models.PakStoreConfigRoot, "pak-store.db")
+	dbPath := filepath.Join(utils.GetUserDataDir(), "pak-store.db")
 
 	if os.Getenv("ENVIRONMENT") == "DEV" {
 		dbPath = "pak-store.db"
 	}
 
+	logger.Debug("Database path resolved", "path", dbPath)
+
 	dbDir := filepath.Dir(dbPath)
 	if dbDir != "." && dbDir != "" {
+		logger.Debug("Creating database directory", "dir", dbDir)
 		err := os.MkdirAll(dbDir, 0755)
 		if err != nil {
-			logger.Error("Unable to open database file", "error", err)
+			logger.Error("Unable to create database directory", "error", err, "dir", dbDir)
 			os.Exit(1)
 		}
 	}
 
+	logger.Debug("Opening database connection", "path", dbPath)
 	dbc, err = sql.Open("sqlite", "file:"+dbPath)
 	if err != nil {
-		logger.Error("Unable to open database file", "error", err)
+		logger.Error("Unable to open database file", "error", err, "path", dbPath)
 		os.Exit(1)
 	}
 
+	logger.Debug("Checking if schema exists")
 	schemaExists, err := tableExists(dbc, "installed_paks")
+	logger.Debug("Schema check complete", "exists", schemaExists)
 	if !schemaExists {
+		logger.Debug("Initializing database schema")
 		if _, err := dbc.ExecContext(ctx, pakstore.DDL); err != nil {
-			logger.Error("Unable to Init schema", "error", err)
+			logger.Error("Unable to init schema", "error", err)
 			os.Exit(1)
 		}
 	}
 
 	columnMigration("installed_paks", "repo_url", "TEXT")
+	columnMigration("installed_paks", "pak_id", "TEXT")
 
 	queries = New(dbc)
 
@@ -68,15 +76,28 @@ func Init() {
 		queries.Install(ctx, InstallParams{
 			DisplayName:  "Pak Store",
 			Name:         "Pak Store",
+			PakID:        sql.NullString{String: models.PakStoreID, Valid: true},
 			RepoUrl:      sql.NullString{String: models.PakStoreRepo, Valid: true},
 			Version:      pak.Version,
 			Type:         "TOOL",
 			CanUninstall: 0,
 		})
 	} else {
-		queries.UpdateVersion(ctx, UpdateVersionParams{
-			Version: pak.Version,
-			RepoUrl: sql.NullString{String: models.PakStoreRepo, Valid: true},
+		queries.SyncPakStore(ctx, SyncPakStoreParams{
+			DisplayName: pak.StorefrontName,
+			Name:        pak.Name,
+			Version:     pak.Version,
+			RepoUrl:     sql.NullString{String: models.PakStoreRepo, Valid: true},
+			PakID:       sql.NullString{String: models.PakStoreID, Valid: true},
+		})
+		// Fallback for pre-migrated tables without pak_id
+		queries.SyncPakStoreByName(ctx, SyncPakStoreByNameParams{
+			DisplayName: pak.StorefrontName,
+			Name:        pak.Name,
+			Version:     pak.Version,
+			RepoUrl:     sql.NullString{String: models.PakStoreRepo, Valid: true},
+			PakID:       sql.NullString{String: models.PakStoreID, Valid: true},
+			OldName:     "Pak Store",
 		})
 	}
 }
@@ -127,7 +148,7 @@ func columnExists(db *sql.DB, tableName, columnName string) (bool, error) {
 }
 
 func columnMigration(tableName, columnName, columnDefinition string) {
-	logger := common.GetLoggerInstance()
+	logger := gabagool.GetLogger()
 	ctx := context.Background()
 
 	ce, err := columnExists(dbc, tableName, columnName)

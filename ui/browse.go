@@ -1,61 +1,83 @@
 package ui
 
 import (
+	"errors"
 	"slices"
 	"strconv"
 	"strings"
 
-	"github.com/UncleJunVIP/gabagool/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/state"
-	"qlova.tech/sum"
+	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/state"
 )
 
-type BrowseScreen struct {
-	AppState state.AppState
+type BrowseInput struct {
+	Storefront           models.Storefront
+	LastSelectedIndex    int
+	LastSelectedPosition int
 }
 
-func InitBrowseScreen(appState state.AppState) BrowseScreen {
-	return BrowseScreen{
-		AppState: appState,
+type BrowseOutput struct {
+	SelectedCategory     string
+	LastSelectedIndex    int
+	LastSelectedPosition int
+}
+
+type BrowseScreen struct{}
+
+func NewBrowseScreen() *BrowseScreen {
+	return &BrowseScreen{}
+}
+
+func (s *BrowseScreen) Draw(input BrowseInput) (ScreenResult[BrowseOutput], error) {
+	output := BrowseOutput{
+		LastSelectedIndex:    input.LastSelectedIndex,
+		LastSelectedPosition: input.LastSelectedPosition,
 	}
-}
 
-func (bs BrowseScreen) Name() sum.Int[models.ScreenName] {
-	return models.ScreenNames.Browse
-}
+	// Compute data on demand
+	installedPaks, err := state.GetInstalledPaks()
+	if err != nil {
+		return withAction(output, ActionError), err
+	}
 
-func (bs BrowseScreen) Draw() (selection interface{}, exitCode int, e error) {
-	var menuItems []gabagool.MenuItem
+	browsePaks := state.GetBrowsePaks(input.Storefront, installedPaks)
 
-	for cat := range bs.AppState.BrowsePaks {
-		menuItems = append(menuItems, gabagool.MenuItem{
-			Text:     cat + " (" + strconv.Itoa(len(bs.AppState.BrowsePaks[cat])) + ")",
+	var menuItems []gaba.MenuItem
+
+	for cat := range browsePaks {
+		menuItems = append(menuItems, gaba.MenuItem{
+			Text:     cat + " (" + strconv.Itoa(len(browsePaks[cat])) + ")",
 			Selected: false,
 			Focused:  false,
 			Metadata: cat,
 		})
 	}
 
-	slices.SortFunc(menuItems, func(a, b gabagool.MenuItem) int {
+	slices.SortFunc(menuItems, func(a, b gaba.MenuItem) int {
 		return strings.Compare(a.Text, b.Text)
 	})
 
-	options := gabagool.DefaultListOptions("Browse Paks", menuItems)
-	options.EnableAction = true
-	options.FooterHelpItems = []gabagool.FooterHelpItem{
-		{ButtonName: "B", HelpText: "Back"},
-		{ButtonName: "A", HelpText: "Select"},
-	}
+	options := gaba.DefaultListOptions("Browse Paks", menuItems)
+	options.SelectedIndex = input.LastSelectedIndex
+	options.VisibleStartIndex = max(0, input.LastSelectedIndex-input.LastSelectedPosition)
+	options.FooterHelpItems = BackSelectFooter()
 
-	sel, err := gabagool.List(options)
+	sel, err := gaba.List(options)
 	if err != nil {
-		return nil, -1, err
+		if errors.Is(err, gaba.ErrCancelled) {
+			return back(output), nil
+		}
+		return withAction(output, ActionError), err
 	}
 
-	if sel.IsNone() || sel.Unwrap().SelectedIndex == -1 {
-		return nil, 2, nil
+	if len(sel.Selected) == 0 {
+		return back(output), nil
 	}
 
-	return sel.Unwrap().SelectedItem.Metadata, 0, nil
+	output.SelectedCategory = sel.Items[sel.Selected[0]].Metadata.(string)
+	output.LastSelectedIndex = sel.Selected[0]
+	output.LastSelectedPosition = sel.VisiblePosition
+
+	return success(output), nil
 }

@@ -1,0 +1,566 @@
+name: Process New Pak Submission
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  validate-and-create-pr:
+    if: contains(github.event.issue.labels.*.name, 'new-pak')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse Issue Body
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body;
+
+            // Parse the form fields from the issue body
+            const displayNameMatch = issueBody.match(/### Display Name\s*\n\s*(.+)/);
+            const repoUrlMatch = issueBody.match(/### GitHub Repository URL\s*\n\s*(.+)/);
+            const categoriesMatch = issueBody.match(/### Categories\s*\n\s*([\s\S]*?)(?=\n### |$)/);
+
+            if (!displayNameMatch || !repoUrlMatch) {
+              core.setFailed('Could not parse display name or repository URL from issue');
+              return;
+            }
+
+            const displayName = displayNameMatch[1].trim();
+            let repoUrl = repoUrlMatch[1].trim();
+
+            // Normalize repo URL (remove trailing slash, .git)
+            repoUrl = repoUrl.replace(/\.git$/, '').replace(/\/$/, '');
+
+            // Parse categories (they appear as comma-separated or newline-separated)
+            let categories = [];
+            if (categoriesMatch) {
+              const catText = categoriesMatch[1].trim();
+              categories = catText.split(/[,\n]/)
+                .map(c => c.trim())
+                .filter(c => c.length > 0 && !c.startsWith('_'));
+            }
+
+            // Validate GitHub URL format
+            const githubUrlPattern = /^https:\/\/github\.com\/[\w-]+\/[\w.-]+$/;
+            if (!githubUrlPattern.test(repoUrl)) {
+              core.setFailed(`Invalid GitHub repository URL: ${repoUrl}`);
+              return;
+            }
+
+            // Extract owner and repo
+            const urlParts = repoUrl.replace('https://github.com/', '').split('/');
+            const owner = urlParts[0];
+            const repo = urlParts[1];
+
+            core.setOutput('display_name', displayName);
+            core.setOutput('repo_url', repoUrl);
+            core.setOutput('categories', JSON.stringify(categories));
+            core.setOutput('owner', owner);
+            core.setOutput('repo', repo);
+
+            console.log(`Parsed: ${displayName} from ${repoUrl}`);
+            console.log(`Categories: ${categories.join(', ')}`);
+
+      - name: Fetch and Validate pak.json
+        id: validate_pak
+        uses: actions/github-script@v7
+        env:
+          TARGET_OWNER: ${{ steps.parse.outputs.owner }}
+          TARGET_REPO: ${{ steps.parse.outputs.repo }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          script: |
+            const owner = process.env.TARGET_OWNER;
+            const repo = process.env.TARGET_REPO;
+
+            console.log(`Fetching pak.json from ${owner}/${repo}`);
+
+            // Fetch pak.json from the repository
+            let pakJson;
+            try {
+              const response = await github.rest.repos.getContent({
+                owner: owner,
+                repo: repo,
+                path: 'pak.json'
+              });
+
+              const content = Buffer.from(response.data.content, 'base64').toString('utf-8');
+              pakJson = JSON.parse(content);
+            } catch (error) {
+              core.setFailed(`Could not fetch pak.json: ${error.message}. Make sure pak.json exists in the repository root.`);
+              return;
+            }
+
+            // Validate required fields
+            const requiredFields = ['name', 'version', 'type', 'author', 'release_filename'];
+            const missingFields = requiredFields.filter(f => !pakJson[f]);
+
+            if (missingFields.length > 0) {
+              core.setFailed(`pak.json is missing required fields: ${missingFields.join(', ')}`);
+              return;
+            }
+
+            // Validate type
+            const validTypes = ['TOOL', 'EMU'];
+            if (!validTypes.includes(pakJson.type)) {
+              core.setFailed(`Invalid pak type: ${pakJson.type}. Must be one of: ${validTypes.join(', ')}`);
+              return;
+            }
+
+            // Store pak info for later
+            core.setOutput('pak_name', pakJson.name);
+            core.setOutput('pak_version', pakJson.version);
+            core.setOutput('pak_type', pakJson.type);
+            core.setOutput('pak_author', pakJson.author);
+            core.setOutput('release_filename', pakJson.release_filename);
+            core.setOutput('pak_description', pakJson.description || '');
+
+            console.log(`Validated pak.json: ${pakJson.name} v${pakJson.version} (${pakJson.type})`);
+
+      - name: Validate Release Exists
+        id: validate_release
+        uses: actions/github-script@v7
+        env:
+          TARGET_OWNER: ${{ steps.parse.outputs.owner }}
+          TARGET_REPO: ${{ steps.parse.outputs.repo }}
+          RELEASE_FILENAME: ${{ steps.validate_pak.outputs.release_filename }}
+        with:
+          script: |
+            const owner = process.env.TARGET_OWNER;
+            const repo = process.env.TARGET_REPO;
+            const releaseFilename = process.env.RELEASE_FILENAME;
+
+            console.log(`Checking for release with asset: ${releaseFilename}`);
+
+            // Fetch latest release
+            let releases;
+            try {
+              const response = await github.rest.repos.listReleases({
+                owner: owner,
+                repo: repo,
+                per_page: 10
+              });
+              releases = response.data;
+            } catch (error) {
+              core.setFailed(`Could not fetch releases: ${error.message}`);
+              return;
+            }
+
+            if (releases.length === 0) {
+              core.setFailed('No releases found. Please create a tagged release with the pak archive.');
+              return;
+            }
+
+            // Find a release with the matching asset
+            let foundRelease = null;
+            let foundAsset = null;
+
+            for (const release of releases) {
+              const matchingAsset = release.assets.find(asset => asset.name === releaseFilename);
+              if (matchingAsset) {
+                foundRelease = release;
+                foundAsset = matchingAsset;
+                break;
+              }
+            }
+
+            if (!foundRelease) {
+              const availableAssets = releases
+                .flatMap(r => r.assets.map(a => a.name))
+                .slice(0, 5)
+                .join(', ');
+              core.setFailed(`No release found with asset named "${releaseFilename}". Available assets: ${availableAssets || 'none'}`);
+              return;
+            }
+
+            console.log(`Found release ${foundRelease.tag_name} with asset ${foundAsset.name}`);
+            core.setOutput('release_tag', foundRelease.tag_name);
+
+      - name: Infer Type from Context
+        id: infer_type
+        uses: actions/github-script@v7
+        env:
+          PAK_NAME: ${{ steps.validate_pak.outputs.pak_name }}
+          PAK_TYPE: ${{ steps.validate_pak.outputs.pak_type }}
+          PAK_DESCRIPTION: ${{ steps.validate_pak.outputs.pak_description }}
+          CATEGORIES: ${{ steps.parse.outputs.categories }}
+        with:
+          script: |
+            const pakName = process.env.PAK_NAME.toLowerCase();
+            const pakType = process.env.PAK_TYPE;
+            const description = (process.env.PAK_DESCRIPTION || '').toLowerCase();
+            const categories = JSON.parse(process.env.CATEGORIES);
+
+            // Emulator-related keywords
+            const emuKeywords = [
+              'emulator', 'emu', 'retroarch', 'libretro', 'core',
+              'nintendo', 'sega', 'sony', 'playstation', 'psp', 'ps1', 'ps2',
+              'gameboy', 'gba', 'gbc', 'n64', 'nes', 'snes', 'genesis',
+              'dreamcast', 'saturn', 'mame', 'arcade', 'neo geo', 'neogeo',
+              'atari', 'commodore', 'msx', 'pc engine', 'turbografx',
+              'game gear', 'master system', 'mega drive', 'pcsx', 'ppsspp',
+              'desmume', 'drastic', 'mupen', 'dolphin', 'flycast', 'redream',
+              'scummvm', 'dosbox', 'fba', 'fbneo', '3do', 'jaguar', 'lynx',
+              'intellivision', 'coleco', 'vectrex', 'wonderswan', 'pico-8', 'tic-80'
+            ];
+
+            const isEmuCategory = categories.includes('Emulators');
+            const hasEmuKeyword = emuKeywords.some(kw =>
+              pakName.includes(kw) || description.includes(kw)
+            );
+
+            let inferredType = pakType;
+            let typeWarning = '';
+
+            if (pakType === 'EMU' && !isEmuCategory && !hasEmuKeyword) {
+              typeWarning = 'Pak is marked as EMU but does not appear to be an emulator based on name/description.';
+            } else if (pakType === 'TOOL' && (isEmuCategory || hasEmuKeyword)) {
+              typeWarning = 'Pak appears to be an emulator but is marked as TOOL. Consider changing type to EMU.';
+              inferredType = 'EMU';
+            }
+
+            core.setOutput('inferred_type', inferredType);
+            core.setOutput('type_warning', typeWarning);
+
+            if (typeWarning) {
+              console.log(`Type warning: ${typeWarning}`);
+            }
+
+      - name: Check for Duplicate
+        id: check_duplicate
+        uses: actions/github-script@v7
+        env:
+          REPO_URL: ${{ steps.parse.outputs.repo_url }}
+        with:
+          script: |
+            const fs = require('fs');
+            const repoUrl = process.env.REPO_URL;
+
+            const storefrontBase = JSON.parse(fs.readFileSync('storefront_base.json', 'utf-8'));
+
+            const isDuplicate = storefrontBase.paks.some(pak =>
+              pak.repo_url === repoUrl ||
+              (pak.previous_repo_urls && pak.previous_repo_urls.includes(repoUrl))
+            );
+
+            if (isDuplicate) {
+              core.setFailed(`This repository is already in the storefront: ${repoUrl}`);
+              return;
+            }
+
+            console.log('No duplicate found, proceeding...');
+
+      - name: Generate Pak ID
+        id: generate_id
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Generate a random 10-character alphanumeric ID
+            const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let id = '';
+            for (let i = 0; i < 10; i++) {
+              id += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            core.setOutput('pak_id', id);
+            console.log(`Generated pak ID: ${id}`);
+
+      - name: Suggest Categories
+        id: suggest_categories
+        uses: actions/github-script@v7
+        env:
+          PAK_NAME: ${{ steps.validate_pak.outputs.pak_name }}
+          PAK_DESCRIPTION: ${{ steps.validate_pak.outputs.pak_description }}
+          PAK_TYPE: ${{ steps.validate_pak.outputs.pak_type }}
+          USER_CATEGORIES: ${{ steps.parse.outputs.categories }}
+        with:
+          script: |
+            const pakName = process.env.PAK_NAME.toLowerCase();
+            const description = (process.env.PAK_DESCRIPTION || '').toLowerCase();
+            const pakType = process.env.PAK_TYPE;
+            let userCategories = JSON.parse(process.env.USER_CATEGORIES);
+
+            // Category inference rules
+            const categoryKeywords = {
+              'Emulators': ['emulator', 'emu', 'retroarch', 'core', 'nintendo', 'sega', 'playstation', 'arcade', 'mame'],
+              'ROM Management': ['rom', 'game manager', 'collection', 'scraper', 'artwork', 'favorites', 'search'],
+              'File Management': ['file', 'ftp', 'sftp', 'ssh', 'sync', 'backup', 'server', 'browser', 'usb', 'storage'],
+              'Media': ['media', 'music', 'video', 'player', 'screenshot', 'gallery', 'viewer', 'reader'],
+              'Developer Tools': ['developer', 'terminal', 'debug', 'report', 'tailscale', 'remote'],
+              'Miscellaneous Tools': ['tool', 'utility', 'random', 'simple mode'],
+              'Streaming Game Clients': ['moonlight', 'stream', 'sunshine', 'parsec'],
+              'Ports': ['port', 'portmaster'],
+              'System': ['system', 'updater', 'ota', 'power', 'clean'],
+              'Customization': ['theme', 'led', 'aesthetic', 'custom', 'function key']
+            };
+
+            let suggestedCategories = [];
+
+            for (const [category, keywords] of Object.entries(categoryKeywords)) {
+              if (keywords.some(kw => pakName.includes(kw) || description.includes(kw))) {
+                suggestedCategories.push(category);
+              }
+            }
+
+            // If EMU type, ensure Emulators category
+            if (pakType === 'EMU' && !suggestedCategories.includes('Emulators')) {
+              suggestedCategories.unshift('Emulators');
+            }
+
+            // Use user-provided categories if they exist and are valid
+            const validCategories = Object.keys(categoryKeywords);
+            userCategories = userCategories.filter(c => validCategories.includes(c));
+
+            // Merge user categories with suggestions, preferring user input
+            let finalCategories = userCategories.length > 0 ? userCategories : suggestedCategories;
+
+            // Fallback to Miscellaneous Tools if no category determined
+            if (finalCategories.length === 0) {
+              finalCategories = ['Miscellaneous Tools'];
+            }
+
+            core.setOutput('categories', JSON.stringify(finalCategories));
+            console.log(`Final categories: ${finalCategories.join(', ')}`);
+
+      - name: Update storefront_base.json
+        id: update_storefront
+        uses: actions/github-script@v7
+        env:
+          DISPLAY_NAME: ${{ steps.parse.outputs.display_name }}
+          REPO_URL: ${{ steps.parse.outputs.repo_url }}
+          PAK_ID: ${{ steps.generate_id.outputs.pak_id }}
+          CATEGORIES: ${{ steps.suggest_categories.outputs.categories }}
+        with:
+          script: |
+            const fs = require('fs');
+
+            const displayName = process.env.DISPLAY_NAME;
+            const repoUrl = process.env.REPO_URL;
+            const pakId = process.env.PAK_ID;
+            const categories = JSON.parse(process.env.CATEGORIES);
+
+            const storefront = JSON.parse(fs.readFileSync('storefront_base.json', 'utf-8'));
+
+            // Create new pak entry
+            const newPak = {
+              id: pakId,
+              storefront_name: displayName,
+              repo_url: repoUrl,
+              categories: categories
+            };
+
+            // Add to paks array
+            storefront.paks.push(newPak);
+
+            // Write back with proper formatting
+            fs.writeFileSync('storefront_base.json', JSON.stringify(storefront, null, 2) + '\n');
+
+            console.log(`Added new pak: ${displayName}`);
+            core.setOutput('new_pak_json', JSON.stringify(newPak, null, 2));
+
+      - name: Create Branch and Commit
+        id: create_branch
+        run: |
+          BRANCH_NAME="add-pak-${{ steps.generate_id.outputs.pak_id }}"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "$BRANCH_NAME"
+          git add storefront_base.json
+          git commit -m "Add ${{ steps.parse.outputs.display_name }} to storefront
+
+          Closes #${{ github.event.issue.number }}
+
+          - Pak: ${{ steps.parse.outputs.display_name }}
+          - Repository: ${{ steps.parse.outputs.repo_url }}
+          - Type: ${{ steps.validate_pak.outputs.pak_type }}
+          - Author: ${{ steps.validate_pak.outputs.pak_author }}
+          - Version: ${{ steps.validate_pak.outputs.pak_version }}"
+
+          git push origin "$BRANCH_NAME"
+
+      - name: Create Pull Request
+        id: create_pr
+        uses: actions/github-script@v7
+        env:
+          BRANCH_NAME: ${{ steps.create_branch.outputs.branch_name }}
+          DISPLAY_NAME: ${{ steps.parse.outputs.display_name }}
+          REPO_URL: ${{ steps.parse.outputs.repo_url }}
+          PAK_NAME: ${{ steps.validate_pak.outputs.pak_name }}
+          PAK_VERSION: ${{ steps.validate_pak.outputs.pak_version }}
+          PAK_TYPE: ${{ steps.validate_pak.outputs.pak_type }}
+          PAK_AUTHOR: ${{ steps.validate_pak.outputs.pak_author }}
+          PAK_DESCRIPTION: ${{ steps.validate_pak.outputs.pak_description }}
+          CATEGORIES: ${{ steps.suggest_categories.outputs.categories }}
+          TYPE_WARNING: ${{ steps.infer_type.outputs.type_warning }}
+          NEW_PAK_JSON: ${{ steps.update_storefront.outputs.new_pak_json }}
+        with:
+          script: |
+            const branchName = process.env.BRANCH_NAME;
+            const displayName = process.env.DISPLAY_NAME;
+            const repoUrl = process.env.REPO_URL;
+            const pakName = process.env.PAK_NAME;
+            const pakVersion = process.env.PAK_VERSION;
+            const pakType = process.env.PAK_TYPE;
+            const pakAuthor = process.env.PAK_AUTHOR;
+            const pakDescription = process.env.PAK_DESCRIPTION;
+            const categories = JSON.parse(process.env.CATEGORIES);
+            const typeWarning = process.env.TYPE_WARNING;
+            const newPakJson = process.env.NEW_PAK_JSON;
+            const issueNumber = context.payload.issue.number;
+
+            let body = `## New Pak Submission
+
+            This PR was automatically generated from issue #${issueNumber}.
+
+            ### Pak Details
+
+            | Field | Value |
+            |-------|-------|
+            | Display Name | ${displayName} |
+            | Internal Name | ${pakName} |
+            | Repository | ${repoUrl} |
+            | Type | ${pakType} |
+            | Author | ${pakAuthor} |
+            | Version | ${pakVersion} |
+            | Categories | ${categories.join(', ')} |
+
+            ${pakDescription ? `**Description:** ${pakDescription}` : ''}
+            `;
+
+            if (typeWarning) {
+              body += `
+            ### Warning
+
+            ${typeWarning}
+            `;
+            }
+
+            body += `
+            ### Entry Added to storefront_base.json
+
+            \`\`\`json
+            ${newPakJson}
+            \`\`\`
+
+            ### Checklist
+
+            - [x] pak.json exists and is valid
+            - [x] Tagged release with matching artifact exists
+            - [x] No duplicate entry in storefront
+            - [x] Categories assigned
+
+            ---
+            Closes #${issueNumber}
+            `;
+
+            const pr = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[New Pak] ${displayName}`,
+              head: branchName,
+              base: 'main',
+              body: body
+            });
+
+            console.log(`Created PR #${pr.data.number}: ${pr.data.html_url}`);
+            core.setOutput('pr_number', pr.data.number);
+            core.setOutput('pr_url', pr.data.html_url);
+
+      - name: Comment on Issue
+        uses: actions/github-script@v7
+        env:
+          PR_URL: ${{ steps.create_pr.outputs.pr_url }}
+          PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
+          TYPE_WARNING: ${{ steps.infer_type.outputs.type_warning }}
+        with:
+          script: |
+            const prUrl = process.env.PR_URL;
+            const prNumber = process.env.PR_NUMBER;
+            const typeWarning = process.env.TYPE_WARNING;
+            const issueNumber = context.payload.issue.number;
+
+            let comment = `## Validation Successful!
+
+            Your pak submission has been validated and a pull request has been created.
+
+            **Pull Request:** ${prUrl}
+
+            The PR will be reviewed and merged by a maintainer. Once merged, your pak will appear in the Pak Store after the next storefront rebuild.
+            `;
+
+            if (typeWarning) {
+              comment += `
+            ### Note
+
+            ${typeWarning}
+
+            Please review the PR and comment if the type should be adjusted.
+            `;
+            }
+
+            comment += `
+            ---
+            Thank you for contributing to the NextUI Pak Store!
+            `;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: comment
+            });
+
+      - name: Handle Validation Failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = context.payload.issue.number;
+
+            // Get the error from previous steps
+            const failedStep = '${{ job.status }}';
+
+            let comment = `## Validation Failed
+
+            Unfortunately, there was an issue validating your pak submission. Please review the error below and update your repository accordingly.
+
+            **Error Details:** Check the [workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) for details.
+
+            ### Common Issues
+
+            1. **Missing pak.json**: Ensure \`pak.json\` exists in your repository root
+            2. **Invalid pak.json**: Required fields: \`name\`, \`version\`, \`type\`, \`author\`, \`release_filename\`
+            3. **No matching release**: Create a tagged release with an asset matching the \`release_filename\` in pak.json
+            4. **Invalid type**: Type must be either \`TOOL\` or \`EMU\`
+            5. **Duplicate entry**: This repository may already be in the store
+
+            Once you've fixed the issue, you can close and reopen this issue, or add the \`new-pak\` label again to re-trigger validation.
+
+            ---
+            If you need help, please check the [pak.json documentation](https://github.com/LoveRetro/nextui-pak-store#pak-json-format) or ask in the issue comments.
+            `;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: comment
+            });
+
+            // Add a label to indicate validation failed
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              labels: ['validation-failed']
+            });

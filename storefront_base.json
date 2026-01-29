@@ -1,13 +1,15 @@
 {
-  "name": "NextUI Officially Unofficial",
-  "url": "https://github.com/UncleJunVIP/nextui-pak-store",
+  "name": "NextUI Formerly Unofficial",
+  "url": "https://github.com/LoveRetro/nextui-pak-store",
   "paks": [
     {
+      "id": "xK9mR2vL4w",
       "storefront_name": "Pak Store",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-pak-store",
+      "repo_url": "https://github.com/LoveRetro/nextui-pak-store",
       "categories": []
     },
     {
+      "id": "bQ3nT7yH1p",
       "storefront_name": "Mortar",
       "repo_url": "https://github.com/UncleJunVIP/Mortar",
       "categories": [
@@ -16,6 +18,7 @@
       "disabled": true
     },
     {
+      "id": "jF8cW5zN2m",
       "storefront_name": "Grout",
       "repo_url": "https://github.com/rommapp/grout",
       "categories": [
@@ -24,6 +27,7 @@
       "disabled": true
     },
     {
+      "id": "pY6kD4xS9q",
       "storefront_name": "Game Manager",
       "repo_url": "https://github.com/UncleJunVIP/nextui-game-manager",
       "categories": [
@@ -31,6 +35,7 @@
       ]
     },
     {
+      "id": "tR1vB8gM3h",
       "storefront_name": "RetroArch",
       "repo_url": "https://github.com/UncleJunVIP/retroarch-tg5040",
       "categories": [
@@ -38,6 +43,7 @@
       ]
     },
     {
+      "id": "wL5nJ2cF7z",
       "storefront_name": "Aesthetics",
       "repo_url": "https://github.com/redria7/nextui-aesthetics",
       "categories": [
@@ -45,20 +51,23 @@
       ]
     },
     {
+      "id": "aH9pK6dX4r",
       "storefront_name": "LED Manager",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-led-manager",
+      "repo_url": "https://github.com/BrandonKowalski/nextui-led-manager",
       "categories": [
         "Customization"
       ]
     },
     {
+      "id": "mC3qY8wT1v",
       "storefront_name": "S3 SaveSync",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-save-sync",
+      "repo_url": "https://github.com/BrandonKowalski/nextui-save-sync",
       "categories": [
         "File Management"
       ]
     },
     {
+      "id": "gN7zR5bL2k",
       "storefront_name": "Screenshot Monitor",
       "repo_url": "https://github.com/josegonzalez/minui-screenshot-monitor-pak",
       "categories": [
@@ -66,6 +75,7 @@
       ]
     },
     {
+      "id": "sD4xM9hP6j",
       "storefront_name": "Dropbear Server (SSH)",
       "repo_url": "https://github.com/josegonzalez/minui-dropbear-server-pak",
       "categories": [
@@ -73,6 +83,7 @@
       ]
     },
     {
+      "id": "yF1cQ7nW3t",
       "storefront_name": "SFTPGO Server",
       "repo_url": "https://github.com/josegonzalez/minui-sftpgo-server-pak",
       "categories": [
@@ -80,6 +91,7 @@
       ]
     },
     {
+      "id": "kB8vT2gR5m",
       "storefront_name": "Dufs HTTP Server",
       "previous_names": [
         "Dufs Server"
@@ -90,6 +102,7 @@
       ]
     },
     {
+      "id": "hJ6yL4zK9n",
       "storefront_name": "File Browser",
       "repo_url": "https://github.com/josegonzalez/minui-filebrowser-pak",
       "categories": [
@@ -97,6 +110,7 @@
       ]
     },
     {
+      "id": "cP3wS1dH7x",
       "storefront_name": "FTP Server",
       "repo_url": "https://github.com/josegonzalez/minui-ftpserver-pak",
       "categories": [
@@ -104,6 +118,7 @@
       ]
     },
     {
+      "id": "nX9mF5qB2v",
       "storefront_name": "Syncthing",
       "repo_url": "https://github.com/josegonzalez/minui-syncthing-pak",
       "categories": [
@@ -111,6 +126,7 @@
       ]
     },
     {
+      "id": "rT4kY8cN6p",
       "storefront_name": "Developer",
       "repo_url": "https://github.com/josegonzalez/minui-developer-pak",
       "categories": [
@@ -118,6 +134,7 @@
       ]
     },
     {
+      "id": "zW1hD3jL7g",
       "storefront_name": "Remote Terminal",
       "repo_url": "https://github.com/josegonzalez/minui-remote-terminal-pak",
       "categories": [
@@ -125,6 +142,7 @@
       ]
     },
     {
+      "id": "vM7rP9xQ2s",
       "storefront_name": "Report",
       "repo_url": "https://github.com/josegonzalez/minui-report-pak",
       "categories": [
@@ -132,6 +150,7 @@
       ]
     },
     {
+      "id": "dK5nB4wT8y",
       "storefront_name": "Terminal",
       "repo_url": "https://github.com/josegonzalez/minui-terminal-pak",
       "categories": [
@@ -139,6 +158,7 @@
       ]
     },
     {
+      "id": "qH2cF6zR1m",
       "storefront_name": "Simple Mode",
       "repo_url": "https://github.com/josegonzalez/minui-simple-mode-pak",
       "categories": [
@@ -146,6 +166,7 @@
       ]
     },
     {
+      "id": "lY9vJ3gK7p",
       "storefront_name": "Artwork Scraper",
       "repo_url": "https://github.com/josegonzalez/minui-artwork-scraper-pak",
       "categories": [
@@ -154,6 +175,7 @@
       ]
     },
     {
+      "id": "xS4dL8hN5w",
       "storefront_name": "Random Game",
       "repo_url": "https://github.com/josegonzalez/minui-random-game-pak",
       "categories": [
@@ -161,6 +183,7 @@
       ]
     },
     {
+      "id": "bR1mQ7yC2t",
       "storefront_name": "PICO-8",
       "repo_url": "https://github.com/josegonzalez/minui-pico-8-pak",
       "categories": [
@@ -168,6 +191,7 @@
       ]
     },
     {
+      "id": "fW6pX3kB9v",
       "storefront_name": "Nintendo DS (DraStic)",
       "repo_url": "https://github.com/josegonzalez/minui-nintendo-ds-pak",
       "categories": [
@@ -175,6 +199,7 @@
       ]
     },
     {
+      "id": "jT8nH4zM1r",
       "storefront_name": "Nintendo 64 (mupen64plus)",
       "repo_url": "https://github.com/josegonzalez/minui-n64-pak",
       "categories": [
@@ -182,6 +207,7 @@
       ]
     },
     {
+      "id": "pK2yD5qS7g",
       "storefront_name": "Dreamcast (Flycast)",
       "repo_url": "https://github.com/josegonzalez/minui-dreamcast-pak",
       "categories": [
@@ -189,6 +215,7 @@
       ]
     },
     {
+      "id": "tN9cW1vL4h",
       "storefront_name": "Moonlight",
       "repo_url": "https://github.com/josegonzalez/trimui-brick-moonlight-pak",
       "categories": [
@@ -196,6 +223,7 @@
       ]
     },
     {
+      "id": "wB5jR8xF3k",
       "storefront_name": "Media Player",
       "repo_url": "https://github.com/josegonzalez/trimui-brick-media-player-pak",
       "categories": [
@@ -203,6 +231,7 @@
       ]
     },
     {
+      "id": "aM3gY6nP2z",
       "storefront_name": "Gallery Pak",
       "repo_url": "https://github.com/josegonzalez/minui-gallery-pak",
       "categories": [
@@ -210,6 +239,7 @@
       ]
     },
     {
+      "id": "gQ7hT4dK9c",
       "storefront_name": "Portmaster",
       "repo_url": "https://github.com/ben16w/minui-portmaster",
       "categories": [
@@ -219,6 +249,7 @@
       "large_pak": true
     },
     {
+      "id": "mL1wS5bV8n",
       "storefront_name": "PPSSPP",
       "repo_url": "https://github.com/ben16w/minui-psp",
       "categories": [
@@ -226,6 +257,7 @@
       ]
     },
     {
+      "id": "sF9zJ2rX6y",
       "storefront_name": "Cloud Backups",
       "repo_url": "https://github.com/ben16w/minui-cloud-backups",
       "categories": [
@@ -233,6 +265,7 @@
       ]
     },
     {
+      "id": "yC4kM7pQ1d",
       "storefront_name": "Favorites",
       "repo_url": "https://github.com/ben16w/minui-favorites",
       "categories": [
@@ -240,6 +273,7 @@
       ]
     },
     {
+      "id": "kH8vN3gT5w",
       "storefront_name": "Tailscale",
       "repo_url": "https://github.com/ben16w/minui-tailscale",
       "categories": [
@@ -248,6 +282,7 @@
       ]
     },
     {
+      "id": "hP6xL9yB2j",
       "storefront_name": "Over The Air Updater",
       "repo_url": "https://github.com/LanderN/nextui-updater-pak",
       "categories": [
@@ -255,6 +290,7 @@
       ]
     },
     {
+      "id": "cR1dW4zK8m",
       "storefront_name": "Search Pak",
       "repo_url": "https://github.com/laesetuc/minui-search-pak",
       "categories": [
@@ -262,6 +298,7 @@
       ]
     },
     {
+      "id": "nY7qF5hS3v",
       "storefront_name": "Collections Editor",
       "repo_url": "https://github.com/laesetuc/minui-collections-editor",
       "categories": [
@@ -269,6 +306,7 @@
       ]
     },
     {
+      "id": "rD3mT9cN6p",
       "storefront_name": "Dot File Cleaner",
       "repo_url": "https://github.com/laesetuc/minui-dotclean-pak",
       "categories": [
@@ -276,6 +314,7 @@
       ]
     },
     {
+      "id": "zK8wB1jL4g",
       "storefront_name": "ScummVM",
       "repo_url": "https://github.com/laesetuc/minui-scummvm",
       "categories": [
@@ -283,6 +322,7 @@
       ]
     },
     {
+      "id": "vN4yR7xQ2h",
       "storefront_name": "Rom Inspector",
       "repo_url": "https://github.com/gabrielpsp/Rom-Inspector-pak",
       "categories": [
@@ -291,6 +331,7 @@
       ]
     },
     {
+      "id": "dJ9pK5nT8s",
       "storefront_name": "Rockbox",
       "repo_url": "https://github.com/IncognitoMan/rockbox",
       "categories": [
@@ -298,6 +339,7 @@
       ]
     },
     {
+      "id": "qM2cH6zW1r",
       "storefront_name": "Zelda Classic",
       "repo_url": "https://github.com/cobaltgit/Zelda-Classic-MinUI",
       "categories": [
@@ -305,6 +347,7 @@
       ]
     },
     {
+      "id": "lS7vD3gF9k",
       "storefront_name": "Theme Manager",
       "repo_url": "https://github.com/Leviathanium/NextUI-Theme-Manager",
       "categories": [
@@ -313,14 +356,7 @@
       "disabled": true
     },
     {
-      "storefront_name": "Power Menu",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-power-menu",
-      "categories": [
-        "System"
-      ],
-      "disabled": true
-    },
-    {
+      "id": "bT1mL9xK2c",
       "storefront_name": "Function Key Editor",
       "repo_url": "https://github.com/josegonzalez/trimui-brick-fn-editor-pak",
       "categories": [
@@ -329,6 +365,7 @@
       "disabled": true
     },
     {
+      "id": "fQ6nR3yS7v",
       "storefront_name": "USB Mass Storage",
       "repo_url": "https://github.com/josegonzalez/trimui-brick-usb-mass-storage-pak",
       "categories": [
@@ -337,6 +374,7 @@
       "disabled": true
     },
     {
+      "id": "jH2wT5dM8g",
       "storefront_name": "Screenshot Viewer",
       "repo_url": "https://github.com/mikecosentino/Screenshots",
       "categories": [
@@ -344,6 +382,7 @@
       ]
     },
     {
+      "id": "pC9kJ4zN1h",
       "storefront_name": "WiliWili",
       "repo_url": "https://github.com/Majirefy/nextui-wiliwili",
       "categories": [
@@ -351,6 +390,7 @@
       ]
     },
     {
+      "id": "tY5xB7qL3r",
       "storefront_name": "SMSU (Genesis Plus GX)",
       "repo_url": "https://github.com/SkyZ0ro/Trimui-Brick-GMD",
       "categories": [
@@ -358,6 +398,7 @@
       ]
     },
     {
+      "id": "wF8gP2vK6m",
       "storefront_name": "SDLReader",
       "repo_url": "https://github.com/Helaas/SDLReader-brick",
       "categories": [
@@ -365,6 +406,7 @@
       ]
     },
     {
+      "id": "aD4hS9nW1j",
       "storefront_name": "M3U Manager",
       "repo_url": "https://github.com/josegonzalez/minui-m3u-manager-pak",
       "categories": [
@@ -372,6 +414,7 @@
       ]
     },
     {
+      "id": "gL7rY3cT5z",
       "storefront_name": "Map.txt Generator",
       "repo_url": "https://github.com/josegonzalez/minui-map-txt-generator-pak",
       "categories": [
@@ -379,6 +422,7 @@
       ]
     },
     {
+      "id": "mN1kQ8xB4p",
       "storefront_name": "Storiies",
       "repo_url": "https://github.com/pcorbel/storiies",
       "categories": [
@@ -386,6 +430,7 @@
       ]
     },
     {
+      "id": "sR6wF2dH9v",
       "storefront_name": "8bit-Numera",
       "repo_url": "https://github.com/naveensiva/Trimui-8bit-Numera",
       "categories": [
@@ -393,6 +438,7 @@
       ]
     },
     {
+      "id": "yK3mJ7zP1n",
       "storefront_name": "Intellivision (FreeINTV)",
       "repo_url": "https://github.com/K2Retro2nd/minui-intv-pak",
       "categories": [
@@ -400,13 +446,15 @@
       ]
     },
     {
+      "id": "kT9vL4gS8c",
       "storefront_name": "PCE SuperGrafx (beetle-supergrafx)",
       "repo_url": "https://github.com/BrandonKowalski/nextui-pce-supergrafx",
       "categories": [
         "Emulators"
       ]
     },
-     {
+    {
+      "id": "hB5yN2xR6w",
       "storefront_name": "3DO",
       "repo_url": "https://github.com/dominickvaccaro/nextui-opera-3do",
       "categories": [
@@ -414,6 +462,7 @@
       ]
     },
     {
+      "id": "cM8pD1hK4q",
       "storefront_name": "JAGUAR",
       "repo_url": "https://github.com/dominickvaccaro/nextui-virtual-jaguar",
       "categories": [
@@ -421,6 +470,7 @@
       ]
     },
     {
+      "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "repo_url": "https://github.com/mohammadsyuhada/nextui-music-player",
       "categories": [
@@ -428,6 +478,7 @@
       ]
     },
     {
+      "id": "rH6cY9zM2g",
       "storefront_name": "TIC-80",
       "repo_url": "https://github.com/amayer5125/nextui-tic-80-pak",
       "categories": [

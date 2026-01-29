@@ -1,16 +1,22 @@
 package models
 
 const (
-	PakStoreRepo            = "https://github.com/UncleJunVIP/nextui-pak-store"
-	StorefrontJsonURL       = "https://pak-store.unclejun.vip/storefront.json"
-	StorefrontJsonBackupURL = "https://raw.githubusercontent.com/UncleJunVIP/nextui-pak-store/refs/heads/gh-pages/storefront.json"
-	GitHubRoot              = "https://github.com/"
-	RawGHUC                 = "https://raw.githubusercontent.com/"
-	RefMainStub             = "/refs/heads/main/"
-	PakJsonStub             = "pak.json"
+	PakStoreID        = "xK9mR2vL4w"
+	PakStoreRepo      = "https://github.com/LoveRetro/nextui-pak-store"
+	StorefrontJsonURL = "https://raw.githubusercontent.com/LoveRetro/nextui-pak-store/refs/heads/gh-pages/storefront.json"
+	GitHubRoot        = "https://github.com/"
+	RawGHUC           = "https://raw.githubusercontent.com/"
+	RefMainStub       = "/refs/heads/main/"
+	PakJsonStub       = "pak.json"
 
-	PakStoreConfigRoot = "/mnt/SDCARD/.userdata/tg5040/nextui-pak-store"
-	SDRoot             = "/mnt/SDCARD"
-	ToolRoot           = "/mnt/SDCARD/Tools/tg5040"
-	EmulatorRoot       = "/mnt/SDCARD/Emus/tg5040"
+	SDRoot              = "/mnt/SDCARD"
+	UserdataDir         = ".userdata"
+	PakStoreUserDataDir = "nextui-pak-store"
+	ToolDir             = "Tools"
+	EmulatorDir         = "Emus"
 )
+
+type Platform string
+
+const TG5040 Platform = "tg5040"
+const TG5050 Platform = "tg5050"

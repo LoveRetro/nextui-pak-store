@@ -1,10 +1,4 @@
-FROM golang:1.24-bullseye
-
-RUN apt-get update && apt-get install -y \
-    libsdl2-dev \
-    libsdl2-ttf-dev \
-    libsdl2-image-dev \
-    libsdl2-gfx-dev
+FROM ghcr.io/brandonkowalski/quasimodo:latest
 
 WORKDIR /build
 
@@ -13,6 +7,16 @@ COPY go.mod go.sum* ./
 RUN GOWORK=off go mod download
 
 COPY . .
-RUN GOWORK=off go build -v -gcflags="all=-N -l" -o pak-store app/pak_store.go
+
+ARG VERSION=dev
+ARG GIT_COMMIT=unknown
+ARG BUILD_DATE=unknown
+
+RUN GOWORK=off go build -v \
+    -tags nodefaultfont \
+    -ldflags "-X github.com/LoveRetro/nextui-pak-store/version.Version=${VERSION} \
+              -X github.com/LoveRetro/nextui-pak-store/version.GitCommit=${GIT_COMMIT} \
+              -X github.com/LoveRetro/nextui-pak-store/version.BuildDate=${BUILD_DATE}" \
+    -o pak-store ./app
 
 CMD ["/bin/bash"]

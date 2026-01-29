@@ -1,3 +1,5 @@
+//go:build ignore
+
 package main
 
 import (
@@ -10,7 +12,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/UncleJunVIP/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/models"
 )
 
 type GitHubContent struct {
@@ -57,8 +59,10 @@ func main() {
 			}
 		}
 
+		pak.ID = p.ID
 		pak.StorefrontName = p.StorefrontName
 		pak.PreviousNames = p.PreviousNames
+		pak.PreviousRepoURLs = p.PreviousRepoURLs
 		pak.RepoURL = p.RepoURL
 		pak.Categories = p.Categories
 		pak.LargePak = p.LargePak
