@@ -1,38 +1,55 @@
 package ui
 
 import (
+	"errors"
 	"slices"
 	"strings"
 
-	"github.com/UncleJunVIP/gabagool/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/state"
-	"qlova.tech/sum"
+	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/state"
 )
 
-type UpdatesScreen struct {
-	AppState state.AppState
+type UpdatesInput struct {
+	Storefront           models.Storefront
+	LastSelectedIndex    int
+	LastSelectedPosition int
 }
 
-func InitUpdatesScreen(appState state.AppState) UpdatesScreen {
-	return UpdatesScreen{
-		AppState: appState,
+type UpdatesOutput struct {
+	SelectedPaks         []models.Pak
+	LastSelectedIndex    int
+	LastSelectedPosition int
+}
+
+type UpdatesScreen struct{}
+
+func NewUpdatesScreen() *UpdatesScreen {
+	return &UpdatesScreen{}
+}
+
+func (s *UpdatesScreen) Draw(input UpdatesInput) (ScreenResult[UpdatesOutput], error) {
+	output := UpdatesOutput{
+		LastSelectedIndex:    input.LastSelectedIndex,
+		LastSelectedPosition: input.LastSelectedPosition,
 	}
-}
 
-func (us UpdatesScreen) Name() sum.Int[models.ScreenName] {
-	return models.ScreenNames.Updates
-}
-
-func (us UpdatesScreen) Draw() (selection interface{}, exitCode int, e error) {
-	if len(us.AppState.UpdatesAvailable) == 0 {
-		return nil, 2, nil
+	// Compute data on demand
+	installedPaks, err := state.GetInstalledPaks()
+	if err != nil {
+		return withAction(output, ActionError), err
 	}
 
-	var menuItems []gabagool.MenuItem
+	updatesAvailable := state.GetUpdatesAvailable(input.Storefront, installedPaks)
 
-	for _, pak := range us.AppState.UpdatesAvailable {
-		menuItems = append(menuItems, gabagool.MenuItem{
+	if len(updatesAvailable) == 0 {
+		return back(output), nil
+	}
+
+	var menuItems []gaba.MenuItem
+
+	for _, pak := range updatesAvailable {
+		menuItems = append(menuItems, gaba.MenuItem{
 			Text:     pak.StorefrontName,
 			Selected: false,
 			Focused:  false,
@@ -40,34 +57,39 @@ func (us UpdatesScreen) Draw() (selection interface{}, exitCode int, e error) {
 		})
 	}
 
-	slices.SortFunc(menuItems, func(a, b gabagool.MenuItem) int {
+	slices.SortFunc(menuItems, func(a, b gaba.MenuItem) int {
 		return strings.Compare(a.Text, b.Text)
 	})
 
 	if len(menuItems) > 1 {
-		menuItems = append([]gabagool.MenuItem{{
+		menuItems = append([]gaba.MenuItem{{
 			Text:     "Update All",
 			Selected: false,
 			Focused:  false,
-			Metadata: us.AppState.UpdatesAvailable,
+			Metadata: updatesAvailable,
 		}}, menuItems...)
 	}
 
-	options := gabagool.DefaultListOptions("Available Pak Updates", menuItems)
-	options.EnableAction = true
-	options.FooterHelpItems = []gabagool.FooterHelpItem{
-		{ButtonName: "B", HelpText: "Back"},
-		{ButtonName: "A", HelpText: "View"},
-	}
+	options := gaba.DefaultListOptions("Available Pak Updates", menuItems)
+	options.SelectedIndex = input.LastSelectedIndex
+	options.VisibleStartIndex = max(0, input.LastSelectedIndex-input.LastSelectedPosition)
+	options.FooterHelpItems = BackViewFooter()
 
-	sel, err := gabagool.List(options)
+	sel, err := gaba.List(options)
 	if err != nil {
-		return nil, -1, err
+		if errors.Is(err, gaba.ErrCancelled) {
+			return back(output), nil
+		}
+		return withAction(output, ActionError), err
 	}
 
-	if sel.IsNone() || sel.Unwrap().SelectedIndex == -1 {
-		return nil, 2, nil
+	if len(sel.Selected) == 0 {
+		return back(output), nil
 	}
 
-	return sel.Unwrap().SelectedItem.Metadata.([]models.Pak), 0, nil
+	output.SelectedPaks = sel.Items[sel.Selected[0]].Metadata.([]models.Pak)
+	output.LastSelectedIndex = sel.Selected[0]
+	output.LastSelectedPosition = sel.VisiblePosition
+
+	return success(output), nil
 }

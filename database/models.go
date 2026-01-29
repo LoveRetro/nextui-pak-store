@@ -11,6 +11,7 @@ import (
 type InstalledPak struct {
 	Name         string
 	DisplayName  string
+	PakID        sql.NullString
 	RepoUrl      sql.NullString
 	Type         string
 	Version      string

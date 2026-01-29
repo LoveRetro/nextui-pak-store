@@ -1,0 +1,73 @@
+name: New Pak Submission
+description: Submit a new pak to be added to the Pak Store
+title: ""
+labels: ["new-pak"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a new pak to the NextUI Pak Store!
+
+        Please ensure your pak repository meets the following requirements:
+        - Has a valid `pak.json` file in the root directory
+        - Has at least one tagged release with a matching release artifact
+        - The release artifact filename matches `release_filename` in pak.json
+
+  - type: input
+    id: display_name
+    attributes:
+      label: Display Name
+      description: The name that will be shown in the Pak Store (storefront_name)
+      placeholder: "My Awesome Pak"
+    validations:
+      required: true
+
+  - type: input
+    id: repo_url
+    attributes:
+      label: GitHub Repository URL
+      description: The full URL to your GitHub repository
+      placeholder: "https://github.com/username/repo-name"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Categories
+      description: Select all categories that apply to your pak
+      multiple: true
+      options:
+        - Emulators
+        - ROM Management
+        - File Management
+        - Media
+        - Developer Tools
+        - Miscellaneous Tools
+        - Streaming Game Clients
+        - Ports
+        - System
+        - Customization
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Any additional context about your pak (optional)
+      placeholder: "Brief description of what your pak does..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have verified that my repository has a valid pak.json in the root
+          required: true
+        - label: I have created at least one tagged release with the correct artifact
+          required: true
+        - label: My pak follows NextUI community guidelines
+          required: true

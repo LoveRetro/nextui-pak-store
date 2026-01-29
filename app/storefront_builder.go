@@ -1,3 +1,5 @@
+//go:build ignore
+
 package main
 
 import (
@@ -5,12 +7,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"strings"
 
-	"github.com/UncleJunVIP/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/models"
 )
 
 type GitHubContent struct {
@@ -21,24 +22,62 @@ type GitHubContent struct {
 	DownloadUrl string `json:"download_url"`
 }
 
+const (
+	colorReset  = "\033[0m"
+	colorRed    = "\033[31m"
+	colorGreen  = "\033[32m"
+	colorYellow = "\033[33m"
+	colorCyan   = "\033[36m"
+	colorBold   = "\033[1m"
+)
+
+func logHeader(msg string) {
+	fmt.Printf("\n%s%s==> %s%s\n", colorBold, colorCyan, msg, colorReset)
+}
+
+func logSuccess(msg string) {
+	fmt.Printf("  %s✓%s %s\n", colorGreen, colorReset, msg)
+}
+
+func logSkipped(msg string) {
+	fmt.Printf("  %s○%s %s %s(disabled)%s\n", colorYellow, colorReset, msg, colorYellow, colorReset)
+}
+
+func logError(msg string) {
+	fmt.Printf("  %s✗%s %s\n", colorRed, colorReset, msg)
+}
+
+func logFatal(msg string) {
+	fmt.Printf("\n%s%s✗ Error: %s%s\n", colorBold, colorRed, msg, colorReset)
+	os.Exit(1)
+}
+
 func main() {
+	fmt.Printf("%s%sNextUI Pak Store - Storefront Builder%s\n", colorBold, colorCyan, colorReset)
+
+	logHeader("Loading storefront_base.json")
 	data, err := os.ReadFile("storefront_base.json")
 	if err != nil {
-		log.Fatal("Error reading file:", err)
+		logFatal("Error reading file: " + err.Error())
 	}
 
 	var sf models.Storefront
 	if err := json.Unmarshal(data, &sf); err != nil {
-		log.Fatal("Unable to unmarshal storefront", err)
+		logFatal("Unable to unmarshal storefront: " + err.Error())
 	}
+	logSuccess(fmt.Sprintf("Found %d paks", len(sf.Paks)))
+
+	logHeader("Fetching pak data from GitHub")
 
 	var paks []models.Pak
+	successCount := 0
+	skippedCount := 0
 
 	for _, p := range sf.Paks {
 		repoPath := strings.ReplaceAll(p.RepoURL, models.GitHubRoot, "")
 		parts := strings.Split(repoPath, "/")
 		if len(parts) < 2 {
-			log.Fatal("Invalid repository URL format:", p.RepoURL)
+			logFatal("Invalid repository URL format: " + p.RepoURL)
 		}
 
 		owner := parts[0]
@@ -48,17 +87,24 @@ func main() {
 			owner, repo, models.PakJsonStub)
 
 		pak := models.Pak{}
-		var err error
 
-		if !p.Disabled {
+		if p.Disabled {
+			logSkipped(p.StorefrontName + " | " + p.RepoURL)
+			skippedCount++
+		} else {
 			pak, err = fetchPakJsonFromGitHubAPI(apiURL)
 			if err != nil {
-				log.Fatal("Unable to fetch pak json for "+p.Name+" ("+p.RepoURL+")", err)
+				logError(fmt.Sprintf("%s | %s - %v", p.StorefrontName, p.RepoURL, err))
+				logFatal("Unable to fetch pak json for " + p.StorefrontName + " (" + p.RepoURL + ")")
 			}
+			logSuccess(p.StorefrontName + " | " + p.RepoURL)
+			successCount++
 		}
 
+		pak.ID = p.ID
 		pak.StorefrontName = p.StorefrontName
 		pak.PreviousNames = p.PreviousNames
+		pak.PreviousRepoURLs = p.PreviousRepoURLs
 		pak.RepoURL = p.RepoURL
 		pak.Categories = p.Categories
 		pak.LargePak = p.LargePak
@@ -69,15 +115,22 @@ func main() {
 
 	sf.Paks = paks
 
+	logHeader("Writing storefront.json")
 	jsonData, err := json.MarshalIndent(sf, "", "  ")
 	if err != nil {
-		log.Fatal("Unable to marshal storefront to JSON", err)
+		logFatal("Unable to marshal storefront to JSON: " + err.Error())
 	}
 
 	err = os.WriteFile("storefront.json", jsonData, 0644)
 	if err != nil {
-		log.Fatal("Unable to write storefront.json", err)
+		logFatal("Unable to write storefront.json: " + err.Error())
 	}
+
+	fmt.Printf("\n%s%s✓ Complete!%s %d paks fetched", colorBold, colorGreen, colorReset, successCount)
+	if skippedCount > 0 {
+		fmt.Printf(", %d skipped", skippedCount)
+	}
+	fmt.Println()
 }
 
 func fetchPakJsonFromGitHubAPI(apiURL string) (models.Pak, error) {

@@ -4,10 +4,11 @@ import (
 	"archive/zip"
 	"bytes"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"image/color"
 	"io"
-	"net"
+	"log"
 	"net/http"
 	"os"
 	"os/exec"
@@ -15,11 +16,23 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UncleJunVIP/gabagool/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-shared-functions/common"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
+	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/skip2/go-qrcode"
 )
+
+func GetPlatform() string {
+	raw := strings.ToLower(os.Getenv("PLATFORM"))
+
+	switch models.Platform(raw) {
+	case models.TG5040:
+		return string(models.TG5040)
+	case models.TG5050:
+		return string(models.TG5050)
+	default:
+		return string(models.TG5040)
+	}
+}
 
 func GetSDRoot() string {
 	if os.Getenv("ENVIRONMENT") == "DEV" {
@@ -29,24 +42,26 @@ func GetSDRoot() string {
 	return models.SDRoot
 }
 
-func GetToolRoot() string {
-	if os.Getenv("ENVIRONMENT") == "DEV" {
-		return os.Getenv("TOOL_ROOT")
-	}
+func GetUserDataDir() string {
+	platform := GetPlatform()
+	return filepath.Join(GetSDRoot(), models.UserdataDir, platform, models.PakStoreUserDataDir)
+}
 
-	return models.ToolRoot
+func GetToolRoot() string {
+	return filepath.Join(GetSDRoot(), models.ToolDir, GetPlatform())
 }
 
 func GetEmulatorRoot() string {
-	if os.Getenv("ENVIRONMENT") == "DEV" {
-		return os.Getenv("EMULATOR_ROOT")
-	}
+	return filepath.Join(GetSDRoot(), models.EmulatorDir, GetPlatform())
+}
 
-	return models.EmulatorRoot
+func LogStandardFatal(msg string, err error) {
+	log.SetOutput(os.Stderr)
+	log.Fatalf("%s: %v", msg, err)
 }
 
 func FetchStorefront() (models.Storefront, error) {
-	logger := common.GetLoggerInstance()
+	logger := gabagool.GetLogger()
 
 	var data []byte
 	var err error
@@ -64,10 +79,7 @@ func FetchStorefront() (models.Storefront, error) {
 	} else {
 		data, err = fetch(models.StorefrontJsonURL)
 		if err != nil {
-			data, err = fetch(models.StorefrontJsonBackupURL)
-			if err != nil {
-				return models.Storefront{}, err
-			}
+			return models.Storefront{}, err
 		}
 	}
 
@@ -107,7 +119,7 @@ func ParseJSONFile(filePath string, out *models.Pak) error {
 }
 
 func DownloadPakArchive(pak models.Pak) (tempFile string, completed bool, error error) {
-	logger := common.GetLoggerInstance()
+	logger := gabagool.GetLogger()
 
 	releasesStub := fmt.Sprintf("/releases/download/%s/", pak.Version)
 	dl := pak.RepoURL + releasesStub + pak.ReleaseFilename
@@ -119,24 +131,29 @@ func DownloadPakArchive(pak models.Pak) (tempFile string, completed bool, error 
 		URL:         dl,
 		Location:    tmp,
 		DisplayName: message,
-	}}, make(map[string]string), true)
-
-	if err == nil && len(res.Errors) > 0 {
-		err = res.Errors[0]
-	}
+	}}, make(map[string]string), gabagool.DownloadManagerOptions{AutoContinueOnComplete: true})
 
 	if err != nil {
+		// Check if it was cancelled
+		if errors.Is(err, gabagool.ErrCancelled) {
+			return "", false, nil
+		}
 		logger.Error("Error downloading", "error", err)
 		return "", false, err
-	} else if res.Cancelled {
-		return "", false, nil
+	}
+
+	// Check for failed downloads
+	if len(res.Failed) > 0 {
+		err = res.Failed[0].Error
+		logger.Error("Error downloading", "error", err)
+		return "", false, err
 	}
 
 	return tmp, true, nil
 }
 
 func RunScript(script models.Script, scriptName string) error {
-	logger := common.GetLoggerInstance()
+	logger := gabagool.GetLogger()
 
 	if script.Path == "" {
 		logger.Info("No script to run")
@@ -186,7 +203,7 @@ func RunScript(script models.Script, scriptName string) error {
 }
 
 func UnzipPakArchive(pak models.Pak, tmp string) error {
-	logger := common.GetLoggerInstance()
+	logger := gabagool.GetLogger()
 
 	pakDestination := ""
 
@@ -318,7 +335,6 @@ func Unzip(src, dest string, pak models.Pak, isUpdate bool) error {
 
 		path := filepath.Join(dest, f.Name)
 
-		// Check for ZipSlip (Directory traversal)
 		if !strings.HasPrefix(path, filepath.Clean(dest)+string(os.PathSeparator)) {
 			return fmt.Errorf("illegal file path: %s", path)
 		}
@@ -334,7 +350,6 @@ func Unzip(src, dest string, pak models.Pak, isUpdate bool) error {
 				return err
 			}
 
-			// Use a temporary file to avoid ETXTBSY error
 			tempPath := path + ".tmp"
 			tempFile, err := os.OpenFile(tempPath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0755)
 			if err != nil {
@@ -342,17 +357,16 @@ func Unzip(src, dest string, pak models.Pak, isUpdate bool) error {
 			}
 
 			_, err = io.Copy(tempFile, rc)
-			tempFile.Close() // Close the file before attempting to rename it
+			tempFile.Close()
 
 			if err != nil {
-				os.Remove(tempPath) // Clean up on error
+				os.Remove(tempPath)
 				return err
 			}
 
-			// Now rename the temporary file to the target path
 			err = os.Rename(tempPath, path)
 			if err != nil {
-				os.Remove(tempPath) // Clean up on error
+				os.Remove(tempPath)
 				return err
 			}
 		}
@@ -391,10 +405,4 @@ func ShouldIgnoreFile(filePath string, pak models.Pak) bool {
 	}
 
 	return false
-}
-
-func IsConnectedToInternet() bool {
-	timeout := 5 * time.Second
-	_, err := net.DialTimeout("tcp", "8.8.8.8:53", timeout)
-	return err == nil
 }

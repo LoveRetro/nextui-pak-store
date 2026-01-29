@@ -1,69 +1,102 @@
 package ui
 
 import (
+	"errors"
 	"slices"
 	"strings"
 
-	"github.com/UncleJunVIP/gabagool/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/state"
-	"qlova.tech/sum"
+	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool/constants"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/state"
 )
 
-type PakList struct {
-	AppState state.AppState
-	Category string
+type PakListInput struct {
+	Storefront           models.Storefront
+	Category             string
+	LastSelectedIndex    int
+	LastSelectedPosition int
 }
 
-func InitPakList(appState state.AppState, category string) PakList {
-	return PakList{
-		AppState: appState,
-		Category: category,
+type PakListOutput struct {
+	SelectedPak          models.Pak
+	Category             string
+	LastSelectedIndex    int
+	LastSelectedPosition int
+	IsInstalled          bool
+	HasUpdate            bool
+}
+
+type PakListScreen struct{}
+
+func NewPakListScreen() *PakListScreen {
+	return &PakListScreen{}
+}
+
+func (s *PakListScreen) Draw(input PakListInput) (ScreenResult[PakListOutput], error) {
+	output := PakListOutput{
+		Category:             input.Category,
+		LastSelectedIndex:    input.LastSelectedIndex,
+		LastSelectedPosition: input.LastSelectedPosition,
 	}
-}
 
-func (pl PakList) Name() sum.Int[models.ScreenName] {
-	return models.ScreenNames.PakList
-}
+	// Compute data on demand
+	installedPaks, err := state.GetInstalledPaks()
+	if err != nil {
+		return withAction(output, ActionError), err
+	}
 
-func (pl PakList) Draw() (selection interface{}, exitCode int, e error) {
-	var menuItems []gabagool.MenuItem
-	for _, p := range pl.AppState.BrowsePaks[pl.Category] {
-		menuItems = append(menuItems, gabagool.MenuItem{
-			Text:     p.StorefrontName,
+	browsePaks := state.GetBrowsePaks(input.Storefront, installedPaks)
+
+	var menuItems []gaba.MenuItem
+	for _, pakStatus := range browsePaks[input.Category] {
+		displayText := pakStatus.Pak.StorefrontName
+
+		// Add status indicator (icon on left side)
+		if pakStatus.HasUpdate {
+			displayText = constants.Update + " " + displayText
+		} else if pakStatus.IsInstalled {
+			displayText = constants.Download + " " + displayText
+		}
+
+		menuItems = append(menuItems, gaba.MenuItem{
+			Text:     displayText,
 			Selected: false,
 			Focused:  false,
-			Metadata: p,
+			Metadata: pakStatus,
 		})
 	}
 
-	slices.SortFunc(menuItems, func(a, b gabagool.MenuItem) int {
-		return strings.Compare(a.Text, b.Text)
+	// Sort by pak name, not display text (to ignore icon prefixes)
+	slices.SortFunc(menuItems, func(a, b gaba.MenuItem) int {
+		aPak := a.Metadata.(state.PakWithStatus).Pak.StorefrontName
+		bPak := b.Metadata.(state.PakWithStatus).Pak.StorefrontName
+		return strings.Compare(aPak, bPak)
 	})
 
-	options := gabagool.DefaultListOptions(pl.Category, menuItems)
+	options := gaba.DefaultListOptions(input.Category, menuItems)
+	options.SelectedIndex = input.LastSelectedIndex
+	options.VisibleStartIndex = max(0, input.LastSelectedIndex-input.LastSelectedPosition)
+	options.FooterHelpItems = BackViewFooter()
 
-	selectedIndex := state.LastSelectedIndex
-
-	options.SelectedIndex = selectedIndex
-	options.VisibleStartIndex = max(0, state.LastSelectedIndex-state.LastSelectedPosition)
-	options.EnableAction = true
-	options.FooterHelpItems = []gabagool.FooterHelpItem{
-		{ButtonName: "B", HelpText: "Back"},
-		{ButtonName: "A", HelpText: "View"},
-	}
-
-	sel, err := gabagool.List(options)
+	sel, err := gaba.List(options)
 	if err != nil {
-		return nil, -1, err
+		if errors.Is(err, gaba.ErrCancelled) {
+			return back(output), nil
+		}
+		return withAction(output, ActionError), err
 	}
 
-	if sel.IsNone() || sel.Unwrap().SelectedIndex == -1 {
-		return nil, 2, nil
+	if len(sel.Selected) == 0 {
+		return back(output), nil
 	}
 
-	state.LastSelectedIndex = sel.Unwrap().SelectedIndex
-	state.LastSelectedPosition = sel.Unwrap().VisiblePosition
+	selectedStatus := sel.Items[sel.Selected[0]].Metadata.(state.PakWithStatus)
+	output.SelectedPak = selectedStatus.Pak
+	output.IsInstalled = selectedStatus.IsInstalled
+	output.HasUpdate = selectedStatus.HasUpdate
+	output.LastSelectedIndex = sel.Selected[0]
+	output.LastSelectedPosition = sel.VisiblePosition
 
-	return sel.Unwrap().SelectedItem.Metadata, 0, nil
+	return success(output), nil
 }

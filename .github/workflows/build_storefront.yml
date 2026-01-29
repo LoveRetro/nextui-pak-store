@@ -3,6 +3,8 @@ name: Build Storefront.json
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
       - storefront_base.json
       - pak.json
@@ -10,10 +12,14 @@ on:
   schedule:
     - cron: "0 * * * *"
 
+permissions:
+  contents: write
+
 jobs:
 
   stock-shelves:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
 

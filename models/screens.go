@@ -1,7 +1,6 @@
 package models
 
-import "qlova.tech/sum"
-
+// ScreenName constants for backwards compatibility
 type ScreenName struct {
 	MainMenu,
 	Browse,
@@ -9,28 +8,16 @@ type ScreenName struct {
 	PakInfo,
 	DownloadPak,
 	Updates,
-	ManageInstalled sum.Int[ScreenName]
+	ManageInstalled int
 }
 
-var ScreenNames = sum.Int[ScreenName]{}.Sum()
-
-type Screen interface {
-	Name() sum.Int[ScreenName]
-	Draw() (value interface{}, exitCode int, e error)
-}
-
-type ScreenReturn interface {
-	Value() interface{}
-}
-
-type WrappedString struct {
-	Contents string
-}
-
-func NewWrappedString(s string) WrappedString {
-	return WrappedString{Contents: s}
-}
-
-func (s WrappedString) Value() interface{} {
-	return s.Contents
+// Legacy screen names - kept for any code that might still reference them
+var ScreenNames = ScreenName{
+	MainMenu:        0,
+	Browse:          1,
+	PakList:         2,
+	PakInfo:         3,
+	DownloadPak:     4,
+	Updates:         5,
+	ManageInstalled: 6,
 }
