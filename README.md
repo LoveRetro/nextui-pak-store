@@ -108,10 +108,10 @@ Thank you for sharing your talents and making NextUI better for everyone! :heart
 
 <!-- Badge References -->
 
-[license-badge]: https://img.shields.io/github/license/UncleJunVIP/nextui-pak-store?style=for-the-badge&color=9B2256
+[license-badge]: https://img.shields.io/github/license/LoveRetro/nextui-pak-store?style=for-the-badge&color=9B2256
 
-[release-badge]: https://img.shields.io/github/v/release/UncleJunVIP/nextui-pak-store?sort=semver&style=for-the-badge&color=9B2256
+[release-badge]: https://img.shields.io/github/v/release/LoveRetro/nextui-pak-store?sort=semver&style=for-the-badge&color=9B2256
 
-[stars-badge]: https://img.shields.io/github/stars/UncleJunVIP/nextui-pak-store?style=for-the-badge&color=9B2256
+[stars-badge]: https://img.shields.io/github/stars/LoveRetro/nextui-pak-store?style=for-the-badge&color=9B2256
 
-[downloads-badge]: https://img.shields.io/github/downloads/UncleJunVIP/nextui-pak-store/total?style=for-the-badge&label=Downloads&color=9B2256
+[downloads-badge]: https://img.shields.io/github/downloads/LoveRetro/nextui-pak-store/total?style=for-the-badge&label=Downloads&color=9B2256
