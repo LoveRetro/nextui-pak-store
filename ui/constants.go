@@ -1,6 +1,5 @@
 package ui
 
-// Action represents the result of a screen interaction.
 type Action int
 
 const (
@@ -10,20 +9,17 @@ const (
 	ActionSelected
 	ActionError
 
-	// Main menu selections
 	ActionBrowse
 	ActionUpdates
 	ActionManageInstalled
 	ActionSettings
 	ActionInfo
 
-	// Pak info results
 	ActionPakStoreUpdated
 	ActionUninstalled
 	ActionPartialUpdate
 	ActionCancelled
 	ActionInstallSuccess
 
-	// Settings results
 	ActionSettingsSaved
 )

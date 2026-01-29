@@ -1,4 +1,4 @@
-module github.com/UncleJunVIP/nextui-pak-store
+module github.com/LoveRetro/nextui-pak-store
 
 go 1.24.0
 
@@ -6,7 +6,7 @@ toolchain go1.24.2
 
 require (
 	github.com/BrandonKowalski/certifiable v1.3.0
-	github.com/BrandonKowalski/gabagool/v2 v2.7.4
+	github.com/BrandonKowalski/gabagool/v2 v2.8.0
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	modernc.org/sqlite v1.44.3
 	qlova.tech v0.1.1

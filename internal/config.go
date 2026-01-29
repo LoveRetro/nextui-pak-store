@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-store/utils"
+	"github.com/LoveRetro/nextui-pak-store/utils"
 )
 
 type PlatformFilterMode string
@@ -16,8 +16,19 @@ const (
 	PlatformFilterAll         PlatformFilterMode = "all"
 )
 
+type DebugLevel string
+
+const (
+	DebugLevelOff   DebugLevel = "off"
+	DebugLevelError DebugLevel = "error"
+	DebugLevelWarn  DebugLevel = "warn"
+	DebugLevelInfo  DebugLevel = "info"
+	DebugLevelDebug DebugLevel = "debug"
+)
+
 type Config struct {
 	PlatformFilter PlatformFilterMode `json:"platform_filter"`
+	DebugLevel     DebugLevel         `json:"debug_level"`
 }
 
 var configInstance *Config
@@ -28,9 +39,9 @@ func LoadConfig() (*Config, error) {
 	data, err := os.ReadFile(configPath)
 	if err != nil {
 		if os.IsNotExist(err) {
-			// Return default config if file doesn't exist
 			config := &Config{
 				PlatformFilter: PlatformFilterMatchDevice,
+				DebugLevel:     DebugLevelError,
 			}
 			configInstance = config
 			return config, nil
@@ -43,9 +54,11 @@ func LoadConfig() (*Config, error) {
 		return nil, err
 	}
 
-	// Apply defaults for missing values
 	if config.PlatformFilter == "" {
 		config.PlatformFilter = PlatformFilterMatchDevice
+	}
+	if config.DebugLevel == "" {
+		config.DebugLevel = DebugLevelError
 	}
 
 	configInstance = &config
@@ -57,6 +70,9 @@ func SaveConfig(config *Config) error {
 
 	if config.PlatformFilter == "" {
 		config.PlatformFilter = PlatformFilterMatchDevice
+	}
+	if config.DebugLevel == "" {
+		config.DebugLevel = DebugLevelError
 	}
 
 	configPath := getConfigPath()
@@ -87,7 +103,7 @@ func GetConfig() *Config {
 	if configInstance == nil {
 		config, err := LoadConfig()
 		if err != nil {
-			return &Config{PlatformFilter: PlatformFilterMatchDevice}
+			return &Config{PlatformFilter: PlatformFilterMatchDevice, DebugLevel: DebugLevelError}
 		}
 		return config
 	}

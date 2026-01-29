@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-store/internal"
+	"github.com/LoveRetro/nextui-pak-store/internal"
 )
 
 type SettingsInput struct {
@@ -74,6 +74,17 @@ func (s *SettingsScreen) buildMenuItems(config *internal.Config) []gaba.ItemWith
 			SelectedOption: platformFilterToIndex(config.PlatformFilter),
 		},
 		{
+			Item: gaba.MenuItem{Text: "Debug Level"},
+			Options: []gaba.Option{
+				{DisplayName: "Off", Value: internal.DebugLevelOff},
+				{DisplayName: "Error", Value: internal.DebugLevelError},
+				{DisplayName: "Warn", Value: internal.DebugLevelWarn},
+				{DisplayName: "Info", Value: internal.DebugLevelInfo},
+				{DisplayName: "Debug", Value: internal.DebugLevelDebug},
+			},
+			SelectedOption: debugLevelToIndex(config.DebugLevel),
+		},
+		{
 			Item:    gaba.MenuItem{Text: "Info"},
 			Options: []gaba.Option{{Type: gaba.OptionTypeClickable}},
 		},
@@ -87,6 +98,10 @@ func (s *SettingsScreen) applySettings(config *internal.Config, items []gaba.Ite
 			if val, ok := item.Options[item.SelectedOption].Value.(internal.PlatformFilterMode); ok {
 				config.PlatformFilter = val
 			}
+		case "Debug Level":
+			if val, ok := item.Options[item.SelectedOption].Value.(internal.DebugLevel); ok {
+				config.DebugLevel = val
+			}
 		}
 	}
 }
@@ -97,6 +112,23 @@ func platformFilterToIndex(mode internal.PlatformFilterMode) int {
 		return 0
 	case internal.PlatformFilterAll:
 		return 1
+	default:
+		return 0
+	}
+}
+
+func debugLevelToIndex(level internal.DebugLevel) int {
+	switch level {
+	case internal.DebugLevelOff:
+		return 0
+	case internal.DebugLevelError:
+		return 1
+	case internal.DebugLevelWarn:
+		return 2
+	case internal.DebugLevelInfo:
+		return 3
+	case internal.DebugLevelDebug:
+		return 4
 	default:
 		return 0
 	}

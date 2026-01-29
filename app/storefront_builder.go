@@ -12,7 +12,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/UncleJunVIP/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/models"
 )
 
 type GitHubContent struct {

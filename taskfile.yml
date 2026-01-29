@@ -7,7 +7,6 @@ tasks:
       - task: build
       - task: package
       - task: package-pakz
-      - task: adb
     silent: true
 
   build:
@@ -40,7 +39,9 @@ tasks:
       - cp -R build/lib "build/Pak Store.pak/resources"
       - rm -rf "build/Tools" || true
       - mkdir -p "build/Tools/tg5040"
+      - mkdir -p "build/Tools/tg5050"
       - cp -R "build/Pak Store.pak" "build/Tools/tg5040"
+      - cp -R "build/Pak Store.pak" "build/Tools/tg5050"
     silent: true
 
   package-pakz:
@@ -56,7 +57,7 @@ tasks:
   adb:
     cmds:
       - adb shell rm -rf "/mnt/SDCARD/Tools/tg5040/Pak Store.pak" || true
-      - adb push "build/Pak Store.pak" /mnt/SDCARD/Tools/tg5040
+      - adb push "build/Pak Store.pak" "/mnt/SDCARD/Tools/tg5040"
       - say Finished deploying Pak Store!
     silent: true
 
@@ -77,4 +78,9 @@ tasks:
   pull-db:
     cmds:
       - adb pull /mnt/SDCARD/.userdata/tg5040/nextui-pak-store/pak-store.db device-pak-store.db
+    silent: true
+
+  push-db:
+    cmds:
+      - adb push device-pak-store.db /mnt/SDCARD/.userdata/tg5040/nextui-pak-store/pak-store.db
     silent: true

@@ -547,7 +547,7 @@ jobs:
             Once you've fixed the issue, you can close and reopen this issue, or add the \`new-pak\` label again to re-trigger validation.
 
             ---
-            If you need help, please check the [pak.json documentation](https://github.com/UncleJunVIP/nextui-pak-store#pak-json-format) or ask in the issue comments.
+            If you need help, please check the [pak.json documentation](https://github.com/LoveRetro/nextui-pak-store#pak-json-format) or ask in the issue comments.
             `;
 
             await github.rest.issues.createComment({

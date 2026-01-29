@@ -17,7 +17,7 @@ import (
 	"time"
 
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/skip2/go-qrcode"
 )
 
@@ -44,7 +44,7 @@ func GetSDRoot() string {
 
 func GetUserDataDir() string {
 	platform := GetPlatform()
-	return filepath.Join(GetSDRoot(), platform, models.UserdataDir, models.PakStoreUserDataDir)
+	return filepath.Join(GetSDRoot(), models.UserdataDir, platform, models.PakStoreUserDataDir)
 }
 
 func GetToolRoot() string {
@@ -79,10 +79,7 @@ func FetchStorefront() (models.Storefront, error) {
 	} else {
 		data, err = fetch(models.StorefrontJsonURL)
 		if err != nil {
-			data, err = fetch(models.StorefrontJsonBackupURL)
-			if err != nil {
-				return models.Storefront{}, err
-			}
+			return models.Storefront{}, err
 		}
 	}
 

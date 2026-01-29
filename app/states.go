@@ -6,9 +6,9 @@ import (
 
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool/router"
-	"github.com/UncleJunVIP/nextui-pak-store/internal"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/ui"
+	"github.com/LoveRetro/nextui-pak-store/internal"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/ui"
 )
 
 const (

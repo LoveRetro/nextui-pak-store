@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
-	pakstore "github.com/UncleJunVIP/nextui-pak-store"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/utils"
+	pakstore "github.com/LoveRetro/nextui-pak-store"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/utils"
 	_ "modernc.org/sqlite"
 )
 
@@ -31,25 +31,32 @@ func Init() {
 		dbPath = "pak-store.db"
 	}
 
+	logger.Debug("Database path resolved", "path", dbPath)
+
 	dbDir := filepath.Dir(dbPath)
 	if dbDir != "." && dbDir != "" {
+		logger.Debug("Creating database directory", "dir", dbDir)
 		err := os.MkdirAll(dbDir, 0755)
 		if err != nil {
-			logger.Error("Unable to open database file", "error", err)
+			logger.Error("Unable to create database directory", "error", err, "dir", dbDir)
 			os.Exit(1)
 		}
 	}
 
+	logger.Debug("Opening database connection", "path", dbPath)
 	dbc, err = sql.Open("sqlite", "file:"+dbPath)
 	if err != nil {
-		logger.Error("Unable to open database file", "error", err)
+		logger.Error("Unable to open database file", "error", err, "path", dbPath)
 		os.Exit(1)
 	}
 
+	logger.Debug("Checking if schema exists")
 	schemaExists, err := tableExists(dbc, "installed_paks")
+	logger.Debug("Schema check complete", "exists", schemaExists)
 	if !schemaExists {
+		logger.Debug("Initializing database schema")
 		if _, err := dbc.ExecContext(ctx, pakstore.DDL); err != nil {
-			logger.Error("Unable to Init schema", "error", err)
+			logger.Error("Unable to init schema", "error", err)
 			os.Exit(1)
 		}
 	}

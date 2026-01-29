@@ -4,6 +4,8 @@ github.com/BrandonKowalski/gabagool/v2 v2.7.1 h1:dKzPkC/UF0GVMxftOHl9x25FxuKp9oX
 github.com/BrandonKowalski/gabagool/v2 v2.7.1/go.mod h1:Iq/YFTz7+w8O78IE21kOkHbg3a4ZD2mjcd0S/jVhI94=
 github.com/BrandonKowalski/gabagool/v2 v2.7.4 h1:EFhlergIVwVpiprUJD+1dMLoS4/OxmPbZntK7ruF0xI=
 github.com/BrandonKowalski/gabagool/v2 v2.7.4/go.mod h1:Iq/YFTz7+w8O78IE21kOkHbg3a4ZD2mjcd0S/jVhI94=
+github.com/BrandonKowalski/gabagool/v2 v2.8.0 h1:AiDAFM5MqMInVslp70wiUJzDMyUagsWlDQpaDDhku1Y=
+github.com/BrandonKowalski/gabagool/v2 v2.8.0/go.mod h1:Iq/YFTz7+w8O78IE21kOkHbg3a4ZD2mjcd0S/jVhI94=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=

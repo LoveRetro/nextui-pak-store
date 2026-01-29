@@ -5,7 +5,7 @@
     {
       "id": "xK9mR2vL4w",
       "storefront_name": "Pak Store",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-pak-store",
+      "repo_url": "https://github.com/LoveRetro/nextui-pak-store",
       "categories": []
     },
     {
@@ -52,7 +52,7 @@
     {
       "id": "aH9pK6dX4r",
       "storefront_name": "LED Manager",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-led-manager",
+      "repo_url": "https://github.com/BrandonKowalski/nextui-led-manager",
       "categories": [
         "Customization"
       ]
@@ -60,7 +60,7 @@
     {
       "id": "mC3qY8wT1v",
       "storefront_name": "S3 SaveSync",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-save-sync",
+      "repo_url": "https://github.com/BrandonKowalski/nextui-save-sync",
       "categories": [
         "File Management"
       ]
@@ -351,15 +351,6 @@
       "repo_url": "https://github.com/Leviathanium/NextUI-Theme-Manager",
       "categories": [
         "Customization"
-      ],
-      "disabled": true
-    },
-    {
-      "id": "xW4bY8hP5n",
-      "storefront_name": "Power Menu",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-power-menu",
-      "categories": [
-        "System"
       ],
       "disabled": true
     },

@@ -2,14 +2,15 @@ package main
 
 import (
 	_ "embed"
+	"log/slog"
 	"time"
 
 	_ "github.com/BrandonKowalski/certifiable"
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
-	"github.com/UncleJunVIP/nextui-pak-store/database"
-	"github.com/UncleJunVIP/nextui-pak-store/models"
-	"github.com/UncleJunVIP/nextui-pak-store/state"
-	"github.com/UncleJunVIP/nextui-pak-store/utils"
+	"github.com/LoveRetro/nextui-pak-store/database"
+	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/state"
+	"github.com/LoveRetro/nextui-pak-store/utils"
 	_ "modernc.org/sqlite"
 )
 
@@ -22,6 +23,8 @@ func init() {
 		LogFilename:    "pak_store.log",
 		IsNextUI:       true,
 	})
+
+	gaba.SetLogLevel(slog.LevelDebug)
 
 	sf, err := gaba.ProcessMessage("",
 		gaba.ProcessMessageOptions{Image: "resources/splash.png", ImageWidth: 1024, ImageHeight: 768}, func() (models.Storefront, error) {
