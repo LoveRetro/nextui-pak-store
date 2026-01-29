@@ -9,15 +9,6 @@
       "categories": []
     },
     {
-      "id": "bQ3nT7yH1p",
-      "storefront_name": "Mortar",
-      "repo_url": "https://github.com/UncleJunVIP/Mortar",
-      "categories": [
-        "ROM Management"
-      ],
-      "disabled": true
-    },
-    {
       "id": "jF8cW5zN2m",
       "storefront_name": "Grout",
       "repo_url": "https://github.com/rommapp/grout",
@@ -37,7 +28,7 @@
     {
       "id": "tR1vB8gM3h",
       "storefront_name": "RetroArch",
-      "repo_url": "https://github.com/UncleJunVIP/retroarch-tg5040",
+      "repo_url": "https://github.com/BrandonKowalski/retroarch-tg5040",
       "categories": [
         "Emulators"
       ]
@@ -56,7 +47,8 @@
       "repo_url": "https://github.com/BrandonKowalski/nextui-led-manager",
       "categories": [
         "Customization"
-      ]
+      ],
+      "disabled": true
     },
     {
       "id": "mC3qY8wT1v",
