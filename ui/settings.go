@@ -76,9 +76,7 @@ func (s *SettingsScreen) buildMenuItems(config *internal.Config) []gaba.ItemWith
 		{
 			Item: gaba.MenuItem{Text: "Debug Level"},
 			Options: []gaba.Option{
-				{DisplayName: "Off", Value: internal.DebugLevelOff},
 				{DisplayName: "Error", Value: internal.DebugLevelError},
-				{DisplayName: "Warn", Value: internal.DebugLevelWarn},
 				{DisplayName: "Info", Value: internal.DebugLevelInfo},
 				{DisplayName: "Debug", Value: internal.DebugLevelDebug},
 			},
@@ -119,16 +117,12 @@ func platformFilterToIndex(mode internal.PlatformFilterMode) int {
 
 func debugLevelToIndex(level internal.DebugLevel) int {
 	switch level {
-	case internal.DebugLevelOff:
-		return 0
 	case internal.DebugLevelError:
-		return 1
-	case internal.DebugLevelWarn:
-		return 2
+		return 0
 	case internal.DebugLevelInfo:
-		return 3
+		return 1
 	case internal.DebugLevelDebug:
-		return 4
+		return 2
 	default:
 		return 0
 	}

@@ -261,14 +261,20 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 		}
 
 		logger.Error("Unable to download pak archive", "error", err)
-		return withAction(output, ActionError), err
+		return withAction(output, ActionError), nil
 	} else if !completed {
 		return withAction(output, ActionCancelled), nil
 	}
 
 	err = utils.UnzipPakArchive(pak, tmp)
 	if err != nil {
-		return withAction(output, ActionError), err
+		logger.Error("Unable to extract pak archive", "error", err)
+		gaba.ProcessMessage(fmt.Sprintf("Failed to extract %s", pak.StorefrontName),
+			gaba.ProcessMessageOptions{ShowThemeBackground: true}, func() (interface{}, error) {
+				time.Sleep(2 * time.Second)
+				return nil, nil
+			})
+		return withAction(output, ActionError), nil
 	}
 
 	if !input.IsUpdate {

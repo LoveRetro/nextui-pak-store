@@ -352,7 +352,7 @@ func buildRouter(storefront models.Storefront) *router.Router {
 				}
 				return screenUpdates, UpdatesInputWithResume{Storefront: storefront}
 
-			case ui.ActionCancelled:
+			case ui.ActionCancelled, ui.ActionError:
 				return screenPakInfo, PakInfoInputWithSource{
 					Paks:        wrapper.Paks,
 					Category:    wrapper.Category,

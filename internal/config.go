@@ -19,9 +19,7 @@ const (
 type DebugLevel string
 
 const (
-	DebugLevelOff   DebugLevel = "off"
 	DebugLevelError DebugLevel = "error"
-	DebugLevelWarn  DebugLevel = "warn"
 	DebugLevelInfo  DebugLevel = "info"
 	DebugLevelDebug DebugLevel = "debug"
 )

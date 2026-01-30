@@ -14,7 +14,8 @@
     ".github/resources/screenshots/portmaster_2.jpg"
   ],
   "platforms": [
-    "tg5040"
+    "tg5040",
+    "tg5050"
   ],
   "changelog": {
     "v3.0.0": "Support for the TrimUI Smart Pro S",
