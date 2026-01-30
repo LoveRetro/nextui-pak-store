@@ -2,11 +2,11 @@ name: Process New Pak Submission
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [labeled]
 
 jobs:
   validate-and-create-pr:
-    if: contains(github.event.issue.labels.*.name, 'new-pak')
+    if: github.event.label.name == 'new-pak'
     runs-on: ubuntu-latest
     permissions:
       issues: write
