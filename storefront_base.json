@@ -483,6 +483,15 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "Rud6jsTmts",
+      "storefront_name": "Log Jack",
+      "repo_url": "https://github.com/BrandonKowalski/nextui-logjack",
+      "categories": [
+        "System",
+        "File Management"
+      ]
     }
   ]
 }
