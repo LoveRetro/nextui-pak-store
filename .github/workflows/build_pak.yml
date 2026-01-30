@@ -1,16 +1,67 @@
-name: Package Pak Store
+name: Create Release
 
 on:
-  release:
-    types: [ published ]
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (e.g., v3.1.0 or v3.1.0-beta.1)'
+        required: true
+        type: string
+      changelog:
+        description: 'Changelog message for this release'
+        required: true
+        type: string
+      beta:
+        description: 'Beta release (skips pak.json commit, marks as prerelease)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
 
 jobs:
-
-  build:
+  release:
     runs-on: ubuntu-22.04-arm
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set version
+        id: version
+        run: |
+          VERSION=$(echo "${{ inputs.version }}" | xargs)
+          echo "value=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Update pak.json
+        run: |
+          CURRENT_VERSION=$(jq -r '.version' pak.json)
+
+          if [ "$CURRENT_VERSION" != "${{ steps.version.outputs.value }}" ]; then
+            echo "Updating pak.json from $CURRENT_VERSION to ${{ steps.version.outputs.value }}"
+
+            jq --arg version "${{ steps.version.outputs.value }}" \
+               --arg changelog "${{ inputs.changelog }}" \
+               '.version = $version | .changelog[$version] = $changelog' \
+               pak.json > pak.json.tmp && mv pak.json.tmp pak.json
+          else
+            echo "Version is already ${{ steps.version.outputs.value }}, skipping pak.json update"
+          fi
+
+      - name: Commit pak.json changes
+        if: ${{ inputs.beta == false }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet pak.json; then
+            echo "No changes to commit"
+          else
+            git add pak.json
+            git commit -m "Update pak.json to ${{ steps.version.outputs.value }}"
+            git push
+          fi
 
       - name: Install Task
         uses: arduino/setup-task@v2
@@ -21,19 +72,24 @@ jobs:
       - name: Build and Package
         run: task build package package-pakz
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: "Pak Store.pak"
-          path: "build/Pak Store.pak"
-          if-no-files-found: error
-          retention-days: 3
-          overwrite: true
+      - name: Create zip distribution
+        run: |
+          cd "build/Pak Store.pak"
+          zip -r ../Pak.Store.pak.zip .
 
-      - uses: actions/upload-artifact@v4
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: "Pak.Store.pakz"
-          path: "build/Pak.Store.pakz"
-          if-no-files-found: error
-          retention-days: 3
-          overwrite: true
-          compression-level: 0
+          tag_name: ${{ steps.version.outputs.value }}
+          name: ${{ steps.version.outputs.value }}
+          body: |
+            ${{ inputs.beta && '⚠️ **This is a beta release.** It may contain bugs or incomplete features.' || '' }}
+
+            ${{ inputs.changelog }}
+
+            ${{ inputs.beta && format('Built from branch: `{0}`', github.ref_name) || '' }}
+          files: |
+            build/Pak.Store.pak.zip
+            build/Pak.Store.pakz
+          draft: false
+          prerelease: ${{ inputs.beta }}
