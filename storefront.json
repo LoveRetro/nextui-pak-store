@@ -2264,7 +2264,7 @@
       "id": "hB5yN2xR6w",
       "storefront_name": "3DO",
       "name": "3DO",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "EMU",
       "description": "A 3DO addon for minarch, utilizing the Opera core.",
       "author": "Dominick Vaccaro",
@@ -2272,7 +2272,8 @@
       "previous_repo_urls": null,
       "release_filename": "3DO.pak.zip",
       "changelog": {
-        "v1.0.0": "Initial Release."
+        "v1.0.0": "Initial Release.",
+        "v1.1.0": "Added TrimUI Smart Pro S support."
       },
       "previous_names": null,
       "scripts": {
@@ -2292,7 +2293,8 @@
       "update_ignore": null,
       "screenshots": null,
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Emulators"
@@ -2304,7 +2306,7 @@
       "id": "cM8pD1hK4q",
       "storefront_name": "JAGUAR",
       "name": "JAGUAR",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "EMU",
       "description": "An Atari Jaguar addon for minarch, utilizing the Virtual Jaguar core.",
       "author": "Dominick Vaccaro",
@@ -2312,7 +2314,8 @@
       "previous_repo_urls": null,
       "release_filename": "JAGUAR.pak.zip",
       "changelog": {
-        "v1.0.0": "Initial Release."
+        "v1.0.0": "Initial Release.",
+        "v1.1.0": "Added TrimUI Smart Pro S support."
       },
       "previous_names": null,
       "scripts": {
@@ -2332,7 +2335,8 @@
       "update_ignore": null,
       "screenshots": null,
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Emulators"
@@ -2344,10 +2348,10 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.1.3",
+      "version": "v1.2.0",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, internet radio streaming, and music downloading.",
-      "author": "kotaksempit",
+      "author": "mohammadsyuhada",
       "repo_url": "https://github.com/mohammadsyuhada/nextui-music-player",
       "previous_repo_urls": null,
       "release_filename": "Music.Player.pak.zip",
@@ -2356,7 +2360,8 @@
         "v1.1.0": "CPU usage optimizations and minor bug fixes",
         "v1.1.1": "Fix: Prevent downloads failing at 100% by enforcing M4A format",
         "v1.1.2": "Latest NextUI v6.7.1 is required. Support for tg5050 and bug fixes",
-        "v1.1.3": "Fix: Wrong binary launched for tg5050."
+        "v1.1.3": "Fix: Wrong binary launched for tg5050.",
+        "v1.2.0": "SELECT+A for screen wake, bug fixes and performance improvements"
       },
       "previous_names": null,
       "scripts": {
