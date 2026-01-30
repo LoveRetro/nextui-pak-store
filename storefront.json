@@ -54,7 +54,8 @@
         ".github/resources/screenshots/portmaster_2.jpg"
       ],
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [],
       "large_pak": false,
@@ -2374,7 +2375,8 @@
         ".github/resources/screenshots/main.jpg"
       ],
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Media"
