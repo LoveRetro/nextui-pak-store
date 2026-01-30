@@ -476,6 +476,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "BgogAJtEiQ",
+      "storefront_name": "Atari 800",
+      "repo_url": "https://github.com/KrutzOtrem/nextui-a800",
+      "categories": [
+        "Emulators"
+      ]
     }
   ]
 }
