@@ -6,7 +6,7 @@
       "id": "xK9mR2vL4w",
       "storefront_name": "Pak Store",
       "name": "Pak Store",
-      "version": "v3.0.0",
+      "version": "v3.0.1",
       "type": "TOOL",
       "description": "A Pak Store in this economy?! Find, install and update community made Paks right on your device!",
       "author": "The NextUI Community",
@@ -28,7 +28,8 @@
         "v1.5.0": "Removed the extra button press after a download completes and added an 'Update All' option for you scoundrels.",
         "v1.5.1": "Made a boo boo! Introduced a bug when I added the 'update all' functionality causing Pak Store to crash when viewing a single update. Thanks to @Helaas for reporting this!",
         "v2.0.1": "Added support for tracking a Pak's previous name to prevent blank entries in the Installed Paks list. DB also tracks Repo URL, something I should have done from the start.",
-        "v3.0.0": "Support for the TrimUI Smart Pro S"
+        "v3.0.0": "Support for the TrimUI Smart Pro S",
+        "v3.0.1": "Fix for Pak Store exiting on failed download"
       },
       "previous_names": null,
       "scripts": {
@@ -65,7 +66,7 @@
       "id": "jF8cW5zN2m",
       "storefront_name": "Grout",
       "name": "Grout",
-      "version": "v4.6.1.0",
+      "version": "v4.6.1.1",
       "type": "TOOL",
       "description": "A RomM client for NextUI, muOS, Knulli, and Spruce v4.",
       "author": "The RomM Team",
@@ -93,7 +94,8 @@
         "v1.4.2": "Fix for incorrect PICO-8 mapping.",
         "v4.6.0.0": "Bunch of great changes by even greater people \u003c3",
         "v4.6.0.1": "Add missing NDS .dsv save file extension",
-        "v4.6.1.0": "Added custom platform mapping entry via keyboard"
+        "v4.6.1.0": "Added custom platform mapping entry via keyboard",
+        "v4.6.1.1": "Add game information to corresponding gamelist.xml for ROCKNIX and Knulli - @pawndev"
       },
       "previous_names": null,
       "scripts": {
@@ -2342,7 +2344,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.1.2",
+      "version": "v1.1.3",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, internet radio streaming, and music downloading.",
       "author": "kotaksempit",
@@ -2353,7 +2355,8 @@
         "v1.0.0": "Initial stable release",
         "v1.1.0": "CPU usage optimizations and minor bug fixes",
         "v1.1.1": "Fix: Prevent downloads failing at 100% by enforcing M4A format",
-        "v1.1.2": "Latest NextUI v6.7.1 is required. Support for tg5050 and bug fixes"
+        "v1.1.2": "Latest NextUI v6.7.1 is required. Support for tg5050 and bug fixes",
+        "v1.1.3": "Fix: Wrong binary launched for tg5050."
       },
       "previous_names": null,
       "scripts": {
