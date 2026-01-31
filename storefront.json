@@ -6,7 +6,7 @@
       "id": "xK9mR2vL4w",
       "storefront_name": "Pak Store",
       "name": "Pak Store",
-      "version": "v3.0.1",
+      "version": "v3.1.0",
       "type": "TOOL",
       "description": "A Pak Store in this economy?! Find, install and update community made Paks right on your device!",
       "author": "The NextUI Community",
@@ -29,7 +29,9 @@
         "v1.5.1": "Made a boo boo! Introduced a bug when I added the 'update all' functionality causing Pak Store to crash when viewing a single update. Thanks to @Helaas for reporting this!",
         "v2.0.1": "Added support for tracking a Pak's previous name to prevent blank entries in the Installed Paks list. DB also tracks Repo URL, something I should have done from the start.",
         "v3.0.0": "Support for the TrimUI Smart Pro S",
-        "v3.0.1": "Fix for Pak Store exiting on failed download"
+        "v3.0.1": "Fix for Pak Store exiting on failed download",
+        "v3.0.2": "Automatically detect existing pak installs",
+        "v3.1.0": "Fixed regression where Pak Store did not detect an update for itself. Super sorry!"
       },
       "previous_names": null,
       "scripts": {
