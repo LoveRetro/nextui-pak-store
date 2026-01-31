@@ -2471,6 +2471,46 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "Rud6jsTmts",
+      "storefront_name": "Log Jack",
+      "name": "Log Jack",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Browse and download log files from your device via a web browser.",
+      "author": "Brandon T. Kowalski",
+      "repo_url": "https://github.com/BrandonKowalski/nextui-logjack",
+      "previous_repo_urls": null,
+      "release_filename": "Log.Jack.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "System",
+        "File Management"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
