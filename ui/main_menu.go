@@ -27,8 +27,7 @@ func NewMainMenuScreen() *MainMenuScreen {
 func (s *MainMenuScreen) Draw(input MainMenuInput) (ScreenResult[MainMenuOutput], error) {
 	output := MainMenuOutput{}
 
-	// Compute data on demand
-	installedPaks, err := state.GetInstalledPaks()
+	installedPaks, err := state.GetUninstallablePaks()
 	if err != nil {
 		return withAction(output, ActionError), err
 	}

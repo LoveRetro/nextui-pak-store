@@ -34,8 +34,7 @@ func (s *ManageInstalledScreen) Draw(input ManageInstalledInput) (ScreenResult[M
 		LastSelectedPosition: input.LastSelectedPosition,
 	}
 
-	// Get installed paks from database
-	installedPaks, err := state.GetInstalledPaks()
+	installedPaks, err := state.GetUninstallablePaks()
 	if err != nil {
 		return withAction(output, ActionError), err
 	}

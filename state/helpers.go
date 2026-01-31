@@ -16,11 +16,11 @@ import (
 )
 
 func GetInstalledPaks() (map[string]database.InstalledPak, error) {
-	return getInstalledPaksFiltered(true)
+	return getInstalledPaksFiltered(false)
 }
 
-func GetAllInstalledPaks() (map[string]database.InstalledPak, error) {
-	return getInstalledPaksFiltered(false)
+func GetUninstallablePaks() (map[string]database.InstalledPak, error) {
+	return getInstalledPaksFiltered(true)
 }
 
 func getInstalledPaksFiltered(excludeNonUninstallable bool) (map[string]database.InstalledPak, error) {
@@ -109,7 +109,7 @@ func GetUpdatesAvailable(storefront models.Storefront) []models.Pak {
 	currentPlatform := utils.GetPlatform()
 	config := internal.GetConfig()
 
-	installedPaks, err := GetAllInstalledPaks()
+	installedPaks, err := GetInstalledPaks()
 	if err != nil {
 		return updates
 	}

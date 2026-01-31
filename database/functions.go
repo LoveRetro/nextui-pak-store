@@ -35,7 +35,6 @@ func Init() {
 
 	dbDir := filepath.Dir(dbPath)
 	if dbDir != "." && dbDir != "" {
-		logger.Debug("Creating database directory", "dir", dbDir)
 		err := os.MkdirAll(dbDir, 0755)
 		if err != nil {
 			logger.Error("Unable to create database directory", "error", err, "dir", dbDir)
@@ -43,16 +42,13 @@ func Init() {
 		}
 	}
 
-	logger.Debug("Opening database connection", "path", dbPath)
 	dbc, err = sql.Open("sqlite", "file:"+dbPath)
 	if err != nil {
 		logger.Error("Unable to open database file", "error", err, "path", dbPath)
 		os.Exit(1)
 	}
 
-	logger.Debug("Checking if schema exists")
 	schemaExists, err := tableExists(dbc, "installed_paks")
-	logger.Debug("Schema check complete", "exists", schemaExists)
 	if !schemaExists {
 		logger.Debug("Initializing database schema")
 		if _, err := dbc.ExecContext(ctx, pakstore.DDL); err != nil {
@@ -72,10 +68,8 @@ func Init() {
 		log.Fatalf("Error parsing JSON file: %v", err)
 	}
 
-	// Check if Pak Store record exists
 	existingPakStore, err := queries.GetInstalledByPakID(ctx, sql.NullString{String: models.PakStoreID, Valid: true})
 	if errors.Is(err, sql.ErrNoRows) {
-		// No Pak Store record exists, try to migrate from old record without pak_id
 		queries.SyncPakStoreByName(ctx, SyncPakStoreByNameParams{
 			DisplayName: pak.Name,
 			Name:        pak.Name,
@@ -85,10 +79,8 @@ func Init() {
 			OldName:     "Pak Store",
 		})
 
-		// Check again if migration worked
 		_, err = queries.GetInstalledByPakID(ctx, sql.NullString{String: models.PakStoreID, Valid: true})
 		if errors.Is(err, sql.ErrNoRows) {
-			// Still no record, insert new one
 			queries.Install(ctx, InstallParams{
 				DisplayName:  pak.Name,
 				Name:         pak.Name,
@@ -103,7 +95,6 @@ func Init() {
 		logger.Error("Unable to check for Pak Store record", "error", err)
 		os.Exit(1)
 	} else if existingPakStore.Version != pak.Version {
-		// Record exists but version differs, update it
 		queries.SyncPakStore(ctx, SyncPakStoreParams{
 			DisplayName: pak.Name,
 			Name:        pak.Name,
