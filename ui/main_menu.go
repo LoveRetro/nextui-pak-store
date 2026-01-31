@@ -34,7 +34,7 @@ func (s *MainMenuScreen) Draw(input MainMenuInput) (ScreenResult[MainMenuOutput]
 	}
 
 	browsePaks := state.GetBrowsePaks(input.Storefront, installedPaks)
-	updatesAvailable := state.GetUpdatesAvailable(input.Storefront, installedPaks)
+	updatesAvailable := state.GetUpdatesAvailable(input.Storefront)
 
 	title := "Pak Store"
 

@@ -16,6 +16,14 @@ import (
 )
 
 func GetInstalledPaks() (map[string]database.InstalledPak, error) {
+	return getInstalledPaksFiltered(true)
+}
+
+func GetAllInstalledPaks() (map[string]database.InstalledPak, error) {
+	return getInstalledPaksFiltered(false)
+}
+
+func getInstalledPaksFiltered(excludeNonUninstallable bool) (map[string]database.InstalledPak, error) {
 	ctx := context.Background()
 	installed, err := database.DBQ().ListInstalledPaks(ctx)
 	if err != nil {
@@ -24,15 +32,15 @@ func GetInstalledPaks() (map[string]database.InstalledPak, error) {
 
 	installedMap := make(map[string]database.InstalledPak)
 	for _, p := range installed {
+		if excludeNonUninstallable && p.CanUninstall == 0 {
+			continue
+		}
 		if p.PakID.Valid && p.PakID.String != "" {
 			installedMap[p.PakID.String] = p
 		} else if p.RepoUrl.Valid && p.RepoUrl.String != "" {
 			installedMap[p.RepoUrl.String] = p
 		}
 	}
-
-	delete(installedMap, "Pak Store")
-	delete(installedMap, models.PakStoreID)
 
 	return installedMap, nil
 }
@@ -96,10 +104,15 @@ func findInstalledPak(pak models.Pak, installedPaks map[string]database.Installe
 	return database.InstalledPak{}, false
 }
 
-func GetUpdatesAvailable(storefront models.Storefront, installedPaks map[string]database.InstalledPak) []models.Pak {
+func GetUpdatesAvailable(storefront models.Storefront) []models.Pak {
 	var updates []models.Pak
 	currentPlatform := utils.GetPlatform()
 	config := internal.GetConfig()
+
+	installedPaks, err := GetAllInstalledPaks()
+	if err != nil {
+		return updates
+	}
 
 	for _, p := range storefront.Paks {
 		if config.PlatformFilter == internal.PlatformFilterMatchDevice && !supportsCurrentPlatform(p, currentPlatform) {

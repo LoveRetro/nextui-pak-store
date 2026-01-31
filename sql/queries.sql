@@ -6,7 +6,6 @@ WHERE pak_id = ?;
 -- name: ListInstalledPaks :many
 SELECT *
 FROM installed_paks
-WHERE can_uninstall = 1
 ORDER BY name;
 
 -- name: ListInstalledPaksWithoutRepo :many

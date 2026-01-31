@@ -34,13 +34,7 @@ func (s *UpdatesScreen) Draw(input UpdatesInput) (ScreenResult[UpdatesOutput], e
 		LastSelectedPosition: input.LastSelectedPosition,
 	}
 
-	// Compute data on demand
-	installedPaks, err := state.GetInstalledPaks()
-	if err != nil {
-		return withAction(output, ActionError), err
-	}
-
-	updatesAvailable := state.GetUpdatesAvailable(input.Storefront, installedPaks)
+	updatesAvailable := state.GetUpdatesAvailable(input.Storefront)
 
 	if len(updatesAvailable) == 0 {
 		return back(output), nil
