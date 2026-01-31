@@ -132,7 +132,7 @@
       "type": "TOOL",
       "description": "A one-stop pak for all your game management needs.",
       "author": "K-Wall \u0026 redria7",
-      "repo_url": "https://github.com/UncleJunVIP/nextui-game-manager",
+      "repo_url": "https://github.com/BrandonKowalski/nextui-game-manager",
       "previous_repo_urls": null,
       "release_filename": "Game.Manager.pak.zip",
       "changelog": {
@@ -2476,7 +2476,7 @@
       "id": "Rud6jsTmts",
       "storefront_name": "Log Jack",
       "name": "Log Jack",
-      "version": "v1.0.1",
+      "version": "v1.0.2",
       "type": "TOOL",
       "description": "Browse and download log files from your device via a web browser.",
       "author": "Brandon T. Kowalski",
