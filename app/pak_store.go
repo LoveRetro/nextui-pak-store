@@ -52,6 +52,10 @@ func init() {
 		gaba.GetLogger().Error("Failed to sync installed metadata with storefront", "error", err)
 	}
 
+	if err := state.DiscoverExistingInstalls(sf); err != nil {
+		gaba.GetLogger().Error("Failed to discover existing pak installs", "error", err)
+	}
+
 	storefront = sf
 }
 

@@ -3,6 +3,7 @@ package state
 import (
 	"context"
 	"database/sql"
+	"os"
 	"slices"
 	"strconv"
 	"strings"
@@ -238,6 +239,64 @@ func SyncInstalledMetadataFromStorefront(storefront models.Storefront) error {
 					"old_name", p.DisplayName,
 					"new_name", sfp.StorefrontName)
 			}
+		}
+	}
+
+	return nil
+}
+
+func DiscoverExistingInstalls(sf models.Storefront) error {
+	config := internal.GetConfig()
+	if !config.ShouldDiscoverExistingInstalls() {
+		return nil
+	}
+
+	logger := gabagool.GetLogger()
+	ctx := context.Background()
+
+	installedPaks, err := GetInstalledPaks()
+	if err != nil {
+		return err
+	}
+
+	for _, pak := range sf.Paks {
+		if _, exists := installedPaks[pak.ID]; exists {
+			continue
+		}
+
+		var pakPath string
+		if pak.PakType == models.PakTypes.TOOL {
+			pakPath = utils.GetToolRoot() + "/" + pak.Name + ".pak"
+		} else if pak.PakType == models.PakTypes.EMU {
+			pakPath = utils.GetEmulatorRoot() + "/" + pak.Name + ".pak"
+		} else {
+			continue
+		}
+
+		if _, err := os.Stat(pakPath); err != nil {
+			continue
+		}
+
+		version := "discovered"
+		pakJsonPath := pakPath + "/pak.json"
+		var diskPak models.Pak
+		if err := utils.ParseJSONFile(pakJsonPath, &diskPak); err == nil && diskPak.Version != "" {
+			version = diskPak.Version
+		}
+
+		err := database.DBQ().Install(ctx, database.InstallParams{
+			DisplayName:  pak.StorefrontName,
+			Name:         pak.Name,
+			PakID:        sql.NullString{String: pak.ID, Valid: true},
+			RepoUrl:      sql.NullString{String: pak.RepoURL, Valid: true},
+			Version:      version,
+			Type:         models.PakTypeMap[pak.PakType],
+			CanUninstall: 1,
+		})
+		if err != nil {
+			logger.Error("Failed to register discovered pak", "error", err, "pak", pak.StorefrontName)
+		} else {
+			logger.Info("Discovered existing pak install", "pak", pak.StorefrontName, "version", version)
 		}
 	}
 

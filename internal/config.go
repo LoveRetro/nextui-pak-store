@@ -25,8 +25,9 @@ const (
 )
 
 type Config struct {
-	PlatformFilter PlatformFilterMode `json:"platform_filter"`
-	DebugLevel     DebugLevel         `json:"debug_level"`
+	PlatformFilter           PlatformFilterMode `json:"platform_filter"`
+	DebugLevel               DebugLevel         `json:"debug_level"`
+	DiscoverExistingInstalls *bool              `json:"discover_existing_installs"`
 }
 
 var configInstance *Config
@@ -113,4 +114,11 @@ func getConfigPath() string {
 		return "config.json"
 	}
 	return filepath.Join(utils.GetUserDataDir(), "config.json")
+}
+
+func (c *Config) ShouldDiscoverExistingInstalls() bool {
+	if c.DiscoverExistingInstalls == nil {
+		return true
+	}
+	return *c.DiscoverExistingInstalls
 }
