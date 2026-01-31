@@ -1,5 +1,5 @@
 <div align="center">
-<img src=".github/resources/banner.png" width="auto" alt="Mortar wordmark">
+<img src=".github/resources/banner.png" width="auto" alt="Pak Store wordmark">
 
 ![GitHub License][license-badge]
 ![GitHub Release][release-badge]
