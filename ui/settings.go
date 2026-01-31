@@ -25,6 +25,8 @@ func (s *SettingsScreen) Draw(input SettingsInput) (ScreenResult[SettingsOutput]
 	config := input.Config
 	output := SettingsOutput{Config: config}
 
+	wasDiscoverEnabled := config.ShouldDiscoverExistingInstalls()
+
 	items := s.buildMenuItems(config)
 
 	result, err := gaba.OptionsList(
@@ -60,6 +62,11 @@ func (s *SettingsScreen) Draw(input SettingsInput) (ScreenResult[SettingsOutput]
 		return withAction(output, ActionError), err
 	}
 
+	// If discover was just turned on, trigger a scan
+	if !wasDiscoverEnabled && config.ShouldDiscoverExistingInstalls() {
+		return withAction(output, ActionDiscoverExistingInstalls), nil
+	}
+
 	return withAction(output, ActionSettingsSaved), nil
 }
 
@@ -83,6 +90,14 @@ func (s *SettingsScreen) buildMenuItems(config *internal.Config) []gaba.ItemWith
 			SelectedOption: debugLevelToIndex(config.DebugLevel),
 		},
 		{
+			Item: gaba.MenuItem{Text: "Discover Existing Installs"},
+			Options: []gaba.Option{
+				{DisplayName: "On", Value: true},
+				{DisplayName: "Off", Value: false},
+			},
+			SelectedOption: discoverExistingInstallsToIndex(config.ShouldDiscoverExistingInstalls()),
+		},
+		{
 			Item:    gaba.MenuItem{Text: "Info"},
 			Options: []gaba.Option{{Type: gaba.OptionTypeClickable}},
 		},
@@ -99,6 +114,10 @@ func (s *SettingsScreen) applySettings(config *internal.Config, items []gaba.Ite
 		case "Debug Level":
 			if val, ok := item.Options[item.SelectedOption].Value.(internal.DebugLevel); ok {
 				config.DebugLevel = val
+			}
+		case "Discover Existing Installs":
+			if val, ok := item.Options[item.SelectedOption].Value.(bool); ok {
+				config.DiscoverExistingInstalls = &val
 			}
 		}
 	}
@@ -126,4 +145,11 @@ func debugLevelToIndex(level internal.DebugLevel) int {
 	default:
 		return 0
 	}
+}
+
+func discoverExistingInstallsToIndex(enabled bool) int {
+	if enabled {
+		return 0
+	}
+	return 1
 }

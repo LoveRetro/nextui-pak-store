@@ -1,3 +1,8 @@
+-- name: GetInstalledByPakID :one
+SELECT *
+FROM installed_paks
+WHERE pak_id = ?;
+
 -- name: ListInstalledPaks :many
 SELECT *
 FROM installed_paks

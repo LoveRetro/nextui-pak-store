@@ -8,6 +8,7 @@ import (
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool/router"
 	"github.com/LoveRetro/nextui-pak-store/internal"
 	"github.com/LoveRetro/nextui-pak-store/models"
+	"github.com/LoveRetro/nextui-pak-store/state"
 	"github.com/LoveRetro/nextui-pak-store/ui"
 )
 
@@ -438,6 +439,9 @@ func buildRouter(storefront models.Storefront) *router.Router {
 			r := result.(ui.ScreenResult[ui.SettingsOutput])
 			switch r.Action {
 			case ui.ActionBack, ui.ActionSettingsSaved:
+				return screenMainMenu, nil
+			case ui.ActionDiscoverExistingInstalls:
+				state.DiscoverExistingInstalls(storefront)
 				return screenMainMenu, nil
 			case ui.ActionInfo:
 				return screenInfo, nil

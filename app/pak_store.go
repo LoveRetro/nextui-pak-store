@@ -3,6 +3,7 @@ package main
 import (
 	_ "embed"
 	"log/slog"
+	"path/filepath"
 	"time"
 
 	_ "github.com/BrandonKowalski/certifiable"
@@ -17,10 +18,11 @@ import (
 var storefront models.Storefront
 
 func init() {
+	logPath := filepath.Join(utils.GetLogsDir(), "pak_store.log")
 	gaba.Init(gaba.Options{
 		WindowTitle:    "Pak Store",
 		ShowBackground: true,
-		LogFilename:    "pak_store.log",
+		LogPath:        logPath,
 		IsNextUI:       true,
 	})
 
@@ -48,6 +50,10 @@ func init() {
 
 	if err := state.SyncInstalledMetadataFromStorefront(sf); err != nil {
 		gaba.GetLogger().Error("Failed to sync installed metadata with storefront", "error", err)
+	}
+
+	if err := state.DiscoverExistingInstalls(sf); err != nil {
+		gaba.GetLogger().Error("Failed to discover existing pak installs", "error", err)
 	}
 
 	storefront = sf

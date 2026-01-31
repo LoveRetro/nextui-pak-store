@@ -22,4 +22,5 @@ const (
 	ActionInstallSuccess
 
 	ActionSettingsSaved
+	ActionDiscoverExistingInstalls
 )

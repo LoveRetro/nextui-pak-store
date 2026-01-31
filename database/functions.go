@@ -72,32 +72,44 @@ func Init() {
 		log.Fatalf("Error parsing JSON file: %v", err)
 	}
 
-	if !schemaExists {
-		queries.Install(ctx, InstallParams{
-			DisplayName:  "Pak Store",
-			Name:         "Pak Store",
-			PakID:        sql.NullString{String: models.PakStoreID, Valid: true},
-			RepoUrl:      sql.NullString{String: models.PakStoreRepo, Valid: true},
-			Version:      pak.Version,
-			Type:         "TOOL",
-			CanUninstall: 0,
-		})
-	} else {
-		queries.SyncPakStore(ctx, SyncPakStoreParams{
-			DisplayName: pak.StorefrontName,
-			Name:        pak.Name,
-			Version:     pak.Version,
-			RepoUrl:     sql.NullString{String: models.PakStoreRepo, Valid: true},
-			PakID:       sql.NullString{String: models.PakStoreID, Valid: true},
-		})
-		// Fallback for pre-migrated tables without pak_id
+	// Check if Pak Store record exists
+	existingPakStore, err := queries.GetInstalledByPakID(ctx, sql.NullString{String: models.PakStoreID, Valid: true})
+	if errors.Is(err, sql.ErrNoRows) {
+		// No Pak Store record exists, try to migrate from old record without pak_id
 		queries.SyncPakStoreByName(ctx, SyncPakStoreByNameParams{
-			DisplayName: pak.StorefrontName,
+			DisplayName: pak.Name,
 			Name:        pak.Name,
 			Version:     pak.Version,
 			RepoUrl:     sql.NullString{String: models.PakStoreRepo, Valid: true},
 			PakID:       sql.NullString{String: models.PakStoreID, Valid: true},
 			OldName:     "Pak Store",
+		})
+
+		// Check again if migration worked
+		_, err = queries.GetInstalledByPakID(ctx, sql.NullString{String: models.PakStoreID, Valid: true})
+		if errors.Is(err, sql.ErrNoRows) {
+			// Still no record, insert new one
+			queries.Install(ctx, InstallParams{
+				DisplayName:  pak.Name,
+				Name:         pak.Name,
+				PakID:        sql.NullString{String: models.PakStoreID, Valid: true},
+				RepoUrl:      sql.NullString{String: models.PakStoreRepo, Valid: true},
+				Version:      pak.Version,
+				Type:         "TOOL",
+				CanUninstall: 0,
+			})
+		}
+	} else if err != nil {
+		logger.Error("Unable to check for Pak Store record", "error", err)
+		os.Exit(1)
+	} else if existingPakStore.Version != pak.Version {
+		// Record exists but version differs, update it
+		queries.SyncPakStore(ctx, SyncPakStoreParams{
+			DisplayName: pak.Name,
+			Name:        pak.Name,
+			Version:     pak.Version,
+			RepoUrl:     sql.NullString{String: models.PakStoreRepo, Valid: true},
+			PakID:       sql.NullString{String: models.PakStoreID, Valid: true},
 		})
 	}
 }

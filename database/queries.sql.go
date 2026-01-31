@@ -10,6 +10,27 @@ import (
 	"database/sql"
 )
 
+const getInstalledByPakID = `-- name: GetInstalledByPakID :one
+SELECT name, display_name, pak_id, repo_url, type, version, can_uninstall
+FROM installed_paks
+WHERE pak_id = ?
+`
+
+func (q *Queries) GetInstalledByPakID(ctx context.Context, pakID sql.NullString) (InstalledPak, error) {
+	row := q.db.QueryRowContext(ctx, getInstalledByPakID, pakID)
+	var i InstalledPak
+	err := row.Scan(
+		&i.Name,
+		&i.DisplayName,
+		&i.PakID,
+		&i.RepoUrl,
+		&i.Type,
+		&i.Version,
+		&i.CanUninstall,
+	)
+	return i, err
+}
+
 const install = `-- name: Install :exec
 INSERT INTO installed_paks (display_name, name, pak_id, repo_url, version, type, can_uninstall)
 VALUES (?, ?, ?, ?, ?, ?, ?)
