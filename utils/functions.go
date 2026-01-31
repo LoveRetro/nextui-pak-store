@@ -47,6 +47,11 @@ func GetUserDataDir() string {
 	return filepath.Join(GetSDRoot(), models.UserdataDir, platform, models.PakStoreUserDataDir)
 }
 
+func GetLogsDir() string {
+	platform := GetPlatform()
+	return filepath.Join(GetSDRoot(), models.UserdataDir, platform, "logs")
+}
+
 func GetToolRoot() string {
 	return filepath.Join(GetSDRoot(), models.ToolDir, GetPlatform())
 }

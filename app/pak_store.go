@@ -3,6 +3,7 @@ package main
 import (
 	_ "embed"
 	"log/slog"
+	"path/filepath"
 	"time"
 
 	_ "github.com/BrandonKowalski/certifiable"
@@ -17,10 +18,11 @@ import (
 var storefront models.Storefront
 
 func init() {
+	logPath := filepath.Join(utils.GetLogsDir(), "pak_store.log")
 	gaba.Init(gaba.Options{
 		WindowTitle:    "Pak Store",
 		ShowBackground: true,
-		LogFilename:    "pak_store.log",
+		LogPath:        logPath,
 		IsNextUI:       true,
 	})
 
