@@ -1,6 +1,6 @@
 {
   "name": "Pak Store",
-  "version": "v3.1.0",
+  "version": "v3.1.1",
   "type": "TOOL",
   "description": "A Pak Store in this economy?! Find, install and update community made Paks right on your device!",
   "author": "The NextUI Community",
@@ -35,6 +35,7 @@
     "v1.0.0": "Upgraded the UI to use gabagool, my NextUI Pak UI Library!",
     "v3.0.1": "Fix for Pak Store exiting on failed download",
     "v3.0.2": "Automatically detect existing pak installs",
-    "v3.1.0": "Fixed regression where Pak Store did not detect an update for itself. Super sorry!"
+    "v3.1.0": "Fixed regression where Pak Store did not detect an update for itself. Super sorry!",
+    "v3.1.1": "One last edge case with the new Pak ID system."
   }
 }
