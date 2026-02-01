@@ -2517,6 +2517,45 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "9iPetKy60R",
+      "storefront_name": "RetroSend",
+      "name": "RetroSend",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "A LocalSend Client for your retro doo-dad!",
+      "author": "Brandon T. Kowalski",
+      "repo_url": "https://github.com/BrandonKowalski/retrosend",
+      "previous_repo_urls": null,
+      "release_filename": "RetroSend.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "File Management"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
