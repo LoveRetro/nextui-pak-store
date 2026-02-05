@@ -2353,7 +2353,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.3.0",
+      "version": "v1.4.0",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, internet radio streaming, and music downloading.",
       "author": "mohammadsyuhada",
@@ -2367,7 +2367,8 @@
         "v1.1.2": "Latest NextUI v6.7.1 is required. Support for tg5050 and bug fixes",
         "v1.1.3": "Fix: Wrong binary launched for tg5050.",
         "v1.2.0": "SELECT+A for screen wake, bug fixes and performance improvements",
-        "v1.3.0": "Auto WiFi connect and ability to delete local music"
+        "v1.3.0": "Auto WiFi connect and ability to delete local music",
+        "v1.4.0": "Podcast playback! Support for bluetooth/usb-c player controls"
       },
       "previous_names": null,
       "scripts": {
