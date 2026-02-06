@@ -1244,7 +1244,7 @@
       "id": "mL1wS5bV8n",
       "storefront_name": "PPSSPP",
       "name": "PSP",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "type": "EMU",
       "description": "A Emu Pak for PSP, wrapping the standalone PPSSPP emulator.",
       "author": "ben16w",
@@ -2354,7 +2354,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.4.1",
+      "version": "v1.4.2",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "mohammadsyuhada",
@@ -2370,7 +2370,8 @@
         "v1.2.0": "SELECT+A for screen wake, bug fixes and performance improvements",
         "v1.3.0": "Auto WiFi connect and ability to delete local music",
         "v1.4.0": "Podcast playback! Support for bluetooth/usb-c player controls",
-        "v1.4.1": "Fix: Prevent volume change during brightness/color temp combos"
+        "v1.4.1": "Fix: Prevent volume change during brightness/color temp combos",
+        "v1.4.2": "Added more radio stations (SG) and update subscription flow "
       },
       "previous_names": null,
       "scripts": {
