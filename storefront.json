@@ -2354,7 +2354,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.4.2",
+      "version": "v1.5.0",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "mohammadsyuhada",
@@ -2371,7 +2371,8 @@
         "v1.3.0": "Auto WiFi connect and ability to delete local music",
         "v1.4.0": "Podcast playback! Support for bluetooth/usb-c player controls",
         "v1.4.1": "Fix: Prevent volume change during brightness/color temp combos",
-        "v1.4.2": "Added more radio stations (SG) and update subscription flow "
+        "v1.4.2": "Added more radio stations (SG) and update subscription flow ",
+        "v1.5.0": "Redesigned Podcast UI with additional features and improvements"
       },
       "previous_names": null,
       "scripts": {
