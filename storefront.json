@@ -2553,6 +2553,57 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "ZUTflymvUX",
+      "storefront_name": "Mono",
+      "name": "Mono",
+      "version": "v1.9.0",
+      "type": "TOOL",
+      "description": "Feature-rich music player with Spotify Connect, YouTube downloads, Bluetooth audio, and equalizer",
+      "author": "berckan",
+      "repo_url": "https://github.com/Berckan/mono",
+      "previous_repo_urls": null,
+      "release_filename": "Mono.pak.zip",
+      "changelog": {
+        "v1.5.0": "Screen dimming, help overlay, power-optimized launcher",
+        "v1.6.0": "YouTube integration, themes, cover art, file management",
+        "v1.7.0": "Home Menu, 5-band Equalizer, Gapless Playback",
+        "v1.8.0": "Bluetooth audio, Spotify Connect, self-update, pocket mode, L2/R2 seek",
+        "v1.9.0": "WiFi/BT status indicators, dynamic lists, scrolling text, UI polish"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/home.jpg",
+        ".github/resources/screenshots/player.jpg",
+        ".github/resources/screenshots/browser.jpg",
+        ".github/resources/screenshots/equalizer.jpg",
+        ".github/resources/screenshots/youtube.jpg",
+        ".github/resources/screenshots/resume.jpg"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
