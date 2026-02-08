@@ -2364,6 +2364,7 @@
       "release_filename": "Music.Player.pak.zip",
       "changelog": {
         "v1.4.0": "Podcast playback! Support for bluetooth/usb-c player controls",
+        "v1.5.0": "Redesigned Podcast UI with additional features and improvements",
         "v1.5.1": "FLAC metadata support and bug fixes"
       },
       "previous_names": null,
