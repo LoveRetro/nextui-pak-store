@@ -1965,7 +1965,7 @@
       "name": "SDLReader",
       "version": "v2.2.1",
       "type": "TOOL",
-      "description": "Read PDF, CBZ/ZIP \u0026 CBR/RAR comic archives, EPUB, MOBI, and plain text files with smooth navigation, zoom, rotation, and mirroring. SDLReader is a lightweight, cross-platform viewer optimized for the TrimUI Brick and TrimUI Smart Pro (TG5040) running NextUI, built on SDL2 and MuPDF.",
+      "description": "Read PDF, CBZ/ZIP \u0026 CBR/RAR comic archives, EPUB, MOBI, and plain text files with smooth navigation, zoom, rotation, and mirroring. SDLReader is a lightweight, cross-platform viewer optimized for TrimUI devices (Brick, Smart Pro, Smart Pro S) running NextUI, built on SDL2 and MuPDF.",
       "author": "Helaas",
       "repo_url": "https://github.com/Helaas/SDLReader-brick",
       "previous_repo_urls": null,
@@ -1984,7 +1984,8 @@
         "v2.1.3": "File browser letter-jump navigation (L1 + R1) and add support for tapping left \u0026 right to scroll a full page in list view.",
         "v2.1.4": "Smarter rotation/fit views, on-screen page/zoom overlays. Optionally keep pan position when changing page.",
         "v2.2.0": "TXT file support \u0026 toolchain moved to loveretro/tg5040-toolchain",
-        "v2.2.1": "TXT \u0026 EPUB performance improvements and bug fixes."
+        "v2.2.1": "TXT \u0026 EPUB performance improvements and bug fixes.",
+        "v2.2.2": "Smart Pro S support, and bugfix for final ebook pages being unreachable after changing font size."
       },
       "previous_names": null,
       "scripts": {
@@ -2011,7 +2012,8 @@
         ".github/resources/Screenshot.2025-11-15-23-40-52.png"
       ],
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Media"
@@ -2360,7 +2362,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.5.2",
+      "version": "v1.6.0",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "mohammadsyuhada",
@@ -2370,8 +2372,7 @@
       "changelog": {
         "v1.4.0": "Podcast playback! Support for bluetooth/usb-c player controls",
         "v1.5.0": "Redesigned Podcast UI with additional features and improvements",
-        "v1.5.1": "FLAC metadata support and bug fixes",
-        "v1.5.2": "Lyrics support and bug fixes"
+        "v1.6.0": "Playlist support, splash screen, resume shortcut, Opus audio format, and UI improvements"
       },
       "previous_names": null,
       "scripts": {
