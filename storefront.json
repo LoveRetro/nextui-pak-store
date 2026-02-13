@@ -69,7 +69,7 @@
       "id": "jF8cW5zN2m",
       "storefront_name": "Grout",
       "name": "Grout",
-      "version": "v4.6.1.7",
+      "version": "V4.6.1.8",
       "type": "TOOL",
       "description": "A RomM client for NextUI, muOS, Knulli, and Spruce v4.",
       "author": "The RomM Team",
@@ -77,6 +77,7 @@
       "previous_repo_urls": null,
       "release_filename": "Grout.pak.zip",
       "changelog": {
+        "V4.6.1.8": "Hotfix for Spruce launch script. Sorry about that!",
         "v1.0.0": "Initial release of Grout!",
         "v1.2.0": "Platform mapping tweaks, multi-file ROM downloads, bug fixes and more!",
         "v1.2.1": "Quick fix for not evaluating all art paths.",
@@ -2604,6 +2605,55 @@
       ],
       "platforms": [
         "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false
+    },
+    {
+      "id": "LmdIH940Bj",
+      "storefront_name": "YouTube",
+      "name": "YouTube",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "YouTube.pak Lightweight YouTube browser for TrimUI devices",
+      "author": "tenlevels (modification by irvanvir12)",
+      "repo_url": "https://github.com/irvanvir12/TrimUI-Brick-Youtube",
+      "previous_repo_urls": null,
+      "release_filename": "YouTube.pak.zip",
+      "changelog": {
+        "v1.0.0": "It supports video search, channel subscriptions, streaming via MPV, and downloading videos directly to your SD card"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/screenshots/main_menu.jpeg",
+        ".github/screenshots/browse_channels.jpeg",
+        ".github/screenshots/search_video.jpeg",
+        ".github/screenshots/search_video2.jpeg",
+        ".github/screenshots/search_list.jpeg",
+        ".github/screenshots/stream.jpeg",
+        ".github/screenshots/download.jpeg"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Media"
