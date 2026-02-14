@@ -2407,7 +2407,7 @@
       "id": "rH6cY9zM2g",
       "storefront_name": "TIC-80",
       "name": "TIC",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "type": "EMU",
       "description": "Runs TIC-80 fantasy computer games",
       "author": "Alex Mayer",
@@ -2415,7 +2415,8 @@
       "previous_repo_urls": null,
       "release_filename": "TIC.pak.zip",
       "changelog": {
-        "0.1.0": "Initial Pak"
+        "0.1.0": "Initial Pak",
+        "0.2.0": "Package the latest TIC-80 release instead of the dev/nightly version. Fixes some games freezing."
       },
       "previous_names": null,
       "scripts": {
@@ -2566,7 +2567,7 @@
       "id": "ZUTflymvUX",
       "storefront_name": "Mono",
       "name": "Mono",
-      "version": "v1.9.0",
+      "version": "v1.9.1",
       "type": "TOOL",
       "description": "Feature-rich music player with Spotify Connect, YouTube downloads, Bluetooth audio, and equalizer",
       "author": "berckan",
@@ -2578,7 +2579,8 @@
         "v1.6.0": "YouTube integration, themes, cover art, file management",
         "v1.7.0": "Home Menu, 5-band Equalizer, Gapless Playback",
         "v1.8.0": "Bluetooth audio, Spotify Connect, self-update, pocket mode, L2/R2 seek",
-        "v1.9.0": "WiFi/BT status indicators, dynamic lists, scrolling text, UI polish"
+        "v1.9.0": "WiFi/BT status indicators, dynamic lists, scrolling text, UI polish",
+        "v1.9.1": "Fix Pak Store installation (flat zip structure)"
       },
       "previous_names": null,
       "scripts": {
