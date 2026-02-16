@@ -2709,6 +2709,45 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "extRHlAv2X",
+      "storefront_name": "Toggle Native SSH",
+      "name": "Native SSH",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Enable and disable SSH access on your device. Displays IP address and port when SSH is active.",
+      "author": "Helaas",
+      "repo_url": "https://github.com/Helaas/nextui-nativessh-pak",
+      "previous_repo_urls": null,
+      "release_filename": "NativeSSH.pakz",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "File Management"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
