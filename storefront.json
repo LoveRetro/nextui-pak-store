@@ -2666,6 +2666,49 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "IPB6VN1KNV",
+      "storefront_name": "Video Player",
+      "name": "Video Player",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "A video playback application for NextUI featuring local video playback, YouTube streaming, and online TV.",
+      "author": "mohammadsyuhada",
+      "repo_url": "https://github.com/mohammadsyuhada/nextui-video-player",
+      "previous_repo_urls": null,
+      "release_filename": "Video.Player.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release with local video playback, YouTube streaming, and online TV support"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/main.jpg"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
