@@ -2362,7 +2362,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.7.0",
+      "version": "v1.7.1",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "mohammadsyuhada",
@@ -2373,7 +2373,8 @@
         "v1.4.0": "Podcast playback! Support for bluetooth/usb-c player controls",
         "v1.5.0": "Redesigned Podcast UI with additional features and improvements",
         "v1.6.0": "Playlist support, splash screen, resume shortcut, Opus audio format, and UI improvements",
-        "v1.7.0": "Background playback - music, radio, and podcasts keep playing while navigating the app"
+        "v1.7.0": "Background playback - music, radio, and podcasts keep playing while navigating the app",
+        "v1.7.1": "Fixed a bug that caused certain podcast cannot be downloaded"
       },
       "previous_names": null,
       "scripts": {
@@ -2620,16 +2621,15 @@
       "id": "LmdIH940Bj",
       "storefront_name": "YouTube",
       "name": "YouTube",
-      "version": "v1.1.0",
+      "version": "v1.0.0",
       "type": "TOOL",
-      "description": "Lightweight YouTube browser for TrimUI devices with Smart Stream and enhanced channel system",
+      "description": "YouTube.pak - Lightweight YouTube browser for TrimUI devices",
       "author": "tenlevels (modification by irvanvir12)",
       "repo_url": "https://github.com/irvanvir12/TrimUI-Brick-Youtube",
       "previous_repo_urls": null,
       "release_filename": "YouTube.pak.zip",
       "changelog": {
-        "v1.0.0": "It supports video search, channel subscriptions, streaming via MPV, and downloading videos directly to your SD card",
-        "v1.1.0": "Added Smart Stream System with multi-format fallback (progressive + DASH), improved download engine with stable progress display, enhanced channel system (Get Last Five now supports streaming and downloading), Download Latest with direct progress support, better format compatibility (AVC1 + MP4A), improved stream stability and error handling"
+        "v1.0.0": "Supports video search, channel subscriptions, streaming via MPV, and downloading videos directly to the SD card."
       },
       "previous_names": null,
       "scripts": {
