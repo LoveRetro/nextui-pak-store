@@ -2620,15 +2620,16 @@
       "id": "LmdIH940Bj",
       "storefront_name": "YouTube",
       "name": "YouTube",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "TOOL",
-      "description": "YouTube.pak Lightweight YouTube browser for TrimUI devices",
+      "description": "Lightweight YouTube browser for TrimUI devices with Smart Stream and enhanced channel system",
       "author": "tenlevels (modification by irvanvir12)",
       "repo_url": "https://github.com/irvanvir12/TrimUI-Brick-Youtube",
       "previous_repo_urls": null,
       "release_filename": "YouTube.pak.zip",
       "changelog": {
-        "v1.0.0": "It supports video search, channel subscriptions, streaming via MPV, and downloading videos directly to your SD card"
+        "v1.0.0": "It supports video search, channel subscriptions, streaming via MPV, and downloading videos directly to your SD card",
+        "v1.1.0": "Added Smart Stream System with multi-format fallback (progressive + DASH), improved download engine with stable progress display, enhanced channel system (Get Last Five now supports streaming and downloading), Download Latest with direct progress support, better format compatibility (AVC1 + MP4A), improved stream stability and error handling"
       },
       "previous_names": null,
       "scripts": {
