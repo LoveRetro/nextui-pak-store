@@ -2672,7 +2672,7 @@
       "id": "IPB6VN1KNV",
       "storefront_name": "Video Player",
       "name": "Video Player",
-      "version": "v1.0.1",
+      "version": "v1.0.2",
       "type": "TOOL",
       "description": "A video playback application for NextUI featuring local video playback, YouTube streaming, and online TV.",
       "author": "mohammadsyuhada",
@@ -2681,7 +2681,8 @@
       "release_filename": "Video.Player.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release with local video playback, YouTube streaming, and online TV support",
-        "v1.0.1": "Added external subtitle and bluetooth support. Also several bug fixes"
+        "v1.0.1": "Added external subtitle and bluetooth support. Also several bug fixes",
+        "v1.0.2": "Added support for multiple audio/subtitle tracks and optimize playback for HEVC and improve OSD titles"
       },
       "previous_names": null,
       "scripts": {
