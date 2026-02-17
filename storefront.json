@@ -2362,7 +2362,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.7.1",
+      "version": "v1.7.2",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "mohammadsyuhada",
@@ -2374,7 +2374,8 @@
         "v1.5.0": "Redesigned Podcast UI with additional features and improvements",
         "v1.6.0": "Playlist support, splash screen, resume shortcut, Opus audio format, and UI improvements",
         "v1.7.0": "Background playback - music, radio, and podcasts keep playing while navigating the app",
-        "v1.7.1": "Fixed a bug that caused certain podcast cannot be downloaded"
+        "v1.7.1": "Fixed a bug that caused certain podcast cannot be downloaded",
+        "v1.7.2": "Fixed app failed to launch on tg5050 (TSPS)"
       },
       "previous_names": null,
       "scripts": {
@@ -2671,7 +2672,7 @@
       "id": "IPB6VN1KNV",
       "storefront_name": "Video Player",
       "name": "Video Player",
-      "version": "v1.0.0",
+      "version": "v1.0.1",
       "type": "TOOL",
       "description": "A video playback application for NextUI featuring local video playback, YouTube streaming, and online TV.",
       "author": "mohammadsyuhada",
@@ -2679,7 +2680,8 @@
       "previous_repo_urls": null,
       "release_filename": "Video.Player.pak.zip",
       "changelog": {
-        "v1.0.0": "Initial release with local video playback, YouTube streaming, and online TV support"
+        "v1.0.0": "Initial release with local video playback, YouTube streaming, and online TV support",
+        "v1.0.1": "Added external subtitle and bluetooth support. Also several bug fixes"
       },
       "previous_names": null,
       "scripts": {
