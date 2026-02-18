@@ -2751,6 +2751,45 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "vf6c1JmurX",
+      "storefront_name": "Shortcuts",
+      "name": "Shortcuts",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Create and manage main menu shortcuts for ROMs and Tools on NextUI.",
+      "author": "Helaas",
+      "repo_url": "https://github.com/Helaas/nextui-shortcuts-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Shortcuts.pakz",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "Customization"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
