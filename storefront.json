@@ -2570,7 +2570,7 @@
       "id": "ZUTflymvUX",
       "storefront_name": "Mono",
       "name": "Mono",
-      "version": "v1.9.2",
+      "version": "v1.9.3",
       "type": "TOOL",
       "description": "Feature-rich music player with Spotify Connect, YouTube downloads, Bluetooth audio, and equalizer",
       "author": "berckan",
@@ -2584,7 +2584,8 @@
         "v1.8.0": "Bluetooth audio, Spotify Connect, self-update, pocket mode, L2/R2 seek",
         "v1.9.0": "WiFi/BT status indicators, dynamic lists, scrolling text, UI polish",
         "v1.9.1": "Fix Pak Store installation (flat zip structure)",
-        "v1.9.2": "Fix self-update and Pak Store download"
+        "v1.9.2": "Fix self-update and Pak Store download",
+        "v1.9.3": "Fix permissions for Pak Store installs"
       },
       "previous_names": null,
       "scripts": {
