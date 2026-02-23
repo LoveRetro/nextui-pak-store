@@ -2795,6 +2795,46 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "MS6nE23a90",
+      "storefront_name": "RPG Maker 2000/2003",
+      "name": "EASYRPG",
+      "version": "v1.2.0",
+      "type": "EMU",
+      "description": "This core emulates RPG Maker 2000 and 2003 games.",
+      "author": "KrutzOtrem",
+      "repo_url": "https://github.com/KrutzOtrem/nextui-easyrpg",
+      "previous_repo_urls": null,
+      "release_filename": "EASYRPG.zip",
+      "changelog": {
+        "1.2.0": "Fixed a bug that causes save files to become corrupted or lost during gameplay."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
