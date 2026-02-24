@@ -2837,6 +2837,48 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "85lpt3IHiy",
+      "storefront_name": "ScrapeGoat",
+      "name": "ScrapeGoat",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Scrape artwork from ScreenScraper.fr and download cheats from Libretro for your ROM library.",
+      "author": "Helaas",
+      "repo_url": "https://github.com/Helaas/nextui-scrapegoat-pak",
+      "previous_repo_urls": null,
+      "release_filename": "ScrapeGoat.pakz",
+      "changelog": {
+        "v1.0.0": "Initial release: ScreenScraper.fr artwork scraping, Libretro cheat downloading."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "ROM Management",
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
