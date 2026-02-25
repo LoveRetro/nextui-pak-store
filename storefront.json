@@ -2842,7 +2842,7 @@
       "id": "85lpt3IHiy",
       "storefront_name": "ScrapeGoat",
       "name": "ScrapeGoat",
-      "version": "v1.0.0",
+      "version": "v1.0.1",
       "type": "TOOL",
       "description": "Scrape artwork from ScreenScraper.fr and download cheats from Libretro for your ROM library.",
       "author": "Helaas",
@@ -2850,7 +2850,8 @@
       "previous_repo_urls": null,
       "release_filename": "ScrapeGoat.pakz",
       "changelog": {
-        "v1.0.0": "Initial release: ScreenScraper.fr artwork scraping, Libretro cheat downloading."
+        "v1.0.0": "Initial release: ScreenScraper.fr artwork scraping, Libretro cheat downloading.",
+        "v1.0.1": "Subfolder support for cheats and artwork, safer media downloads via temp files."
       },
       "previous_names": null,
       "scripts": {
