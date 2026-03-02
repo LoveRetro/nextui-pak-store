@@ -1415,7 +1415,7 @@
       "id": "hP6xL9yB2j",
       "storefront_name": "Over The Air Updater",
       "name": "Updater",
-      "version": "0.5.0",
+      "version": "0.7.0",
       "type": "TOOL",
       "description": "Update NextUI over-the-air!",
       "author": "LanderN",
