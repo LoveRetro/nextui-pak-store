@@ -2875,6 +2875,53 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "PatiFgxsej",
+      "storefront_name": "Paws, Productivity and Workflow System",
+      "name": "Paws",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Paws is a distraction-free focus app for NextUI that pairs Pomodoro sessions, daily schedules, and music integration with a system that turns your focus time into budgeted gaming sessions. It comes with an unimpressed cat who has a particular habit of assigning tasks. Consider it corrective training.",
+      "author": "KrutzOtrem",
+      "repo_url": "https://github.com/KrutzOtrem/Paws",
+      "previous_repo_urls": null,
+      "release_filename": "Paws.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/Paws.jpg",
+        ".github/resources/screenshots/1.png",
+        ".github/resources/screenshots/2.png",
+        ".github/resources/screenshots/3.png",
+        ".github/resources/screenshots/4.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
