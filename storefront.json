@@ -2833,6 +2833,48 @@
       ],
       "large_pak": false,
       "disabled": false
+    },
+    {
+      "id": "TWZc9jCf7o",
+      "storefront_name": "Dronage Terminal",
+      "name": "Dronage Terminal",
+      "version": "v2.0.1",
+      "type": "TOOL",
+      "description": "Ambient drone synthesizer with 4 macro oscillators, modulation matrix, and effects",
+      "author": "boorch (Bruce Menace/Cometary Trails)",
+      "repo_url": "https://github.com/boorch/dronage-terminal-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Dronage.Terminal.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/screenshots/splash.png",
+        ".github/screenshots/main.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools",
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false
     }
   ]
 }
