@@ -2840,7 +2840,7 @@
       "name": "Dronage Terminal",
       "version": "v2.0.1",
       "type": "TOOL",
-      "description": "Ambient drone synthesizer with 4 macro oscillators, modulation matrix, and effects",
+      "description": "Ambient drone synthesizer with 4 macro oscillators, modulation matrix, and effects. PRO TIP: R1+Select is HELP",
       "author": "boorch (Bruce Menace/Cometary Trails)",
       "repo_url": "https://github.com/boorch/dronage-terminal-pak",
       "previous_repo_urls": null,
