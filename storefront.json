@@ -2433,7 +2433,7 @@
         "v1.7.3": "Fixed black screen issue on TG5050 when exiting the keyboard",
         "v1.7.4": "Fixed online radio failed to play redirected stream URL (https)",
         "v1.7.5": "Fixed missing library for TG5050",
-        "v1.7.6": "Added playback speed control for podcasts"
+        "v1.7.6": "Added playback speed control for podcasts and fixed the volume stepping issue"
       },
       "previous_names": null,
       "scripts": {
