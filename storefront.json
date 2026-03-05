@@ -2688,7 +2688,7 @@
       "id": "IPB6VN1KNV",
       "storefront_name": "Video Player",
       "name": "Video Player",
-      "version": "v1.0.3",
+      "version": "v1.0.4",
       "type": "TOOL",
       "description": "A video playback application for NextUI featuring local video playback, YouTube streaming, and online TV.",
       "author": "mohammadsyuhada",
@@ -2699,7 +2699,8 @@
         "v1.0.0": "Initial release with local video playback, YouTube streaming, and online TV support",
         "v1.0.1": "Added external subtitle and bluetooth support. Also several bug fixes",
         "v1.0.2": "Added support for multiple audio/subtitle tracks and optimize playback for HEVC and improve OSD titles",
-        "v1.0.3": "Fixed black screen issue on TG5050 when exiting the keyboard"
+        "v1.0.3": "Fixed black screen issue on TG5050 when exiting the keyboard",
+        "v1.0.4": "Added aspect ratio toggle during playback via Y button"
       },
       "previous_names": null,
       "scripts": {
