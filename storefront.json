@@ -2419,7 +2419,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.7.5",
+      "version": "v1.7.6",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "mohammadsyuhada",
@@ -2432,7 +2432,8 @@
         "v1.7.2": "Fixed app failed to launch on tg5050 (TSPS)",
         "v1.7.3": "Fixed black screen issue on TG5050 when exiting the keyboard",
         "v1.7.4": "Fixed online radio failed to play redirected stream URL (https)",
-        "v1.7.5": "Fixed missing library for TG5050"
+        "v1.7.5": "Fixed missing library for TG5050",
+        "v1.7.6": "Added playback speed control for podcasts"
       },
       "previous_names": null,
       "scripts": {
