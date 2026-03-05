@@ -64,7 +64,8 @@
       ],
       "categories": [],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "jF8cW5zN2m",
@@ -133,7 +134,8 @@
         "ROM Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "pY6kD4xS9q",
@@ -185,7 +187,8 @@
         "ROM Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "tR1vB8gM3h",
@@ -225,7 +228,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "wL5nJ2cF7z",
@@ -267,7 +271,8 @@
         "Customization"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "aH9pK6dX4r",
@@ -303,7 +308,8 @@
         "Customization"
       ],
       "large_pak": false,
-      "disabled": true
+      "disabled": true,
+      "experimental": false
     },
     {
       "id": "mC3qY8wT1v",
@@ -344,7 +350,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "gN7zR5bL2k",
@@ -386,7 +393,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "sD4xM9hP6j",
@@ -428,7 +436,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "yF1cQ7nW3t",
@@ -470,7 +479,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "kB8vT2gR5m",
@@ -514,7 +524,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "hJ6yL4zK9n",
@@ -556,7 +567,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "cP3wS1dH7x",
@@ -598,7 +610,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "nX9mF5qB2v",
@@ -640,7 +653,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "rT4kY8cN6p",
@@ -682,7 +696,8 @@
         "Developer Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "zW1hD3jL7g",
@@ -722,7 +737,8 @@
         "Developer Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "vM7rP9xQ2s",
@@ -765,7 +781,8 @@
         "Developer Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "dK5nB4wT8y",
@@ -805,7 +822,8 @@
         "Developer Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "qH2cF6zR1m",
@@ -847,7 +865,8 @@
         "Miscellaneous Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "lY9vJ3gK7p",
@@ -887,7 +906,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "xS4dL8hN5w",
@@ -929,7 +949,8 @@
         "Miscellaneous Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "bR1mQ7yC2t",
@@ -968,7 +989,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "fW6pX3kB9v",
@@ -1009,7 +1031,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "jT8nH4zM1r",
@@ -1047,7 +1070,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "pK2yD5qS7g",
@@ -1085,7 +1109,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "tN9cW1vL4h",
@@ -1123,7 +1148,8 @@
         "Streaming Game Clients"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "wB5jR8xF3k",
@@ -1161,7 +1187,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "aM3gY6nP2z",
@@ -1203,7 +1230,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "gQ7hT4dK9c",
@@ -1244,7 +1272,8 @@
         "Ports"
       ],
       "large_pak": true,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "mL1wS5bV8n",
@@ -1286,7 +1315,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "sF9zJ2rX6y",
@@ -1326,7 +1356,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "yC4kM7pQ1d",
@@ -1369,7 +1400,8 @@
         "ROM Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "kH8vN3gT5w",
@@ -1410,7 +1442,8 @@
         "Miscellaneous Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "hP6xL9yB2j",
@@ -1450,7 +1483,8 @@
         "System"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "cR1dW4zK8m",
@@ -1488,7 +1522,8 @@
         "ROM Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "nY7qF5hS3v",
@@ -1526,7 +1561,8 @@
         "ROM Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "rD3mT9cN6p",
@@ -1564,7 +1600,8 @@
         "System"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "zK8wB1jL4g",
@@ -1602,7 +1639,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "vN4yR7xQ2h",
@@ -1641,7 +1679,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "dJ9pK5nT8s",
@@ -1684,7 +1723,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "qM2cH6zW1r",
@@ -1724,7 +1764,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "lS7vD3gF9k",
@@ -1760,7 +1801,8 @@
         "Customization"
       ],
       "large_pak": false,
-      "disabled": true
+      "disabled": true,
+      "experimental": false
     },
     {
       "id": "bT1mL9xK2c",
@@ -1796,7 +1838,8 @@
         "Customization"
       ],
       "large_pak": false,
-      "disabled": true
+      "disabled": true,
+      "experimental": false
     },
     {
       "id": "fQ6nR3yS7v",
@@ -1832,7 +1875,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": true
+      "disabled": true,
+      "experimental": false
     },
     {
       "id": "jH2wT5dM8g",
@@ -1878,7 +1922,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "pC9kJ4zN1h",
@@ -1916,7 +1961,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "tY5xB7qL3r",
@@ -1958,7 +2004,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "wF8gP2vK6m",
@@ -2020,7 +2067,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "aD4hS9nW1j",
@@ -2063,7 +2111,8 @@
         "ROM Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "gL7rY3cT5z",
@@ -2105,7 +2154,8 @@
         "ROM Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "mN1kQ8xB4p",
@@ -2153,7 +2203,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "sR6wF2dH9v",
@@ -2193,7 +2244,8 @@
         "Miscellaneous Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "yK3mJ7zP1n",
@@ -2233,7 +2285,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "kT9vL4gS8c",
@@ -2273,7 +2326,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "hB5yN2xR6w",
@@ -2315,7 +2369,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "cM8pD1hK4q",
@@ -2357,7 +2412,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "nQ4wT7bL3j",
@@ -2405,7 +2461,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "rH6cY9zM2g",
@@ -2447,7 +2504,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "QXheBZoEcC",
@@ -2487,7 +2545,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "Rud6jsTmts",
@@ -2527,7 +2586,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "9iPetKy60R",
@@ -2566,7 +2626,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "ZUTflymvUX",
@@ -2620,7 +2681,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "IPB6VN1KNV",
@@ -2666,7 +2728,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "extRHlAv2X",
@@ -2705,7 +2768,8 @@
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "vf6c1JmurX",
@@ -2748,7 +2812,8 @@
         "Customization"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "MS6nE23a90",
@@ -2788,7 +2853,8 @@
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "85lpt3IHiy",
@@ -2832,7 +2898,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "TWZc9jCf7o",
@@ -2874,7 +2941,8 @@
         "Media"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
     },
     {
       "id": "PatiFgxsej",
@@ -2921,7 +2989,54 @@
         "Miscellaneous Tools"
       ],
       "large_pak": false,
-      "disabled": false
+      "disabled": false,
+      "experimental": false
+    }
+  ],
+  "experimental_paks": [
+    {
+      "id": "Z67hD2c222",
+      "storefront_name": "Netplay",
+      "name": "Netplay",
+      "version": "v1.3.2",
+      "type": "TOOL",
+      "description": "Enable/disable netplay for multiplayer gaming over WiFi.",
+      "author": "mohammadsyuhada",
+      "repo_url": "https://github.com/mohammadsyuhada/nextui-netplay",
+      "previous_repo_urls": null,
+      "release_filename": "Netplay.pak.zip",
+      "changelog": {
+        "v1.3.0": "Add NextUI v6.7.7 support",
+        "v1.3.1": "Add NextUI v6.8.0 support",
+        "v1.3.2": "Add NextUI v6.9.0 support"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "System"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ]
 }
