@@ -3083,6 +3083,48 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "77QFF0uYRu",
+      "storefront_name": "RPG Maker XP/VX/VX Ace (MKXPZ)",
+      "name": "MKXPZ",
+      "version": "v0.6.7",
+      "type": "EMU",
+      "description": "This core emulates RPG Maker XP/VX/VX Ace games.",
+      "author": "KrutzOtrem",
+      "repo_url": "https://github.com/KrutzOtrem/nextui-mkxpz",
+      "previous_repo_urls": null,
+      "release_filename": "MKXPZ.pak.zip",
+      "changelog": {
+        "0.6.7": "Fixed an issue that prevented the B button from being assigned to other actions."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ]
 }
