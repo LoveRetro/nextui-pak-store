@@ -2995,6 +2995,45 @@
       "experimental": false
     },
     {
+      "id": "rZCmsXQDOc",
+      "storefront_name": "TrimUI Music Player \u0026 Scrobbler",
+      "name": "Music Player",
+      "version": "0.4.1",
+      "type": "TOOL",
+      "description": "Music Player with Last.fm scrobble logging",
+      "author": "ExpandedPlum",
+      "repo_url": "https://github.com/ExpandedPlum/trimui-brick-music-player-with-scrobbling-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Music.Player.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
       "id": "tjvKBDM77H",
       "storefront_name": "Another Cheat Downloader",
       "name": "Another Cheat Downloader",
