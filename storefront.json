@@ -6,7 +6,7 @@
       "id": "xK9mR2vL4w",
       "storefront_name": "Pak Store",
       "name": "Pak Store",
-      "version": "v4.0.0",
+      "version": "v4.0.1",
       "type": "TOOL",
       "description": "A Pak Store in this economy?! Find, install and update community made Paks right on your device!",
       "author": "The NextUI Community",
@@ -33,7 +33,8 @@
         "v3.0.2": "Automatically detect existing pak installs",
         "v3.1.0": "Fixed regression where Pak Store did not detect an update for itself. Super sorry!",
         "v3.1.1": "One last edge case with the new Pak ID system.",
-        "v4.0.0": "Experimental Paks are now available! Must use a shortcut on startup to access."
+        "v4.0.0": "Experimental Paks are now available! Must use a shortcut on startup to access.",
+        "v4.0.1": "Forgot the new experimental splash screen! Thanks @Helaas!"
       },
       "previous_names": null,
       "scripts": {
