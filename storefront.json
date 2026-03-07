@@ -624,7 +624,7 @@
       "id": "nX9mF5qB2v",
       "storefront_name": "Syncthing",
       "name": "Syncthing",
-      "version": "0.7.2",
+      "version": "0.8.0",
       "type": "TOOL",
       "description": "Manages Syncthing",
       "author": "josegonzalez",
@@ -654,7 +654,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "File Management"
@@ -798,7 +799,7 @@
       "id": "dK5nB4wT8y",
       "storefront_name": "Terminal",
       "name": "Terminal",
-      "version": "0.8.1",
+      "version": "0.9.0",
       "type": "TOOL",
       "description": "Manages the Terminal",
       "author": "josegonzalez",
@@ -826,7 +827,8 @@
       "platforms": [
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Developer Tools"
@@ -883,7 +885,7 @@
       "id": "lY9vJ3gK7p",
       "storefront_name": "Artwork Scraper",
       "name": "Artwork Scraper",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "type": "TOOL",
       "description": "Scrapes artwork from the internet",
       "author": "josegonzalez",
@@ -910,7 +912,8 @@
       "screenshots": null,
       "platforms": [
         "my355",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "ROM Management",
