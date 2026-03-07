@@ -359,7 +359,7 @@
       "id": "gN7zR5bL2k",
       "storefront_name": "Screenshot Monitor",
       "name": "Screenshot Monitor",
-      "version": "0.8.0",
+      "version": "0.9.0",
       "type": "TOOL",
       "description": "Launches a daemon that allows users to take screenshots",
       "author": "josegonzalez",
@@ -389,7 +389,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Media"
