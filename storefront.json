@@ -446,7 +446,7 @@
       "id": "yF1cQ7nW3t",
       "storefront_name": "SFTPGO Server",
       "name": "FTP Server",
-      "version": "0.6.1",
+      "version": "0.7.0",
       "type": "TOOL",
       "description": "Manages the FTP Server",
       "author": "josegonzalez",
@@ -476,7 +476,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "File Management"
@@ -710,7 +711,7 @@
       "id": "zW1hD3jL7g",
       "storefront_name": "Remote Terminal",
       "name": "Remote Terminal",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "type": "TOOL",
       "description": "Manages the Remote Terminal",
       "author": "josegonzalez",
@@ -738,7 +739,8 @@
       "platforms": [
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Developer Tools"
@@ -751,7 +753,7 @@
       "id": "vM7rP9xQ2s",
       "storefront_name": "Report",
       "name": "Report",
-      "version": "0.9.1",
+      "version": "0.10.0",
       "type": "TOOL",
       "description": "Generates a report for development purposes",
       "author": "josegonzalez",
@@ -782,6 +784,7 @@
         "my355",
         "rg35xxplus",
         "tg5040",
+        "tg5050",
         "trimuismart"
       ],
       "categories": [
@@ -836,7 +839,7 @@
       "id": "qH2cF6zR1m",
       "storefront_name": "Simple Mode",
       "name": "Simple Mode",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "type": "TOOL",
       "description": "Manages MinUI's Simple Mode",
       "author": "josegonzalez",
@@ -866,7 +869,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Miscellaneous Tools"
@@ -920,7 +924,7 @@
       "id": "xS4dL8hN5w",
       "storefront_name": "Random Game",
       "name": "Random Game",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "type": "TOOL",
       "description": "Randomly selects a game from the ROMs folder and launches it",
       "author": "josegonzalez",
@@ -950,7 +954,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Miscellaneous Tools"
@@ -963,7 +968,7 @@
       "id": "bR1mQ7yC2t",
       "storefront_name": "PICO-8",
       "name": "PICO",
-      "version": "0.6.0",
+      "version": "0.7.0",
       "type": "EMU",
       "description": "Runs pico-8 in standalone mode",
       "author": "josegonzalez",
@@ -990,7 +995,8 @@
       "screenshots": null,
       "platforms": [
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Emulators"
