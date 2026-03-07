@@ -402,7 +402,7 @@
       "id": "sD4xM9hP6j",
       "storefront_name": "Dropbear Server (SSH)",
       "name": "SSH Server",
-      "version": "0.8.0",
+      "version": "0.9.0",
       "type": "TOOL",
       "description": "Manages the Dropbear SSH Server",
       "author": "josegonzalez",
@@ -432,7 +432,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "File Management"
@@ -488,7 +489,7 @@
       "id": "kB8vT2gR5m",
       "storefront_name": "Dufs HTTP Server",
       "name": "HTTP Server",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "type": "TOOL",
       "description": "Manages the Dufs HTTP Server",
       "author": "josegonzalez",
@@ -520,7 +521,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "File Management"
@@ -533,7 +535,7 @@
       "id": "hJ6yL4zK9n",
       "storefront_name": "File Browser",
       "name": "HTTP Filebrowser",
-      "version": "0.8.0",
+      "version": "0.9.0",
       "type": "TOOL",
       "description": "Manages the HTTP Filebrowser",
       "author": "josegonzalez",
@@ -563,7 +565,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "File Management"
@@ -576,7 +579,7 @@
       "id": "cP3wS1dH7x",
       "storefront_name": "FTP Server",
       "name": "FTP Server",
-      "version": "0.3.1",
+      "version": "0.4.0",
       "type": "TOOL",
       "description": "Manages the FTP Server",
       "author": "josegonzalez",
@@ -606,7 +609,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "File Management"
@@ -662,7 +666,7 @@
       "id": "rT4kY8cN6p",
       "storefront_name": "Developer",
       "name": "Developer",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "type": "TOOL",
       "description": "Keeps the screen awake for development purposes",
       "author": "josegonzalez",
@@ -692,7 +696,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Developer Tools"
@@ -1196,7 +1201,7 @@
       "id": "aM3gY6nP2z",
       "storefront_name": "Gallery Pak",
       "name": "Gallery",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "type": "TOOL",
       "description": "Launches a Gallery to view screenshots",
       "author": "josegonzalez",
@@ -1226,7 +1231,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Media"
@@ -2076,7 +2082,7 @@
       "id": "aD4hS9nW1j",
       "storefront_name": "M3U Manager",
       "name": "M3U Manager",
-      "version": "0.1.2",
+      "version": "0.2.0",
       "type": "TOOL",
       "description": "Manages M3U files",
       "author": "josegonzalez",
@@ -2107,6 +2113,7 @@
         "my355",
         "rg35xxplus",
         "tg5040",
+        "tg5050",
         "trimuismart"
       ],
       "categories": [
@@ -2120,7 +2127,7 @@
       "id": "gL7rY3cT5z",
       "storefront_name": "Map.txt Generator",
       "name": "Map.txt Generator",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "type": "TOOL",
       "description": "Generates the Map.txt files for FBN ROMs",
       "author": "josegonzalez",
@@ -2150,7 +2157,8 @@
         "my282",
         "my355",
         "rg35xxplus",
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "ROM Management"
