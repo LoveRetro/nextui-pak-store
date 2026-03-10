@@ -3149,7 +3149,7 @@
       "id": "Z67hD2c222",
       "storefront_name": "Netplay",
       "name": "Netplay",
-      "version": "v1.3.2",
+      "version": "v1.3.3",
       "type": "TOOL",
       "description": "Enable/disable netplay for multiplayer gaming over WiFi.",
       "author": "mohammadsyuhada",
@@ -3159,7 +3159,8 @@
       "changelog": {
         "v1.3.0": "Add NextUI v6.7.7 support",
         "v1.3.1": "Add NextUI v6.8.0 support",
-        "v1.3.2": "Add NextUI v6.9.0 support"
+        "v1.3.2": "Add NextUI v6.9.0 support",
+        "v1.3.3": "Add NextUI v6.9.3 support"
       },
       "previous_names": null,
       "scripts": {
