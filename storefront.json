@@ -73,7 +73,7 @@
       "id": "jF8cW5zN2m",
       "storefront_name": "Grout",
       "name": "Grout",
-      "version": "V4.6.1.8",
+      "version": "v4.7.0.0",
       "type": "TOOL",
       "description": "A RomM client for NextUI, muOS, Knulli, and Spruce v4.",
       "author": "The RomM Team",
@@ -81,7 +81,6 @@
       "previous_repo_urls": null,
       "release_filename": "Grout.pak.zip",
       "changelog": {
-        "V4.6.1.8": "Hotfix for Spruce launch script. Sorry about that!",
         "v1.0.0": "Initial release of Grout!",
         "v1.2.0": "Platform mapping tweaks, multi-file ROM downloads, bug fixes and more!",
         "v1.2.1": "Quick fix for not evaluating all art paths.",
@@ -109,7 +108,9 @@
         "v4.6.1.4": "Added support for TrimUI Stock OS. Thanks @malkavi",
         "v4.6.1.5": "Fix for collections not appearing on main menu immediately after enabling",
         "v4.6.1.6": "Bug fix for BIOS download folder discrepancy when info metadata not present",
-        "v4.6.1.7": "Added in the ability to filter the games list with more than just search."
+        "v4.6.1.7": "Added in the ability to filter the games list with more than just search.",
+        "v4.6.1.8": "Hotfix for Spruce launch script. Sorry about that!",
+        "v4.7.0.0": "Support for new features in RomM v4.7.0. See the changelog for more info."
       },
       "previous_names": null,
       "scripts": {
