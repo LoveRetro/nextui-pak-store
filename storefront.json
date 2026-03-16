@@ -2758,7 +2758,7 @@
       "id": "extRHlAv2X",
       "storefront_name": "Toggle Native SSH",
       "name": "Native SSH",
-      "version": "v1.0.0",
+      "version": "v2.0.0",
       "type": "TOOL",
       "description": "Enable and disable SSH access on your device. Displays default IP address and port when SSH is active.",
       "author": "Helaas",
