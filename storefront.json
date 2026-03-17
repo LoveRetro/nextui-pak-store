@@ -2846,7 +2846,7 @@
       "id": "MS6nE23a90",
       "storefront_name": "RPG Maker 2000/2003",
       "name": "EASYRPG",
-      "version": "v1.2.0",
+      "version": "v1.2.1",
       "type": "EMU",
       "description": "This core emulates RPG Maker 2000 and 2003 games.",
       "author": "KrutzOtrem",
@@ -2854,7 +2854,7 @@
       "previous_repo_urls": null,
       "release_filename": "EASYRPG.zip",
       "changelog": {
-        "1.2.0": "Fixed a bug that causes save files to become corrupted or lost during gameplay."
+        "1.2.1": "Enabled ICU-based encoding support to fix non-English text rendering and asset lookup in Unicode/non-Western titles."
       },
       "previous_names": null,
       "scripts": {
