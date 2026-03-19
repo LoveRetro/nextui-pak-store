@@ -2802,7 +2802,7 @@
       "id": "vf6c1JmurX",
       "storefront_name": "Shortcuts",
       "name": "Shortcuts",
-      "version": "v1.1.1",
+      "version": "v2.0.0",
       "type": "TOOL",
       "description": "Create and manage main menu shortcuts for ROMs and Tools on NextUI.",
       "author": "Helaas",
@@ -2812,7 +2812,8 @@
       "changelog": {
         "v1.0.0": "Initial release",
         "v1.1.0": "Adds customizable shortcut artwork backgrounds, the ability to view hidden/disabled ROMs, renamed and streamlined artwork management and settings behavior, improved defaults, and easier setup for curated “five-game handheld” menus.",
-        "v1.1.1": "ROMs inside subfolders now appear in the ROM picker and can be used to create shortcuts."
+        "v1.1.1": "ROMs inside subfolders now appear in the ROM picker and can be used to create shortcuts.",
+        "v2.0.0": "Add Miyoo Flip support and ability to rename shortcuts. Major rework porting app from Gabagool to Apostrophe."
       },
       "previous_names": null,
       "scripts": {
@@ -2833,7 +2834,8 @@
       "screenshots": null,
       "platforms": [
         "tg5040",
-        "tg5050"
+        "tg5050",
+        "my355"
       ],
       "categories": [
         "Customization"
