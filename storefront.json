@@ -2030,9 +2030,9 @@
       "id": "wF8gP2vK6m",
       "storefront_name": "SDLReader",
       "name": "SDLReader",
-      "version": "v2.2.2",
+      "version": "v2.3.0",
       "type": "TOOL",
-      "description": "Read PDF, CBZ/ZIP \u0026 CBR/RAR comic archives, EPUB, MOBI, and plain text files with smooth navigation, zoom, rotation, and mirroring. SDLReader is a lightweight, cross-platform viewer optimized for TrimUI devices (Brick, Smart Pro, Smart Pro S) running NextUI, built on SDL2 and MuPDF.",
+      "description": "Read PDF, CBZ/ZIP \u0026 CBR/RAR comic archives, EPUB, MOBI, and plain text files with smooth navigation, zoom, rotation, and mirroring. SDLReader is a lightweight, cross-platform viewer optimized for TrimUI devices (Brick, Smart Pro, Smart Pro S) and the Miyoo Flip running NextUI, built on SDL2 and MuPDF.",
       "author": "Helaas",
       "repo_url": "https://github.com/Helaas/SDLReader-brick",
       "previous_repo_urls": null,
@@ -2052,7 +2052,8 @@
         "v2.1.4": "Smarter rotation/fit views, on-screen page/zoom overlays. Optionally keep pan position when changing page.",
         "v2.2.0": "TXT file support \u0026 toolchain moved to loveretro/tg5040-toolchain",
         "v2.2.1": "TXT \u0026 EPUB performance improvements and bug fixes.",
-        "v2.2.2": "Smart Pro S support, and bugfix for final ebook pages being unreachable after changing font size."
+        "v2.2.2": "Smart Pro S support, and bugfix for final ebook pages being unreachable after changing font size.",
+        "v2.3.0": "Miyoo Flip support, installation size optimized, general performance improvements."
       },
       "previous_names": null,
       "scripts": {
@@ -2073,6 +2074,7 @@
       "screenshots": [
         ".github/resources/tg5040%20controls.png",
         ".github/resources/smart%20pro%20controls.png",
+        ".github/resources/my355%20controls.png",
         ".github/resources/Screenshot.2025-11-15-20-37-26.png",
         ".github/resources/Screenshot.2025-11-15-23-27-12.png",
         ".github/resources/Screenshot.2025-11-15-23-27-17.png",
@@ -2080,7 +2082,8 @@
       ],
       "platforms": [
         "tg5040",
-        "tg5050"
+        "tg5050",
+        "my355"
       ],
       "categories": [
         "Media"
