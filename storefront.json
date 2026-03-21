@@ -2030,7 +2030,7 @@
       "id": "wF8gP2vK6m",
       "storefront_name": "SDLReader",
       "name": "SDLReader",
-      "version": "v2.3.0",
+      "version": "v2.3.1",
       "type": "TOOL",
       "description": "Read PDF, CBZ/ZIP \u0026 CBR/RAR comic archives, EPUB, MOBI, and plain text files with smooth navigation, zoom, rotation, and mirroring. SDLReader is a lightweight, cross-platform viewer optimized for TrimUI devices (Brick, Smart Pro, Smart Pro S) and the Miyoo Flip running NextUI, built on SDL2 and MuPDF.",
       "author": "Helaas",
@@ -2053,7 +2053,8 @@
         "v2.2.0": "TXT file support \u0026 toolchain moved to loveretro/tg5040-toolchain",
         "v2.2.1": "TXT \u0026 EPUB performance improvements and bug fixes.",
         "v2.2.2": "Smart Pro S support, and bugfix for final ebook pages being unreachable after changing font size.",
-        "v2.3.0": "Miyoo Flip support, installation size optimized, general performance improvements."
+        "v2.3.0": "Miyoo Flip support, installation size optimized, general performance improvements.",
+        "v2.3.1": "Same as v2.3.0: Miyoo Flip support, installation size optimized, general performance improvements. Issue fixed with bundle extraction via Pak Store."
       },
       "previous_names": null,
       "scripts": {
