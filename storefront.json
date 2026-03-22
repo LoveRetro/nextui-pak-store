@@ -3153,6 +3153,46 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "bGeMnFrpN6",
+      "storefront_name": "Sega Saturn (YabaSanshiro)",
+      "name": "SS",
+      "version": "1.9.0",
+      "type": "EMU",
+      "description": "Yaba Sanshiro standalone emulator for Sega Saturn",
+      "author": "SouthwestDivineFist",
+      "repo_url": "https://github.com/SouthwestDivineFist/SS-pak",
+      "previous_repo_urls": null,
+      "release_filename": "SS.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
