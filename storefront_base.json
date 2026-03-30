@@ -598,6 +598,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "BE0YiyJxxc",
+      "storefront_name": "WeRead",
+      "repo_url": "https://github.com/Lin0u0/TrimUI-WeRead",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
