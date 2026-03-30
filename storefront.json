@@ -3124,7 +3124,8 @@
         "v1.0.0": "Initial release.",
         "v1.1.0": "Use zip file for faster cheat extraction time (supportied by packed miniz).",
         "v1.2.0": "Suppress buttons on downloading screen, restore last position in lists (using unofficial builds of minui-list and minui-presenter).",
-        "v1.3.0": "Use official builds of minui-list and minui-presenter, add tg5050 and my355 support"
+        "v1.3.0": "Use official builds of minui-list and minui-presenter, add tg5050 and my355 support",
+        "v1.4.0": "Sort cheats ignoring case, fix overlapping in list selectors, rewrite app in Nim"
       },
       "previous_names": null,
       "scripts": {
@@ -3190,6 +3191,45 @@
       ],
       "categories": [
         "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "jSb2dK7H00",
+      "storefront_name": "WeRead",
+      "name": "WeRead",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "A native WeRead client for TrimUI handhelds.",
+      "author": "Lin0u0",
+      "repo_url": "https://github.com/Lin0u0/TrimUI-WeRead",
+      "previous_repo_urls": null,
+      "release_filename": "WeRead.pakz",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
       ],
       "large_pak": false,
       "disabled": false,
