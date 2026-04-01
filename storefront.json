@@ -3209,7 +3209,9 @@
       "repo_url": "https://github.com/Lin0u0/TrimUI-WeRead",
       "previous_repo_urls": null,
       "release_filename": "WeRead.pakz",
-      "changelog": null,
+      "changelog": {
+        "v0.1.3": "Improved reader layout, restored system OSD hotkeys, and added tg5040 haptic feedback."
+      },
       "previous_names": null,
       "scripts": {
         "post_install": {
@@ -3226,7 +3228,16 @@
         }
       },
       "update_ignore": null,
-      "screenshots": null,
+      "screenshots": [
+        ".github/resources/screenshots/1.png",
+        ".github/resources/screenshots/2.png",
+        ".github/resources/screenshots/3.png",
+        ".github/resources/screenshots/4.png",
+        ".github/resources/screenshots/5.png",
+        ".github/resources/screenshots/6.png",
+        ".github/resources/screenshots/7.png",
+        ".github/resources/screenshots/8.png"
+      ],
       "platforms": [
         "tg5040"
       ],
