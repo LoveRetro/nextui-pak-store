@@ -3202,7 +3202,7 @@
       "id": "jSb2dK7H00",
       "storefront_name": "WeRead",
       "name": "WeRead",
-      "version": "v0.1.2",
+      "version": "v0.1.3",
       "type": "TOOL",
       "description": "A native WeRead client for TrimUI handhelds.",
       "author": "Lin0u0",
