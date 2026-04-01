@@ -3236,6 +3236,52 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "4RjneX9Zj2",
+      "storefront_name": "SideB",
+      "name": "SideB",
+      "version": "v1.0.3",
+      "type": "TOOL",
+      "description": "Retro cassette-style player for TrimUI Brick with Spotify Connect, offline favorites, and local MP3 playback",
+      "author": "CharlexH",
+      "repo_url": "https://github.com/CharlexH/SideB",
+      "previous_repo_urls": null,
+      "release_filename": "SideB-1.0.3-nextui.zip",
+      "changelog": {
+        "v1.0.3": "Added local MP3 import, safer delayed removal for the currently playing local track, and clarified bundled audio transcoder requirements."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "screenshots/spotify_connecting.png",
+        "screenshots/favlist.png",
+        "screenshots/offline_playing.png",
+        "screenshots/waiting.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
