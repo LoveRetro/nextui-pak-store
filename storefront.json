@@ -3202,7 +3202,7 @@
       "id": "jSb2dK7H00",
       "storefront_name": "WeRead",
       "name": "WeRead",
-      "version": "v0.1.3",
+      "version": "v0.1.4",
       "type": "TOOL",
       "description": "A native WeRead client for TrimUI handhelds.",
       "author": "Lin0u0",
@@ -3210,7 +3210,8 @@
       "previous_repo_urls": null,
       "release_filename": "WeRead.pakz",
       "changelog": {
-        "v0.1.3": "Improved reader layout, restored system OSD hotkeys, and added tg5040 haptic feedback."
+        "v0.1.3": "Improved reader layout, restored system OSD hotkeys, and added tg5040 haptic feedback.",
+        "v0.1.4": "Polished reader navigation with smoother catalog selection, confirm-to-exit from reading, and faster nearby shelf cover loading. Also refactored reader and UI helpers into dedicated modules for easier maintenance."
       },
       "previous_names": null,
       "scripts": {
