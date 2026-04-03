@@ -3163,7 +3163,7 @@
       "id": "bGeMnFrpN6",
       "storefront_name": "Sega Saturn (YabaSanshiro)",
       "name": "SS",
-      "version": "1.9.0",
+      "version": "v1.9.0",
       "type": "EMU",
       "description": "Yaba Sanshiro standalone emulator for Sega Saturn",
       "author": "SouthwestDivineFist",
