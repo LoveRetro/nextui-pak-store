@@ -2895,9 +2895,9 @@
       "id": "85lpt3IHiy",
       "storefront_name": "ScrapeGoat",
       "name": "ScrapeGoat",
-      "version": "v2.0.0",
+      "version": "v2.1.0",
       "type": "TOOL",
-      "description": "Scrape artwork from ScreenScraper.fr and download cheats from Libretro for your ROM library.",
+      "description": "Scrape artwork and manuals from ScreenScraper.fr and download cheats from Libretro for your ROM library.",
       "author": "Helaas",
       "repo_url": "https://github.com/Helaas/nextui-scrapegoat-pak",
       "previous_repo_urls": null,
@@ -2906,7 +2906,8 @@
         "v1.0.0": "Initial release: ScreenScraper.fr artwork scraping, Libretro cheat downloading.",
         "v1.0.1": "Subfolder support for cheats and artwork, safer media downloads via temp files.",
         "v1.0.2": "Bugfix for certain consoles being incorrectly mapped.",
-        "v2.0.0": "New Apostrophe UI with queue/progress tracking, existing-file overviews, Miyoo Flip (my355) support, and can now scrape Sega Saturn."
+        "v2.0.0": "New Apostrophe UI with queue/progress tracking, existing-file overviews, Miyoo Flip (my355) support, and can now scrape Sega Saturn.",
+        "v2.1.0": "Adds PDF manual downloads with configurable storage, background queue handoff and resume, clearer quit behavior, smarter cheat-file selection, and daemon-safe artwork scraping."
       },
       "previous_names": null,
       "scripts": {
