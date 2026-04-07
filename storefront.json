@@ -3306,7 +3306,7 @@
       "id": "cllNwPQZ9b",
       "storefront_name": "NothingClock",
       "name": "NothingClock",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "type": "TOOL",
       "description": "A Nothing-inspired clock app for TrimUI handhelds.",
       "author": "Lin0u0",
@@ -3314,7 +3314,8 @@
       "previous_repo_urls": null,
       "release_filename": "NothingClock.pakz",
       "changelog": {
-        "v0.1.0": "Initial release."
+        "v0.1.0": "Initial release.",
+        "v0.1.1": "Added TG5040 haptic feedback across navigation and confirm actions, improved timer lap scrolling and indicators, and refined dot-matrix spacing plus anti-aliased arc rendering."
       },
       "previous_names": null,
       "scripts": {
