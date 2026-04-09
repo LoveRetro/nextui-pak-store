@@ -3343,6 +3343,45 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "cBCP9BBlE3",
+      "storefront_name": "RepeatNow",
+      "name": "RepeatNow",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "A TrimUI Brick vocabulary trainer with direct Anki deck import.",
+      "author": "Lin0u0",
+      "repo_url": "https://github.com/Lin0u0/NextUI-RepeatNow-Pak",
+      "previous_repo_urls": null,
+      "release_filename": "RepeatNow.pakz",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
