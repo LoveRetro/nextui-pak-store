@@ -3387,7 +3387,7 @@
       "id": "yfEKfG0W1a",
       "storefront_name": "RetroRead",
       "name": "RetroRead",
-      "version": "v0.5.0",
+      "version": "v0.5.1",
       "type": "TOOL",
       "description": "A retro game-style reader for EPUB and TXT books on NextUI.",
       "author": "expkzb",
@@ -3395,7 +3395,8 @@
       "previous_repo_urls": null,
       "release_filename": "RetroRead.pak.zip",
       "changelog": {
-        "v0.5.0": "Introduced the RetroRead name, TXT support, voice styles, richer dialogue box themes, and a polished TrimUI Brick experience."
+        "v0.5.0": "Introduced the RetroRead name, TXT support, voice styles, richer dialogue box themes, and a polished TrimUI Brick experience.",
+        "v0.5.1": "Fixed release packaging structure and refreshed project screenshots and support messaging."
       },
       "previous_names": null,
       "scripts": {
