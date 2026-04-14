@@ -1060,7 +1060,7 @@
       "id": "jT8nH4zM1r",
       "storefront_name": "Nintendo 64 (mupen64plus)",
       "name": "N64",
-      "version": "0.5.0",
+      "version": "0.6.1",
       "type": "EMU",
       "description": "Runs mupen64plus in standalone mode for the specified rom",
       "author": "josegonzalez",
@@ -1086,7 +1086,8 @@
       "update_ignore": null,
       "screenshots": null,
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "tg5050"
       ],
       "categories": [
         "Emulators"
