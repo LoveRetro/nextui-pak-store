@@ -3566,6 +3566,51 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "LenGAzYdOL",
+      "storefront_name": "Central Scrutinizer",
+      "name": "The Central Scrutinizer",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "Browser-based device manager for NextUI handhelds, letting users manage their devices from web or mobile browsers with library browsing, file tools, collections, screenshots, logs, artwork replacement, and optional background mode.",
+      "author": "helaas",
+      "repo_url": "https://github.com/Helaas/nextui-CentralScrutinizer-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Central.Scrutinizer.pakz",
+      "changelog": {
+        "v0.1.0": "Initial release with a browser-based dashboard for managing paired devices from desktop or mobile browsers, plus platform library browsing, save-state management, file tools, collections, screenshots, logs, Mac dot cleanup, optional terminal access, and background mode."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355"
+      ],
+      "categories": [
+        "ROM Management",
+        "File Management",
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
