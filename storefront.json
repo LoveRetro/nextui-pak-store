@@ -3443,7 +3443,7 @@
       "name": "Grampus",
       "version": "v0.3.0",
       "type": "TOOL",
-      "description": "ORCA-inspired grid sequencer paired with 5 built-in polyphonic synth engines: Drifter (dual-osc analog), Warper (wavetable), BrokenFM (6-operator FM), String (Karplus), and ROMpler (15 sample kits). 8 tracks, per-track LFOs and effects, master delay and reverb, WAV recording. Projects, recordings, and bundled demos live in the Grampus folder at the root of your SD Card. Full operator and instrument reference in MANUAL.md at https://github.com/boorch/grampus-pak/blob/main/MANUAL.md — desktop builds (macOS / Linux / Windows) at https://boorch.itch.io/grampus.",
+      "description": "ORCA-inspired grid sequencer paired with 7 built-in polyphonic synth engines: Drifter (dual-osc analog), Warper (wavetable), BrokenFM (6-operator FM), String (Karplus), ROMpler (sample kits), LoFiTron (tape-replay sustained instruments), and WaveSurf (2D wavetable morph). 8 tracks, per-track LFOs and effects, master delay and reverb, WAV recording. Projects, recordings, and bundled demos live in the Grampus folder at the root of your SD Card. Full operator and instrument reference in MANUAL.md at https://github.com/boorch/grampus-pak/blob/main/MANUAL.md. Desktop builds (macOS / Linux / Windows) at https://boorch.itch.io/grampus.",
       "author": "boorch (Bruce Menace/Cometary Trails)",
       "repo_url": "https://github.com/boorch/grampus-pak",
       "previous_repo_urls": null,
