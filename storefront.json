@@ -3577,7 +3577,7 @@
       "id": "LenGAzYdOL",
       "storefront_name": "Central Scrutinizer",
       "name": "The Central Scrutinizer",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "type": "TOOL",
       "description": "Browser-based device manager for NextUI handhelds, letting users manage their devices from web or mobile browsers with library browsing, file tools, collections, screenshots, logs, artwork replacement, and optional background mode.",
       "author": "helaas",
@@ -3585,7 +3585,8 @@
       "previous_repo_urls": null,
       "release_filename": "Central.Scrutinizer.pakz",
       "changelog": {
-        "v0.1.0": "Initial release with a browser-based dashboard for managing paired devices from desktop or mobile browsers, plus platform library browsing, save-state management, file tools, collections, screenshots, logs, Mac dot cleanup, optional terminal access, and background mode."
+        "v0.1.0": "Initial release with a browser-based dashboard for managing paired devices from desktop or mobile browsers, plus platform library browsing, save-state management, file tools, collections, screenshots, logs, Mac dot cleanup, optional terminal access, and background mode.",
+        "v0.1.1": "Small bug fixes and improvements to the experience on mobile browsers."
       },
       "previous_names": null,
       "scripts": {
