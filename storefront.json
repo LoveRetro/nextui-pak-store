@@ -3474,7 +3474,7 @@
       "id": "3JM2zY4UKh",
       "storefront_name": "Itch.io Store",
       "name": "Itch-io",
-      "version": "v1.0.5",
+      "version": "v1.0.6",
       "type": "TOOL",
       "description": "Browse and download GB/GBC games from Itch.io's GB Studio collection.",
       "author": "Carroarmato0",
@@ -3483,11 +3483,12 @@
       "release_filename": "Itch-io.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release — browse and download free and paid GB/GBC games from itch.io's GB Studio collection, with built-in content filters.",
-        "v1.0.1": "Fix Pak name",
-        "v1.0.2": "Place app logs in correct folder location, fix scripts and in-app version",
-        "v1.0.3": "Support alternative ROM Location per file-type",
-        "v1.0.4": "Add advanced logging, privacy obfuscation in logs, user agent string",
-        "v1.0.5": "Trasnparant gamelist caching, better scrolling in general, support asian fonts through Noto Sans JP"
+        "v1.0.1": "Fix Pak name.",
+        "v1.0.2": "Place app logs in correct folder location, fix scripts and in-app version.",
+        "v1.0.3": "Support alternative ROM Location per file-type.",
+        "v1.0.4": "Add advanced logging, privacy obfuscation in logs, user agent string.",
+        "v1.0.5": "Trasnparant gamelist caching, better scrolling in general, support asian fonts through Noto Sans JP.",
+        "v1.0.6": "More robust handling of Cloudflare checks, download of cover art, handle game page with .zip filenames."
       },
       "previous_names": null,
       "scripts": {
