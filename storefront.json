@@ -1018,7 +1018,7 @@
       "id": "fW6pX3kB9v",
       "storefront_name": "Nintendo DS (DraStic)",
       "name": "NDS",
-      "version": "0.10.0",
+      "version": "0.11.0",
       "type": "EMU",
       "description": "Runs drastic in standalone mode for the specified rom",
       "author": "josegonzalez",
