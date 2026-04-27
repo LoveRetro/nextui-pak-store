@@ -3474,7 +3474,7 @@
       "id": "3JM2zY4UKh",
       "storefront_name": "Itch.io Store",
       "name": "Itch-io",
-      "version": "v1.0.6",
+      "version": "v1.0.7",
       "type": "TOOL",
       "description": "Browse and download GB/GBC games from Itch.io's GB Studio collection.",
       "author": "Carroarmato0",
@@ -3488,7 +3488,8 @@
         "v1.0.3": "Support alternative ROM Location per file-type.",
         "v1.0.4": "Add advanced logging, privacy obfuscation in logs, user agent string.",
         "v1.0.5": "Trasnparant gamelist caching, better scrolling in general, support asian fonts through Noto Sans JP.",
-        "v1.0.6": "More robust handling of Cloudflare checks, download of cover art, handle game page with .zip filenames."
+        "v1.0.6": "More robust handling of Cloudflare checks, download of cover art, handle game page with .zip filenames.",
+        "v1.0.7": "Advanced logging, API key testing, game inventory, file management, purchase picker for games bought multiple times (individual and bundle), shows bundle names in picker, faster game detail scrolling. Fix coverart not shown properly."
       },
       "previous_names": null,
       "scripts": {
