@@ -3484,6 +3484,7 @@
       "changelog": {
         "v1.0.0": "Initial release — browse and download free and paid GB/GBC games from itch.io's GB Studio collection, with built-in content filters.",
         "v1.0.1": "Fix Pak name.",
+        "v1.0.10-rc1": "Add support for Arabic, Hebrew, Thai, Devanagari, Greek, and many more non-CJK fonts. Allow exiting the Pak when Cloudflare is blocking the initial fetching of the game list. Rewrite build and release to use NextUI toolchains and switch to native SDL on device.",
         "v1.0.2": "Place app logs in correct folder location, fix scripts and in-app version.",
         "v1.0.3": "Support alternative ROM Location per file-type.",
         "v1.0.4": "Add advanced logging, privacy obfuscation in logs, user agent string.",
