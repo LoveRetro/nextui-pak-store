@@ -3617,6 +3617,49 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "wyZHFVcCzy",
+      "storefront_name": "Joe's Calibrage",
+      "name": "Joe's Calibrage",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "Calibrate and persist thumbstick values for NextUI on Miyoo Flip, TrimUI Smart Pro, and TrimUI Smart Pro S.",
+      "author": "Helaas",
+      "repo_url": "https://github.com/Helaas/nextui-Joe-s-Calibrage-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Joe.s.Calibrage.pakz",
+      "changelog": {
+        "v0.1.0": "Initial thumbstick calibration tool for my355, tg5040, and tg5050 with persistent joypad config writes."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "my355",
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "System"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
