@@ -3482,21 +3482,21 @@
       "previous_repo_urls": null,
       "release_filename": "Itch-io.pak.zip",
       "changelog": {
-        "v1.0.0": "Initial release — browse and download free and paid GB/GBC games from itch.io's GB Studio collection, with built-in content filters.",
-        "v1.0.1": "Fix Pak name.",
-        "v1.0.10": "Log rotation, fix alignment of filetype in ROM selection screen.",
-        "v1.0.10-rc1": "Add support for Arabic, Hebrew, Thai, Devanagari, Greek, and many more non-CJK fonts. Allow exiting the Pak when Cloudflare is blocking the initial fetching of the game list. Rewrite build and release to use NextUI toolchains and switch to native SDL on device.",
-        "v1.0.10-rc2": "Fix some UI issues, prevent double input on my355",
-        "v1.0.10-rc3": "Support GIFs in cover art, enhance inventory for tracking game updates or store removal.",
-        "v1.0.10-rc4": "Implement Power Control (wakeup/poweroff), fix double d-pad input on my355.",
-        "v1.0.2": "Place app logs in correct folder location, fix scripts and in-app version.",
-        "v1.0.3": "Support alternative ROM Location per file-type.",
-        "v1.0.4": "Add advanced logging, privacy obfuscation in logs, user agent string.",
-        "v1.0.5": "Trasnparant gamelist caching, better scrolling in general, support asian fonts through Noto Sans JP.",
-        "v1.0.6": "More robust handling of Cloudflare checks, download of cover art, handle game page with .zip filenames.",
-        "v1.0.7": "Advanced logging, API key testing, game inventory, file management, purchase picker for games bought multiple times (individual and bundle), shows bundle names in picker, faster game detail scrolling. Fix coverart not shown properly.",
-        "v1.0.8": "Fix the +50 owned games issue when the API returns an empty page response because there's not 51 games.",
-        "v1.0.9": "Implement basic sorting in Game List"
+        "v1.0.0": "• Initial release — browse and download free and paid GB/GBC games from itch.io's GB Studio collection, with built-in content filters.",
+        "v1.0.1": "• Fix Pak name.",
+        "v1.0.10": "• Add support for Arabic, Hebrew, Thai, Devanagari, Greek, and many more non-CJK fonts.\n• Fix issue preventing to exit the app when Cloudflare blocks the connection.\n• Rewrite of the build system to leverage NextUI's own toolchains, allowing the use of the native SDL library on the devices and reducing the size of the Pak.\n• Some UI fixes.\n• Fix launching on Miyoo Flip and TrimUI Smart Pro S.\n• Support GIFs in cover art.\n• New Inventory system for tracking downloaded ROMs, game updates and store removals.\n• New Sorting category [DL] = Download, with Update section.\n• Implement Power Control (standby and poweroff).\n• Countermeasures for the \"double input\" hardware bug on my355.\n• Log rotation.",
+        "v1.0.10-rc1": "• Add support for Arabic, Hebrew, Thai, Devanagari, Greek, and many more non-CJK fonts.\n• Allow exiting the Pak when Cloudflare is blocking the initial fetching of the game list.\n• Rewrite build and release to use NextUI toolchains and switch to native SDL on device.",
+        "v1.0.10-rc2": "• Fix some UI issues.\n• Prevent double input on my355.",
+        "v1.0.10-rc3": "• Support GIFs in cover art.\n• Enhance inventory for tracking game updates or store removal.",
+        "v1.0.10-rc4": "• Implement Power Control (wakeup/poweroff).\n• Fix double d-pad input on my355.",
+        "v1.0.2": "• Place app logs in correct folder location.\n• Fix scripts and in-app version.",
+        "v1.0.3": "• Support alternative ROM location per file-type.",
+        "v1.0.4": "• Add advanced logging.\n• Privacy obfuscation in logs.\n• User agent string.",
+        "v1.0.5": "• Transparent game list caching.\n• Better scrolling in general.\n• Support Asian fonts through Noto Sans JP.",
+        "v1.0.6": "• More robust handling of Cloudflare checks.\n• Improved cover art download.\n• Handle game page with .zip filenames.",
+        "v1.0.7": "• Advanced logging.\n• API key testing.\n• Game inventory.\n• File management.\n• Purchase picker for games bought multiple times (individual and bundle).\n• Shows bundle names in picker.\n• Faster game detail scrolling.\n• Fix cover art not shown properly.",
+        "v1.0.8": "• Fix the +50 owned games issue when the API returns an empty page response because there are not 51 games.",
+        "v1.0.9": "• Implement basic sorting in Game List."
       },
       "previous_names": null,
       "scripts": {
@@ -3579,7 +3579,7 @@
       "id": "LenGAzYdOL",
       "storefront_name": "Central Scrutinizer",
       "name": "The Central Scrutinizer",
-      "version": "v0.1.1",
+      "version": "v0.1.2",
       "type": "TOOL",
       "description": "Browser-based device manager for NextUI handhelds, letting users manage their devices from web or mobile browsers with library browsing, file tools, collections, screenshots, logs, artwork replacement, and optional background mode.",
       "author": "helaas",
@@ -3588,7 +3588,8 @@
       "release_filename": "Central.Scrutinizer.pakz",
       "changelog": {
         "v0.1.0": "Initial release with a browser-based dashboard for managing paired devices from desktop or mobile browsers, plus platform library browsing, save-state management, file tools, collections, screenshots, logs, Mac dot cleanup, optional terminal access, and background mode.",
-        "v0.1.1": "Small bug fixes and improvements to the experience on mobile browsers."
+        "v0.1.1": "Small bug fixes and improvements to the experience on mobile browsers.",
+        "v0.1.2": "Adds multi-select file actions, drag-to-move support, clearer auto-dismissing browser notices, mobile layout refinements, and safer rename fallback handling."
       },
       "previous_names": null,
       "scripts": {
