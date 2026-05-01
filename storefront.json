@@ -3669,7 +3669,7 @@
       "id": "uTS0lQhoBa",
       "storefront_name": "NextFeed",
       "name": "NextFeed",
-      "version": "0.2.0",
+      "version": "v0.2.0",
       "type": "TOOL",
       "description": "Offline-friendly RSS and Atom reader for NextUI devices.",
       "author": "Eric Reinsmidt",
@@ -3677,8 +3677,8 @@
       "previous_repo_urls": null,
       "release_filename": "NextFeed.tg5040.pak.zip",
       "changelog": {
-        "0.1.0": "RSS 2.0 and Atom feed parsing,using Apostrophe for native NextUI look.",
-        "0.2.0": "Added caching of raw XML per feed, auto-refresh on launch, article count shown next to feed names, color picker and more."
+        "v0.1.0": "RSS 2.0 and Atom feed parsing,using Apostrophe for native NextUI look.",
+        "v0.2.0": "Added caching of raw XML per feed, auto-refresh on launch, article count shown next to feed names, color picker and more."
       },
       "previous_names": null,
       "scripts": {
