@@ -3713,6 +3713,53 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "BEgjD8r76k",
+      "storefront_name": "Nimbus",
+      "name": "Nimbus",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "Weather app for NextUI",
+      "author": "Eric Reinsmidt",
+      "repo_url": "https://github.com/ericreinsmidt/nextui-nimbus",
+      "previous_repo_urls": null,
+      "release_filename": "Nimbus.tg5040.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial version"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "assets/current.png",
+        "assets/sunrise.png",
+        "assets/forecast.png",
+        "assets/location.png",
+        "assets/settings.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
