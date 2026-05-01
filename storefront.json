@@ -3718,7 +3718,7 @@
       "id": "BEgjD8r76k",
       "storefront_name": "Nimbus",
       "name": "Nimbus",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "type": "TOOL",
       "description": "Weather app for NextUI",
       "author": "Eric Reinsmidt",
@@ -3726,7 +3726,8 @@
       "previous_repo_urls": null,
       "release_filename": "Nimbus.tg5040.pak.zip",
       "changelog": {
-        "v0.1.0": "Initial version"
+        "v0.1.0": "Initial version",
+        "v0.1.1": "Updated UI, squashed some bugs"
       },
       "previous_names": null,
       "scripts": {
