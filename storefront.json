@@ -3698,6 +3698,7 @@
       },
       "update_ignore": null,
       "screenshots": [
+        "assets/logo.png",
         "assets/screenshots/feeds.png",
         "assets/screenshots/list.png",
         "assets/screenshots/article.png"
@@ -3745,6 +3746,7 @@
       },
       "update_ignore": null,
       "screenshots": [
+        "assets/logo.png",
         "assets/screenshots/current.png",
         "assets/screenshots/forecast.png",
         "assets/screenshots/location.png",
