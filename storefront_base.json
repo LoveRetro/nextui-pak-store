@@ -698,6 +698,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "BhWF364Yvb",
+      "storefront_name": "Music Player",
+      "repo_url": "https://github.com/nborodikhin/nextui-music-player",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
