@@ -3432,7 +3432,7 @@
       "id": "DyC1zZW0El",
       "storefront_name": "Grampus",
       "name": "Grampus",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "TOOL",
       "description": "ORCA-inspired grid sequencer paired with 9 built-in polyphonic synth engines: Drifter (dual-osc analog), Warper (wavetable), BrokenFM (6-operator FM), String (Karplus), ROMpler (sample kits), LoFiTron (tape-replay sustained instruments), WaveSurf (2D wavetable morph), SynDrums (kick/snare/clap/toms/cymbals with transient layer), and BoneSaw (Roland JP-8000 SuperSaw with per-saw hard sync). 8 scene slots per project let you switch between grids, params, and tempos mid-performance on tick-quantized boundaries so the music keeps flowing across the swap. New ^ Strum operator plays chord notes in arpeggiator-pattern order with sub-tick to multi-tick spacing, swing-aware. 10 filter modes including 3 Polivoks-inspired modelling filters with vocal diode-pair bite (PVox LP/HP/BP). 8 tracks, per-track LFOs and effects, master delay and reverb, WAV recording. Projects, recordings, and bundled demos live in the Grampus folder at the root of your SD Card. Full operator and instrument reference in MANUAL.md at https://github.com/boorch/grampus-pak/blob/main/MANUAL.md. Desktop builds (macOS / Linux / Windows) at https://boorch.itch.io/grampus.",
       "author": "boorch (Bruce Menace/Cometary Trails)",
