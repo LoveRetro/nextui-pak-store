@@ -3669,7 +3669,7 @@
       "id": "uTS0lQhoBa",
       "storefront_name": "NextFeed",
       "name": "NextFeed",
-      "version": "v0.2.0",
+      "version": "v0.3.0",
       "type": "TOOL",
       "description": "Offline-friendly RSS and Atom reader for NextUI devices.",
       "author": "Eric Reinsmidt",
@@ -3677,8 +3677,9 @@
       "previous_repo_urls": null,
       "release_filename": "NextFeed.tg5040.pak.zip",
       "changelog": {
-        "v0.1.0": "RSS 2.0 and Atom feed parsing,using Apostrophe for native NextUI look.",
-        "v0.2.0": "Added caching of raw XML per feed, auto-refresh on launch, article count shown next to feed names, color picker and more."
+        "v0.1.0": "RSS 2.0 and Atom feed parsing, using Apostrophe for native NextUI look.",
+        "v0.2.0": "Added caching of raw XML per feed, auto-refresh on launch, article count shown next to feed names, color picker and more.",
+        "v0.3.0": "PakKit UI integration, custom on-screen keyboard with URL shortcuts, removed color settings, minimal text hints."
       },
       "previous_names": null,
       "scripts": {
@@ -3697,12 +3698,9 @@
       },
       "update_ignore": null,
       "screenshots": [
-        "assets/screenshots/main.png",
+        "assets/screenshots/feeds.png",
         "assets/screenshots/list.png",
-        "assets/screenshots/article.png",
-        "assets/screenshots/manage.png",
-        "assets/screenshots/color.png",
-        "assets/screenshots/about.png"
+        "assets/screenshots/article.png"
       ],
       "platforms": [
         "tg5040"
@@ -3718,16 +3716,17 @@
       "id": "BEgjD8r76k",
       "storefront_name": "Nimbus",
       "name": "Nimbus",
-      "version": "v0.1.1",
+      "version": "v0.2.0",
       "type": "TOOL",
-      "description": "Weather app for NextUI",
+      "description": "Weather app for NextUI devices.",
       "author": "Eric Reinsmidt",
       "repo_url": "https://github.com/ericreinsmidt/nextui-nimbus",
       "previous_repo_urls": null,
       "release_filename": "Nimbus.tg5040.pak.zip",
       "changelog": {
-        "v0.1.0": "Initial version",
-        "v0.1.1": "Updated UI, squashed some bugs"
+        "v0.1.0": "Initial version.",
+        "v0.1.1": "Updated UI, squashed some bugs.",
+        "v0.2.0": "PakKit keyboard for location search, updated README, pinned PakKit v0.2.0."
       },
       "previous_names": null,
       "scripts": {
@@ -3746,11 +3745,11 @@
       },
       "update_ignore": null,
       "screenshots": [
-        "assets/current.png",
-        "assets/sunrise.png",
-        "assets/forecast.png",
-        "assets/location.png",
-        "assets/settings.png"
+        "assets/screenshots/current.png",
+        "assets/screenshots/forecast.png",
+        "assets/screenshots/location.png",
+        "assets/screenshots/qr.png",
+        "assets/screenshots/api.png"
       ],
       "platforms": [
         "tg5040"
