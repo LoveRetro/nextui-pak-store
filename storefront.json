@@ -3763,6 +3763,45 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "TxM1OmN9am",
+      "storefront_name": "PlexMusic",
+      "name": "Plex Music",
+      "version": "v1.0.1",
+      "type": "TOOL",
+      "description": "Plex music client for NextUI",
+      "author": "Thwonp",
+      "repo_url": "https://github.com/thwonp/PlexMusicPak",
+      "previous_repo_urls": null,
+      "release_filename": "PlexMusic.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
