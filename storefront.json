@@ -3770,7 +3770,7 @@
       "id": "TxM1OmN9am",
       "storefront_name": "PlexMusic",
       "name": "Plex Music",
-      "version": "v1.0.3",
+      "version": "1.0.31",
       "type": "TOOL",
       "description": "Plex music client for NextUI",
       "author": "Thwonp",
