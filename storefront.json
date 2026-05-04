@@ -3673,7 +3673,7 @@
       "id": "uTS0lQhoBa",
       "storefront_name": "NextFeed",
       "name": "NextFeed",
-      "version": "v0.3.0",
+      "version": "v1.0.0",
       "type": "TOOL",
       "description": "Offline-friendly RSS and Atom reader for NextUI devices.",
       "author": "Eric Reinsmidt",
@@ -3683,7 +3683,8 @@
       "changelog": {
         "v0.1.0": "RSS 2.0 and Atom feed parsing, using Apostrophe for native NextUI look.",
         "v0.2.0": "Added caching of raw XML per feed, auto-refresh on launch, article count shown next to feed names, color picker and more.",
-        "v0.3.0": "PakKit UI integration, custom on-screen keyboard with URL shortcuts, removed color settings, minimal text hints."
+        "v0.3.0": "PakKit UI integration, custom on-screen keyboard with URL shortcuts, removed color settings, minimal text hints.",
+        "v1.0.0": "WiFi check before fetch with retry/continue, refresh all feeds, scroll bounce fix, new logo and splash screen."
       },
       "previous_names": null,
       "scripts": {
@@ -3705,7 +3706,10 @@
         "assets/logo.png",
         "assets/screenshots/feeds.png",
         "assets/screenshots/list.png",
-        "assets/screenshots/article.png"
+        "assets/screenshots/article.png",
+        "assets/screenshots/menu.png",
+        "assets/screenshots/keyboard.png",
+        "assets/screenshots/nowifi.png"
       ],
       "platforms": [
         "tg5040"
@@ -3721,7 +3725,7 @@
       "id": "BEgjD8r76k",
       "storefront_name": "Nimbus",
       "name": "Nimbus",
-      "version": "v0.2.0",
+      "version": "v1.0.0",
       "type": "TOOL",
       "description": "Weather app for NextUI devices.",
       "author": "Eric Reinsmidt",
@@ -3731,7 +3735,8 @@
       "changelog": {
         "v0.1.0": "Initial version.",
         "v0.1.1": "Updated UI, squashed some bugs.",
-        "v0.2.0": "PakKit keyboard for location search, updated README, pinned PakKit v0.2.0."
+        "v0.2.0": "PakKit keyboard for location search, updated README, pinned PakKit v0.2.0.",
+        "v1.0.0": "Offline cache with cached data indicator, L1/R1 error handling, WiFi retry/continue on launch, new logo and splash screen."
       },
       "previous_names": null,
       "scripts": {
@@ -3753,9 +3758,10 @@
         "assets/logo.png",
         "assets/screenshots/current.png",
         "assets/screenshots/forecast.png",
-        "assets/screenshots/location.png",
-        "assets/screenshots/qr.png",
-        "assets/screenshots/api.png"
+        "assets/screenshots/hourly.png",
+        "assets/screenshots/astro.png",
+        "assets/screenshots/locations.png",
+        "assets/screenshots/cached.png"
       ],
       "platforms": [
         "tg5040"
