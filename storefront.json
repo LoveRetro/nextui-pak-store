@@ -3824,16 +3824,18 @@
       "id": "zZdmZSHL8L",
       "storefront_name": "LED'oh!",
       "name": "LED'oh!",
-      "version": "v0.2.0",
+      "version": "v0.5.0",
       "type": "TOOL",
-      "description": "Graphical LED color controller for NextUI on TrimUI Brick and Smart Pro.",
+      "description": "Graphical LED color controller with per-LED animations for NextUI on TrimUI Brick and Smart Pro.",
       "author": "Eric Reinsmidt",
       "repo_url": "https://github.com/ericreinsmidt/nextui-ledoh",
       "previous_repo_urls": null,
       "release_filename": "LEDoh.tg5040.pak.zip",
       "changelog": {
         "v0.1.0": "Initial release. Front/back device view with LED zone overlays, 2D HSL color picker with live LED preview, per-zone brightness/effect/speed settings, NextUI-compatible settings file.",
-        "v0.2.0": "Smart Pro support (3 zones: joystick rings, logo triangle). LED toggle (∴ button). Random front image variants. Pill-shaped selection borders on FN keys. Brightness sharing notes in zone settings. Smart Pro GRB color fix for logo LED. Joystick leak fix in color picker. Preserves color2/trigger/inbrightness from settings file."
+        "v0.2.0": "Smart Pro support (3 zones: joystick rings, logo triangle). LED toggle (∴ button). Random front image variants. Pill-shaped selection borders on FN keys. Brightness sharing notes in zone settings. Smart Pro GRB color fix for logo LED. Joystick leak fix in color picker. Preserves color2/trigger/inbrightness from settings file.",
+        "v0.4.0": "15 per-LED animations via frame_hex (Brick only). Animations persist across app exit and reboot. Settings backup/restore preserves colors while animations run. Simplified state model (removed toggle, removed save prompt). Blip-free animation handoff.",
+        "v0.5.0": "Dynamic animation discovery — drop .sh scripts in the scripts folder and they appear in the menu automatically. Added Lava Lamp animation. User-created animation support with NAME header convention."
       },
       "previous_names": null,
       "scripts": {
