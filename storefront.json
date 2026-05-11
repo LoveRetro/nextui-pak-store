@@ -3873,6 +3873,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "3aNJrBZdif",
+      "storefront_name": "Overlays",
+      "name": "Overlays",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "Browse, preview and install community emulator overlays from the LoveRetro/nextui-community-overlays repository directly on your handheld. Auto-detects installed emu paks (e.g. MGBA, GAMBATTE, SUPA) and resolution-aware overlay paths.",
+      "author": "zolek86",
+      "repo_url": "https://github.com/zolek86/NextUI-Overlays",
+      "previous_repo_urls": null,
+      "release_filename": "Overlays.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial release. System browser, fullscreen preview, install with auto-generated .cfg, alias detection (GBA -\u003e MGBA, SFC -\u003e SUPA, etc.), resolution-aware install paths."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": [],
+      "screenshots": [],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
