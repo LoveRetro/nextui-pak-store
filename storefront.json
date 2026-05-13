@@ -3827,7 +3827,7 @@
       "id": "zZdmZSHL8L",
       "storefront_name": "LED'oh!",
       "name": "LED'oh!",
-      "version": "v0.6.0",
+      "version": "v0.6.1",
       "type": "TOOL",
       "description": "Graphical LED color controller with per-LED animations for NextUI on TrimUI Brick and Smart Pro.",
       "author": "Eric Reinsmidt",
@@ -3839,7 +3839,8 @@
         "v0.2.0": "Smart Pro support (3 zones: joystick rings, logo triangle). LED toggle (∴ button). Random front image variants. Pill-shaped selection borders on FN keys. Brightness sharing notes in zone settings. Smart Pro GRB color fix for logo LED. Joystick leak fix in color picker. Preserves color2/trigger/inbrightness from settings file.",
         "v0.4.0": "15 per-LED animations via frame_hex (Brick only). Animations persist across app exit and reboot. Settings backup/restore preserves colors while animations run. Simplified state model (removed toggle, removed save prompt). Blip-free animation handoff.",
         "v0.5.0": "Dynamic animation discovery — drop .sh scripts in the scripts folder and they appear in the menu automatically. Added Lava Lamp animation. User-created animation support with NAME header convention.",
-        "v0.6.0": "LEDs Off/On toggle (Menu button) with persistent state — remembers and resumes static colors or running animation. Consolidated state management into single state file. Simplified hint bar in off mode. New Kessel Run animation. Reversed direction on EKG, Binary. Removed 6 animations."
+        "v0.6.0": "LEDs Off/On toggle (Menu button) with persistent state — remembers and resumes static colors or running animation. Consolidated state management into single state file. Simplified hint bar in off mode. New Kessel Run animation. Reversed direction on EKG, Binary. Removed 6 animations.",
+        "v0.6.1": "Fast cursor movement in color picker (hold L1/R1 + D-pad)."
       },
       "previous_names": null,
       "scripts": {
