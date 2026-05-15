@@ -3924,7 +3924,7 @@
       "id": "dZuxGhtuE3",
       "storefront_name": "Fuhgeddaboudit",
       "name": "Fuhgeddaboudit",
-      "version": "v0.1.0",
+      "version": "v0.2.0",
       "type": "TOOL",
       "description": "Remove game stats from the NextUI Game Tracker. Have too many games being tracked you don't want to scroll through? Select one you don't want and fuhgeddaboudit!",
       "author": "Eric Reinsmidt",
@@ -3932,7 +3932,8 @@
       "previous_repo_urls": null,
       "release_filename": "Fuhgeddaboudit.tg5040.pak.zip",
       "changelog": {
-        "v0.1.0": "Initial release. Browse tracked games sorted by total playtime, select and delete play history."
+        "v0.1.0": "Initial release. Browse tracked games sorted by total playtime, select and delete play history.",
+        "v0.2.0": "Merge duplicate entries (∴ button). Fix thumbnails not loading for palette-format PNG images."
       },
       "previous_names": null,
       "scripts": {
@@ -3950,7 +3951,13 @@
         }
       },
       "update_ignore": null,
-      "screenshots": null,
+      "screenshots": [
+        "assets/screenshots/splash.png",
+        "assets/screenshots/game_list.png",
+        "assets/screenshots/confirm.png",
+        "assets/screenshots/merge_list.png",
+        "assets/screenshots/merge_entry.png"
+      ],
       "platforms": [
         "tg5040"
       ],
