@@ -3883,7 +3883,7 @@
       "id": "3aNJrBZdif",
       "storefront_name": "Overlays",
       "name": "Overlays",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "type": "TOOL",
       "description": "Browse, preview and install community emulator overlays from the LoveRetro/nextui-community-overlays repository directly on your handheld. Auto-detects installed emu paks (e.g. MGBA, GAMBATTE, SUPA) and resolution-aware overlay paths.",
       "author": "zolek86",
@@ -3891,7 +3891,8 @@
       "previous_repo_urls": null,
       "release_filename": "Overlays.pak.zip",
       "changelog": {
-        "v0.1.0": "Initial release. System browser, fullscreen preview, install with auto-generated .cfg, alias detection (GBA -\u003e MGBA, SFC -\u003e SUPA, etc.), resolution-aware install paths."
+        "v0.1.0": "Initial release. System browser, fullscreen preview, install with auto-generated .cfg, alias detection (GBA -\u003e MGBA, SFC -\u003e SUPA, etc.), resolution-aware install paths.",
+        "v0.1.1": "Fix release packaging: zip the pak contents directly so the Pak Store no longer creates a nested Overlays.pak/Overlays.pak/ folder on install."
       },
       "previous_names": null,
       "scripts": {
@@ -3924,16 +3925,17 @@
       "id": "dZuxGhtuE3",
       "storefront_name": "Fuhgeddaboudit",
       "name": "Fuhgeddaboudit",
-      "version": "v0.2.0",
+      "version": "v0.2.1",
       "type": "TOOL",
-      "description": "Remove game stats from the NextUI Game Tracker. Have too many games being tracked you don't want to scroll through? Select one you don't want and fuhgeddaboudit!",
+      "description": "Remove game stats from the NextUI Game Tracker. Have too many games being tracked you don't want to scroll through? Select one you don't want and fuhgeddaboudit! Also merges duplicate entries.",
       "author": "Eric Reinsmidt",
       "repo_url": "https://github.com/ericreinsmidt/nextui-fuhgeddaboudit",
       "previous_repo_urls": null,
       "release_filename": "Fuhgeddaboudit.tg5040.pak.zip",
       "changelog": {
         "v0.1.0": "Initial release. Browse tracked games sorted by total playtime, select and delete play history.",
-        "v0.2.0": "Merge duplicate entries (∴ button). Fix thumbnails not loading for palette-format PNG images."
+        "v0.2.0": "Merge duplicate entries (∴ button). Fix thumbnails not loading for palette-format PNG images.",
+        "v0.2.1": "Fixed non-deterministic list sorting on matching number of plays, because I am a knucklehead."
       },
       "previous_names": null,
       "scripts": {
