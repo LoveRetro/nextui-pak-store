@@ -3919,6 +3919,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "dZuxGhtuE3",
+      "storefront_name": "Fuhgeddaboudit",
+      "name": "Fuhgeddaboudit",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "Remove game stats from the NextUI Game Tracker. Have too many games being tracked you don't want to scroll through? Select one you don't want and fuhgeddaboudit!",
+      "author": "Eric Reinsmidt",
+      "repo_url": "https://github.com/ericreinsmidt/nextui-fuhgeddaboudit",
+      "previous_repo_urls": null,
+      "release_filename": "Fuhgeddaboudit.tg5040.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial release. Browse tracked games sorted by total playtime, select and delete play history."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
