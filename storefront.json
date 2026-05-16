@@ -3684,7 +3684,7 @@
       "id": "uTS0lQhoBa",
       "storefront_name": "NextFeed",
       "name": "NextFeed",
-      "version": "v1.2.0",
+      "version": "v1.3.0",
       "type": "TOOL",
       "description": "Offline-friendly RSS and Atom reader for NextUI devices.",
       "author": "Eric Reinsmidt",
@@ -3697,7 +3697,8 @@
         "v0.3.0": "PakKit UI integration, custom on-screen keyboard with URL shortcuts, removed color settings, minimal text hints.",
         "v1.0.0": "WiFi check before fetch with retry/continue, refresh all feeds, scroll bounce fix, new logo and splash screen.",
         "v1.1.0": "Article hero images with fetch and cache, scroll bounce fix, standardized build system.",
-        "v1.2.0": "Smooth scrolling in article detail view."
+        "v1.2.0": "Smooth scrolling in article detail view.",
+        "v1.3.0": "Shoulder button navigation (L1/R1) to flip between articles."
       },
       "previous_names": null,
       "scripts": {
