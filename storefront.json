@@ -4062,6 +4062,53 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "rgQk9umplH",
+      "storefront_name": "Shader Installer",
+      "name": "Shader Installer",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Browse, download, and install single-pass GLSL shaders from GitHub directly onto your NextUI device.",
+      "author": "SkyWalker541",
+      "repo_url": "https://github.com/SkyWalker541/NextUI-Shader-Installer-Pak",
+      "previous_repo_urls": null,
+      "release_filename": "Shader.Installer.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release — browse and install single-pass GLSL shaders from libretro and SkyWalker541, with automatic .glslp to .cfg conversion, update checking, and shader management."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "screenshots/screenshot1.png",
+        "screenshots/screenshot2.png",
+        "screenshots/screenshot3.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ]
 }
