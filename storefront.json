@@ -3201,7 +3201,7 @@
       "id": "jSb2dK7H00",
       "storefront_name": "WeRead",
       "name": "WeRead",
-      "version": "v0.1.11",
+      "version": "v0.1.12",
       "type": "TOOL",
       "description": "A native WeRead client for TrimUI handhelds.",
       "author": "Lin0u0",
@@ -3211,6 +3211,7 @@
       "changelog": {
         "v0.1.10": "Split the reader and UI runtime into dedicated modules, hardened reader/article parsing and progress/session handling, and added package launcher audit smoke coverage.",
         "v0.1.11": "Reduced default device log noise, cached repeated text and shelf indexes, throttled reader position saves, and moved more reader work off the input path for smoother low-power use.",
+        "v0.1.12": "Fixed NextUI Shortcuts launches so WeRead resolves the same data root as Tools launches, preserving the existing login session, and added relative-launch smoke coverage.",
         "v0.1.3": "Improved reader layout, restored system OSD hotkeys, and added tg5040 haptic feedback.",
         "v0.1.4": "Polished reader navigation with smoother catalog selection, confirm-to-exit from reading, and faster nearby shelf cover loading. Also refactored reader and UI helpers into dedicated modules for easier maintenance.",
         "v0.1.5": "Reduced CPU usage and device heat during idle reading and browsing with event-driven sleep, non-blocking haptics, and smarter render skipping.",
