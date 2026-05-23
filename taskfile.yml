@@ -36,6 +36,7 @@ tasks:
       - mkdir -p "build/Pak Store.pak/resources/lib"
       - cp build/pak-store launch.sh README.md LICENSE pak.json "build/Pak Store.pak"
       - cp resources/splash.png resources/jankstore.png "build/Pak Store.pak/resources"
+      - cp resources/splash_*.png "build/Pak Store.pak/resources"
       - cp -R build/lib "build/Pak Store.pak/resources"
       - rm -rf "build/Tools" || true
       - mkdir -p "build/Tools/tg5040"

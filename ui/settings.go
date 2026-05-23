@@ -5,6 +5,7 @@ import (
 
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
 	"github.com/LoveRetro/nextui-pak-store/internal"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 )
 
 type SettingsInput struct {
@@ -30,7 +31,7 @@ func (s *SettingsScreen) Draw(input SettingsInput) (ScreenResult[SettingsOutput]
 	items := s.buildMenuItems(config)
 
 	result, err := gaba.OptionsList(
-		"Settings",
+		i18n.T("ps.title.settings"),
 		gaba.OptionListSettings{
 			FooterHelpItems: OptionsListFooter(),
 			UseSmallTitle:   true,
@@ -49,7 +50,7 @@ func (s *SettingsScreen) Draw(input SettingsInput) (ScreenResult[SettingsOutput]
 	// Check if Info was clicked
 	if result.Action == gaba.ListActionSelected {
 		selectedText := items[result.Selected].Item.Text
-		if selectedText == "Info" {
+		if selectedText == i18n.T("ps.settings.info") {
 			return withAction(output, ActionInfo), nil
 		}
 	}
@@ -73,32 +74,32 @@ func (s *SettingsScreen) Draw(input SettingsInput) (ScreenResult[SettingsOutput]
 func (s *SettingsScreen) buildMenuItems(config *internal.Config) []gaba.ItemWithOptions {
 	return []gaba.ItemWithOptions{
 		{
-			Item: gaba.MenuItem{Text: "Platform Filter"},
+			Item: gaba.MenuItem{Text: i18n.T("ps.settings.platform_filter")},
 			Options: []gaba.Option{
-				{DisplayName: "Match Device", Value: internal.PlatformFilterMatchDevice},
-				{DisplayName: "All", Value: internal.PlatformFilterAll},
+				{DisplayName: i18n.T("ps.settings.platform_filter.match"), Value: internal.PlatformFilterMatchDevice},
+				{DisplayName: i18n.T("ps.settings.platform_filter.all"), Value: internal.PlatformFilterAll},
 			},
 			SelectedOption: platformFilterToIndex(config.PlatformFilter),
 		},
 		{
-			Item: gaba.MenuItem{Text: "Debug Level"},
+			Item: gaba.MenuItem{Text: i18n.T("ps.settings.debug_level")},
 			Options: []gaba.Option{
-				{DisplayName: "Error", Value: internal.DebugLevelError},
-				{DisplayName: "Info", Value: internal.DebugLevelInfo},
-				{DisplayName: "Debug", Value: internal.DebugLevelDebug},
+				{DisplayName: i18n.T("ps.settings.debug_level.error"), Value: internal.DebugLevelError},
+				{DisplayName: i18n.T("ps.settings.debug_level.info"), Value: internal.DebugLevelInfo},
+				{DisplayName: i18n.T("ps.settings.debug_level.debug"), Value: internal.DebugLevelDebug},
 			},
 			SelectedOption: debugLevelToIndex(config.DebugLevel),
 		},
 		{
-			Item: gaba.MenuItem{Text: "Discover Existing Installs"},
+			Item: gaba.MenuItem{Text: i18n.T("ps.settings.discover")},
 			Options: []gaba.Option{
-				{DisplayName: "On", Value: true},
-				{DisplayName: "Off", Value: false},
+				{DisplayName: i18n.T("ps.toggle.on"), Value: true},
+				{DisplayName: i18n.T("ps.toggle.off"), Value: false},
 			},
 			SelectedOption: discoverExistingInstallsToIndex(config.ShouldDiscoverExistingInstalls()),
 		},
 		{
-			Item:    gaba.MenuItem{Text: "Info"},
+			Item:    gaba.MenuItem{Text: i18n.T("ps.settings.info")},
 			Options: []gaba.Option{{Type: gaba.OptionTypeClickable}},
 		},
 	}
@@ -107,15 +108,15 @@ func (s *SettingsScreen) buildMenuItems(config *internal.Config) []gaba.ItemWith
 func (s *SettingsScreen) applySettings(config *internal.Config, items []gaba.ItemWithOptions) {
 	for _, item := range items {
 		switch item.Item.Text {
-		case "Platform Filter":
+		case i18n.T("ps.settings.platform_filter"):
 			if val, ok := item.Options[item.SelectedOption].Value.(internal.PlatformFilterMode); ok {
 				config.PlatformFilter = val
 			}
-		case "Debug Level":
+		case i18n.T("ps.settings.debug_level"):
 			if val, ok := item.Options[item.SelectedOption].Value.(internal.DebugLevel); ok {
 				config.DebugLevel = val
 			}
-		case "Discover Existing Installs":
+		case i18n.T("ps.settings.discover"):
 			if val, ok := item.Options[item.SelectedOption].Value.(bool); ok {
 				config.DiscoverExistingInstalls = &val
 			}

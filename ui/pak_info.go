@@ -15,6 +15,7 @@ import (
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool/constants"
 	"github.com/LoveRetro/nextui-pak-store/database"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/utils"
 )
@@ -105,21 +106,21 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 	if _, ok := pak.Changelog[pak.Version]; ok && input.IsUpdate {
 		sections = append(sections,
 			gaba.NewDescriptionSection(
-				fmt.Sprintf("What's new in %s?", pak.Version),
+				i18n.Tf("ps.pak.whats_new_fmt", pak.Version),
 				pak.Changelog[pak.Version],
 			))
 	}
 
 	if pak.Description != "" {
 		sections = append(sections, gaba.NewDescriptionSection(
-			"Description",
+			i18n.T("ps.pak.description"),
 			pak.Description,
 		))
 	}
 
 	if len(screenshots) > 0 {
 		sections = append(sections, gaba.NewSlideshowSection(
-			"Screenshots",
+			i18n.T("ps.pak.screenshots"),
 			screenshots,
 			int32(float64(gaba.GetWindow().GetWidth())/1.2),
 			int32(float64(gaba.GetWindow().GetHeight())/1.2),
@@ -127,10 +128,10 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 	}
 
 	sections = append(sections, gaba.NewInfoSection(
-		"Pak Info",
+		i18n.T("ps.pak.info"),
 		[]gaba.MetadataItem{
-			{Label: "Author", Value: pak.Author},
-			{Label: "Version", Value: pak.Version},
+			{Label: i18n.T("ps.pak.author"), Value: pak.Author},
+			{Label: i18n.T("ps.pak.version"), Value: pak.Version},
 		},
 	))
 
@@ -151,7 +152,7 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 
 	if len(changelog) > 0 {
 		sections = append(sections, gaba.NewDescriptionSection(
-			"Changelog",
+			i18n.T("ps.pak.changelog"),
 			strings.Join(changelog, "\n\n"),
 		))
 	}
@@ -159,7 +160,7 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 	qrcode, err := utils.CreateTempQRCode(pak.RepoURL, 256)
 	if err == nil {
 		sections = append(sections, gaba.NewImageSection(
-			"Pak Repository",
+			i18n.T("ps.pak.repository"),
 			qrcode,
 			int32(256),
 			int32(256),
@@ -179,17 +180,17 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 	if input.IsUpdate {
 		footerItems = []gaba.FooterHelpItem{
 			FooterBack(),
-			{ButtonName: "A", HelpText: "Update"},
+			{ButtonName: "A", HelpText: i18n.T("ps.btn.update")},
 		}
 	} else if input.IsInstalled {
 		footerItems = []gaba.FooterHelpItem{
 			FooterBack(),
-			{ButtonName: "A", HelpText: "Uninstall"},
+			{ButtonName: "A", HelpText: i18n.T("ps.btn.uninstall")},
 		}
 	} else {
 		footerItems = []gaba.FooterHelpItem{
 			FooterBack(),
-			{ButtonName: "A", HelpText: "Install"},
+			{ButtonName: "A", HelpText: i18n.T("ps.btn.install")},
 		}
 	}
 
@@ -203,10 +204,10 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 	}
 
 	if input.IsInstalled && !input.IsUpdate {
-		_, err = gaba.ConfirmationMessage(fmt.Sprintf("Are you sure that you want to uninstall\n %s?", pak.Name),
+		_, err = gaba.ConfirmationMessage(i18n.Tf("ps.uninstall.confirm_fmt", pak.Name),
 			[]gaba.FooterHelpItem{
-				{ButtonName: "B", HelpText: "Nevermind"},
-				{ButtonName: "X", HelpText: "Yes"},
+				{ButtonName: "B", HelpText: i18n.T("ps.btn.nevermind")},
+				{ButtonName: "X", HelpText: i18n.T("ps.btn.yes")},
 			}, gaba.MessageOptions{
 				ConfirmButton: constants.VirtualButtonX,
 			})
@@ -218,7 +219,7 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 			return withAction(output, ActionError), err
 		}
 
-		_, err = gaba.ProcessMessage(fmt.Sprintf("%s %s...", "Uninstalling", pak.Name), gaba.ProcessMessageOptions{}, func() (interface{}, error) {
+		_, err = gaba.ProcessMessage(i18n.Tf("ps.uninstall.in_progress_fmt", pak.Name), gaba.ProcessMessageOptions{}, func() (interface{}, error) {
 			pakLocation := ""
 
 			switch pak.PakType {
@@ -236,7 +237,7 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 		})
 
 		if err != nil {
-			gaba.ProcessMessage(fmt.Sprintf("Unable to uninstall %s", pak.Name), gaba.ProcessMessageOptions{}, func() (interface{}, error) {
+			gaba.ProcessMessage(i18n.Tf("ps.uninstall.error_fmt", pak.Name), gaba.ProcessMessageOptions{}, func() (interface{}, error) {
 				time.Sleep(3 * time.Second)
 				return nil, nil
 			})
@@ -269,7 +270,7 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 	err = utils.UnzipPakArchive(pak, tmp)
 	if err != nil {
 		logger.Error("Unable to extract pak archive", "error", err)
-		gaba.ProcessMessage(fmt.Sprintf("Failed to extract %s", pak.StorefrontName),
+		gaba.ProcessMessage(i18n.Tf("ps.install.extract_error_fmt", pak.StorefrontName),
 			gaba.ProcessMessageOptions{ShowThemeBackground: true}, func() (interface{}, error) {
 				time.Sleep(2 * time.Second)
 				return nil, nil
@@ -297,16 +298,16 @@ func (s *PakInfoScreen) drawSingle(input PakInfoInput) (ScreenResult[PakInfoOutp
 		database.DBQ().UpdateVersion(context.Background(), update)
 	}
 
-	action := "Installed"
+	actionKey := "ps.install.success_fmt"
 	if input.IsUpdate {
-		action = "Updated"
+		actionKey = "ps.update.success_fmt"
 	}
 
 	if pak.Name == "Pak Store" {
 		return withAction(output, ActionPakStoreUpdated), nil
 	}
 
-	gaba.ProcessMessage(fmt.Sprintf("%s %s!", pak.StorefrontName, action), gaba.ProcessMessageOptions{}, func() (interface{}, error) {
+	gaba.ProcessMessage(i18n.Tf(actionKey, pak.StorefrontName), gaba.ProcessMessageOptions{}, func() (interface{}, error) {
 		time.Sleep(1250 * time.Millisecond)
 		return nil, nil
 	})
@@ -329,22 +330,21 @@ func (s *PakInfoScreen) drawMultiple(input PakInfoInput) (ScreenResult[PakInfoOu
 		pakNames[i] = pak.StorefrontName
 	}
 
-	overviewText := fmt.Sprintf("The following %d paks will be updated!",
-		len(input.Paks))
+	overviewText := i18n.Tf("ps.update.overview_fmt", len(input.Paks))
 
 	sections = append(sections, gaba.NewDescriptionSection(
-		"Update Overview",
+		i18n.T("ps.update.overview_title"),
 		overviewText,
 	))
 
 	for _, pak := range input.Paks {
 		info := []gaba.MetadataItem{
-			{Label: "Author", Value: pak.Author},
-			{Label: "Current Version", Value: pak.Version},
+			{Label: i18n.T("ps.pak.author"), Value: pak.Author},
+			{Label: i18n.T("ps.pak.current_version"), Value: pak.Version},
 		}
 
 		if changelog, ok := pak.Changelog[pak.Version]; ok {
-			info = append(info, gaba.MetadataItem{Label: "Changelog", Value: changelog})
+			info = append(info, gaba.MetadataItem{Label: i18n.T("ps.pak.changelog"), Value: changelog})
 		}
 
 		sections = append(sections, gaba.NewInfoSection(
@@ -361,10 +361,10 @@ func (s *PakInfoScreen) drawMultiple(input PakInfoInput) (ScreenResult[PakInfoOu
 
 	footerItems := []gaba.FooterHelpItem{
 		FooterCancel(),
-		{ButtonName: "X", HelpText: "Update All"},
+		{ButtonName: "X", HelpText: i18n.T("ps.updates.update_all")},
 	}
 
-	title := fmt.Sprintf("Update %d Paks", len(input.Paks))
+	title := i18n.Tf("ps.update.title_fmt", len(input.Paks))
 
 	var err error
 	_, err = gaba.DetailScreen(title, options, footerItems)
@@ -385,7 +385,7 @@ func (s *PakInfoScreen) drawMultiple(input PakInfoInput) (ScreenResult[PakInfoOu
 			logger.Error("Failed to download pak",
 				"error", err,
 				"pak", pak.StorefrontName)
-			gaba.ProcessMessage(fmt.Sprintf("Failed to download %s", pak.StorefrontName),
+			gaba.ProcessMessage(i18n.Tf("ps.update.download_error_fmt", pak.StorefrontName),
 				gaba.ProcessMessageOptions{ShowThemeBackground: true}, func() (interface{}, error) {
 					time.Sleep(2 * time.Second)
 					return nil, nil
@@ -400,7 +400,7 @@ func (s *PakInfoScreen) drawMultiple(input PakInfoInput) (ScreenResult[PakInfoOu
 			logger.Error("Failed to extract pak",
 				"error", err,
 				"pak", pak.StorefrontName)
-			gaba.ProcessMessage(fmt.Sprintf("Failed to extract %s", pak.StorefrontName),
+			gaba.ProcessMessage(i18n.Tf("ps.update.extract_error_fmt", pak.StorefrontName),
 				gaba.ProcessMessageOptions{ShowThemeBackground: true}, func() (interface{}, error) {
 					time.Sleep(2 * time.Second)
 					return nil, nil
@@ -421,7 +421,7 @@ func (s *PakInfoScreen) drawMultiple(input PakInfoInput) (ScreenResult[PakInfoOu
 		}
 
 		if pak.Name == "Pak Store" {
-			gaba.ProcessMessage("Pak Store Updated! Restarting...",
+			gaba.ProcessMessage(i18n.T("ps.update.pak_store_restarting"),
 				gaba.ProcessMessageOptions{ShowThemeBackground: true}, func() (interface{}, error) {
 					time.Sleep(2 * time.Second)
 					return nil, nil
@@ -430,7 +430,7 @@ func (s *PakInfoScreen) drawMultiple(input PakInfoInput) (ScreenResult[PakInfoOu
 		}
 	}
 
-	gaba.ProcessMessage("All paks updated successfully!",
+	gaba.ProcessMessage(i18n.T("ps.update.all_success"),
 		gaba.ProcessMessageOptions{ShowThemeBackground: true}, func() (interface{}, error) {
 			time.Sleep(2 * time.Second)
 			return nil, nil

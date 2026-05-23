@@ -17,6 +17,7 @@ import (
 	"time"
 
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/skip2/go-qrcode"
 )
@@ -173,7 +174,7 @@ func RunScript(script models.Script, scriptName string) error {
 		return nil
 	}
 
-	_, err := gabagool.ProcessMessage(fmt.Sprintf("%s %s %s...", "Running", scriptName, "Script"), gabagool.ProcessMessageOptions{}, func() (interface{}, error) {
+	_, err := gabagool.ProcessMessage(i18n.Tf("ps.script.running_fmt", scriptName), gabagool.ProcessMessageOptions{}, func() (interface{}, error) {
 		logger.Info("Running script",
 			"path", script.Path,
 			"args", script.Args)
@@ -228,7 +229,7 @@ func UnzipPakArchive(pak models.Pak, tmp string) error {
 		pakDestination = filepath.Join(GetEmulatorRoot(), pak.Name+".pak")
 	}
 
-	_, err := gabagool.ProcessMessage(fmt.Sprintf("%s %s...", "Unzipping", pak.StorefrontName), gabagool.ProcessMessageOptions{}, func() (interface{}, error) {
+	_, err := gabagool.ProcessMessage(i18n.Tf("ps.unzip.in_progress_fmt", pak.StorefrontName), gabagool.ProcessMessageOptions{}, func() (interface{}, error) {
 		err := Unzip(tmp, pakDestination, pak, false)
 		if err != nil {
 			return nil, err
@@ -240,7 +241,7 @@ func UnzipPakArchive(pak models.Pak, tmp string) error {
 	})
 
 	if err != nil {
-		gabagool.ProcessMessage(fmt.Sprintf("Unable to unzip %s", pak.StorefrontName), gabagool.ProcessMessageOptions{}, func() (interface{}, error) {
+		gabagool.ProcessMessage(i18n.Tf("ps.unzip.error_fmt", pak.StorefrontName), gabagool.ProcessMessageOptions{}, func() (interface{}, error) {
 			time.Sleep(3 * time.Second)
 			return nil, nil
 		})

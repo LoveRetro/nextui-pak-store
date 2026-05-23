@@ -5,6 +5,7 @@
 .DS_Store
 
 /build/
+/pak-store
 
 *.log
 /.device_logs/

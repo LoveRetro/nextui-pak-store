@@ -5,6 +5,7 @@ import (
 
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool/constants"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/utils"
 	"github.com/LoveRetro/nextui-pak-store/version"
@@ -50,25 +51,21 @@ func (s *InfoScreen) buildSections() []gaba.Section {
 
 	buildInfo := version.Get()
 	buildMetadata := []gaba.MetadataItem{
-		{Label: "Version", Value: buildInfo.Version},
-		{Label: "Commit", Value: buildInfo.GitCommit},
-		{Label: "Build Date", Value: buildInfo.BuildDate},
+		{Label: i18n.T("ps.info.version"), Value: buildInfo.Version},
+		{Label: i18n.T("ps.info.commit"), Value: buildInfo.GitCommit},
+		{Label: i18n.T("ps.info.build_date"), Value: buildInfo.BuildDate},
 	}
 	sections = append(sections, gaba.NewInfoSection("Pak Store", buildMetadata))
 
 	sections = append(sections, gaba.NewDescriptionSection(
-		"Community Shout Out",
-		"Pak Store exists because of the incredible NextUI community. "+
-			"Your creativity, passion, and dedication to building amazing paks "+
-			"is what makes this platform special. Every emulator, tool, and enhancement "+
-			"you create brings joy to our retro doo-dads! "+
-			"Thank you for sharing your talents and making NextUI better for everyone.",
+		i18n.T("ps.info.community.title"),
+		i18n.T("ps.info.community.body"),
 	))
 
 	qrcode, err := utils.CreateTempQRCode(models.PakStoreRepo, 256)
 	if err == nil {
 		sections = append(sections, gaba.NewImageSection(
-			"GitHub Repository",
+			i18n.T("ps.info.github_repo"),
 			qrcode,
 			int32(256),
 			int32(256),

@@ -3,6 +3,7 @@ package main
 import (
 	_ "embed"
 	"log/slog"
+	"os"
 	"path/filepath"
 	"time"
 
@@ -10,16 +11,33 @@ import (
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool/constants"
 	"github.com/LoveRetro/nextui-pak-store/database"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/state"
 	"github.com/LoveRetro/nextui-pak-store/utils"
 	_ "modernc.org/sqlite"
 )
 
+// splashForLocale returns the locale-specific splash image path when it
+// exists on disk, falling back to the English splash. The active locale
+// comes from NextUI's minuisettings (via i18n.Active()).
+func splashForLocale() string {
+	code := i18n.Active()
+	if code != "" && code != "en" {
+		candidate := "resources/splash_" + code + ".png"
+		if _, err := os.Stat(candidate); err == nil {
+			return candidate
+		}
+	}
+	return "resources/splash.png"
+}
+
 var storefront models.Storefront
 var experimentalUnlocked bool
 
 func init() {
+	i18n.Init()
+
 	logPath := filepath.Join(utils.GetLogsDir(), "pak_store.log")
 	gaba.Init(gaba.Options{
 		WindowTitle:    "Pak Store",
@@ -41,7 +59,7 @@ func init() {
 	})
 
 	sf, err := gaba.ProcessMessage("",
-		gaba.ProcessMessageOptions{Image: "resources/splash.png", ImageWidth: 1024, ImageHeight: 768}, func() (models.Storefront, error) {
+		gaba.ProcessMessageOptions{Image: splashForLocale(), ImageWidth: 1024, ImageHeight: 768}, func() (models.Storefront, error) {
 			time.Sleep(3 * time.Second)
 			return utils.FetchStorefront()
 		})
@@ -56,14 +74,14 @@ func init() {
 			return nil, nil
 		})
 
-		gaba.ConfirmationMessage("Experimental Paks Unlocked.\nUse at your own risk!\nMake sure you have backups!", []gaba.FooterHelpItem{
-			{ButtonName: "A", HelpText: "Continue"},
+		gaba.ConfirmationMessage(i18n.T("ps.experimental_unlocked"), []gaba.FooterHelpItem{
+			{ButtonName: "A", HelpText: i18n.T("ps.btn.continue")},
 		}, gaba.MessageOptions{})
 	}
 
 	if err != nil {
-		gaba.ConfirmationMessage("Could not load the Storefront!\nMake sure you are connected to Wi-Fi.\nIf this issue persists, check the logs.", []gaba.FooterHelpItem{
-			{ButtonName: "B", HelpText: "Quit"},
+		gaba.ConfirmationMessage(i18n.T("ps.storefront_error"), []gaba.FooterHelpItem{
+			{ButtonName: "B", HelpText: i18n.T("ps.btn.quit")},
 		}, gaba.MessageOptions{})
 		defer gaba.Close()
 		utils.LogStandardFatal("Could not load Storefront!", err)
