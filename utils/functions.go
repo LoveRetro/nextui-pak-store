@@ -139,13 +139,20 @@ func DownloadPakArchive(pak models.Pak) (tempFile string, completed bool, error 
 	dl := pak.RepoURL + releasesStub + pak.ReleaseFilename
 	tmp := filepath.Join("/tmp", pak.ReleaseFilename)
 
-	message := fmt.Sprintf("Downloading %s %s...", pak.StorefrontName, pak.Version)
+	message := i18n.Tf("ps.download.title_fmt", pak.StorefrontName, pak.Version)
 
 	res, err := gabagool.DownloadManager([]gabagool.Download{{
 		URL:         dl,
 		Location:    tmp,
 		DisplayName: message,
-	}}, make(map[string]string), gabagool.DownloadManagerOptions{AutoContinueOnComplete: true})
+	}}, make(map[string]string), gabagool.DownloadManagerOptions{
+		AutoContinueOnComplete: true,
+		CloseText:              i18n.T("ps.btn.close"),
+		CancelDownloadText:     i18n.T("ps.btn.cancel_download"),
+		CancelAllDownloadsText: i18n.T("ps.btn.cancel_all_downloads"),
+		ShowSpeedText:          i18n.T("ps.btn.show_speed"),
+		HideSpeedText:          i18n.T("ps.btn.hide_speed"),
+	})
 
 	if err != nil {
 		// Check if it was cancelled
