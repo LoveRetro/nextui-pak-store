@@ -3938,7 +3938,7 @@
       "id": "dZuxGhtuE3",
       "storefront_name": "Fuhgeddaboudit",
       "name": "Fuhgeddaboudit",
-      "version": "v0.2.1",
+      "version": "v0.3.0",
       "type": "TOOL",
       "description": "Remove game stats from the NextUI Game Tracker. Have too many games being tracked you don't want to scroll through? Select one you don't want and fuhgeddaboudit! Also merges duplicate entries.",
       "author": "Eric Reinsmidt",
@@ -3948,7 +3948,8 @@
       "changelog": {
         "v0.1.0": "Initial release. Browse tracked games sorted by total playtime, select and delete play history.",
         "v0.2.0": "Merge duplicate entries (∴ button). Fix thumbnails not loading for palette-format PNG images.",
-        "v0.2.1": "Fixed non-deterministic list sorting on matching number of plays, because I am a knucklehead."
+        "v0.2.1": "Fixed non-deterministic list sorting on matching number of plays, because I am a knucklehead.",
+        "v0.3.0": "Selective merge with multiselect toggles. Platform shown in sublabels. Bumped max game limit to 2048. Fixed merge confirmation bug."
       },
       "previous_names": null,
       "scripts": {
