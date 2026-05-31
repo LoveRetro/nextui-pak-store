@@ -763,6 +763,14 @@
         "Miscellaneous Tools",
         "Media"
       ]
+    },
+    {
+      "id": "gWEj1jIxXs",
+      "storefront_name": "Moonlight",
+      "repo_url": "https://github.com/richieszemeredi/nextui-moonlight-pak",
+      "categories": [
+        "Streaming Game Clients"
+      ]
     }
   ],
   "experimental_paks": [
