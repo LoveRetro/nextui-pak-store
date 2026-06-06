@@ -4254,7 +4254,7 @@
       "id": "rgQk9umplH",
       "storefront_name": "Shader Installer",
       "name": "Shader Installer",
-      "version": "v1.0.0",
+      "version": "v1.0.1",
       "type": "TOOL",
       "description": "Browse, download, and install single-pass GLSL shaders from GitHub directly onto your NextUI device.",
       "author": "SkyWalker541",
