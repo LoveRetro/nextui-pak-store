@@ -322,7 +322,7 @@
       "id": "mC3qY8wT1v",
       "storefront_name": "S3 SaveSync",
       "name": "SaveSync",
-      "version": "v1.0.1",
+      "version": "v1.1.0",
       "type": "TOOL",
       "description": "Sync your save files to a versioned S3 Bucket.",
       "author": "Brandon T. Kowalski",
