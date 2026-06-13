@@ -3263,13 +3263,13 @@
       "id": "4RjneX9Zj2",
       "storefront_name": "SideB",
       "name": "SideB",
-      "version": "v1.0.12",
+      "version": "v1.1.0",
       "type": "TOOL",
       "description": "Retro cassette-style player for TrimUI Brick with Spotify Connect, offline favorites, local MP3 playback, smart caching, and download progress",
       "author": "CharlexH",
       "repo_url": "https://github.com/CharlexH/SideB",
       "previous_repo_urls": null,
-      "release_filename": "SideB-1.0.12-nextui.zip",
+      "release_filename": "SideB-1.1.0-nextui.zip",
       "changelog": {
         "v1.0.10": "Fixed local MP3 playback on NextUI by using the bundled ffmpeg-lite decoder and showing short on-device playback error notices.",
         "v1.0.11": "Hotfixes the bundled ffmpeg-lite build so local playback exposes the real s16le PCM output path and no longer auto-skips tracks.",
@@ -3279,7 +3279,8 @@
         "v1.0.6": "Major performance optimization: 3x faster rendering (87ms → 25ms per frame), eliminated CPU busy-waiting, fast alpha blending, reduced device temperature by ~25°C during playback.",
         "v1.0.7": "Fixed NextUI Pak Store install layout so SideB launches from the menu after store installation.",
         "v1.0.8": "Added a status-bar battery indicator and SideB Lock screen-off behavior, with safer playback-aware sleep handling.",
-        "v1.0.9": "Local MP3 import now scans nested folders under data/imports, so album subfolders are added to FAV LIST automatically."
+        "v1.0.9": "Local MP3 import now scans nested folders under data/imports, so album subfolders are added to FAV LIST automatically.",
+        "v1.1.0": "Adds SDL-based local playback, stronger download recovery and failure notices, improved MP3 import cover handling, and release packaging checks."
       },
       "previous_names": null,
       "scripts": {
