@@ -4128,7 +4128,7 @@
       "id": "addbpI0ckr",
       "storefront_name": "BRIXEQ",
       "name": "BRIXEQ",
-      "version": "v1.6.7",
+      "version": "v1.7.0",
       "type": "TOOL",
       "description": "Tracker-grade step sequencer with per-step instrument snapshots. Every step on every track carries its own engine, envelope, filter, chord stack, send levels, probability, and trigger logic, no patches to switch between. Five concurrent tracks, sixteen patterns per track, sixteen scenes per project, plus a linear 64-row song mode. Six built-in engines (VA, FM, NOIZ, BD, SD, CY). Master delay + reverb + sidechain compressor. WAV recording to the SD card. Full manual at https://github.com/boorch/brixeq-pak/blob/main/MANUAL.md.",
       "author": "boorch (Bruce Menace/Cometary Trails)",
