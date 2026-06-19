@@ -4255,6 +4255,45 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "duA0gQwZlT",
+      "storefront_name": "Ambience",
+      "name": "Ambience",
+      "version": "0.1.0",
+      "type": "TOOL",
+      "description": "Ambient-sound mixer. Drop your own .ogg / .wav / .mp3 files into /mnt/SDCARD/Ambience/sounds and each becomes a looping channel with its own volume and mute. Named presets with an on-screen keyboard, sleep timer with fade-out; everything is saved outside the pak so it survives uninstalling.",
+      "author": "calmery",
+      "repo_url": "https://github.com/calmery/Ambience.pak",
+      "previous_repo_urls": null,
+      "release_filename": "Ambience.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
