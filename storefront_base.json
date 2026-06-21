@@ -787,6 +787,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "qYyqrS1Jfz",
+      "storefront_name": "BMO",
+      "repo_url": "https://github.com/carroarmato0/nextui-bmo-pak",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
