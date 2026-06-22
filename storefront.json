@@ -4299,7 +4299,7 @@
       "id": "qYyqrS1Jfz",
       "storefront_name": "BMO",
       "name": "BMO",
-      "version": "v1.0.0",
+      "version": "v1.0.1",
       "type": "TOOL",
       "description": "Fullscreen BMO-inspired AI assistant and desk companion.",
       "author": "Carroarmato0",
@@ -4308,7 +4308,8 @@
       "release_filename": "BMO.pak.zip",
       "changelog": {
         "v0.1.0": "Initial BMO Pak scaffold.",
-        "v1.0.0": "First stable release: animated BMO face, LLM-directed emotion, voice assistant pipeline, and mods."
+        "v1.0.0": "First stable release: animated BMO face, LLM-directed emotion, voice assistant pipeline, and mods.",
+        "v1.0.1": "Wake-word setting now applies immediately when toggled in Settings, and a 'restart required' notice appears when enabling AI mode (or the wake word) needs a relaunch."
       },
       "previous_names": null,
       "scripts": {
