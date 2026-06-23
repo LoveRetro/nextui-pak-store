@@ -795,6 +795,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "yo3jvTpTvf",
+      "storefront_name": "Trimpod Classic",
+      "repo_url": "https://github.com/tyrannotorus/c-trimui-trimpod-classic-pak",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
