@@ -4343,6 +4343,51 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "yo3jvTpTvf",
+      "storefront_name": "Trimpod Classic",
+      "name": "Trimpod Classic",
+      "version": "v1.0.1",
+      "type": "TOOL",
+      "description": "An iPod Classic-inspired, offline music player for the TrimUI Brick/Hammer with winamp-like visualizations.",
+      "author": "tyrannotorus",
+      "repo_url": "https://github.com/tyrannotorus/c-trimui-trimpod-classic-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Trimpod.pak.zip",
+      "changelog": {
+        "v1.0.1": "Initial release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "screenshots/now-playing.png",
+        "screenshots/settings-power.png",
+        "screenshots/visualizer.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
