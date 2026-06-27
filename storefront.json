@@ -4389,6 +4389,48 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "UTRIL9C3F1",
+      "storefront_name": "WonderSwan Color (beetle)",
+      "name": "WSC",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "Beetle WonderSwan (mednafen_wswan) core to emulate Bandai WonderSwan / WonderSwan Color on the Trimui Brick (tg5040 / tg5050) with NextUI.",
+      "author": "alecrem",
+      "repo_url": "https://github.com/alecrem/Trimui-Brick-WSC",
+      "previous_repo_urls": null,
+      "release_filename": "WSC.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release. mednafen_wswan core (aarch64) from the libretro buildbot."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": [],
+      "screenshots": [],
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
