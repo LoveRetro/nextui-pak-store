@@ -803,6 +803,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "UTRIL9C3F1",
+      "storefront_name": "WonderSwan Color (beetle)",
+      "repo_url": "https://github.com/alecrem/Trimui-Brick-WSC",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
