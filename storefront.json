@@ -3284,7 +3284,7 @@
         "v1.0.9": "Local MP3 import now scans nested folders under data/imports, so album subfolders are added to FAV LIST automatically.",
         "v1.1.0": "Adds SDL-based local playback, stronger download recovery and failure notices, improved MP3 import cover handling, and release packaging checks.",
         "v1.2.1": "Adds USB DAC support for Spotify streaming and local playback, with SDL-based hot-plug routing, inherited SideB volume control, and internal-audio fallback when a DAC is unplugged.",
-        "v1.2.2": "Restores unfinished favorite downloads on startup, lets undownloaded FAV LIST tracks be manually retried at the front of the waiting queue, remembers the last local track across app restarts, and updates yt-dlp plus go-librespot."
+        "v1.2.2": "Restores unfinished favorite downloads on startup, lets undownloaded FAV LIST tracks be manually retried at the front of the waiting queue, remembers the last local track across app restarts and Spotify disconnects, and updates yt-dlp plus go-librespot."
       },
       "previous_names": null,
       "scripts": {
