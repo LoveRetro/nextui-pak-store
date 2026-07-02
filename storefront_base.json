@@ -838,6 +838,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "sxmeMrVFki",
+      "storefront_name": "Lodor",
+      "repo_url": "https://github.com/lodordev/lodor-nextui",
+      "categories": [
+        "ROM Management"
+      ]
     }
   ]
 }
