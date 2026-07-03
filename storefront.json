@@ -4570,6 +4570,51 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "sxmeMrVFki",
+      "storefront_name": "Lodor",
+      "name": "Lodor",
+      "version": "0.9.1-beta",
+      "type": "TOOL",
+      "description": "RomM thin-client — whole-library stubs, download-on-launch, two-way save sync",
+      "author": "lodordev",
+      "repo_url": "https://github.com/lodordev/lodor-nextui",
+      "previous_repo_urls": null,
+      "release_filename": "Lodor.pak.zip",
+      "changelog": {
+        "0.9.1-beta": "First public beta."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": [
+        "config.json",
+        "settings.conf"
+      ],
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "ROM Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ]
 }
