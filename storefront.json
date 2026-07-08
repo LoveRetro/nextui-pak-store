@@ -4575,7 +4575,7 @@
       "id": "sxmeMrVFki",
       "storefront_name": "Lodor",
       "name": "Lodor",
-      "version": "0.9.6",
+      "version": "0.9.7",
       "type": "TOOL",
       "description": "RomM thin-client — whole-library stubs, download-on-launch, two-way save sync",
       "author": "lodordev",
@@ -4584,7 +4584,8 @@
       "release_filename": "Lodor.pak.zip",
       "changelog": {
         "0.9.1-beta": "First public beta.",
-        "0.9.6": "Self-update notices (store badge + daily check after a good sync), pairing self-heal for preseeded/cloned cards, Tailscale QR sign-in no longer times out, sync engine 0.9.6 (save-integrity + cross-device Recently Played interop)."
+        "0.9.6": "Self-update notices (store badge + daily check after a good sync), pairing self-heal for preseeded/cloned cards, Tailscale QR sign-in no longer times out, sync engine 0.9.6 (save-integrity + cross-device Recently Played interop).",
+        "0.9.7": "0.9.7: fleet core alignment (states-portable cores), stale auto-state retirement on restore, Handoff state manifests (dark), engine sync fixes. First release in lockstep with the new Android lane."
       },
       "previous_names": null,
       "scripts": {
