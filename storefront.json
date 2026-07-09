@@ -4575,7 +4575,7 @@
       "id": "sxmeMrVFki",
       "storefront_name": "Lodor",
       "name": "Lodor",
-      "version": "0.9.7.3",
+      "version": "0.9.7.4",
       "type": "TOOL",
       "description": "RomM thin-client — whole-library stubs, download-on-launch, two-way save sync",
       "author": "lodordev",
@@ -4587,7 +4587,8 @@
         "0.9.6": "Self-update notices (store badge + daily check after a good sync), pairing self-heal for preseeded/cloned cards, Tailscale QR sign-in no longer times out, sync engine 0.9.6 (save-integrity + cross-device Recently Played interop).",
         "0.9.7": "0.9.7: fleet core alignment (states-portable cores), stale auto-state retirement on restore, Handoff state manifests (dark), engine sync fixes. First release in lockstep with the new Android lane.",
         "0.9.7.2": "0.9.7.2 — Handoff save-state core alignment (SNES/GBA/etc. now declare the real cores), save-state data-loss fixes, self-update honesty",
-        "0.9.7.3": "0.9.7.3 — Handoff save-state sync end-to-end: Sync Now + daemon now push save-states, on-exit state push decoupled from battery saves, offline queue/drain"
+        "0.9.7.3": "0.9.7.3 — Handoff save-state sync end-to-end: Sync Now + daemon now push save-states, on-exit state push decoupled from battery saves, offline queue/drain",
+        "0.9.7.4": "0.9.7.4 — Sync Now now pushes save-states (wired into the real sync paths), on top of the on-exit + offline-queue state sync"
       },
       "previous_names": null,
       "scripts": {
