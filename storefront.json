@@ -4575,7 +4575,7 @@
       "id": "sxmeMrVFki",
       "storefront_name": "Lodor",
       "name": "Lodor",
-      "version": "0.9.7.7",
+      "version": "0.9.7.8",
       "type": "TOOL",
       "description": "RomM thin-client — whole-library stubs, download-on-launch, two-way save sync",
       "author": "lodordev",
@@ -4591,7 +4591,8 @@
         "0.9.7.4": "0.9.7.4 — Sync Now now pushes save-states (wired into the real sync paths), on top of the on-exit + offline-queue state sync",
         "0.9.7.5": "0.9.7.5 — parity/maintenance. Adds an uninstall cleanup hook (post_uninstall) that clears saved server credentials on removal; activates once the pak store runs uninstall hooks. Picks up the current sync engine. No user-facing behavior change on NextUI.",
         "0.9.7.6": "0.9.7.6 — Uninstall now clears your saved server credentials (config moved into the pak so removal wipes the RomM token; update_ignore preserves pairing across updates). Reinstall re-pairs. Plus engine reliability + security hardening.",
-        "0.9.7.7": "Save states and saves sync more honestly: deleted saves stay deleted (newer progress from other devices still arrives), downloads resume after interruptions, library refresh shows live progress, errors wait to be read and name the real cause, and setup opens with a proper welcome page."
+        "0.9.7.7": "Save states and saves sync more honestly: deleted saves stay deleted (newer progress from other devices still arrives), downloads resume after interruptions, library refresh shows live progress, errors wait to be read and name the real cause, and setup opens with a proper welcome page.",
+        "0.9.7.8": "Fix release: update and Reset-WiFi screens no longer black out on Miyoo Mini devices, and downloaded updates now always install at reboot (older cards had a missing boot hook — now self-repairing)."
       },
       "previous_names": null,
       "scripts": {
