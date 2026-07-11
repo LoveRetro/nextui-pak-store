@@ -811,6 +811,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "7z9F2mVZ7b",
+      "storefront_name": "RaceSlate",
+      "repo_url": "https://github.com/Lin0u0/nextui-raceslate-pak",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
