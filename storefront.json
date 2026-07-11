@@ -4433,6 +4433,51 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "7z9F2mVZ7b",
+      "storefront_name": "RaceSlate",
+      "name": "RaceSlate",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "Independent open-source Formula racing season companion with offline history, standings, classifications, circuit maps, and weather.",
+      "author": "Lin0u0",
+      "repo_url": "https://github.com/Lin0u0/nextui-raceslate-pak",
+      "previous_repo_urls": null,
+      "release_filename": "RaceSlate.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial public release with 1950-2026 offline seasons, current-season refresh, circuit history, classifications, standings progression, weather, haptics, and adjustable text sizes."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "marketing/promo-01-weekend.png",
+        "marketing/promo-02-results.png",
+        "marketing/promo-03-standings.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
