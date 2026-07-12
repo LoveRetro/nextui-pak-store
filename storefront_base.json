@@ -819,6 +819,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "9duidHBqAk",
+      "storefront_name": "GPGX (Genesis Plus GX)",
+      "repo_url": "https://github.com/Helaas/nextui-gppx-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
