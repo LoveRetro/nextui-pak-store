@@ -4478,6 +4478,49 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "9duidHBqAk",
+      "storefront_name": "GPGX (Genesis Plus GX)",
+      "name": "GPGX",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "Genesis Plus GX libretro core for Sega Genesis/Mega Drive, Master System, Game Gear, SG-1000, and Sega/Mega CD.",
+      "author": "Helaas",
+      "repo_url": "https://github.com/Helaas/nextui-gppx-pak",
+      "previous_repo_urls": null,
+      "release_filename": "GPGX.pakz",
+      "changelog": {
+        "v1.0.0": "Initial release. Genesis Plus GX core pinned to upstream fa4dca5."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
