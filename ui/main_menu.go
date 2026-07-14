@@ -2,10 +2,10 @@ package ui
 
 import (
 	"errors"
-	"fmt"
 
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool/constants"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/state"
 )
@@ -42,7 +42,7 @@ func (s *MainMenuScreen) Draw(input MainMenuInput) (ScreenResult[MainMenuOutput]
 
 	if len(updatesAvailable) > 0 {
 		menuItems = append(menuItems, gaba.MenuItem{
-			Text:     fmt.Sprintf("Available Updates (%d)", len(updatesAvailable)),
+			Text:     i18n.Tf("ps.menu.updates_fmt", len(updatesAvailable)),
 			Selected: false,
 			Focused:  false,
 			Metadata: "Available Updates",
@@ -51,7 +51,7 @@ func (s *MainMenuScreen) Draw(input MainMenuInput) (ScreenResult[MainMenuOutput]
 
 	if len(browsePaks) > 0 {
 		menuItems = append(menuItems, gaba.MenuItem{
-			Text:     "Browse",
+			Text:     i18n.T("ps.menu.browse"),
 			Selected: false,
 			Focused:  false,
 			Metadata: "Browse",
@@ -60,7 +60,7 @@ func (s *MainMenuScreen) Draw(input MainMenuInput) (ScreenResult[MainMenuOutput]
 
 	if len(installedPaks) > 0 {
 		menuItems = append(menuItems, gaba.MenuItem{
-			Text:     "Manage Installed",
+			Text:     i18n.T("ps.menu.manage"),
 			Selected: false,
 			Focused:  false,
 			Metadata: "Manage Installed",
@@ -70,12 +70,12 @@ func (s *MainMenuScreen) Draw(input MainMenuInput) (ScreenResult[MainMenuOutput]
 	options := gaba.DefaultListOptions(title, menuItems)
 	options.FooterHelpItems = []gaba.FooterHelpItem{
 		FooterQuit(),
-		{ButtonName: "X", HelpText: "Settings"},
+		{ButtonName: "X", HelpText: i18n.T("ps.btn.settings")},
 		FooterSelect(),
 	}
 	options.ActionButton = constants.VirtualButtonX
 
-	options.EmptyMessage = "No Paks Available"
+	options.EmptyMessage = i18n.T("ps.no_paks")
 
 	sel, err := gaba.List(options)
 	if err != nil {

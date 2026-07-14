@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/state"
 )
@@ -58,14 +59,14 @@ func (s *UpdatesScreen) Draw(input UpdatesInput) (ScreenResult[UpdatesOutput], e
 
 	if len(menuItems) > 1 {
 		menuItems = append([]gaba.MenuItem{{
-			Text:     "Update All",
+			Text:     i18n.T("ps.updates.update_all"),
 			Selected: false,
 			Focused:  false,
 			Metadata: updatesAvailable,
 		}}, menuItems...)
 	}
 
-	options := gaba.DefaultListOptions("Available Pak Updates", menuItems)
+	options := gaba.DefaultListOptions(i18n.T("ps.title.updates"), menuItems)
 	options.SelectedIndex = input.LastSelectedIndex
 	options.VisibleStartIndex = max(0, input.LastSelectedIndex-input.LastSelectedPosition)
 	options.FooterHelpItems = BackViewFooter()

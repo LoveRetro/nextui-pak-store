@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/state"
 )
@@ -77,7 +78,7 @@ func (s *ManageInstalledScreen) Draw(input ManageInstalledInput) (ScreenResult[M
 		return strings.Compare(a.Text, b.Text)
 	})
 
-	options := gaba.DefaultListOptions("Manage Installed Paks", menuItems)
+	options := gaba.DefaultListOptions(i18n.T("ps.title.manage"), menuItems)
 	options.SelectedIndex = input.LastSelectedIndex
 	options.VisibleStartIndex = max(0, input.LastSelectedIndex-input.LastSelectedPosition)
 	options.FooterHelpItems = BackSelectFooter()

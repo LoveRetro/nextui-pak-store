@@ -11,6 +11,7 @@ import (
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
 	"github.com/LoveRetro/nextui-pak-store/database"
 	"github.com/LoveRetro/nextui-pak-store/internal"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/utils"
 )
@@ -83,14 +84,15 @@ func GetBrowsePaks(storefront models.Storefront, installedPaks map[string]databa
 
 		categories := p.Categories
 		if p.Experimental {
-			categories = []string{"Experimental"}
+			categories = []string{i18n.T("ps.category.experimental")}
 		}
 
 		for _, cat := range categories {
-			if _, ok := browsePaks[cat]; !ok {
-				browsePaks[cat] = make(map[string]PakWithStatus)
+			localized := localizeCategory(cat)
+			if _, ok := browsePaks[localized]; !ok {
+				browsePaks[localized] = make(map[string]PakWithStatus)
 			}
-			browsePaks[cat][p.StorefrontName] = pakStatus
+			browsePaks[localized][p.StorefrontName] = pakStatus
 		}
 	}
 
@@ -373,4 +375,35 @@ func compareVersions(a, b string) int {
 	}
 
 	return 0
+}
+
+// localizeCategory maps a storefront category to its translated name.
+// Falls back to the original string when the key is missing (so new
+// upstream categories show up untranslated rather than disappearing).
+func localizeCategory(cat string) string {
+	if cat == "" {
+		return cat
+	}
+	key := "ps.cat." + categoryKey(cat)
+	v := i18n.T(key)
+	if v == key {
+		return cat
+	}
+	return v
+}
+
+func categoryKey(s string) string {
+	out := make([]byte, 0, len(s))
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		switch {
+		case c >= 'A' && c <= 'Z':
+			out = append(out, c+32)
+		case c >= 'a' && c <= 'z', c >= '0' && c <= '9':
+			out = append(out, c)
+		case c == ' ':
+			out = append(out, '_')
+		}
+	}
+	return string(out)
 }

@@ -30,3 +30,5 @@ require (
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.11.0 // indirect
 )
+
+replace github.com/BrandonKowalski/gabagool/v2 => github.com/foXaCe/gabagool/v2 v2.12.1-0.20260523135333-91ae7f8abbc7

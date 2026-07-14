@@ -7,6 +7,7 @@ import (
 	gaba "github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool/router"
 	"github.com/LoveRetro/nextui-pak-store/internal"
+	"github.com/LoveRetro/nextui-pak-store/internal/i18n"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/state"
 	"github.com/LoveRetro/nextui-pak-store/ui"
@@ -308,7 +309,7 @@ func buildRouter(storefront models.Storefront) *router.Router {
 				}
 
 			case ui.ActionPakStoreUpdated:
-				gaba.ProcessMessage("Pak Store Updated! Exiting...", gaba.ProcessMessageOptions{}, func() (any, error) {
+				gaba.ProcessMessage(i18n.T("ps.update.pak_store_exiting"), gaba.ProcessMessageOptions{}, func() (any, error) {
 					time.Sleep(3 * time.Second)
 					return nil, nil
 				})
