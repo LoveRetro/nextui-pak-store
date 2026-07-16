@@ -2763,7 +2763,7 @@
       "id": "extRHlAv2X",
       "storefront_name": "Toggle Native SSH",
       "name": "Native SSH",
-      "version": "v2.0.0",
+      "version": "v2.1.0",
       "type": "TOOL",
       "description": "Enable and disable SSH access on your device. Displays default IP address and port when SSH is active.",
       "author": "Helaas",
@@ -2772,7 +2772,8 @@
       "release_filename": "NativeSSH.pakz",
       "changelog": {
         "v1.0.0": "Initial release",
-        "v2.0.0": "Add Miyoo Flip support. Major rework porting to app from Gabagool to Apostrophe."
+        "v2.0.0": "Add Miyoo Flip support. Major rework porting to app from Gabagool to Apostrophe.",
+        "v2.1.0": "Fixes incorrect colors with NextUI's RGBA theme format."
       },
       "previous_names": null,
       "scripts": {
@@ -2807,7 +2808,7 @@
       "id": "vf6c1JmurX",
       "storefront_name": "Shortcuts",
       "name": "Shortcuts",
-      "version": "v2.1.0",
+      "version": "v2.2.0",
       "type": "TOOL",
       "description": "Create and manage main menu shortcuts for ROMs and Tools on NextUI.",
       "author": "Helaas",
@@ -2819,7 +2820,8 @@
         "v1.1.0": "Adds customizable shortcut artwork backgrounds, the ability to view hidden/disabled ROMs, renamed and streamlined artwork management and settings behavior, improved defaults, and easier setup for curated “five-game handheld” menus.",
         "v1.1.1": "ROMs inside subfolders now appear in the ROM picker and can be used to create shortcuts.",
         "v2.0.0": "Add Miyoo Flip support and ability to rename shortcuts. Major rework porting app from Gabagool to Apostrophe.",
-        "v2.1.0": "NextUI ≥ v6.11.0: X to Resume now works on ROM shortcuts. Cleaner Game Switcher \u0026 Recently Played with no duplicates or tool entries."
+        "v2.1.0": "NextUI ≥ v6.11.0: X to Resume now works on ROM shortcuts. Cleaner Game Switcher \u0026 Recently Played with no duplicates or tool entries.",
+        "v2.2.0": "Fixes incorrect colors with NextUI's RGBA theme format."
       },
       "previous_names": null,
       "scripts": {
@@ -2895,7 +2897,7 @@
       "id": "85lpt3IHiy",
       "storefront_name": "ScrapeGoat",
       "name": "ScrapeGoat",
-      "version": "v2.1.0",
+      "version": "v2.2.0",
       "type": "TOOL",
       "description": "Scrape artwork and manuals from ScreenScraper.fr and download cheats from Libretro for your ROM library.",
       "author": "Helaas",
@@ -2907,7 +2909,8 @@
         "v1.0.1": "Subfolder support for cheats and artwork, safer media downloads via temp files.",
         "v1.0.2": "Bugfix for certain consoles being incorrectly mapped.",
         "v2.0.0": "New Apostrophe UI with queue/progress tracking, existing-file overviews, Miyoo Flip (my355) support, and can now scrape Sega Saturn.",
-        "v2.1.0": "Adds PDF manual downloads with configurable storage, background queue handoff and resume, clearer quit behavior, smarter cheat-file selection, and daemon-safe artwork scraping."
+        "v2.1.0": "Adds PDF manual downloads with configurable storage, background queue handoff and resume, clearer quit behavior, smarter cheat-file selection, and daemon-safe artwork scraping.",
+        "v2.2.0": "Fixes incorrect colors with NextUI's RGBA theme format."
       },
       "previous_names": null,
       "scripts": {
@@ -3567,7 +3570,7 @@
       "id": "0P2Ttq4WOv",
       "storefront_name": "Porty McPortface",
       "name": "Porty McPortface - Miyoo Flip (my355)",
-      "version": "v0.2.0",
+      "version": "v0.3.0",
       "type": "TOOL",
       "description": "Tool to manage a NextUI PortMaster runtime installation on device.",
       "author": "helaas",
@@ -3576,7 +3579,8 @@
       "release_filename": "Porty-McPortface.pakz",
       "changelog": {
         "v0.1.0": "Initial release.",
-        "v0.2.0": "Adds native compatibility helpers, runtime launch probing, controller layout settings, power/lid handling, and per-port fixes."
+        "v0.2.0": "Adds native compatibility helpers, runtime launch probing, controller layout settings, power/lid handling, and per-port fixes.",
+        "v0.3.0": "Fixes incorrect colors with NextUI's RGBA theme format."
       },
       "previous_names": null,
       "scripts": {
@@ -3609,7 +3613,7 @@
       "id": "LenGAzYdOL",
       "storefront_name": "Central Scrutinizer",
       "name": "The Central Scrutinizer",
-      "version": "v0.1.6",
+      "version": "v0.2.0",
       "type": "TOOL",
       "description": "Browser-based device manager for NextUI handhelds, letting users manage their devices from web or mobile browsers with library browsing, file tools, collections, screenshots, logs, artwork replacement, and optional background mode.",
       "author": "helaas",
@@ -3623,7 +3627,8 @@
         "v0.1.3": "Properly handle large folders in the browser, add pagination system.",
         "v0.1.4": "Add folder and ZIP/.pakz uploads with extraction modes, conflict previews, and safer partial-upload handling.",
         "v0.1.5": "Add server-backed Name/Size/Modified sorting for paginated browser tables with accessible headers. Thanks @ericreinsmidt.",
-        "v0.1.6": "Custom ROM folders now appear in the library when the matching emulator pak is installed. Platforms page stream-loads for snappier startup, with incremental card rendering, a loading skeleton, and a fallback icon for unknown platforms."
+        "v0.1.6": "Custom ROM folders now appear in the library when the matching emulator pak is installed. Platforms page stream-loads for snappier startup, with incremental card rendering, a loading skeleton, and a fallback icon for unknown platforms.",
+        "v0.2.0": "Fixes incorrect colors with NextUI's RGBA theme format."
       },
       "previous_names": null,
       "scripts": {
@@ -3660,7 +3665,7 @@
       "id": "wyZHFVcCzy",
       "storefront_name": "Joe's Calibrage",
       "name": "Joe's Calibrage",
-      "version": "v0.1.0",
+      "version": "v0.2.0",
       "type": "TOOL",
       "description": "Calibrate and persist thumbstick values for NextUI on Miyoo Flip, TrimUI Smart Pro, and TrimUI Smart Pro S.",
       "author": "Helaas",
@@ -3668,7 +3673,8 @@
       "previous_repo_urls": null,
       "release_filename": "Joe.s.Calibrage.pakz",
       "changelog": {
-        "v0.1.0": "Initial thumbstick calibration tool for my355, tg5040, and tg5050 with persistent joypad config writes."
+        "v0.1.0": "Initial thumbstick calibration tool for my355, tg5040, and tg5050 with persistent joypad config writes.",
+        "v0.2.0": "Fixes incorrect colors with NextUI's RGBA theme format."
       },
       "previous_names": null,
       "scripts": {
