@@ -30,7 +30,8 @@
       "repo_url": "https://github.com/BrandonKowalski/retroarch-tg5040",
       "categories": [
         "Emulators"
-      ]
+      ],
+      "disabled": true
     },
     {
       "id": "wL5nJ2cF7z",
@@ -55,7 +56,8 @@
       "repo_url": "https://github.com/BrandonKowalski/nextui-save-sync",
       "categories": [
         "File Management"
-      ]
+      ],
+      "disabled": true
     },
     {
       "id": "gN7zR5bL2k",
@@ -442,7 +444,8 @@
       "repo_url": "https://github.com/BrandonKowalski/nextui-pce-supergrafx",
       "categories": [
         "Emulators"
-      ]
+      ],
+      "disabled": true
     },
     {
       "id": "hB5yN2xR6w",
@@ -491,7 +494,8 @@
       "categories": [
         "System",
         "File Management"
-      ]
+      ],
+      "disabled": true
     },
     {
       "id": "9iPetKy60R",
@@ -499,7 +503,8 @@
       "repo_url": "https://github.com/BrandonKowalski/retrosend",
       "categories": [
         "File Management"
-      ]
+      ],
+      "disabled": true
     },
     {
       "id": "ZUTflymvUX",
