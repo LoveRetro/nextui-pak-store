@@ -202,17 +202,15 @@
     {
       "id": "tR1vB8gM3h",
       "storefront_name": "RetroArch",
-      "name": "RetroArch",
-      "version": "v1.0.0",
+      "name": "",
+      "version": "",
       "type": "TOOL",
-      "description": "A clean, reproducible RetroArch build with known provenance.",
-      "author": "Brandon T. Kowalski",
+      "description": "",
+      "author": "",
       "repo_url": "https://github.com/BrandonKowalski/retroarch-tg5040",
       "previous_repo_urls": null,
-      "release_filename": "RetroArch.pak.zip",
-      "changelog": {
-        "v1.0.0": "Initial release with RetroArch v1.21.0. See GitHub README for more details."
-      },
+      "release_filename": "",
+      "changelog": null,
       "previous_names": null,
       "scripts": {
         "post_install": {
@@ -230,14 +228,12 @@
       },
       "update_ignore": null,
       "screenshots": null,
-      "platforms": [
-        "tg5040"
-      ],
+      "platforms": null,
       "categories": [
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false,
+      "disabled": true,
       "experimental": false
     },
     {
@@ -323,18 +319,15 @@
     {
       "id": "mC3qY8wT1v",
       "storefront_name": "S3 SaveSync",
-      "name": "SaveSync",
-      "version": "v1.1.0",
+      "name": "",
+      "version": "",
       "type": "TOOL",
-      "description": "Sync your save files to a versioned S3 Bucket.",
-      "author": "Brandon T. Kowalski",
+      "description": "",
+      "author": "",
       "repo_url": "https://github.com/BrandonKowalski/nextui-save-sync",
       "previous_repo_urls": null,
-      "release_filename": "SaveSync.pak.zip",
-      "changelog": {
-        "v1.0.0": "Initial release!",
-        "v1.0.1": "Small fix in UI library for artifacts that appeared when no bg.png is present."
-      },
+      "release_filename": "",
+      "changelog": null,
       "previous_names": null,
       "scripts": {
         "post_install": {
@@ -352,14 +345,12 @@
       },
       "update_ignore": null,
       "screenshots": null,
-      "platforms": [
-        "tg5040"
-      ],
+      "platforms": null,
       "categories": [
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false,
+      "disabled": true,
       "experimental": false
     },
     {
@@ -2325,17 +2316,15 @@
     {
       "id": "kT9vL4gS8c",
       "storefront_name": "PCE SuperGrafx (beetle-supergrafx)",
-      "name": "SUPERGRAFX",
-      "version": "v1.0.0",
-      "type": "EMU",
-      "description": "An addon core for minarch for PC Engine SuperGrafx. Uses the beetle-supergrafx core. No support provided.",
-      "author": "Mednafen Team",
+      "name": "",
+      "version": "",
+      "type": "TOOL",
+      "description": "",
+      "author": "",
       "repo_url": "https://github.com/BrandonKowalski/nextui-pce-supergrafx",
       "previous_repo_urls": null,
-      "release_filename": "SUPERGRAFX.pak.zip",
-      "changelog": {
-        "v1.0.0": "Initial Release."
-      },
+      "release_filename": "",
+      "changelog": null,
       "previous_names": null,
       "scripts": {
         "post_install": {
@@ -2353,14 +2342,12 @@
       },
       "update_ignore": null,
       "screenshots": null,
-      "platforms": [
-        "tg5040"
-      ],
+      "platforms": null,
       "categories": [
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false,
+      "disabled": true,
       "experimental": false
     },
     {
@@ -2589,14 +2576,14 @@
     {
       "id": "Rud6jsTmts",
       "storefront_name": "Log Jack",
-      "name": "Log Jack",
-      "version": "v1.0.2",
+      "name": "",
+      "version": "",
       "type": "TOOL",
-      "description": "Browse and download log files from your device via a web browser.",
-      "author": "Brandon T. Kowalski",
+      "description": "",
+      "author": "",
       "repo_url": "https://github.com/BrandonKowalski/nextui-logjack",
       "previous_repo_urls": null,
-      "release_filename": "Log.Jack.pak.zip",
+      "release_filename": "",
       "changelog": null,
       "previous_names": null,
       "scripts": {
@@ -2615,29 +2602,26 @@
       },
       "update_ignore": null,
       "screenshots": null,
-      "platforms": [
-        "tg5040",
-        "tg5050"
-      ],
+      "platforms": null,
       "categories": [
         "System",
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false,
+      "disabled": true,
       "experimental": false
     },
     {
       "id": "9iPetKy60R",
       "storefront_name": "RetroSend",
-      "name": "RetroSend",
-      "version": "v0.1.0",
+      "name": "",
+      "version": "",
       "type": "TOOL",
-      "description": "A LocalSend Client for your retro doo-dad!",
-      "author": "Brandon T. Kowalski",
+      "description": "",
+      "author": "",
       "repo_url": "https://github.com/BrandonKowalski/retrosend",
       "previous_repo_urls": null,
-      "release_filename": "RetroSend.pak.zip",
+      "release_filename": "",
       "changelog": null,
       "previous_names": null,
       "scripts": {
@@ -2656,15 +2640,12 @@
       },
       "update_ignore": null,
       "screenshots": null,
-      "platforms": [
-        "tg5040",
-        "tg5050"
-      ],
+      "platforms": null,
       "categories": [
         "File Management"
       ],
       "large_pak": false,
-      "disabled": false,
+      "disabled": true,
       "experimental": false
     },
     {
