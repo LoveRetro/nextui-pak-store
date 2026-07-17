@@ -151,7 +151,7 @@
       "id": "pY6kD4xS9q",
       "storefront_name": "Game Manager",
       "name": "Game Manager",
-      "version": "v2.8.0",
+      "version": "v2.9.0",
       "type": "TOOL",
       "description": "A one-stop pak for all your game management needs.",
       "author": "K-Wall \u0026 redria7",
@@ -171,7 +171,8 @@
         "v2.6.0": "Behind the scenes collection enhancements, fix for the art downloader missing exact name matches, you can now jump pages (D-Pad Left / Right) while reordering games in a collection and new option in the collection options screen to alphabetize the games.",
         "v2.7.0": "A new filtering option for the Play History Tool!",
         "v2.7.1": "Updated filter screen formatting to show the full time.",
-        "v2.8.0": "Updated the system tag mappings to help find game art for more platforms."
+        "v2.8.0": "Updated the system tag mappings to help find game art for more platforms.",
+        "v2.9.0": "Bump dependencies to support alpha channels in theme colors."
       },
       "previous_names": null,
       "scripts": {
