@@ -832,6 +832,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "RaNc4Mb8wK",
+      "storefront_name": "EUCLIDTRACK",
+      "repo_url": "https://github.com/boorch/euclidtrack-pak",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
