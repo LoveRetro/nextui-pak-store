@@ -74,7 +74,7 @@
       "id": "jF8cW5zN2m",
       "storefront_name": "Grout",
       "name": "Grout",
-      "version": "v4.9.1.0",
+      "version": "v5.0.0.0",
       "type": "TOOL",
       "description": "A RomM client for NextUI, muOS, Knulli, and Spruce v4.",
       "author": "The RomM Team",
@@ -117,7 +117,8 @@
         "v4.8.0.1-beta.5": "CI work complete. We just need all hands on deck.",
         "v4.8.1.0": "Add GKD Pixel 2 support on Spruce. Thanks for the assist theycallmeboxy!",
         "v4.9.0.0": "Support for new RomM Server-Driven Save Sync Orchestration",
-        "v4.9.1.0": "More save sync conflict tweaks and QoL features"
+        "v4.9.1.0": "More save sync conflict tweaks and QoL features",
+        "v5.0.0.0": "Hello RomM 5.0!"
       },
       "previous_names": null,
       "scripts": {
@@ -4516,7 +4517,7 @@
       "id": "RaNc4Mb8wK",
       "storefront_name": "EUCLIDTRACK",
       "name": "EUCLIDTRACK",
-      "version": "v1.0.3",
+      "version": "v1.0.4",
       "type": "TOOL",
       "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation using LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. USER MANUAL: https://bit.ly/euclidtrack",
       "author": "boorch (Bruce Menace/Cometary Trails)",
