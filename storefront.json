@@ -4517,9 +4517,9 @@
       "id": "RaNc4Mb8wK",
       "storefront_name": "EUCLIDTRACK",
       "name": "EUCLIDTRACK",
-      "version": "v1.1.2",
+      "version": "v1.2.0",
       "type": "TOOL",
-      "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation using LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. USER MANUAL: https://bit.ly/euclidtrack",
+      "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation using LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. USER MANUAL: https://euclidtrack.neocities.org",
       "author": "boorch (Bruce Menace/Cometary Trails)",
       "repo_url": "https://github.com/boorch/euclidtrack-pak",
       "previous_repo_urls": null,
@@ -4546,7 +4546,8 @@
         ".github/screenshots/02.png",
         ".github/screenshots/03.png",
         ".github/screenshots/04.png",
-        ".github/screenshots/05.png"
+        ".github/screenshots/05.png",
+        ".github/screenshots/06.png"
       ],
       "platforms": [
         "tg5040"
