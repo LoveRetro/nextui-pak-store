@@ -4559,6 +4559,49 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "2J5vkdSppU",
+      "storefront_name": "Game\u0026Watch",
+      "name": "GW",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "Game \u0026 Watch simulators (MADrigal) via the gw libretro core for NextUI/MinUI",
+      "author": "Pawndev",
+      "repo_url": "https://github.com/pawndev/Game-Watch-NextUI",
+      "previous_repo_urls": null,
+      "release_filename": "GW.pakz",
+      "changelog": {
+        "v1.0.0": "feat: Non-functional first release",
+        "v1.0.1": "fix: Build the core with correct glibc version",
+        "v1.0.2": "chore: remove txt from Game folder"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
