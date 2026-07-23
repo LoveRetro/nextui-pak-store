@@ -840,6 +840,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "2J5vkdSppU",
+      "storefront_name": "Game&Watch",
+      "repo_url": "https://github.com/pawndev/Game-Watch-NextUI",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
