@@ -1057,7 +1057,7 @@
       "id": "jT8nH4zM1r",
       "storefront_name": "Nintendo 64 (mupen64plus)",
       "name": "N64",
-      "version": "0.6.2",
+      "version": "0.6.3",
       "type": "EMU",
       "description": "Runs mupen64plus in standalone mode for the specified rom",
       "author": "josegonzalez",
