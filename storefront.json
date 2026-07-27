@@ -4342,7 +4342,7 @@
       "id": "yo3jvTpTvf",
       "storefront_name": "Trimpod Classic",
       "name": "Trimpod Classic",
-      "version": "v1.0.2",
+      "version": "v1.0.3",
       "type": "TOOL",
       "description": "An iPod Classic-inspired, offline music player for the TrimUI Brick/Hammer with winamp-like visualizations.",
       "author": "tyrannotorus",
@@ -4351,7 +4351,7 @@
       "release_filename": "Trimpod.pak.zip",
       "changelog": {
         "v1.0.1": "Initial release.",
-        "v1.0.2": "Japanese song metadata now displays throughout the UI. New Artists/Albums/Songs library browsing backed by a track index, with much faster playback start on large queues. Now Playing: tap A to play/pause, hold A for the menu. Settings values now change in place (no sub-pages). Smarter shuffle: normal plays start in order; only explicit shuffle actions shuffle. New in Settings \u003e Power: battery Charge Limit and CPU frequency control. A-B repeat removed; internal cleanup."
+        "v1.0.3": "Adjusted volume increments, improved performance by reducing redundant cycle burn, added a controls legend to Settings, various bug fixes."
       },
       "previous_names": null,
       "scripts": {
