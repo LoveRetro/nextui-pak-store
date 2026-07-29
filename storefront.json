@@ -4343,7 +4343,7 @@
       "id": "yo3jvTpTvf",
       "storefront_name": "Trimpod Classic",
       "name": "Trimpod Classic",
-      "version": "v1.0.4",
+      "version": "v1.0.5",
       "type": "TOOL",
       "description": "An iPod Classic-inspired, offline music player for the TrimUI Brick/Hammer with winamp-like visualizations.",
       "author": "tyrannotorus",
@@ -4353,7 +4353,8 @@
       "changelog": {
         "v1.0.1": "Initial release.",
         "v1.0.3": "Adjusted volume increments, improved performance by reducing redundant cycle burn, added a controls legend to Settings, various bug fixes.",
-        "v1.0.4": "Rebuilt the audio output path: direct ALSA output with a hardware/software split volume. Fixes quiet passages dropping to silence at low volume; maximum volume is now full scale."
+        "v1.0.4": "Rebuilt the audio output path: direct ALSA output with a hardware/software split volume. Fixes quiet passages dropping to silence at low volume; maximum volume is now full scale.",
+        "v1.0.5": "Fixed bug allowing user to escape to file system after song end"
       },
       "previous_names": null,
       "scripts": {
