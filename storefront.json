@@ -4345,7 +4345,7 @@
       "id": "yo3jvTpTvf",
       "storefront_name": "Trimpod Classic",
       "name": "Trimpod Classic",
-      "version": "v1.0.5",
+      "version": "v1.0.6",
       "type": "TOOL",
       "description": "An iPod Classic-inspired, offline music player for the TrimUI Brick/Hammer with winamp-like visualizations.",
       "author": "tyrannotorus",
@@ -4356,7 +4356,8 @@
         "v1.0.1": "Initial release.",
         "v1.0.3": "Adjusted volume increments, improved performance by reducing redundant cycle burn, added a controls legend to Settings, various bug fixes.",
         "v1.0.4": "Rebuilt the audio output path: direct ALSA output with a hardware/software split volume. Fixes quiet passages dropping to silence at low volume; maximum volume is now full scale.",
-        "v1.0.5": "Fixed bug allowing user to escape to file system after song end"
+        "v1.0.5": "Fixed bug allowing user to escape to file system after song end",
+        "v1.0.6": "Fixed music playing about 8% too fast (roughly 1.4 semitones sharp). USB-C headphones work again, with in-app volume control. Powering off a Bluetooth speaker no longer crashes the app. Unplugging headphones or losing a Bluetooth device now pauses playback instead of switching to the internal speaker."
       },
       "previous_names": null,
       "scripts": {
@@ -4603,6 +4604,55 @@
       ],
       "categories": [
         "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "WEDqOJt3qB",
+      "storefront_name": "RA Explorer",
+      "name": "RA Explorer",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "A RetroAchievements browser for NextUI handhelds.",
+      "author": "theadurn",
+      "repo_url": "https://github.com/apommel/nextui-ra-explorer",
+      "previous_repo_urls": null,
+      "release_filename": "RA.Explorer.pakz",
+      "changelog": {
+        "v1.0.0": "Initial release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "screenshots/main_menu.png",
+        "screenshots/achievements_list.png",
+        "screenshots/achievement_details.png",
+        "screenshots/game_list.png",
+        "screenshots/game_details.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
       ],
       "large_pak": false,
       "disabled": false,
