@@ -848,6 +848,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "WEDqOJt3qB",
+      "storefront_name": "RA Explorer",
+      "repo_url": "https://github.com/apommel/nextui-ra-explorer",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
