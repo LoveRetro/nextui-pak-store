@@ -856,6 +856,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "gO1kmG7hkg",
+      "storefront_name": "Swap",
+      "repo_url": "https://github.com/carroarmato0/NextUI-Swap-Pak",
+      "categories": [
+        "System"
+      ]
     }
   ],
   "experimental_paks": [
