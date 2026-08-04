@@ -2793,7 +2793,7 @@
       "id": "vf6c1JmurX",
       "storefront_name": "Shortcuts",
       "name": "Shortcuts",
-      "version": "v2.2.0",
+      "version": "v2.2.2",
       "type": "TOOL",
       "description": "Create and manage main menu shortcuts for ROMs and Tools on NextUI.",
       "author": "Helaas",
@@ -2806,7 +2806,9 @@
         "v1.1.1": "ROMs inside subfolders now appear in the ROM picker and can be used to create shortcuts.",
         "v2.0.0": "Add Miyoo Flip support and ability to rename shortcuts. Major rework porting app from Gabagool to Apostrophe.",
         "v2.1.0": "NextUI ≥ v6.11.0: X to Resume now works on ROM shortcuts. Cleaner Game Switcher \u0026 Recently Played with no duplicates or tool entries.",
-        "v2.2.0": "Fixes incorrect colors with NextUI's RGBA theme format."
+        "v2.2.0": "Fixes incorrect colors with NextUI's RGBA theme format.",
+        "v2.2.1": "Fixes blue-tinted shortcut artwork backgrounds caused by NextUI's RGBA theme color format.",
+        "v2.2.2": "Fixes shortcut art appearing doubled/ghosted by matching NextUI's own art position, size, and corner rounding exactly."
       },
       "previous_names": null,
       "scripts": {
@@ -4658,6 +4660,43 @@
       ],
       "large_pak": false,
       "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "gO1kmG7hkg",
+      "storefront_name": "Swap",
+      "name": "",
+      "version": "",
+      "type": "TOOL",
+      "description": "",
+      "author": "",
+      "repo_url": "https://github.com/carroarmato0/NextUI-Swap-Pak",
+      "previous_repo_urls": null,
+      "release_filename": "",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": null,
+      "categories": [
+        "System"
+      ],
+      "large_pak": false,
+      "disabled": true,
       "experimental": false
     }
   ],
