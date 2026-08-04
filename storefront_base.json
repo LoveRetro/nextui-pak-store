@@ -863,7 +863,8 @@
       "repo_url": "https://github.com/carroarmato0/NextUI-Swap-Pak",
       "categories": [
         "System"
-      ]
+      ],
+      "disabled": true
     }
   ],
   "experimental_paks": [
