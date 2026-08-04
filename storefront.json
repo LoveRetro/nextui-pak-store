@@ -4614,7 +4614,7 @@
       "id": "WEDqOJt3qB",
       "storefront_name": "RA Explorer",
       "name": "RA Explorer",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "TOOL",
       "description": "A RetroAchievements browser for NextUI handhelds.",
       "author": "theadurn",
@@ -4622,7 +4622,8 @@
       "previous_repo_urls": null,
       "release_filename": "RA.Explorer.pakz",
       "changelog": {
-        "v1.0.0": "Initial release."
+        "v1.0.0": "Initial release.",
+        "v1.1.0": "Add request caching to improve speed and to allow offline usage."
       },
       "previous_names": null,
       "scripts": {
