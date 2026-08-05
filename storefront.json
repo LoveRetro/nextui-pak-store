@@ -4714,7 +4714,7 @@
       "id": "9njs1Bz52d",
       "storefront_name": "RetroArch Core Saves",
       "name": "RetroArch Core Saves",
-      "version": "v0.5.3",
+      "version": "v0.5.4",
       "type": "TOOL",
       "description": "Convert your save files and use RetroArch core-name folders for easier SyncThing setup.",
       "author": "bmpriest",
@@ -4722,7 +4722,8 @@
       "previous_repo_urls": null,
       "release_filename": "RetroArch.Core.Saves.pak.zip",
       "changelog": {
-        "0.5.3": "Fixed a bug to compare for identical saves before keeping both as a conflict."
+        "0.5.3": "Fixed a bug to compare for identical saves before keeping both as a conflict.",
+        "0.5.4": "Added extra settings to handle paks from the pak store or elsewhere better."
       },
       "previous_names": null,
       "scripts": {
