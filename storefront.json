@@ -4665,15 +4665,17 @@
     {
       "id": "gO1kmG7hkg",
       "storefront_name": "Swap",
-      "name": "",
-      "version": "",
+      "name": "Swap",
+      "version": "v0.1.0",
       "type": "TOOL",
-      "description": "",
-      "author": "",
+      "description": "Add swap space so memory-hungry ports stop being killed. Trades storage speed for capacity - it does not make games faster.",
+      "author": "Carroarmato0",
       "repo_url": "https://github.com/carroarmato0/NextUI-Swap-Pak",
       "previous_repo_urls": null,
-      "release_filename": "",
-      "changelog": null,
+      "release_filename": "Swap.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial release."
+      },
       "previous_names": null,
       "scripts": {
         "post_install": {
@@ -4690,13 +4692,22 @@
         }
       },
       "update_ignore": null,
-      "screenshots": null,
-      "platforms": null,
+      "screenshots": [
+        "docs/screenshots/first-run.png",
+        "docs/screenshots/main-menu.png",
+        "docs/screenshots/change-size.png",
+        "docs/screenshots/about-swap.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355"
+      ],
       "categories": [
         "System"
       ],
       "large_pak": false,
-      "disabled": true,
+      "disabled": false,
       "experimental": false
     },
     {
