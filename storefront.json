@@ -4698,6 +4698,54 @@
       "large_pak": false,
       "disabled": true,
       "experimental": false
+    },
+    {
+      "id": "9njs1Bz52d",
+      "storefront_name": "RetroArch Core Saves",
+      "name": "RetroArch Core Saves",
+      "version": "v0.5.3",
+      "type": "TOOL",
+      "description": "Convert your save files and use RetroArch core-name folders for easier SyncThing setup.",
+      "author": "bmpriest",
+      "repo_url": "https://github.com/bmpriest/nextui-retroarch-core-saves-pak",
+      "previous_repo_urls": null,
+      "release_filename": "RetroArch.Core.Saves.pak.zip",
+      "changelog": {
+        "0.5.3": "Fixed a bug to compare for identical saves before keeping both as a conflict."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "screenshots/convert.png",
+        "screenshots/mounts.png",
+        "screenshots/revert.png",
+        "screenshots/convert_saves.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "File Management",
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
