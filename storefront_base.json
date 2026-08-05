@@ -865,6 +865,15 @@
         "System"
       ],
       "disabled": true
+    },
+    {
+      "id": "9njs1Bz52d",
+      "storefront_name": "RetroArch Core Saves",
+      "repo_url": "https://github.com/bmpriest/nextui-retroarch-core-saves-pak",
+      "categories": [
+        "File Management",
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
