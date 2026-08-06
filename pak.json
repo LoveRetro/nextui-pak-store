@@ -1,6 +1,6 @@
 {
   "name": "Pak Store",
-  "version": "v4.1.0",
+  "version": "v4.2.0",
   "type": "TOOL",
   "description": "A Pak Store in this economy?! Find, install and update community made Paks right on your device!",
   "author": "The NextUI Community",
@@ -41,6 +41,7 @@
     "v3.1.1": "One last edge case with the new Pak ID system.",
     "v4.0.0": "Experimental Paks are now available! Must use a shortcut on startup to access.",
     "v4.0.1": "Forgot the new experimental splash screen! Thanks @Helaas!",
-    "v4.1.0": "Support for alpha channels in theme colors."
+    "v4.1.0": "Support for alpha channels in theme colors.",
+    "v4.2.0": "Added H700 support"
   }
 }
