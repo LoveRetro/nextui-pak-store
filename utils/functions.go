@@ -31,6 +31,8 @@ func GetPlatform() string {
 		return string(models.TG5050)
 	case models.MY355:
 		return string(models.MY355)
+	case models.H700:
+		return string(models.H700)
 	default:
 		return string(models.TG5040)
 	}
