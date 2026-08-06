@@ -1470,14 +1470,17 @@
       "id": "hP6xL9yB2j",
       "storefront_name": "Over The Air Updater",
       "name": "Updater",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "type": "TOOL",
       "description": "Update NextUI over-the-air!",
       "author": "LanderN",
       "repo_url": "https://github.com/LoveRetro/nextui-updater-pak",
       "previous_repo_urls": null,
       "release_filename": "nextui.updater.pakz",
-      "changelog": null,
+      "changelog": {
+        "0.7.0": "DPI awareness, tg5050/my355 support.",
+        "0.8.0": "h700 support (8Anbernic RG xx)."
+      },
       "previous_names": null,
       "scripts": {
         "post_install": {
@@ -1498,7 +1501,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "System"
