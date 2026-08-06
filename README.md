@@ -89,7 +89,8 @@ Awesome! To get added to Pak Store you have to complete the following steps:
   "platforms": [
     "tg5040",
     "tg5050",
-    "my355"
+    "my355",
+    "h700"
   ]
 }
 ```
