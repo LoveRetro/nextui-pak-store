@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/BrandonKowalski/certifiable v1.3.0
-	github.com/BrandonKowalski/gabagool/v2 v2.22.0
+	github.com/BrandonKowalski/gabagool/v2 v2.24.0
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	modernc.org/sqlite v1.54.0
 	qlova.tech v0.1.1

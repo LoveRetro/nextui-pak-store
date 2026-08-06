@@ -2,6 +2,8 @@ github.com/BrandonKowalski/certifiable v1.3.0 h1:o4VbMMVqBQ8kYFqUFD7J3P6tJg9dVKW
 github.com/BrandonKowalski/certifiable v1.3.0/go.mod h1:fnYhDBTxp3ZeTYFkWDXSAo5m8ytUwGG/3dZHSzDH9UU=
 github.com/BrandonKowalski/gabagool/v2 v2.22.0 h1:g0WCSRfPIo+AtYMpAqqSITKUwN1PTILDOxBWJ6Vv2pQ=
 github.com/BrandonKowalski/gabagool/v2 v2.22.0/go.mod h1:Iq/YFTz7+w8O78IE21kOkHbg3a4ZD2mjcd0S/jVhI94=
+github.com/BrandonKowalski/gabagool/v2 v2.24.0 h1:5DNRutxcAzevo8j1xcmaYhRPY+mbbXSCr5RP4Xkf49c=
+github.com/BrandonKowalski/gabagool/v2 v2.24.0/go.mod h1:Iq/YFTz7+w8O78IE21kOkHbg3a4ZD2mjcd0S/jVhI94=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=
