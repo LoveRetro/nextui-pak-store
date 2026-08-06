@@ -1470,7 +1470,7 @@
       "id": "hP6xL9yB2j",
       "storefront_name": "Over The Air Updater",
       "name": "Updater",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "type": "TOOL",
       "description": "Update NextUI over-the-air!",
       "author": "LanderN",
@@ -1479,7 +1479,8 @@
       "release_filename": "nextui.updater.pakz",
       "changelog": {
         "0.7.0": "DPI awareness, tg5050/my355 support.",
-        "0.8.0": "h700 support (8Anbernic RG xx)."
+        "0.8.0": "h700 support (8Anbernic RG xx).",
+        "0.8.1": "Fix glibc linkage."
       },
       "previous_names": null,
       "scripts": {
