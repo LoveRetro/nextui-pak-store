@@ -1910,7 +1910,7 @@
       "id": "jH2wT5dM8g",
       "storefront_name": "Screenshot Viewer",
       "name": "Screenshots",
-      "version": "v0.2.5",
+      "version": "v0.2.6",
       "type": "TOOL",
       "description": "A MinUI pak for browsing your saved screenshots. Automatically organized by game/app.",
       "author": "mikecosentino",
@@ -1924,7 +1924,8 @@
         "v0.2.2": "Sped up rebuilding screenshot list after deleting a screenshot.",
         "v0.2.3": "Moved screenshot delete to list of screenshots.",
         "v0.2.4": "Displays a status screen while rebuilding cache.",
-        "v0.2.5": "Fixed bug with games with an apostrophe in their title and sped up pak loading by only loading list of screenshots on launch, and then building individual games' screenshots when choosing that game."
+        "v0.2.5": "Fixed bug with games with an apostrophe in their title and sped up pak loading by only loading list of screenshots on launch, and then building individual games' screenshots when choosing that game.",
+        "v0.2.6": "Updated minui-list and minui-presenter to new builds to fix for Brick Pro"
       },
       "previous_names": null,
       "scripts": {
