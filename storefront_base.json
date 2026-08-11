@@ -873,6 +873,14 @@
         "File Management",
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "LIlbOftveW",
+      "storefront_name": "Gen1Recomp",
+      "repo_url": "https://github.com/carroarmato0/NextUI-Gen1Recomp-Pak",
+      "categories": [
+        "Ports"
+      ]
     }
   ],
   "experimental_paks": [
