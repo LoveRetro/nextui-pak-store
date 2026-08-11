@@ -4766,6 +4766,50 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "LIlbOftveW",
+      "storefront_name": "Gen1Recomp",
+      "name": "Gen1Recomp",
+      "version": "v0.1.0",
+      "type": "EMU",
+      "description": "Play Pokemon Red, Blue and Yellow in 3D natively on TrimUI handhelds using Gen1Recomp and the Dramatic Shape voxel 3D mod. Needs your own US cartridge dump.",
+      "author": "Carroarmato0",
+      "repo_url": "https://github.com/carroarmato0/NextUI-Gen1Recomp-Pak",
+      "previous_repo_urls": null,
+      "release_filename": "Gen1Recomp.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial release, bundles Gen1Recomp 0.1.77 and the LOVE 11.5 aarch64 runtime."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "docs/screenshots/main.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "Ports"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
