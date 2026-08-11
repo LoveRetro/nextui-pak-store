@@ -4771,15 +4771,16 @@
       "id": "LIlbOftveW",
       "storefront_name": "Gen1Recomp",
       "name": "Gen1Recomp",
-      "version": "v0.1.0",
-      "type": "EMU",
-      "description": "Play Pokemon Red, Blue and Yellow in 3D natively on TrimUI handhelds using Gen1Recomp and the Dramatic Shape voxel 3D mod. Needs your own US cartridge dump.",
+      "version": "v0.2.0",
+      "type": "TOOL",
+      "description": "Play Pokemon Red, Blue and Yellow in 3D natively on TrimUI handhelds using Gen1Recomp 0.1.77 and the Dramatic Shape voxel 3D mod. Needs your own US cartridge dump.",
       "author": "Carroarmato0",
       "repo_url": "https://github.com/carroarmato0/NextUI-Gen1Recomp-Pak",
       "previous_repo_urls": null,
       "release_filename": "Gen1Recomp.pak.zip",
       "changelog": {
-        "v0.1.0": "Initial release, bundles Gen1Recomp 0.1.77 and the LOVE 11.5 aarch64 runtime."
+        "v0.1.0": "Initial release, bundles Gen1Recomp 0.1.77 and the LOVE 11.5 aarch64 runtime.",
+        "v0.2.0": "Now a Tool pak: it appears under Tools instead of Games, so no ROM folder or launchable stub file is needed. The automatic ROM import now finds your dump in any folder NextUI treats as Game Boy or Game Boy Color, not just the two default folder names, and says so in the log when it finds no such folder. Upgrading from v0.1.0: the first launch deletes the now-pointless Roms/Gen1Recomp (Gen1Recomp) folder, including any box art you put in it; delete Emus/\u003cplatform\u003e/Gen1Recomp.pak yourself to reclaim ~31 MB. Your saves are untouched -- they live in .userdata/shared/Gen1Recomp."
       },
       "previous_names": null,
       "scripts": {
