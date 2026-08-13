@@ -2664,7 +2664,7 @@
       "id": "ZUTflymvUX",
       "storefront_name": "Mono",
       "name": "Mono",
-      "version": "v1.9.4",
+      "version": "v1.9.5",
       "type": "TOOL",
       "description": "Feature-rich music player with Spotify Connect, YouTube downloads, Bluetooth audio, and equalizer",
       "author": "berckan",
@@ -2680,7 +2680,8 @@
         "v1.9.1": "Fix Pak Store installation (flat zip structure)",
         "v1.9.2": "Fix self-update and Pak Store download",
         "v1.9.3": "Fix permissions for Pak Store installs",
-        "v1.9.4": "Fix black screen on launch when Bluetooth is off"
+        "v1.9.4": "Fix black screen on launch when Bluetooth is off",
+        "v1.9.5": "Fix black screen after an unclean exit left the panel dark"
       },
       "previous_names": null,
       "scripts": {
