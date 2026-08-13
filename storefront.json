@@ -4773,7 +4773,7 @@
       "id": "LIlbOftveW",
       "storefront_name": "Gen1Recomp",
       "name": "Gen1Recomp",
-      "version": "v0.2.1",
+      "version": "v0.2.2",
       "type": "TOOL",
       "description": "Play Pokemon Red, Blue and Yellow in 3D natively on TrimUI handhelds using Gen1Recomp 0.1.77 and the Dramatic Shape voxel 3D mod. Needs your own US cartridge dump.",
       "author": "Carroarmato0",
@@ -4783,7 +4783,8 @@
       "changelog": {
         "v0.1.0": "Initial release, bundles Gen1Recomp 0.1.77 and the LOVE 11.5 aarch64 runtime.",
         "v0.2.0": "Now a Tool pak: it appears under Tools instead of Games, so no ROM folder or launchable stub file is needed. The automatic ROM import now finds your dump in any folder NextUI treats as Game Boy or Game Boy Color, not just the two default folder names, and says so in the log when it finds no such folder. Upgrading from v0.1.0: the first launch deletes the now-pointless Roms/Gen1Recomp (Gen1Recomp) folder, including any box art you put in it; delete Emus/\u003cplatform\u003e/Gen1Recomp.pak yourself to reclaim ~31 MB. Your saves are untouched -- they live in .userdata/shared/Gen1Recomp.",
-        "v0.2.1": "Fixes Pokemon Yellow. Two separate bugs stopped it working. First, the ROM scan gave up as soon as any one version had been imported, so a Yellow dump added after Red or Blue was never picked up -- the scan now tracks each version on its own, imports what is missing, leaves what is already there alone, and only stops once all three are in. Second, the game data Yellow needs to import was missing from the pak, so importing it failed with \"ROM import metadata is missing\"; it is now included. If you already have Red or Blue and a Yellow dump on your card, just launch the pak: it imports Yellow on the next start. Your saves are untouched."
+        "v0.2.1": "Fixes Pokemon Yellow. Two separate bugs stopped it working. First, the ROM scan gave up as soon as any one version had been imported, so a Yellow dump added after Red or Blue was never picked up -- the scan now tracks each version on its own, imports what is missing, leaves what is already there alone, and only stops once all three are in. Second, the game data Yellow needs to import was missing from the pak, so importing it failed with \"ROM import metadata is missing\"; it is now included. If you already have Red or Blue and a Yellow dump on your card, just launch the pak: it imports Yellow on the next start. Your saves are untouched.",
+        "v0.2.2": "Fixes a crash that stopped the game starting at all on some devices. LOVE needs libmpg123, and not every TrimUI firmware image ships it -- where it was missing the game exited instantly to a black screen with \"error while loading shared libraries: libmpg123.so.0\". The pak now carries its own copy as a fallback, used only when the firmware has none. Thanks to @nicdichiara for finding and fixing this. Also: the pak now takes the game itself from upstream own build rather than a repackaged one, which is what caused Pokemon Yellow to be missing the data it needed to import, and refreshes the bundled certificate list. Your saves and imported ROMs are untouched."
       },
       "previous_names": null,
       "scripts": {
