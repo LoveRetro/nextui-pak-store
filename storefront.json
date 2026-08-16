@@ -76,7 +76,7 @@
       "id": "jF8cW5zN2m",
       "storefront_name": "Grout",
       "name": "Grout",
-      "version": "v5.0.0.0",
+      "version": "v5.1.0.0",
       "type": "TOOL",
       "description": "A RomM client for NextUI, muOS, Knulli, and Spruce v4.",
       "author": "The RomM Team",
@@ -120,7 +120,8 @@
         "v4.8.1.0": "Add GKD Pixel 2 support on Spruce. Thanks for the assist theycallmeboxy!",
         "v4.9.0.0": "Support for new RomM Server-Driven Save Sync Orchestration",
         "v4.9.1.0": "More save sync conflict tweaks and QoL features",
-        "v5.0.0.0": "Hello RomM 5.0!"
+        "v5.0.0.0": "Hello RomM 5.0!",
+        "v5.1.0.0": "Catching up on some PRs."
       },
       "previous_names": null,
       "scripts": {
