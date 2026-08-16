@@ -4538,7 +4538,7 @@
       "id": "RaNc4Mb8wK",
       "storefront_name": "EUCLIDTRACK",
       "name": "EUCLIDTRACK",
-      "version": "v1.7.0",
+      "version": "v1.7.1",
       "type": "TOOL",
       "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation using LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. USER MANUAL: https://euclidtrack.neocities.org",
       "author": "boorch (Bruce Menace/Cometary Trails)",
