@@ -750,7 +750,8 @@
       "repo_url": "https://github.com/zboralski/nextui-m8c-pak",
       "categories": [
         "Miscellaneous Tools"
-      ]
+      ],
+      "disabled": true
     },
     {
       "id": "HCRwulxl8T",
