@@ -4052,14 +4052,14 @@
     {
       "id": "llD8Yvx5Zg",
       "storefront_name": "M8C",
-      "name": "M8C",
-      "version": "v0.2.0",
+      "name": "",
+      "version": "",
       "type": "TOOL",
-      "description": "Remote display client for the Dirtywave M8 tracker. Wraps laamaa/m8c v1.7.10. Works with M8 hardware over USB and the M8 Headless firmware on a Teensy.",
-      "author": "zboralski",
+      "description": "",
+      "author": "",
       "repo_url": "https://github.com/zboralski/nextui-m8c-pak",
       "previous_repo_urls": null,
-      "release_filename": "M8C.pak.zip",
+      "release_filename": "",
       "changelog": null,
       "previous_names": null,
       "scripts": {
@@ -4078,14 +4078,12 @@
       },
       "update_ignore": null,
       "screenshots": null,
-      "platforms": [
-        "tg5040"
-      ],
+      "platforms": null,
       "categories": [
         "Miscellaneous Tools"
       ],
       "large_pak": false,
-      "disabled": false,
+      "disabled": true,
       "experimental": false
     },
     {
