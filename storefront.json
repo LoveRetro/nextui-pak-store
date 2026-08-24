@@ -4859,6 +4859,50 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "Ke46sYN1Pz",
+      "storefront_name": "Gift Code",
+      "name": "Gift Code",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Unlock parent-staged bonus games with a 4-digit hex code.",
+      "author": "Dalexanco",
+      "repo_url": "https://github.com/dalexanco/nextui-gift-code",
+      "previous_repo_urls": null,
+      "release_filename": "Gift.Code.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release: hex code unlock, Gifts/ manifest scan, .media merge, cleanup toggle."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "screenshots/screen-code.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
