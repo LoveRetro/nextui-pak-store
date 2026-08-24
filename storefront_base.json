@@ -882,6 +882,14 @@
       "categories": [
         "Ports"
       ]
+    },
+    {
+      "id": "9zWXgEipEd",
+      "storefront_name": "SwanStation",
+      "repo_url": "https://github.com/discus7l/nextui-swanstation-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
