@@ -4901,6 +4901,48 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "9lV09bLLoE",
+      "storefront_name": "ClassicPod",
+      "name": "ClassicPod",
+      "version": "v1.0.1",
+      "type": "TOOL",
+      "description": "An iPod-Classic-inspired music player for NextUI — Cover Flow, a full Now Playing screen with on-screen transport, on-device rename/delete, and a built-in WiFi file server for pushing music.",
+      "author": "thanhhaiwork1998",
+      "repo_url": "https://github.com/thanhhaiwork1998/ClassicPod",
+      "previous_repo_urls": null,
+      "release_filename": "ClassicPod.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release: Cover Flow, Now Playing with prev/next + right-stick scrub, Songs rename/delete, on-screen volume, WiFi file server.",
+        "v1.0.1": "Fix a crash in Cover Flow when browsing large libraries: album-art loading no longer makes an unbounded allocation on a corrupt ID3 tag, and oversized covers are skipped."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
