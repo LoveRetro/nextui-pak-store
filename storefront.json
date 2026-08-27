@@ -2492,7 +2492,8 @@
       ],
       "platforms": [
         "tg5040",
-        "tg5050"
+        "tg5050",
+        "my355"
       ],
       "categories": [
         "Media"
