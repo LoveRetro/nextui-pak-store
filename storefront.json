@@ -1261,7 +1261,7 @@
       "id": "gQ7hT4dK9c",
       "storefront_name": "Portmaster",
       "name": "PORTS",
-      "version": "2.13.0",
+      "version": "2.14.0",
       "type": "EMU",
       "description": "A Emu Pak for PortMaster which includes everything needed and requires no additional software.",
       "author": "ben16w",
@@ -1303,7 +1303,7 @@
       "id": "mL1wS5bV8n",
       "storefront_name": "PPSSPP",
       "name": "PSP",
-      "version": "5.1.0",
+      "version": "6.0.0",
       "type": "EMU",
       "description": "A Emu Pak for PSP, wrapping the standalone PPSSPP emulator.",
       "author": "ben16w",
@@ -1346,7 +1346,7 @@
       "id": "sF9zJ2rX6y",
       "storefront_name": "Cloud Backups",
       "name": "Cloud Backups",
-      "version": "1.1.0",
+      "version": "2.0.1",
       "type": "TOOL",
       "description": "A Pak to to back up saves, screenshots and other folders to cloud storage providers like Google Drive and Dropbox.",
       "author": "ben16w",
@@ -1374,7 +1374,19 @@
       ],
       "screenshots": null,
       "platforms": [
-        "tg5040"
+        "h700",
+        "m17",
+        "magicmini",
+        "miyoomini",
+        "my282",
+        "my355",
+        "rg35xx",
+        "rg35xxplus",
+        "rgb30",
+        "tg5040",
+        "tg5050",
+        "trimuismart",
+        "zero28"
       ],
       "categories": [
         "File Management"
@@ -1387,7 +1399,7 @@
       "id": "yC4kM7pQ1d",
       "storefront_name": "Favorites",
       "name": "Favorites",
-      "version": "0.4.0",
+      "version": "1.0.1",
       "type": "TOOL",
       "description": "A Pak to manage a Favorites collection.",
       "author": "ben16w",
@@ -1415,10 +1427,19 @@
       ],
       "screenshots": null,
       "platforms": [
-        "tg5040",
-        "rg35xxplus",
+        "h700",
+        "m17",
+        "magicmini",
+        "miyoomini",
         "my282",
-        "miyoomini"
+        "my355",
+        "rg35xx",
+        "rg35xxplus",
+        "rgb30",
+        "tg5040",
+        "tg5050",
+        "trimuismart",
+        "zero28"
       ],
       "categories": [
         "ROM Management"
@@ -1431,7 +1452,7 @@
       "id": "kH8vN3gT5w",
       "storefront_name": "Tailscale",
       "name": "Tailscale",
-      "version": "1.3.0",
+      "version": "2.0.0",
       "type": "TOOL",
       "description": "A Pak wrapping Tailscale, a secure and easy-to-use VPN.",
       "author": "ben16w",
@@ -1459,7 +1480,19 @@
       ],
       "screenshots": null,
       "platforms": [
-        "tg5040"
+        "h700",
+        "m17",
+        "magicmini",
+        "miyoomini",
+        "my282",
+        "my355",
+        "rg35xx",
+        "rg35xxplus",
+        "rgb30",
+        "tg5040",
+        "tg5050",
+        "trimuismart",
+        "zero28"
       ],
       "categories": [
         "Developer Tools",
@@ -2944,7 +2977,7 @@
       "id": "TWZc9jCf7o",
       "storefront_name": "Dronage Terminal",
       "name": "Dronage Terminal",
-      "version": "v3.1.0",
+      "version": "v3.2.0",
       "type": "TOOL",
       "description": "PRO TIP: R1+Select is HELP. Ambient drone synthesizer with 4 macro oscillators, modulation matrix, and effects. Projects, recordings and user scales are stored in DronageTerminal folder at the root of your SD Card. You can check out the 'desktop' version (that contains a very comprehensive README.md) of Dronage Terminal here: https://boorch.itch.io/dronage-terminal Additionally you can search for 'Dronage Terminal Tutorial' on YouTube for a 'Basics Tutorial'.",
       "author": "boorch (Bruce Menace/Cometary Trails)",
