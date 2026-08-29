@@ -4977,6 +4977,52 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "72p7yQjQQu",
+      "storefront_name": "Discrete Integrated Circuit Emulator (DICE)",
+      "name": "DICE",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "A Discrete Integrated Circult Emulator for minarch using the DICE Libretro core.",
+      "author": "TSOLfan",
+      "repo_url": "https://github.com/tsolfan/dice-libretro-nextui",
+      "previous_repo_urls": null,
+      "release_filename": "DICE.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial Release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/af03744c-289f-4c22-895d-47e69150f88d.png",
+        ".github/resources/screenshots/fdb1cf27-99c1-4291-aa8f-dda0c1f1b363.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
