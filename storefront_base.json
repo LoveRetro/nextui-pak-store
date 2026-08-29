@@ -914,6 +914,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "23hbrUZWLY",
+      "storefront_name": "Neo Geo CD",
+      "repo_url": "https://github.com/tsolfan/neocd_libretro-nextui",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
