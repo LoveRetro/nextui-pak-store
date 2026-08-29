@@ -906,6 +906,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "72p7yQjQQu",
+      "storefront_name": "Discrete Integrated Circuit Emulator (DICE)",
+      "repo_url": "https://github.com/tsolfan/dice-libretro-nextui",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
