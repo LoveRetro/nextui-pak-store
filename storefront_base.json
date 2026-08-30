@@ -922,6 +922,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "8SdCQx7vgn",
+      "storefront_name": "NEC PC Engine SuperGrafx",
+      "repo_url": "https://github.com/tsolfan/beetle-supergrafx-libretro-nextui",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
