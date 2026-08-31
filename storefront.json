@@ -1303,7 +1303,7 @@
       "id": "mL1wS5bV8n",
       "storefront_name": "PPSSPP",
       "name": "PSP",
-      "version": "6.0.0",
+      "version": "6.0.1",
       "type": "EMU",
       "description": "A Emu Pak for PSP, wrapping the standalone PPSSPP emulator.",
       "author": "ben16w",
