@@ -1303,7 +1303,7 @@
       "id": "mL1wS5bV8n",
       "storefront_name": "PPSSPP",
       "name": "PSP",
-      "version": "6.0.1",
+      "version": "6.1.0",
       "type": "EMU",
       "description": "A Emu Pak for PSP, wrapping the standalone PPSSPP emulator.",
       "author": "ben16w",
@@ -4390,7 +4390,7 @@
       "id": "yo3jvTpTvf",
       "storefront_name": "Trimpod Classic",
       "name": "Trimpod Classic",
-      "version": "v1.0.8",
+      "version": "v1.0.9",
       "type": "TOOL",
       "description": "An iPod Classic-inspired, offline music player for the TrimUI Brick/Hammer with winamp-like visualizations.",
       "author": "tyrannotorus",
@@ -4404,7 +4404,8 @@
         "v1.0.5": "Fixed bug allowing user to escape to file system after song end",
         "v1.0.6": "Fixed music playing about 8% too fast (roughly 1.4 semitones sharp). USB-C headphones work again, with in-app volume control. Powering off a Bluetooth speaker no longer crashes the app. Unplugging headphones or losing a Bluetooth device now pauses playback instead of switching to the internal speaker.",
         "v1.0.7": "Added Themes with Dark, Light, and a third ink variant per color. Volume bar now reads 'Volume X/40'. Fixed: playlist song menu not sliding back on close, status bar showing '.trimpod_queue', divider line ignoring the foreground color, and Now Playing spacing/status-bar text alignment.",
-        "v1.0.8": "Audiobook support for .m4b files: each book resumes from where you left off, and L2/R2 skip between chapters."
+        "v1.0.8": "Audiobook support for .m4b files: each book resumes from where you left off, and L2/R2 skip between chapters.",
+        "v1.0.9": "Indexing shows a Scanning Library progress screen instead of a blank screen. Adding or removing a library folder reindexes immediately. Launch after a library change no longer stalls for ~15 s."
       },
       "previous_names": null,
       "scripts": {
@@ -4423,9 +4424,7 @@
       },
       "update_ignore": null,
       "screenshots": [
-        "screenshots/now-playing.png",
-        "screenshots/settings-power.png",
-        "screenshots/visualizer.png"
+        "screenshots/trimpod-amber-main-menu.jpg"
       ],
       "platforms": [
         "tg5040"
