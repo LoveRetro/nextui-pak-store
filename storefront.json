@@ -5072,6 +5072,52 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "8SdCQx7vgn",
+      "storefront_name": "NEC PC Engine SuperGrafx",
+      "name": "PC Engine SuperGrafx",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "A PC Engine SuperGrafx emulator for minarch using the Beetle PC Engine SuperGrafx core.",
+      "author": "TSOLfan",
+      "repo_url": "https://github.com/tsolfan/beetle-supergrafx-libretro-nextui",
+      "previous_repo_urls": null,
+      "release_filename": "SGX.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial Release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/c0a3f25f-2907-4b39-9d64-01e02e523524.png",
+        ".github/resources/screenshots/5b9fa7d0-6025-4b32-b95d-bc2f9a5d49a2.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
