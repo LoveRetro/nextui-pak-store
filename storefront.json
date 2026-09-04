@@ -5029,7 +5029,7 @@
     {
       "id": "23hbrUZWLY",
       "storefront_name": "Neo Geo CD",
-      "name": "Neo Geo CD",
+      "name": "NEOCD",
       "version": "v1.0.0",
       "type": "EMU",
       "description": "A Neo Geo CD emulator for minarch using the NeoCD-Libretro core.",
@@ -5076,7 +5076,7 @@
     {
       "id": "8SdCQx7vgn",
       "storefront_name": "NEC PC Engine SuperGrafx",
-      "name": "PC Engine SuperGrafx",
+      "name": "SGX",
       "version": "v1.0.0",
       "type": "EMU",
       "description": "A PC Engine SuperGrafx emulator for minarch using the Beetle PC Engine SuperGrafx core.",
