@@ -4757,7 +4757,7 @@
       "id": "9njs1Bz52d",
       "storefront_name": "RetroArch Core Saves",
       "name": "RetroArch Core Saves",
-      "version": "v0.5.4",
+      "version": "v0.5.5",
       "type": "TOOL",
       "description": "Convert your save files and use RetroArch core-name folders for easier SyncThing setup.",
       "author": "bmpriest",
@@ -4766,7 +4766,8 @@
       "release_filename": "RetroArch.Core.Saves.pak.zip",
       "changelog": {
         "0.5.3": "Fixed a bug to compare for identical saves before keeping both as a conflict.",
-        "0.5.4": "Added extra settings to handle paks from the pak store or elsewhere better."
+        "0.5.4": "Added extra settings to handle paks from the pak store or elsewhere better.",
+        "0.5.5": "Added compatibility for my285. Working on Profile support."
       },
       "previous_names": null,
       "scripts": {
@@ -4792,7 +4793,8 @@
       ],
       "platforms": [
         "tg5040",
-        "tg5050"
+        "tg5050",
+        "my285"
       ],
       "categories": [
         "File Management",
