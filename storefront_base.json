@@ -930,6 +930,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "FxBRHBO4mo",
+      "storefront_name": "Magnavox Odyssey 2/Philips Videopac",
+      "repo_url": "https://github.com/tsolfan/libretro-o2em-nextui",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
