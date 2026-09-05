@@ -5120,6 +5120,56 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "FxBRHBO4mo",
+      "storefront_name": "Magnavox Odyssey 2/Philips Videopac",
+      "name": "O2",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "An Odyssey 2/VideoPac emulator for minarch using the O2EM core.",
+      "author": "TSOLfan",
+      "repo_url": "https://github.com/tsolfan/libretro-o2em-nextui",
+      "previous_repo_urls": null,
+      "release_filename": "O2.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial Release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/bee51c14-a765-40d4-bcea-33a1b5086af8.png",
+        ".github/resources/screenshots/05ea6a71-97a7-4fe5-8c41-8563dd3c7f8b.png",
+        ".github/resources/screenshots/450ffcb3-cab0-431e-b911-ccddb45069fa.png",
+        ".github/resources/screenshots/b8810bf0-5998-40ca-87b5-8d06729c7b52.png",
+        ".github/resources/screenshots/3962a38c-35a2-470a-a54e-16138ad263c5.png",
+        ".github/resources/screenshots/01522a46-daf9-433b-9f61-d8d523405320.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
