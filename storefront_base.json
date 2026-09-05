@@ -938,6 +938,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "0llrkhS0L5",
+      "storefront_name": "retroshelf",
+      "repo_url": "https://github.com/retroshelf-org/linux",
+      "categories": [
+        "ROM Management"
+      ]
     }
   ],
   "experimental_paks": [
