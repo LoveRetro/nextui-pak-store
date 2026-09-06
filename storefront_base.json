@@ -946,6 +946,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "sBzfoJrKA6",
+      "storefront_name": "MeshClient",
+      "repo_url": "https://github.com/mcereal/mesh-client",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
