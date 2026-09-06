@@ -5170,6 +5170,49 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "QVpS4UNW26",
+      "storefront_name": "Fireplace",
+      "name": "Fireplace",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "A lovely pixelated fireplace with a demoscene twist: rising embers, a parallax starfield, chiptune music, a cracktro text scroller, wind, adjustable intensity and a CRT filter.",
+      "author": "Marice",
+      "repo_url": "https://github.com/Marice/nextui-fireplace-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Fireplace.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/fireplace.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
