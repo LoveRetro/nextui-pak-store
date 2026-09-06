@@ -938,6 +938,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "QVpS4UNW26",
+      "storefront_name": "Fireplace",
+      "repo_url": "https://github.com/Marice/nextui-fireplace-pak",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
