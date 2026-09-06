@@ -5263,6 +5263,50 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "VDhSsgndqM",
+      "storefront_name": "J2ME",
+      "name": "J2ME",
+      "version": "v1.6.0",
+      "type": "EMU",
+      "description": "Emulator for J2ME games",
+      "author": "FreeJ2ME-Plus \u0026 Reesque",
+      "repo_url": "https://github.com/reesque/J2ME-Pak",
+      "previous_repo_urls": null,
+      "release_filename": "J2ME.pak.zip",
+      "changelog": {
+        "v1.60": "Initial release"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
