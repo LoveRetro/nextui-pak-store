@@ -5218,7 +5218,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.30.0",
+      "version": "v2.33.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5226,11 +5226,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.27.0": "Give cards three weights and a verb, and make Status act; Keep the focus ring out of card layout, and the Status verbs append-only.",
-        "v2.28.0": "Count list windows in steps, not items.",
-        "v2.29.0": "Add the selection control and the segmented button; Do not reserve the plain row's gutter twice, or clamp an unknown choice.",
-        "v2.29.1": "Keep Bluetooth and animated UI updates responsive.",
-        "v2.30.0": "Add the screen progress bar and the banner."
+        "v2.30.0": "Add the screen progress bar and the banner.",
+        "v2.31.0": "Add the slider, and say which numbers are a scale; Place a slider's stops after the fill, and refuse anything under its bottom stop.",
+        "v2.32.0": "Slide between screens, from a route derived off the nav; Let the tab strip decide a transition's direction, both ways round.",
+        "v2.32.1": "Draw the clock from a seam, so a screenshot is reproducible.",
+        "v2.33.0": "A sparkline, and the sample ring behind it; Break a battery trend across external power, and keep the line legible under the cursor."
       },
       "previous_names": null,
       "scripts": {
