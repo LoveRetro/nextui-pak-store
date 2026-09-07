@@ -5218,7 +5218,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.25.0",
+      "version": "v2.30.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5226,11 +5226,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.22.0": "Give a device's state a capsule instead of a supporting line.",
-        "v2.23.0": "Add Spanish language support.",
-        "v2.23.1": "Run repository setup in the environment.",
-        "v2.24.0": "Draw the UI in a rasterised face instead of a 5x7 bitmap; Ship the third-party font licences in the pak; Carry the ground through the signal slot, and format the generated table.",
-        "v2.25.0": "Fill the leading and marker slots the component set already had."
+        "v2.27.0": "Give cards three weights and a verb, and make Status act; Keep the focus ring out of card layout, and the Status verbs append-only.",
+        "v2.28.0": "Count list windows in steps, not items.",
+        "v2.29.0": "Add the selection control and the segmented button; Do not reserve the plain row's gutter twice, or clamp an unknown choice.",
+        "v2.29.1": "Keep Bluetooth and animated UI updates responsive.",
+        "v2.30.0": "Add the screen progress bar and the banner."
       },
       "previous_names": null,
       "scripts": {
