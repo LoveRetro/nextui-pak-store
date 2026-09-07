@@ -4570,9 +4570,9 @@
       "id": "RaNc4Mb8wK",
       "storefront_name": "EUCLIDTRACK",
       "name": "EUCLIDTRACK",
-      "version": "v1.9.0",
+      "version": "v2.0.0",
       "type": "TOOL",
-      "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation using LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. USER MANUAL: https://euclidtrack.neocities.org",
+      "description": "An experimental synth workstation for generating melodies and rhythms through euclidean sequencing and modulation. Four tracks, each with its own synth voice, euclidean sequencer and effect chain, drawing from a deep collection of engines spanning virtual analog, FM, physical models, sample romplers, wavetables and drum machines. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, a hybrid morphing delay/reverb with resonator and shimmer stages, a master bus live looper, and realtime WAV recording. USER MANUAL: https://euclidtrack.neocities.org",
       "author": "boorch (Bruce Menace/Cometary Trails)",
       "repo_url": "https://github.com/boorch/euclidtrack-pak",
       "previous_repo_urls": null,
@@ -5218,7 +5218,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.16.0",
+      "version": "v2.25.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5226,11 +5226,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.13.0": "Draw row markers as themed Material icons; Blend a chip's icon over the bar it sits on.",
-        "v2.14.0": "Draw the draft box and the confirmation as components; Stack a dialog's answers when they will not fit side by side.",
-        "v2.15.0": "Draw the transient notice as a Material snackbar.",
-        "v2.15.1": "Round the icon buffer bound the way the box is rounded; Stop the icon sprites being cropped.",
-        "v2.16.0": "Add a meter component and give the updater progress; Measure a card's label column from labels, not row kinds."
+        "v2.22.0": "Give a device's state a capsule instead of a supporting line.",
+        "v2.23.0": "Add Spanish language support.",
+        "v2.23.1": "Run repository setup in the environment.",
+        "v2.24.0": "Draw the UI in a rasterised face instead of a 5x7 bitmap; Ship the third-party font licences in the pak; Carry the ground through the signal slot, and format the generated table.",
+        "v2.25.0": "Fill the leading and marker slots the component set already had."
       },
       "previous_names": null,
       "scripts": {
