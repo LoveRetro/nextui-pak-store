@@ -5218,7 +5218,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.12.0",
+      "version": "v2.12.2",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5226,11 +5226,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.10.0": "Animated toggle switch component; Give an animating frame the animation's interval.",
         "v2.10.1": "Give back a message keyboard a pairing prompt displaced; Make A quick-reply and Y write in a conversation.",
         "v2.11.0": "Add a reusable card component and rebuild the Status tab on it; Clip a card's trailing note instead of dropping it whole.",
         "v2.12.0": "Add surface tiers, a shape scale and tonal accents to the theme; Keep the tab strip inside the panel at every glyph scale.",
-        "v2.9.1": "Three gaps the Codex review found."
+        "v2.12.1": "Drop a trailing slot that does not fit instead of drawing it.",
+        "v2.12.2": "Resolve a node's disc through the node, and never star ourselves."
       },
       "previous_names": null,
       "scripts": {
