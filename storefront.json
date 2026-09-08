@@ -5219,7 +5219,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.35.0",
+      "version": "v2.37.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5227,11 +5227,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.34.0": "Say what a fix is, how precise, and whose clock dated it; Check the conversion before the coordinate, and don't date a replayed fix by unrelated chatter.",
-        "v2.34.1": "Stop scanning while a link is up or being made.",
         "v2.34.2": "Stop input-map leaking readers, and hold a held button together; Stop the power button quitting the client.",
         "v2.34.3": "Close the four truncation sites the device build reports.",
-        "v2.35.0": "The four radio verbs that are not a section; Never let a canned save delete a message it could not show."
+        "v2.35.0": "The four radio verbs that are not a section; Never let a canned save delete a message it could not show.",
+        "v2.36.0": "Count the roster a running sync has delivered; Gate the radio actions on the link, not on knowing the radio; Stop the client losing a sync it had already earned.",
+        "v2.37.0": "Mark a message's delivery state instead of spelling it."
       },
       "previous_names": null,
       "scripts": {
