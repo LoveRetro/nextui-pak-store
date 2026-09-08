@@ -5218,7 +5218,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.33.1",
+      "version": "v2.34.2",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5226,11 +5226,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.31.0": "Add the slider, and say which numbers are a scale; Place a slider's stops after the fill, and refuse anything under its bottom stop.",
-        "v2.32.0": "Slide between screens, from a route derived off the nav; Let the tab strip decide a transition's direction, both ways round.",
-        "v2.32.1": "Draw the clock from a seam, so a screenshot is reproducible.",
         "v2.33.0": "A sparkline, and the sample ring behind it; Break a battery trend across external power, and keep the line legible under the cursor.",
-        "v2.33.1": "Retry a timed-out ServicesResolved poll instead of ending the link; Return from the event loop within its own timeout."
+        "v2.33.1": "Retry a timed-out ServicesResolved poll instead of ending the link; Return from the event loop within its own timeout.",
+        "v2.34.0": "Say what a fix is, how precise, and whose clock dated it; Check the conversion before the coordinate, and don't date a replayed fix by unrelated chatter.",
+        "v2.34.1": "Stop scanning while a link is up or being made.",
+        "v2.34.2": "Stop input-map leaking readers, and hold a held button together; Stop the power button quitting the client."
       },
       "previous_names": null,
       "scripts": {
