@@ -2075,13 +2075,13 @@
       "id": "wF8gP2vK6m",
       "storefront_name": "SDLReader",
       "name": "SDLReader",
-      "version": "v2.4.0",
+      "version": "v2.5.1",
       "type": "TOOL",
-      "description": "Read PDF, CBZ/ZIP \u0026 CBR/RAR comic archives, EPUB, MOBI, plain text, and standalone image files with smooth navigation, zoom, rotation, and mirroring. SDLReader is a lightweight, cross-platform viewer optimized for TrimUI devices (Brick, Smart Pro, Smart Pro S) and the Miyoo Flip running NextUI, built on SDL2 and MuPDF.",
+      "description": "Read PDF, CBZ/ZIP \u0026 CBR/RAR comic archives, EPUB, MOBI, plain text, and standalone image files with smooth navigation, zoom, rotation, and mirroring. SDLReader is a lightweight viewer for TG5040, TG5050, MY355, and H700 devices running NextUI, built on SDL2 and MuPDF.",
       "author": "Helaas",
       "repo_url": "https://github.com/Helaas/SDLReader-brick",
       "previous_repo_urls": null,
-      "release_filename": "SDLReader.pakz",
+      "release_filename": "SDLReader.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release with PDF, CBZ, and EPUB support, optimized for TrimUI Brick",
         "v1.0.1": "Better scrolling, support for MOBI files [MuPDF 0.50 -\u003e 1.26.7], and faster performance by streamlining the code.",
@@ -2100,7 +2100,9 @@
         "v2.2.2": "Smart Pro S support, and bugfix for final ebook pages being unreachable after changing font size.",
         "v2.3.0": "Miyoo Flip support, installation size optimized, general performance improvements.",
         "v2.3.1": "Same as v2.3.0: Miyoo Flip support, installation size optimized, general performance improvements. Issue fixed with bundle extraction via Pak Store.",
-        "v2.4.0": "Standalone image support, optional image visibility in the file browser, and new edge page-turn modes (Automatic, Double Tap, or Disable)."
+        "v2.4.0": "Standalone image support, optional image visibility in the file browser, and new edge page-turn modes (Automatic, Double Tap, or Disable).",
+        "v2.5.0": "H700 support (Anbernic RG35XX family) and a single universal binary shared by every NextUI device, plus a configurable UI menu font size for more readable menus and file browsing on high-DPI screens.",
+        "v2.5.1": "Adds the Miniloong Pocket 1 (Leaf) port to the main build line. NextUI devices are unaffected — the tg5040, tg5050, my355, and h700 binary is byte-for-byte identical to v2.5.0."
       },
       "previous_names": null,
       "scripts": {
@@ -2130,7 +2132,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "Media"
