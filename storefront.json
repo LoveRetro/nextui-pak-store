@@ -4570,7 +4570,7 @@
       "id": "RaNc4Mb8wK",
       "storefront_name": "EUCLIDTRACK",
       "name": "EUCLIDTRACK",
-      "version": "v2.0.0",
+      "version": "v2.1.0",
       "type": "TOOL",
       "description": "An experimental synth workstation for generating melodies and rhythms through euclidean sequencing and modulation. Four tracks, each with its own synth voice, euclidean sequencer and effect chain, drawing from a deep collection of engines spanning virtual analog, FM, physical models, sample romplers, wavetables and drum machines. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, a hybrid morphing delay/reverb with resonator and shimmer stages, a master bus live looper, and realtime WAV recording. USER MANUAL: https://euclidtrack.neocities.org",
       "author": "boorch (Bruce Menace/Cometary Trails)",
