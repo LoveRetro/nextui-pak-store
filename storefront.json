@@ -4390,7 +4390,7 @@
       "id": "yo3jvTpTvf",
       "storefront_name": "Trimpod Classic",
       "name": "Trimpod Classic",
-      "version": "v1.0.9",
+      "version": "v1.0.10",
       "type": "TOOL",
       "description": "An iPod Classic-inspired, offline music player for the TrimUI Brick/Hammer with winamp-like visualizations.",
       "author": "tyrannotorus",
@@ -4399,6 +4399,7 @@
       "release_filename": "Trimpod.pak.zip",
       "changelog": {
         "v1.0.1": "Initial release.",
+        "v1.0.10": "- Play Next and Add to Play Queue added to context menus\n- Idle menus return to Now Playing after 10 s\n- Holding Power powers off instead of exiting app\n- Play Queue limit increased to avoid truncated lists\n- Toggling a settings row with A no longer scrolls the list",
         "v1.0.3": "Adjusted volume increments, improved performance by reducing redundant cycle burn, added a controls legend to Settings, various bug fixes.",
         "v1.0.4": "Rebuilt the audio output path: direct ALSA output with a hardware/software split volume. Fixes quiet passages dropping to silence at low volume; maximum volume is now full scale.",
         "v1.0.5": "Fixed bug allowing user to escape to file system after song end",
@@ -5218,7 +5219,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.34.2",
+      "version": "v2.35.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5226,11 +5227,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.33.0": "A sparkline, and the sample ring behind it; Break a battery trend across external power, and keep the line legible under the cursor.",
-        "v2.33.1": "Retry a timed-out ServicesResolved poll instead of ending the link; Return from the event loop within its own timeout.",
         "v2.34.0": "Say what a fix is, how precise, and whose clock dated it; Check the conversion before the coordinate, and don't date a replayed fix by unrelated chatter.",
         "v2.34.1": "Stop scanning while a link is up or being made.",
-        "v2.34.2": "Stop input-map leaking readers, and hold a held button together; Stop the power button quitting the client."
+        "v2.34.2": "Stop input-map leaking readers, and hold a held button together; Stop the power button quitting the client.",
+        "v2.34.3": "Close the four truncation sites the device build reports.",
+        "v2.35.0": "The four radio verbs that are not a section; Never let a canned save delete a message it could not show."
       },
       "previous_names": null,
       "scripts": {
