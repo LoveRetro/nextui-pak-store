@@ -4762,7 +4762,7 @@
       "id": "9njs1Bz52d",
       "storefront_name": "RetroArch Core Saves",
       "name": "RetroArch Core Saves",
-      "version": "v0.5.5",
+      "version": "v0.6.0",
       "type": "TOOL",
       "description": "Convert your save files and use RetroArch core-name folders for easier SyncThing setup.",
       "author": "bmpriest",
@@ -4772,7 +4772,8 @@
       "changelog": {
         "0.5.3": "Fixed a bug to compare for identical saves before keeping both as a conflict.",
         "0.5.4": "Added extra settings to handle paks from the pak store or elsewhere better.",
-        "0.5.5": "Added compatibility for my285. Working on Profile support."
+        "0.5.5": "Added compatibility for my285. Working on Profile support.",
+        "0.6.0": "Bigger update to add h700 support and fix compatibility issues with Profiles.pak and Netplay.pak"
       },
       "previous_names": null,
       "scripts": {
@@ -4799,6 +4800,7 @@
       "platforms": [
         "tg5040",
         "tg5050",
+        "h700",
         "my285"
       ],
       "categories": [
@@ -5223,7 +5225,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.43.0",
+      "version": "v2.43.1",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5231,11 +5233,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.39.0": "Send reactions and threaded replies, not just read them; The tapback picker owns the body, so no banner may shorten it.",
         "v2.40.0": "Ask a router for the messages the Brick missed; Stop dating a replay by when it was fetched.",
         "v2.41.0": "Explain settings in the client, on a help screen SELECT opens; Make the help press and its keycap agree in every section state.",
         "v2.42.0": "Explain the features as well as the settings; Ask the route whether a settings section is what is on the panel.",
-        "v2.43.0": "Explain the long tail of settings rows; Stop a help topic falling back across a subheading."
+        "v2.43.0": "Explain the long tail of settings rows; Stop a help topic falling back across a subheading.",
+        "v2.43.1": "Date a press's toast by the clock driving the frames; Say why a new waypoint cannot be made."
       },
       "previous_names": null,
       "scripts": {
