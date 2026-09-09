@@ -2075,7 +2075,7 @@
       "id": "wF8gP2vK6m",
       "storefront_name": "SDLReader",
       "name": "SDLReader",
-      "version": "v2.5.1",
+      "version": "v2.5.2",
       "type": "TOOL",
       "description": "Read PDF, CBZ/ZIP \u0026 CBR/RAR comic archives, EPUB, MOBI, plain text, and standalone image files with smooth navigation, zoom, rotation, and mirroring. SDLReader is a lightweight viewer for TG5040, TG5050, MY355, and H700 devices running NextUI, built on SDL2 and MuPDF.",
       "author": "Helaas",
@@ -2102,7 +2102,8 @@
         "v2.3.1": "Same as v2.3.0: Miyoo Flip support, installation size optimized, general performance improvements. Issue fixed with bundle extraction via Pak Store.",
         "v2.4.0": "Standalone image support, optional image visibility in the file browser, and new edge page-turn modes (Automatic, Double Tap, or Disable).",
         "v2.5.0": "H700 support (Anbernic RG35XX family) and a single universal binary shared by every NextUI device, plus a configurable UI menu font size for more readable menus and file browsing on high-DPI screens.",
-        "v2.5.1": "Adds the Miniloong Pocket 1 (Leaf) port to the main build line. NextUI devices are unaffected — the tg5040, tg5050, my355, and h700 binary is byte-for-byte identical to v2.5.0."
+        "v2.5.1": "Adds the Miniloong Pocket 1 (Leaf) port to the main build line. NextUI devices are unaffected — the tg5040, tg5050, my355, and h700 binary is byte-for-byte identical to v2.5.0.",
+        "v2.5.2": "Corrects the Leaf (MLP1) pak version stamp, which still reported 2.4.0 in v2.5.1. No functional change on any device."
       },
       "previous_names": null,
       "scripts": {
@@ -4574,7 +4575,7 @@
       "id": "RaNc4Mb8wK",
       "storefront_name": "EUCLIDTRACK",
       "name": "EUCLIDTRACK",
-      "version": "v2.1.0",
+      "version": "v2.1.1",
       "type": "TOOL",
       "description": "An experimental synth workstation for generating melodies and rhythms through euclidean sequencing and modulation. Four tracks, each with its own synth voice, euclidean sequencer and effect chain, drawing from a deep collection of engines spanning virtual analog, FM, physical models, sample romplers, wavetables and drum machines. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, a hybrid morphing delay/reverb with resonator and shimmer stages, a master bus live looper, and realtime WAV recording. USER MANUAL: https://euclidtrack.neocities.org",
       "author": "boorch (Bruce Menace/Cometary Trails)",
@@ -5222,7 +5223,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.37.0",
+      "version": "v2.40.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5230,11 +5231,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.34.2": "Stop input-map leaking readers, and hold a held button together; Stop the power button quitting the client.",
-        "v2.34.3": "Close the four truncation sites the device build reports.",
-        "v2.35.0": "The four radio verbs that are not a section; Never let a canned save delete a message it could not show.",
         "v2.36.0": "Count the roster a running sync has delivered; Gate the radio actions on the link, not on knowing the radio; Stop the client losing a sync it had already earned.",
-        "v2.37.0": "Mark a message's delivery state instead of spelling it."
+        "v2.37.0": "Mark a message's delivery state instead of spelling it.",
+        "v2.38.0": "List, share and withdraw the mesh's shared places; Honour a dated expiry, and let the places follow the radio.",
+        "v2.39.0": "Send reactions and threaded replies, not just read them; The tapback picker owns the body, so no banner may shorten it.",
+        "v2.40.0": "Ask a router for the messages the Brick missed; Stop dating a replay by when it was fetched."
       },
       "previous_names": null,
       "scripts": {
@@ -5254,6 +5255,7 @@
       "update_ignore": null,
       "screenshots": [
         ".github/resources/screenshots/nodes.png",
+        ".github/resources/screenshots/waypoints.png",
         ".github/resources/screenshots/messages.png",
         ".github/resources/screenshots/status.png",
         ".github/resources/screenshots/settings.png"
@@ -5272,7 +5274,7 @@
       "id": "VDhSsgndqM",
       "storefront_name": "J2ME",
       "name": "J2ME",
-      "version": "v1.6.0",
+      "version": "v1.6.1",
       "type": "EMU",
       "description": "Emulator for J2ME games",
       "author": "FreeJ2ME-Plus \u0026 Reesque",
@@ -5280,7 +5282,8 @@
       "previous_repo_urls": null,
       "release_filename": "J2ME.pak.zip",
       "changelog": {
-        "v1.6.0": "Initial release"
+        "v1.6.0": "Initial release",
+        "v1.6.1": "Added auto BIOS copy command to launch"
       },
       "previous_names": null,
       "scripts": {
