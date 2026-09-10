@@ -4575,7 +4575,7 @@
       "id": "RaNc4Mb8wK",
       "storefront_name": "EUCLIDTRACK",
       "name": "EUCLIDTRACK",
-      "version": "v2.1.2",
+      "version": "v2.2.0",
       "type": "TOOL",
       "description": "An experimental synth workstation for generating melodies and rhythms through euclidean sequencing and modulation. Four tracks, each with its own synth voice, euclidean sequencer and effect chain, drawing from a deep collection of engines spanning virtual analog, FM, physical models, sample romplers, wavetables and drum machines. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, a hybrid morphing delay/reverb with resonator and shimmer stages, a master bus live looper, and realtime WAV recording. USER MANUAL: https://euclidtrack.neocities.org",
       "author": "boorch (Bruce Menace/Cometary Trails)",
@@ -5225,7 +5225,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.44.0",
+      "version": "v2.47.1",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5233,11 +5233,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.41.0": "Explain settings in the client, on a help screen SELECT opens; Make the help press and its keycap agree in every section state.",
-        "v2.42.0": "Explain the features as well as the settings; Ask the route whether a settings section is what is on the panel.",
-        "v2.43.0": "Explain the long tail of settings rows; Stop a help topic falling back across a subheading.",
-        "v2.43.1": "Date a press's toast by the clock driving the frames; Say why a new waypoint cannot be made.",
-        "v2.44.0": "Draw the map, and record what steps 1 and 2 became; Put the nodes and the places on a map; Project a coordinate onto a flat picture of the world; Keep the map's presses and its ink inside the map."
+        "v2.44.0": "Draw the map, and record what steps 1 and 2 became; Put the nodes and the places on a map; Project a coordinate onto a flat picture of the world; Keep the map's presses and its ink inside the map.",
+        "v2.45.0": "Draw every positioned node the session holds; Give the range test a scan to read, and the grace a reconnect; Auto-connect to the radio you have, not the one BlueZ remembers.",
+        "v2.46.0": "Say what firmware the radio could be running; Read the firmware catalog upstream publishes; Two findings from the Codex review; Refuse a release whose tag is a 'v' and nothing else; Drop a firmware answer that belongs to another radio.",
+        "v2.47.0": "Offer the radio firmware channel as a row.",
+        "v2.47.1": "Step past the marker the crosshair is already on; Step to the next marker instead of panning onto a lattice."
       },
       "previous_names": null,
       "scripts": {
