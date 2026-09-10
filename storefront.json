@@ -2934,20 +2934,21 @@
       "id": "85lpt3IHiy",
       "storefront_name": "ScrapeGoat",
       "name": "ScrapeGoat",
-      "version": "v2.2.0",
+      "version": "v2.3.0",
       "type": "TOOL",
       "description": "Scrape artwork and manuals from ScreenScraper.fr and download cheats from Libretro for your ROM library.",
       "author": "Helaas",
       "repo_url": "https://github.com/Helaas/nextui-scrapegoat-pak",
       "previous_repo_urls": null,
-      "release_filename": "ScrapeGoat.pakz",
+      "release_filename": "ScrapeGoat.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release: ScreenScraper.fr artwork scraping, Libretro cheat downloading.",
         "v1.0.1": "Subfolder support for cheats and artwork, safer media downloads via temp files.",
         "v1.0.2": "Bugfix for certain consoles being incorrectly mapped.",
         "v2.0.0": "New Apostrophe UI with queue/progress tracking, existing-file overviews, Miyoo Flip (my355) support, and can now scrape Sega Saturn.",
         "v2.1.0": "Adds PDF manual downloads with configurable storage, background queue handoff and resume, clearer quit behavior, smarter cheat-file selection, and daemon-safe artwork scraping.",
-        "v2.2.0": "Fixes incorrect colors with NextUI's RGBA theme format."
+        "v2.2.0": "Fixes incorrect colors with NextUI's RGBA theme format.",
+        "v2.3.0": "Adds per-folder scraping platforms and suffix defaults, with a compact System Mappings screen. Multi-system suffixes such as GPGX can map each folder independently, and unknown folders stay visible until mapped. Preserves mapping choices and queued cheat targets across updates and background handoff. Fixes COLECO scraping PlayStation 4 artwork and MSX scraping PS Vita artwork, and adds cheat databases for SG-1000 and PrBoom. Ships one ScrapeGoat.pak.zip for tg5040, tg5050, my355, and h700, with automated releases and an evidence-based suffix coverage report."
       },
       "previous_names": null,
       "scripts": {
@@ -2969,7 +2970,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "ROM Management",
@@ -4533,15 +4535,16 @@
       "id": "9duidHBqAk",
       "storefront_name": "GPGX (Genesis Plus GX)",
       "name": "GPGX",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "EMU",
       "description": "Genesis Plus GX libretro core for Sega Genesis/Mega Drive, Master System, Game Gear, SG-1000, and Sega/Mega CD.",
       "author": "Helaas",
       "repo_url": "https://github.com/Helaas/nextui-gppx-pak",
       "previous_repo_urls": null,
-      "release_filename": "GPGX.pakz",
+      "release_filename": "GPGX.pak.zip",
       "changelog": {
-        "v1.0.0": "Initial release. Genesis Plus GX core pinned to upstream fa4dca5."
+        "v1.0.0": "Initial release. Genesis Plus GX core pinned to upstream fa4dca5.",
+        "v1.1.0": "Adds H700 (Anbernic) support. One core build now serves every platform and ships as a single GPGX.pak.zip."
       },
       "previous_names": null,
       "scripts": {
@@ -4563,7 +4566,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "Emulators"
@@ -5226,7 +5230,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.53.0",
+      "version": "v2.54.1",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5234,11 +5238,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.50.0": "Say each Status reading once and give the room to the card in trouble; Measure the Status card's shares 64 bits wide.",
-        "v2.51.0": "Key the Status cursor on a verb rather than a position.",
         "v2.51.1": "Do not pick a bootloader as the implicit serial target; Stop calling a UF2 bootloader a radio.",
         "v2.52.0": "Resolve a board to its image and fetch it; Fetch one board's image out of a release zip; Read a release zip from its back end; Check the manifest is for the board we asked for.",
-        "v2.53.0": "Write a UF2 to a radio's bootloader over USB; Ask a radio to enter its UF2 bootloader; Fill in why an install refused to start; Match the bootloader on the bus id, not on the tty label; Compress the push stream; Stage a push under a name the launcher does not glob."
+        "v2.53.0": "Write a UF2 to a radio's bootloader over USB; Ask a radio to enter its UF2 bootloader; Fill in why an install refused to start; Match the bootloader on the bus id, not on the tty label; Compress the push stream; Stage a push under a name the launcher does not glob.",
+        "v2.54.0": "Add USB (adb) transport to the device deploy loop.",
+        "v2.54.1": "Open the drive without testing it first; Hold the drive, and read a write that ended as a restart."
       },
       "previous_names": null,
       "scripts": {
