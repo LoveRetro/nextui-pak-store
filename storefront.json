@@ -1087,7 +1087,8 @@
       "screenshots": null,
       "platforms": [
         "tg5040",
-        "tg5050"
+        "tg5050",
+        "my355"
       ],
       "categories": [
         "Emulators"
@@ -5276,16 +5277,17 @@
       "id": "VDhSsgndqM",
       "storefront_name": "J2ME",
       "name": "J2ME",
-      "version": "v1.6.1",
+      "version": "v1.6.2",
       "type": "EMU",
-      "description": "Emulator for J2ME games",
+      "description": "Emulator for running all compatible J2ME games from pre-smartphone/Symbian era on devices like Nokia, Sony Ericsson, Motorola, Samsung, Blackberry, etc.",
       "author": "FreeJ2ME-Plus \u0026 Reesque",
       "repo_url": "https://github.com/reesque/J2ME-Pak",
       "previous_repo_urls": null,
       "release_filename": "J2ME.pak.zip",
       "changelog": {
         "v1.6.0": "Initial release",
-        "v1.6.1": "Added auto BIOS copy command to launch"
+        "v1.6.1": "Added auto BIOS copy command to launch",
+        "v1.6.2": "Same package as 1.6.1 hotfix, but this is to force update for 1.6.1 devices without hotfix"
       },
       "previous_names": null,
       "scripts": {
@@ -5303,7 +5305,11 @@
         }
       },
       "update_ignore": null,
-      "screenshots": [],
+      "screenshots": [
+        ".github/resources/screenshots/screenshot0.png",
+        ".github/resources/screenshots/screenshot1.png",
+        ".github/resources/screenshots/screenshot2.png"
+      ],
       "platforms": [
         "tg5040",
         "tg5050",
