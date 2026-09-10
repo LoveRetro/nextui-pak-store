@@ -5226,7 +5226,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.52.0",
+      "version": "v2.53.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5234,11 +5234,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.49.0": "Draw the airtime trend as a chart with its axes named; Measure several series on one clock window; Offer a trend only when there is a line to draw.",
         "v2.50.0": "Say each Status reading once and give the room to the card in trouble; Measure the Status card's shares 64 bits wide.",
         "v2.51.0": "Key the Status cursor on a verb rather than a position.",
         "v2.51.1": "Do not pick a bootloader as the implicit serial target; Stop calling a UF2 bootloader a radio.",
-        "v2.52.0": "Resolve a board to its image and fetch it; Fetch one board's image out of a release zip; Read a release zip from its back end; Check the manifest is for the board we asked for."
+        "v2.52.0": "Resolve a board to its image and fetch it; Fetch one board's image out of a release zip; Read a release zip from its back end; Check the manifest is for the board we asked for.",
+        "v2.53.0": "Write a UF2 to a radio's bootloader over USB; Ask a radio to enter its UF2 bootloader; Fill in why an install refused to start; Match the bootloader on the bus id, not on the tty label; Compress the push stream; Stage a push under a name the launcher does not glob."
       },
       "previous_names": null,
       "scripts": {
