@@ -5226,7 +5226,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.47.1",
+      "version": "v2.50.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5234,11 +5234,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.44.0": "Draw the map, and record what steps 1 and 2 became; Put the nodes and the places on a map; Project a coordinate onto a flat picture of the world; Keep the map's presses and its ink inside the map.",
-        "v2.45.0": "Draw every positioned node the session holds; Give the range test a scan to read, and the grace a reconnect; Auto-connect to the radio you have, not the one BlueZ remembers.",
-        "v2.46.0": "Say what firmware the radio could be running; Read the firmware catalog upstream publishes; Two findings from the Codex review; Refuse a release whose tag is a 'v' and nothing else; Drop a firmware answer that belongs to another radio.",
         "v2.47.0": "Offer the radio firmware channel as a row.",
-        "v2.47.1": "Step past the marker the crosshair is already on; Step to the next marker instead of panning onto a lattice."
+        "v2.47.1": "Step past the marker the crosshair is already on; Step to the next marker instead of panning onto a lattice.",
+        "v2.48.0": "Add a proportion bar and the categorical palette it needs; Reserve room for the last card in a column; Draw a proportion bar's gaps in the ground it is actually on.",
+        "v2.49.0": "Draw the airtime trend as a chart with its axes named; Measure several series on one clock window; Offer a trend only when there is a line to draw.",
+        "v2.50.0": "Say each Status reading once and give the room to the card in trouble; Measure the Status card's shares 64 bits wide."
       },
       "previous_names": null,
       "scripts": {
