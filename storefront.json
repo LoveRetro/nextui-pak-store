@@ -4675,16 +4675,17 @@
       "id": "WEDqOJt3qB",
       "storefront_name": "RA Explorer",
       "name": "RA Explorer",
-      "version": "v1.1.0",
+      "version": "v1.2.0",
       "type": "TOOL",
       "description": "A RetroAchievements browser for NextUI handhelds.",
       "author": "theadurn",
       "repo_url": "https://github.com/apommel/nextui-ra-explorer",
       "previous_repo_urls": null,
-      "release_filename": "RA.Explorer.pakz",
+      "release_filename": "RA.Explorer.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release.",
-        "v1.1.0": "Add request caching to improve speed and to allow offline usage."
+        "v1.1.0": "Add request caching to improve speed and to allow offline usage.",
+        "v1.2.0": "Adds Anbernic H700 support. One RA.Explorer.pak.zip now installs on every platform, with an universal binary."
       },
       "previous_names": null,
       "scripts": {
@@ -4712,7 +4713,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "Miscellaneous Tools"
@@ -5236,7 +5238,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.61.1",
+      "version": "v2.62.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5244,11 +5246,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.58.0": "Install ESP32 radio firmware over Bluetooth; Arm only the named radio, and only behind an empty admin queue.",
         "v2.59.0": "Chart a node's temperature and humidity over time; Close a node's chart with its row, and need a line to open one.",
         "v2.60.0": "Read a tile pack, and say which tiles a view stands on; Zero a refused source, and diagnose a short pack index.",
         "v2.61.0": "Decode a tile, with Wuffs vendored.",
-        "v2.61.1": "Count the Map row when a scene walks the Nodes list."
+        "v2.61.1": "Count the Map row when a scene walks the Nodes list.",
+        "v2.62.0": "Keep decoded tiles, and remember which ones are not there; Keep a hole when a tile claim is refused."
       },
       "previous_names": null,
       "scripts": {
