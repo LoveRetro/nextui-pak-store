@@ -5230,7 +5230,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.57.0",
+      "version": "v2.58.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5238,11 +5238,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.54.1": "Open the drive without testing it first; Hold the drive, and read a write that ended as a restart.",
         "v2.55.0": "Make an arriving message visible from anywhere; Three notification bugs from review.",
         "v2.56.0": "Reach a Meshtastic node over the network; A network link is not a Bluetooth radio; Four findings from review.",
         "v2.56.1": "Adopt a connect's host as the one to go back to; Route a network row's press to the network transport.",
-        "v2.57.0": "Make the pad and the panel table-driven; Bind the xbox profile's X and Y by code, not by compass name."
+        "v2.57.0": "Make the pad and the panel table-driven; Bind the xbox profile's X and Y by code, not by compass name.",
+        "v2.58.0": "Install ESP32 radio firmware over Bluetooth; Arm only the named radio, and only behind an empty admin queue."
       },
       "previous_names": null,
       "scripts": {
