@@ -5230,7 +5230,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.54.1",
+      "version": "v2.55.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5238,11 +5238,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.51.1": "Do not pick a bootloader as the implicit serial target; Stop calling a UF2 bootloader a radio.",
         "v2.52.0": "Resolve a board to its image and fetch it; Fetch one board's image out of a release zip; Read a release zip from its back end; Check the manifest is for the board we asked for.",
         "v2.53.0": "Write a UF2 to a radio's bootloader over USB; Ask a radio to enter its UF2 bootloader; Fill in why an install refused to start; Match the bootloader on the bus id, not on the tty label; Compress the push stream; Stage a push under a name the launcher does not glob.",
         "v2.54.0": "Add USB (adb) transport to the device deploy loop.",
-        "v2.54.1": "Open the drive without testing it first; Hold the drive, and read a write that ended as a restart."
+        "v2.54.1": "Open the drive without testing it first; Hold the drive, and read a write that ended as a restart.",
+        "v2.55.0": "Make an arriving message visible from anywhere; Three notification bugs from review."
       },
       "previous_names": null,
       "scripts": {
