@@ -2797,18 +2797,19 @@
     {
       "id": "extRHlAv2X",
       "storefront_name": "Toggle Native SSH",
-      "name": "Native SSH",
-      "version": "v2.1.0",
+      "name": "NativeSSH",
+      "version": "v2.2.0",
       "type": "TOOL",
       "description": "Enable and disable SSH access on your device. Displays default IP address and port when SSH is active.",
       "author": "Helaas",
       "repo_url": "https://github.com/Helaas/nextui-nativessh-pak",
       "previous_repo_urls": null,
-      "release_filename": "NativeSSH.pakz",
+      "release_filename": "NativeSSH.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release",
         "v2.0.0": "Add Miyoo Flip support. Major rework porting to app from Gabagool to Apostrophe.",
-        "v2.1.0": "Fixes incorrect colors with NextUI's RGBA theme format."
+        "v2.1.0": "Fixes incorrect colors with NextUI's RGBA theme format.",
+        "v2.2.0": "Adds H700 support and one universal NativeSSH.pak.zip for all supported devices. Updates Apostrophe to v1.2.0, protects startup scripts, fixes firmware version parsing, and reports SSH toggle and persistence failures."
       },
       "previous_names": null,
       "scripts": {
@@ -2830,7 +2831,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "File Management"
@@ -2843,13 +2845,13 @@
       "id": "vf6c1JmurX",
       "storefront_name": "Shortcuts",
       "name": "Shortcuts",
-      "version": "v2.2.2",
+      "version": "v2.3.0",
       "type": "TOOL",
       "description": "Create and manage main menu shortcuts for ROMs and Tools on NextUI.",
       "author": "Helaas",
       "repo_url": "https://github.com/Helaas/nextui-shortcuts-pak",
       "previous_repo_urls": null,
-      "release_filename": "Shortcuts.pakz",
+      "release_filename": "Shortcuts.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release",
         "v1.1.0": "Adds customizable shortcut artwork backgrounds, the ability to view hidden/disabled ROMs, renamed and streamlined artwork management and settings behavior, improved defaults, and easier setup for curated “five-game handheld” menus.",
@@ -2858,7 +2860,8 @@
         "v2.1.0": "NextUI ≥ v6.11.0: X to Resume now works on ROM shortcuts. Cleaner Game Switcher \u0026 Recently Played with no duplicates or tool entries.",
         "v2.2.0": "Fixes incorrect colors with NextUI's RGBA theme format.",
         "v2.2.1": "Fixes blue-tinted shortcut artwork backgrounds caused by NextUI's RGBA theme color format.",
-        "v2.2.2": "Fixes shortcut art appearing doubled/ghosted by matching NextUI's own art position, size, and corner rounding exactly."
+        "v2.2.2": "Fixes shortcut art appearing doubled/ghosted by matching NextUI's own art position, size, and corner rounding exactly.",
+        "v2.3.0": "Adds H700 (Anbernic) support and Apostrophe v1.2.0 input fixes. One universal build now serves every supported platform and ships as Shortcuts.pak.zip."
       },
       "previous_names": null,
       "scripts": {
@@ -2880,7 +2883,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "Customization"
@@ -3653,14 +3657,14 @@
     {
       "id": "LenGAzYdOL",
       "storefront_name": "Central Scrutinizer",
-      "name": "The Central Scrutinizer",
-      "version": "v0.2.0",
+      "name": "Central Scrutinizer",
+      "version": "v0.3.0",
       "type": "TOOL",
       "description": "Browser-based device manager for NextUI handhelds, letting users manage their devices from web or mobile browsers with library browsing, file tools, collections, screenshots, logs, artwork replacement, and optional background mode.",
       "author": "helaas",
       "repo_url": "https://github.com/Helaas/nextui-CentralScrutinizer-pak",
       "previous_repo_urls": null,
-      "release_filename": "Central.Scrutinizer.pakz",
+      "release_filename": "Central.Scrutinizer.pak.zip",
       "changelog": {
         "v0.1.0": "Initial release with a browser-based dashboard for managing paired devices from desktop or mobile browsers, plus platform library browsing, save-state management, file tools, collections, screenshots, logs, Mac dot cleanup, optional terminal access, and background mode.",
         "v0.1.1": "Small bug fixes and improvements to the experience on mobile browsers.",
@@ -3669,7 +3673,8 @@
         "v0.1.4": "Add folder and ZIP/.pakz uploads with extraction modes, conflict previews, and safer partial-upload handling.",
         "v0.1.5": "Add server-backed Name/Size/Modified sorting for paginated browser tables with accessible headers. Thanks @ericreinsmidt.",
         "v0.1.6": "Custom ROM folders now appear in the library when the matching emulator pak is installed. Platforms page stream-loads for snappier startup, with incremental card rendering, a loading skeleton, and a fallback icon for unknown platforms.",
-        "v0.2.0": "Fixes incorrect colors with NextUI's RGBA theme format."
+        "v0.2.0": "Fixes incorrect colors with NextUI's RGBA theme format.",
+        "v0.3.0": "Adds H700 support and one universal build for all supported NextUI handhelds, packaged as Central.Scrutinizer.pak.zip for Pak Store. Updates Apostrophe to v1.2.0 for improved H700 input and face-button handling. Fixes stray cursor-position text in the browser terminal. Adds automated GitHub releases and stronger package and deployment checks."
       },
       "previous_names": null,
       "scripts": {
@@ -3691,7 +3696,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "ROM Management",
@@ -5230,7 +5236,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.58.0",
+      "version": "v2.61.1",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5238,11 +5244,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.55.0": "Make an arriving message visible from anywhere; Three notification bugs from review.",
-        "v2.56.0": "Reach a Meshtastic node over the network; A network link is not a Bluetooth radio; Four findings from review.",
-        "v2.56.1": "Adopt a connect's host as the one to go back to; Route a network row's press to the network transport.",
-        "v2.57.0": "Make the pad and the panel table-driven; Bind the xbox profile's X and Y by code, not by compass name.",
-        "v2.58.0": "Install ESP32 radio firmware over Bluetooth; Arm only the named radio, and only behind an empty admin queue."
+        "v2.58.0": "Install ESP32 radio firmware over Bluetooth; Arm only the named radio, and only behind an empty admin queue.",
+        "v2.59.0": "Chart a node's temperature and humidity over time; Close a node's chart with its row, and need a line to open one.",
+        "v2.60.0": "Read a tile pack, and say which tiles a view stands on; Zero a refused source, and diagnose a short pack index.",
+        "v2.61.0": "Decode a tile, with Wuffs vendored.",
+        "v2.61.1": "Count the Map row when a scene walks the Nodes list."
       },
       "previous_names": null,
       "scripts": {
