@@ -5238,7 +5238,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.64.0",
+      "version": "v2.68.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5246,11 +5246,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.61.1": "Count the Map row when a scene walks the Nodes list.",
-        "v2.62.0": "Keep decoded tiles, and remember which ones are not there; Keep a hole when a tile claim is refused.",
-        "v2.63.0": "Draw a tile pack, and a scene that reads one; Draw the basemap under the markers; Wrap a synthetic pack's columns, and make its output directory.",
-        "v2.63.1": "Bound a direction's reach to one step so the map can be explored.",
-        "v2.64.0": "Install the radio's firmware from Settings; Revalidate the radio, refuse TCP, and let the loader be recovered from."
+        "v2.65.0": "Bring the node detail up to the component set; Open the detail on a real row from the map, and key its switches by node.",
+        "v2.66.0": "Measure the edit buffer from the field table.",
+        "v2.67.0": "Draw the node detail's groups as cards; Keep the traced route out of the node detail's action block; Keep a card heading in the list's own leading gutter; Give a list control the row's resting ground, not its current one.",
+        "v2.67.1": "Settle the libc branch inside the ioctl header, and make it a helper; Clear every compiler warning the build, the pak and CI emit.",
+        "v2.68.0": "Give the charts a span picker, a contracting ceiling and one renderer; Pick a chart's ceiling from the readings it draws."
       },
       "previous_names": null,
       "scripts": {
