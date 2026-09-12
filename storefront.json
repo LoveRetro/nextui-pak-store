@@ -5238,7 +5238,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.68.0",
+      "version": "v2.68.4",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5246,11 +5246,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.65.0": "Bring the node detail up to the component set; Open the detail on a real row from the map, and key its switches by node.",
-        "v2.66.0": "Measure the edit buffer from the field table.",
-        "v2.67.0": "Draw the node detail's groups as cards; Keep the traced route out of the node detail's action block; Keep a card heading in the list's own leading gutter; Give a list control the row's resting ground, not its current one.",
-        "v2.67.1": "Settle the libc branch inside the ioctl header, and make it a helper; Clear every compiler warning the build, the pak and CI emit.",
-        "v2.68.0": "Give the charts a span picker, a contracting ceiling and one renderer; Pick a chart's ceiling from the readings it draws."
+        "v2.68.0": "Give the charts a span picker, a contracting ceiling and one renderer; Pick a chart's ceiling from the readings it draws.",
+        "v2.68.1": "Keep the header's assertions spellable from C++; State the name and description limits as characters, not buffers.",
+        "v2.68.2": "Give the airtime trend a gap the radio's own cadence fits in.",
+        "v2.68.3": "Say why an assetless release cannot be installed; Stop an up-to-date radio reporting the installer as unbuilt.",
+        "v2.68.4": "Keep a card's inset out of a heading's room at the smallest scale; Give the node detail's cards room to be cards."
       },
       "previous_names": null,
       "scripts": {
