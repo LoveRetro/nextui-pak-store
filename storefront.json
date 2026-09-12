@@ -4775,7 +4775,7 @@
       "id": "9njs1Bz52d",
       "storefront_name": "RetroArch Core Saves",
       "name": "RetroArch Core Saves",
-      "version": "v0.6.0",
+      "version": "0.6.1",
       "type": "TOOL",
       "description": "Convert your save files and use RetroArch core-name folders for easier SyncThing setup.",
       "author": "bmpriest",
@@ -5238,7 +5238,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.63.1",
+      "version": "v2.64.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5246,11 +5246,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.61.0": "Decode a tile, with Wuffs vendored.",
         "v2.61.1": "Count the Map row when a scene walks the Nodes list.",
         "v2.62.0": "Keep decoded tiles, and remember which ones are not there; Keep a hole when a tile claim is refused.",
         "v2.63.0": "Draw a tile pack, and a scene that reads one; Draw the basemap under the markers; Wrap a synthetic pack's columns, and make its output directory.",
-        "v2.63.1": "Bound a direction's reach to one step so the map can be explored."
+        "v2.63.1": "Bound a direction's reach to one step so the map can be explored.",
+        "v2.64.0": "Install the radio's firmware from Settings; Revalidate the radio, refuse TCP, and let the loader be recovered from."
       },
       "previous_names": null,
       "scripts": {
