@@ -5238,7 +5238,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.68.8",
+      "version": "v2.69.1",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5246,11 +5246,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.68.4": "Keep a card's inset out of a heading's room at the smallest scale; Give the node detail's cards room to be cards.",
-        "v2.68.5": "Widen the framebuffer size multiply before it overflows.",
         "v2.68.6": "Give the scroll rail a gutter of its own beside a list's cards.",
         "v2.68.7": "Keep the radio's airtime trend across a restart.",
-        "v2.68.8": "Let a row's label inherit its tone; Draw a row's label and its value as two tiers."
+        "v2.68.8": "Let a row's label inherit its tone; Draw a row's label and its value as two tiers.",
+        "v2.69.0": "Leave a readable report behind when the client faults; Stop the report promising privacy it cannot deliver, and survive an exhausted stack.",
+        "v2.69.1": "Fill the keyboard's tenth symbol key."
       },
       "previous_names": null,
       "scripts": {
