@@ -2491,7 +2491,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.16.0",
+      "version": "v1.17.0",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "nborodikhin",
@@ -2506,6 +2506,7 @@
         "v1.14.0": "More US radio stations, Downloader updates, UI fixes, TG5050 (TSPS) fixes, In-app auto-update setting",
         "v1.15.0": "Better keyboard, Miyoo Flip support",
         "v1.16.0": "100% NextUI theme support",
+        "v1.17.0": "UI improvements, spectrum on all playing screens, Miyoo jpeg",
         "v1.7.6": "Added playback speed control for podcasts and fixed the volume stepping issue",
         "v1.8.0": "Usability updates, new maintainer",
         "v1.9.0": "Fix regression in scrolling text display"
@@ -5238,7 +5239,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.69.2",
+      "version": "v2.70.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5246,11 +5247,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.68.7": "Keep the radio's airtime trend across a restart.",
         "v2.68.8": "Let a row's label inherit its tone; Draw a row's label and its value as two tiers.",
         "v2.69.0": "Leave a readable report behind when the client faults; Stop the report promising privacy it cannot deliver, and survive an exhausted stack.",
         "v2.69.1": "Fill the keyboard's tenth symbol key.",
-        "v2.69.2": "Stop a read conversation rewriting the cache on every update."
+        "v2.69.2": "Stop a read conversation rewriting the cache on every update.",
+        "v2.70.0": "Measure a press to the panel, and close step 3 of the map; Walk the node detail by card, and stop promising presses it does not have; Time only presses that changed the frame, and stop the client on a failed run."
       },
       "previous_names": null,
       "scripts": {
