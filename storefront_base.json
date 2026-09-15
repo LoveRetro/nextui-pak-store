@@ -962,6 +962,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "GUrTHt7tEa",
+      "storefront_name": "ScummVM Standalone",
+      "repo_url": "https://github.com/Helaas/nextui-scummvm-standalone-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
