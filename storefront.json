@@ -976,7 +976,7 @@
       "id": "bR1mQ7yC2t",
       "storefront_name": "PICO-8",
       "name": "PICO",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "type": "EMU",
       "description": "Runs pico-8 in standalone mode",
       "author": "josegonzalez",
@@ -1002,6 +1002,7 @@
       "update_ignore": null,
       "screenshots": null,
       "platforms": [
+        "h700",
         "rg35xxplus",
         "tg5040",
         "tg5050"
@@ -1017,7 +1018,7 @@
       "id": "fW6pX3kB9v",
       "storefront_name": "Nintendo DS (DraStic)",
       "name": "NDS",
-      "version": "0.12.0",
+      "version": "0.13.0",
       "type": "EMU",
       "description": "Runs drastic in standalone mode for the specified rom",
       "author": "josegonzalez",
@@ -1041,11 +1042,13 @@
         }
       },
       "update_ignore": [
+        "drastic/config/drastic.cf2",
         "drastic/config/drastic.cfg",
         "drastic/resources/settings.json"
       ],
       "screenshots": null,
       "platforms": [
+        "h700",
         "tg5040",
         "tg5050"
       ],
