@@ -977,7 +977,7 @@
       "id": "bR1mQ7yC2t",
       "storefront_name": "PICO-8",
       "name": "PICO",
-      "version": "0.8.2",
+      "version": "0.8.3",
       "type": "EMU",
       "description": "Runs pico-8 in standalone mode",
       "author": "josegonzalez",
