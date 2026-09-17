@@ -4637,7 +4637,7 @@
       "id": "2J5vkdSppU",
       "storefront_name": "Game\u0026Watch",
       "name": "GW",
-      "version": "v1.0.0",
+      "version": "v1.0.3",
       "type": "EMU",
       "description": "Game \u0026 Watch simulators (MADrigal) via the gw libretro core for NextUI/MinUI",
       "author": "Pawndev",
@@ -4647,7 +4647,8 @@
       "changelog": {
         "v1.0.0": "feat: Non-functional first release",
         "v1.0.1": "fix: Build the core with correct glibc version",
-        "v1.0.2": "chore: remove txt from Game folder"
+        "v1.0.2": "chore: remove txt from Game folder",
+        "v1.0.3": "chore: correctly bump version"
       },
       "previous_names": null,
       "scripts": {
