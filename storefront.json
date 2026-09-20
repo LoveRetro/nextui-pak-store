@@ -5244,7 +5244,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.71.0",
+      "version": "v2.71.1",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5252,11 +5252,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.69.0": "Leave a readable report behind when the client faults; Stop the report promising privacy it cannot deliver, and survive an exhausted stack.",
         "v2.69.1": "Fill the keyboard's tenth symbol key.",
         "v2.69.2": "Stop a read conversation rewriting the cache on every update.",
         "v2.70.0": "Measure a press to the panel, and close step 3 of the map; Walk the node detail by card, and stop promising presses it does not have; Time only presses that changed the frame, and stop the client on a failed run.",
-        "v2.71.0": "Fetch over HTTPS in-process instead of forking curl; An HTTP/1.1 codec for fetching in-process; Verify against CA roots compiled into the binary; Open a node's detail on the node, not on its verbs; Clear a channel slot rather than only disabling it; Keep a measured route per node, on the card (and 108 more)."
+        "v2.71.0": "Fetch over HTTPS in-process instead of forking curl; An HTTP/1.1 codec for fetching in-process; Verify against CA roots compiled into the binary; Open a node's detail on the node, not on its verbs; Clear a channel slot rather than only disabling it; Keep a measured route per node, on the card (and 108 more).",
+        "v2.71.1": "Two more places the environment prefix and the catalog were missed; Build clean under clang, which the sanitizer job uses."
       },
       "previous_names": null,
       "scripts": {
