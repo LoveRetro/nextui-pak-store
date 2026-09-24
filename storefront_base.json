@@ -1005,6 +1005,14 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "FKA4skAY1e",
+      "storefront_name": "Nintendo DS (DSperate)",
+      "repo_url": "https://github.com/josegonzalez/minui-nintendo-dsperate-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ]
 }
