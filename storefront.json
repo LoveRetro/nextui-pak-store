@@ -5395,6 +5395,49 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "Lzbnbd5QB0",
+      "storefront_name": "Favorite Toggle",
+      "name": "Favorite Toggle",
+      "version": "v0.1.2",
+      "type": "TOOL",
+      "description": "Add or remove the selected game from Favorites with one button press.",
+      "author": "dennougorilla",
+      "repo_url": "https://github.com/dennougorilla/nextui-favorite-toggle",
+      "previous_repo_urls": null,
+      "release_filename": "Favorite.Toggle.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial release.",
+        "v0.1.1": "Log the last toggle to .userdata/\u003cplatform\u003e/logs/Favorite Toggle.txt.",
+        "v0.1.2": "Show a broken heart instead of the NextUI logo when the selection is not a game."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "ROM Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
