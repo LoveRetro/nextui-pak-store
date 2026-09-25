@@ -970,6 +970,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "Lzbnbd5QB0",
+      "storefront_name": "Favorite Toggle",
+      "repo_url": "https://github.com/dennougorilla/nextui-favorite-toggle",
+      "categories": [
+        "ROM Management"
+      ]
     }
   ],
   "experimental_paks": [
