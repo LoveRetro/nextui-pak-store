@@ -364,7 +364,7 @@
       "id": "gN7zR5bL2k",
       "storefront_name": "Screenshot Monitor",
       "name": "Screenshot Monitor",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "type": "TOOL",
       "description": "Launches a daemon that allows users to take screenshots",
       "author": "josegonzalez",
