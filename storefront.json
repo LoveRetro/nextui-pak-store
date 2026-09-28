@@ -76,7 +76,7 @@
       "id": "jF8cW5zN2m",
       "storefront_name": "Grout",
       "name": "Grout",
-      "version": "v5.3.1.0",
+      "version": "v5.3.1.1",
       "type": "TOOL",
       "description": "A RomM client for NextUI, muOS, Knulli, and Spruce v4.",
       "author": "The RomM Team",
@@ -124,7 +124,8 @@
         "v5.1.0.0": "Catching up on some PRs.",
         "v5.2.0.0": "Save sync path resolution fixes.",
         "v5.3.0.0": "Long overdue bug fixes and refactoring.",
-        "v5.3.1.0": "Bump for the server's point release."
+        "v5.3.1.0": "Bump for the server's point release.",
+        "v5.3.1.1": "Made the version selector more robust."
       },
       "previous_names": null,
       "scripts": {
