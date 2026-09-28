@@ -4442,7 +4442,7 @@
       "id": "yo3jvTpTvf",
       "storefront_name": "Trimpod Classic",
       "name": "Trimpod Classic",
-      "version": "v1.0.10",
+      "version": "v1.0.11",
       "type": "TOOL",
       "description": "An iPod Classic-inspired, offline music player for the TrimUI Brick/Hammer with winamp-like visualizations.",
       "author": "tyrannotorus",
@@ -4452,6 +4452,7 @@
       "changelog": {
         "v1.0.1": "Initial release.",
         "v1.0.10": "- Play Next and Add to Play Queue added to context menus\n- Idle menus return to Now Playing after 10 s\n- Holding Power powers off instead of exiting app\n- Play Queue limit increased to avoid truncated lists\n- Toggling a settings row with A no longer scrolls the list",
+        "v1.0.11": "- Holding Power now powers the Brick off instead of rebooting it",
         "v1.0.3": "Adjusted volume increments, improved performance by reducing redundant cycle burn, added a controls legend to Settings, various bug fixes.",
         "v1.0.4": "Rebuilt the audio output path: direct ALSA output with a hardware/software split volume. Fixes quiet passages dropping to silence at low volume; maximum volume is now full scale.",
         "v1.0.5": "Fixed bug allowing user to escape to file system after song end",
