@@ -978,6 +978,14 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "R7E9BYKhWU",
+      "storefront_name": "WASM-4",
+      "repo_url": "https://github.com/amayer5125/nextui-wasm-4-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
