@@ -978,6 +978,15 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "u8jzPde0Ig",
+      "storefront_name": "Little Piggy Tracker",
+      "repo_url": "https://github.com/realBytewav/lgpt-pak",
+      "categories": [
+        "Miscellaneous Tools",
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
