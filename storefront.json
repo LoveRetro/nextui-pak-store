@@ -5280,7 +5280,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.75.0",
+      "version": "v2.75.1",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5288,11 +5288,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.71.1": "Two more places the environment prefix and the catalog were missed; Build clean under clang, which the sanitizer job uses.",
         "v2.72.0": "Install nRF52 radios over BLE through their DFU bootloader; Leave the on-screen keyboard grid out of a desktop window; Move About radio and Radio actions onto the Radio tab; App icon for the macOS and Windows installs; Ship a macOS .dmg and a Windows installer; Install updates on macOS and Windows (and 102 more).",
         "v2.73.0": "A full-screen radio firmware install screen; The 1200-baud touch on the Brick, through usbfs; Switch a board between Meshtastic and MeshCore over USB; Install a MeshCore nRF52 over USB by the 1200-baud touch; Check and install a MeshCore radio's firmware from MeshCore's own releases (and 138 more).",
         "v2.74.0": "Stand a node's facts in two columns where there is room; Preview the row under the list's cursor beside it; Name a sender in the tint their avatar wears; Count MQTT and private messages, and record the farthest node heard and weakest signal; Count delivered and undelivered messages (and 169 more).",
-        "v2.75.0": "Say the clock is wrong when a certificate is not valid yet; Run on the Miyoo Mini Plus under Onion OS; Give a Mac window a menu bar, and the same chords everywhere else; Say what a window's reader does, not which Brick button to press; Read all 40 of a companion's channel slots, not the first eight (and 47 more)."
+        "v2.75.0": "Say the clock is wrong when a certificate is not valid yet; Run on the Miyoo Mini Plus under Onion OS; Give a Mac window a menu bar, and the same chords everywhere else; Say what a window's reader does, not which Brick button to press; Read all 40 of a companion's channel slots, not the first eight (and 47 more).",
+        "v2.75.1": "Ship the Miyoo an icon Onion will draw; Refuse a download built for another machine."
       },
       "previous_names": null,
       "scripts": {
