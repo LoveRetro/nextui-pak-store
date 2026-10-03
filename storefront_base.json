@@ -978,6 +978,14 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "Mn80KbNCVd",
+      "storefront_name": "BaseOS Updater",
+      "repo_url": "https://github.com/Sundownersport/nextui-baseos-updater",
+      "categories": [
+        "System"
+      ]
     }
   ],
   "experimental_paks": [
