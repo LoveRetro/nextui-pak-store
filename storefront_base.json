@@ -978,6 +978,14 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "RucvvY8GsP",
+      "storefront_name": "BaseOS Updater",
+      "repo_url": "https://github.com/SundownerSport/nextui-baseos-updater",
+      "categories": [
+        "System"
+      ]
     }
   ],
   "experimental_paks": [
