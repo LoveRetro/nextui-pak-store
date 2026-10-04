@@ -5465,6 +5465,50 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "R7E9BYKhWU",
+      "storefront_name": "WASM-4",
+      "name": "WASM",
+      "version": "0.1.0",
+      "type": "EMU",
+      "description": "Libretro core to run WASM-4 games",
+      "author": "Alex Mayer",
+      "repo_url": "https://github.com/amayer5125/nextui-wasm-4-pak",
+      "previous_repo_urls": null,
+      "release_filename": "WASM.pakz",
+      "changelog": {
+        "0.1.0": "Initial Pak"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
