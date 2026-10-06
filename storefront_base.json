@@ -994,6 +994,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "a7gKdGbgnu",
+      "storefront_name": "BaseOS Updater",
+      "repo_url": "https://github.com/Sundownersport/nextui-base-jumper",
+      "categories": [
+        "System"
+      ]
     }
   ],
   "experimental_paks": [
