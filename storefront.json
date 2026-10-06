@@ -5551,6 +5551,50 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "a7gKdGbgnu",
+      "storefront_name": "BaseOS Updater",
+      "name": "Base Jumper",
+      "version": "v1.0.3",
+      "type": "TOOL",
+      "description": "Updates BaseOS on Anbernic RG XX devices over WiFi.",
+      "author": "SundownerSport",
+      "repo_url": "https://github.com/Sundownersport/nextui-base-jumper",
+      "previous_repo_urls": null,
+      "release_filename": "Base.Jumper.pak.zip",
+      "changelog": {
+        "v1.0.0": "First release.",
+        "v1.0.1": "Renamed to Base Jumper.",
+        "v1.0.2": "No longer hangs on the checking screen. Tells you when WiFi is off or the date is wrong. Safer download.",
+        "v1.0.3": "Long messages no longer split mid-line."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "h700"
+      ],
+      "categories": [
+        "System"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
