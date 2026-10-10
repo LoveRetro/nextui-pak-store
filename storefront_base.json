@@ -1002,6 +1002,14 @@
       "categories": [
         "System"
       ]
+    },
+    {
+      "id": "sMYdyouBaI",
+      "storefront_name": "Gametank",
+      "repo_url": "https://github.com/Sundownersport/nextui-gametank-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
