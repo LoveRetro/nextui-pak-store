@@ -14,11 +14,11 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Parse Issue Body
         id: parse
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const issueBody = context.payload.issue.body;
@@ -75,7 +75,7 @@ jobs:
 
       - name: Fetch and Validate pak.json
         id: validate_pak
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           TARGET_OWNER: ${{ steps.parse.outputs.owner }}
           TARGET_REPO: ${{ steps.parse.outputs.repo }}
@@ -131,7 +131,7 @@ jobs:
 
       - name: Validate Release Exists
         id: validate_release
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           TARGET_OWNER: ${{ steps.parse.outputs.owner }}
           TARGET_REPO: ${{ steps.parse.outputs.repo }}
@@ -190,7 +190,7 @@ jobs:
 
       - name: Infer Type from Context
         id: infer_type
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           PAK_NAME: ${{ steps.validate_pak.outputs.pak_name }}
           PAK_TYPE: ${{ steps.validate_pak.outputs.pak_type }}
@@ -240,7 +240,7 @@ jobs:
 
       - name: Check for Duplicate
         id: check_duplicate
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           REPO_URL: ${{ steps.parse.outputs.repo_url }}
         with:
@@ -265,7 +265,7 @@ jobs:
 
       - name: Generate Pak ID
         id: generate_id
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             // Generate a random 10-character alphanumeric ID
@@ -279,7 +279,7 @@ jobs:
 
       - name: Suggest Categories
         id: suggest_categories
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           PAK_NAME: ${{ steps.validate_pak.outputs.pak_name }}
           PAK_DESCRIPTION: ${{ steps.validate_pak.outputs.pak_description }}
@@ -336,7 +336,7 @@ jobs:
 
       - name: Update storefront_base.json
         id: update_storefront
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           DISPLAY_NAME: ${{ steps.parse.outputs.display_name }}
           REPO_URL: ${{ steps.parse.outputs.repo_url }}
@@ -407,7 +407,7 @@ jobs:
 
       - name: Create Pull Request
         id: create_pr
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           BRANCH_NAME: ${{ steps.create_branch.outputs.branch_name }}
           DISPLAY_NAME: ${{ steps.parse.outputs.display_name }}
@@ -499,7 +499,7 @@ jobs:
             core.setOutput('pr_url', pr.data.html_url);
 
       - name: Comment on Issue
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           PR_URL: ${{ steps.create_pr.outputs.pr_url }}
           PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
@@ -545,7 +545,7 @@ jobs:
 
       - name: Handle Validation Failure
         if: failure()
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
