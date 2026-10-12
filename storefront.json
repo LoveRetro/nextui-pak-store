@@ -5585,6 +5585,51 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "sMYdyouBaI",
+      "storefront_name": "Gametank",
+      "name": "GAMETANK",
+      "version": "v1.0.1",
+      "type": "EMU",
+      "description": "Standalone GameTank emulator (GameTankEmulator) with a pause menu on Select.",
+      "author": "SundownerSport",
+      "repo_url": "https://github.com/Sundownersport/nextui-gametank-pak",
+      "previous_repo_urls": null,
+      "release_filename": "GAMETANK.pakz",
+      "changelog": {
+        "v1.0.0": "Initial release.",
+        "v1.0.1": "Nintendo button layout, simpler pause menu."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
