@@ -1010,6 +1010,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "Ekxi9uVwhY",
+      "storefront_name": "Arduboy",
+      "repo_url": "https://github.com/amayer5125/nextui-arduboy-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
