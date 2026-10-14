@@ -1124,7 +1124,7 @@
       "id": "pK2yD5qS7g",
       "storefront_name": "Dreamcast (Flycast)",
       "name": "DC",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "type": "EMU",
       "description": "Runs Flycast in standalone mode for the specified rom",
       "author": "josegonzalez",
@@ -3198,7 +3198,7 @@
       "id": "EDkODyX2KO",
       "storefront_name": "Cheat Downloader Offline",
       "name": "Cheat Downloader Offline",
-      "version": "v1.6.0",
+      "version": "v1.7.0",
       "type": "TOOL",
       "description": "A NextUI pak for getting cheats from the Libretro github repo. Needs internet only for the initial database download.",
       "author": "nborodikhin",
@@ -3212,7 +3212,8 @@
         "v1.3.0": "Use official builds of minui-list and minui-presenter, add tg5050 and my355 support",
         "v1.4.0": "Sort cheats ignoring case, fix overlapping in list selectors, rewrite app in Nim",
         "v1.5.0": "Skip empty game directories, improve sorting, put abbreviated tool/region as [AR,US].  Prepopulate game-to-cheat mapping.",
-        "v1.6.0": "Add pre-downloaded file processing (zip file at the root of the SD card)."
+        "v1.6.0": "Add pre-downloaded file processing (zip file at the root of the SD card).",
+        "v1.7.0": "Add Anbernic H700 support."
       },
       "previous_names": null,
       "scripts": {
@@ -3234,7 +3235,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "ROM Management"
