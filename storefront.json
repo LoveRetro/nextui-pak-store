@@ -2518,7 +2518,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.18.0",
+      "version": "v1.18.1",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "nborodikhin",
@@ -2534,7 +2534,7 @@
         "v1.15.0": "Better keyboard, Miyoo Flip support",
         "v1.16.0": "100% NextUI theme support",
         "v1.17.0": "UI improvements, spectrum on all playing screens, Miyoo jpeg",
-        "v1.18.0": "Anbernic H700 support, better HDMI/BT/USB playback, pitch-preserving speedup, better MP3 seeking and OGG metadata support, beta update channel",
+        "v1.18.1": "Anbernic H700 support, better HDMI/BT/USB playback, pitch-preserving speedup, better MP3 seeking and OGG metadata support, beta update channel",
         "v1.9.0": "Fix regression in scrolling text display"
       },
       "previous_names": null,
@@ -2559,7 +2559,8 @@
       "platforms": [
         "tg5040",
         "tg5050",
-        "my355"
+        "my355",
+        "h700"
       ],
       "categories": [
         "Media"
@@ -2572,7 +2573,7 @@
       "id": "rH6cY9zM2g",
       "storefront_name": "TIC-80",
       "name": "TIC",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "type": "EMU",
       "description": "Runs TIC-80 fantasy computer games",
       "author": "Alex Mayer",
@@ -2583,7 +2584,8 @@
         "0.1.0": "Initial Pak",
         "0.2.0": "Package the latest TIC-80 release instead of the dev/nightly version. Fixes some games freezing.",
         "0.3.0": "Remap buttons. Set screen scaling. Remove boarder to make game larger.",
-        "0.4.0": "Build pakz for all platforms."
+        "0.4.0": "Build pakz for all platforms.",
+        "0.5.0": "Use POSIX redirects for broader device support."
       },
       "previous_names": null,
       "scripts": {
@@ -5465,7 +5467,7 @@
       "id": "R7E9BYKhWU",
       "storefront_name": "WASM-4",
       "name": "WASM",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "type": "EMU",
       "description": "Libretro core to run WASM-4 games",
       "author": "Alex Mayer",
@@ -5473,7 +5475,8 @@
       "previous_repo_urls": null,
       "release_filename": "WASM.pakz",
       "changelog": {
-        "0.1.0": "Initial Pak"
+        "0.1.0": "Initial Pak",
+        "0.2.0": "Use POSIX redirects for broader device support."
       },
       "previous_names": null,
       "scripts": {
