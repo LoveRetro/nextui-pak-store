@@ -1010,6 +1010,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "wEeaCPCUTT",
+      "storefront_name": "Pokémon Manager",
+      "repo_url": "https://github.com/ProClifo/NextUI-Pokemon-Manager",
+      "categories": [
+        "ROM Management"
+      ]
     }
   ],
   "experimental_paks": [
