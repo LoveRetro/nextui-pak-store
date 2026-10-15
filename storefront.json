@@ -5689,7 +5689,7 @@
       "id": "O3Bxrde19z",
       "storefront_name": "Pokémon Manager",
       "name": "Pokemon Manager",
-      "version": "v0.2.50",
+      "version": "v0.2.51",
       "type": "TOOL",
       "description": "PKHeX-powered save manager: move Pokémon between games, perform trade evolutions, and inject Mystery Gifts, Mystery Events and e-Reader cards.",
       "author": "ProClifo",
@@ -5697,7 +5697,11 @@
       "previous_repo_urls": null,
       "release_filename": "PokemonManager.pak.zip",
       "changelog": {
-        "v0.2.36": "Pak Store release. Gen 3 Egg summary page, markings, centred HP, update check on start."
+        "v0.2.47": "Gen 2 clock keeps the game's day count, so setting the time no longer resets daily events.",
+        "v0.2.48": "Gen 2 Mystery Gift: \"Sorry—only five gifts a day.\" after the fifth gift.",
+        "v0.2.49": "Save states are backed up to PokemonManager/Backups instead of deleted. Backups keep the last 32 saves and 32 save states per game. Save state settings removed.",
+        "v0.2.50": "Save state message wording.",
+        "v0.2.51": "Player sprites for Black/White and Black 2/White 2 saves on the saves list."
       },
       "previous_names": null,
       "scripts": {
