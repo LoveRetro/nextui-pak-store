@@ -5381,7 +5381,7 @@
       "id": "GUrTHt7tEa",
       "storefront_name": "ScummVM Standalone",
       "name": "SCUMMVMSA",
-      "version": "v1.0.1",
+      "version": "v1.0.2",
       "type": "EMU",
       "description": "Standalone ScummVM 2026.3.0 for NextUI. Full ScummVM GUI and options, per-game keymaps, virtual keyboard, label-correct controls with a d-pad mouse on stickless devices. Power button sleep/shutdown on all supported platforms.",
       "author": "Helaas",
@@ -5390,7 +5390,8 @@
       "release_filename": "SCUMMVMSA.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release. Standalone ScummVM 2026.3.0 (pinned to fed42f2) built once for tg5040, tg5050, my355 and h700, using each firmware's SDL2. Handheld controls: A/B/X/Y follow the printed labels, Menu opens the ScummVM menu, Start the game menu, and the d-pad moves the mouse on devices without sticks. minui-power-control 3.0.0 provides power button deep sleep and shutdown on tg5040, tg5050 and my355.",
-        "v1.0.1": "Add h700 power button support: short press sleeps and wakes, holding for 2 seconds shuts down. Restore ScummVM audio after h700 sleep by closing and reopening the audio device."
+        "v1.0.1": "Add h700 power button support: short press sleeps and wakes, holding for 2 seconds shuts down. Restore ScummVM audio after h700 sleep by closing and reopening the audio device.",
+        "v1.0.2": "Fix h700 controls on NextUI rc11 and later, where A/B and X/Y were swapped and the d-pad no longer moved the mouse on stickless models. Add the QD Engine (Pilot Brothers 3), Phoenix VR and Alcachofa engines, so their games no longer fail with \"could not find suitable engine plugin\". Penumbra (Hpl1) stays unsupported: it needs desktop OpenGL, which these handhelds lack."
       },
       "previous_names": null,
       "scripts": {
@@ -5679,6 +5680,57 @@
       ],
       "categories": [
         "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "O3Bxrde19z",
+      "storefront_name": "Pokémon Manager",
+      "name": "Pokemon Manager",
+      "version": "v0.2.50",
+      "type": "TOOL",
+      "description": "PKHeX-powered save manager: move Pokémon between games, perform trade evolutions, and inject Mystery Gifts, Mystery Events and e-Reader cards.",
+      "author": "ProClifo",
+      "repo_url": "https://github.com/ProClifo/NextUI-Pokemon-Manager",
+      "previous_repo_urls": null,
+      "release_filename": "PokemonManager.pak.zip",
+      "changelog": {
+        "v0.2.36": "Pak Store release. Gen 3 Egg summary page, markings, centred HP, update check on start."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/main_menu.jpg",
+        ".github/resources/screenshots/emerald_box.jpg",
+        ".github/resources/screenshots/platinum_box.jpg",
+        ".github/resources/screenshots/firered_box.jpg",
+        ".github/resources/screenshots/heartgold_party.jpg",
+        ".github/resources/screenshots/platinum_summary.jpg"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "ROM Management"
       ],
       "large_pak": false,
       "disabled": false,
