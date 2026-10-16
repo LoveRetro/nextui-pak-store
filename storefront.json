@@ -5740,6 +5740,48 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "PCcUb0LU3f",
+      "storefront_name": "Restart ADB",
+      "name": "Restart ADB",
+      "version": "v0.1.1",
+      "type": "TOOL",
+      "description": "Bring adb back without rebooting. Needs BaseOS.",
+      "author": "Pobega",
+      "repo_url": "https://github.com/Pobega/adbd-restart-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Restart.ADB.pak.zip",
+      "changelog": {
+        "v0.1.0": "First release: rebinds the BaseOS adb USB gadget, and restarts adbd if that isn't enough.",
+        "v0.1.1": "Clearer message when no USB cable is plugged in; regression tests in CI."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "h700"
+      ],
+      "categories": [
+        "Developer Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
