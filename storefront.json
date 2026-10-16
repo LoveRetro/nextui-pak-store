@@ -995,7 +995,7 @@
       "id": "bR1mQ7yC2t",
       "storefront_name": "PICO-8",
       "name": "PICO",
-      "version": "0.9.3",
+      "version": "0.9.4",
       "type": "EMU",
       "description": "Runs pico-8 in standalone mode",
       "author": "josegonzalez",
@@ -1124,7 +1124,7 @@
       "id": "pK2yD5qS7g",
       "storefront_name": "Dreamcast (Flycast)",
       "name": "DC",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "type": "EMU",
       "description": "Runs Flycast in standalone mode for the specified rom",
       "author": "josegonzalez",
@@ -1150,7 +1150,8 @@
       "update_ignore": null,
       "screenshots": null,
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "h700"
       ],
       "categories": [
         "Emulators"
