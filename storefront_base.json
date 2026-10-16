@@ -1026,6 +1026,14 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "PCcUb0LU3f",
+      "storefront_name": "Restart ADB",
+      "repo_url": "https://github.com/Pobega/adbd-restart-pak",
+      "categories": [
+        "Developer Tools"
+      ]
     }
   ],
   "experimental_paks": [
