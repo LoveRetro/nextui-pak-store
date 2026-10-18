@@ -5282,7 +5282,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.76.0",
+      "version": "v2.77.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5290,11 +5290,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.73.0": "A full-screen radio firmware install screen; The 1200-baud touch on the Brick, through usbfs; Switch a board between Meshtastic and MeshCore over USB; Install a MeshCore nRF52 over USB by the 1200-baud touch; Check and install a MeshCore radio's firmware from MeshCore's own releases (and 138 more).",
         "v2.74.0": "Stand a node's facts in two columns where there is room; Preview the row under the list's cursor beside it; Name a sender in the tint their avatar wears; Count MQTT and private messages, and record the farthest node heard and weakest signal; Count delivered and undelivered messages (and 169 more).",
         "v2.75.0": "Say the clock is wrong when a certificate is not valid yet; Run on the Miyoo Mini Plus under Onion OS; Give a Mac window a menu bar, and the same chords everywhere else; Say what a window's reader does, not which Brick button to press; Read all 40 of a companion's channel slots, not the first eight (and 47 more).",
         "v2.75.1": "Ship the Miyoo an icon Onion will draw; Refuse a download built for another machine.",
-        "v2.76.0": "Speak version 3 of the companion protocol; Speak Tern's companion protocol as a third conversation; Scope message ids to the node, and apply a gap's news live; An expired place's lock binds nobody; Keep a locked place locked against other senders."
+        "v2.76.0": "Speak version 3 of the companion protocol; Speak Tern's companion protocol as a third conversation; Scope message ids to the node, and apply a gap's news live; An expired place's lock binds nobody; Keep a locked place locked against other senders.",
+        "v2.77.0": "Install a Tern node's firmware from the project's feed; Show a Tern node's own fix and receiver, and turn it off; Speak version 9 of the companion protocol; Show a Tern node's presence card on its detail; Speak version 7 of the companion protocol (and 4 more)."
       },
       "previous_names": null,
       "scripts": {
@@ -5557,9 +5557,9 @@
       "id": "a7gKdGbgnu",
       "storefront_name": "BaseOS Updater",
       "name": "Base Jumper",
-      "version": "v1.0.3",
+      "version": "v1.1.0",
       "type": "TOOL",
-      "description": "Updates BaseOS on Anbernic RG XX devices over WiFi.",
+      "description": "Updates BaseOS on Anbernic RG XX devices and the Miyoo Flip over WiFi.",
       "author": "SundownerSport",
       "repo_url": "https://github.com/Sundownersport/nextui-base-jumper",
       "previous_repo_urls": null,
@@ -5568,7 +5568,8 @@
         "v1.0.0": "First release.",
         "v1.0.1": "Renamed to Base Jumper.",
         "v1.0.2": "No longer hangs on the checking screen. Tells you when WiFi is off or the date is wrong. Safer download.",
-        "v1.0.3": "Long messages no longer split mid-line."
+        "v1.0.3": "Long messages no longer split mid-line.",
+        "v1.1.0": "Supports BaseOS for the Miyoo Flip (my355)."
       },
       "previous_names": null,
       "scripts": {
@@ -5588,7 +5589,8 @@
       "update_ignore": null,
       "screenshots": null,
       "platforms": [
-        "h700"
+        "h700",
+        "my355"
       ],
       "categories": [
         "System"
