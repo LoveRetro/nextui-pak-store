@@ -4925,17 +4925,15 @@
     {
       "id": "9zWXgEipEd",
       "storefront_name": "SwanStation",
-      "name": "SWAN",
-      "version": "v1.0.0",
-      "type": "EMU",
-      "description": "A PSX addon for minarch, utilizing the Swanstation core.",
-      "author": "yu2kataoka",
+      "name": "",
+      "version": "",
+      "type": "TOOL",
+      "description": "",
+      "author": "",
       "repo_url": "https://github.com/discus7l/nextui-swanstation-pak",
       "previous_repo_urls": null,
-      "release_filename": "SWAN.pak.zip",
-      "changelog": {
-        "v1.0.0": "Initial Release."
-      },
+      "release_filename": "",
+      "changelog": null,
       "previous_names": null,
       "scripts": {
         "post_install": {
@@ -4953,14 +4951,12 @@
       },
       "update_ignore": null,
       "screenshots": null,
-      "platforms": [
-        "h700"
-      ],
+      "platforms": null,
       "categories": [
         "Emulators"
       ],
       "large_pak": false,
-      "disabled": false,
+      "disabled": true,
       "experimental": false
     },
     {
