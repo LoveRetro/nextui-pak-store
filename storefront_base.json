@@ -889,7 +889,8 @@
       "repo_url": "https://github.com/discus7l/nextui-swanstation-pak",
       "categories": [
         "Emulators"
-      ]
+      ],
+      "disabled": true
     },
     {
       "id": "Ke46sYN1Pz",
