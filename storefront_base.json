@@ -1034,6 +1034,14 @@
       "categories": [
         "Developer Tools"
       ]
+    },
+    {
+      "id": "6N0NccoR38",
+      "storefront_name": "Boombrick",
+      "repo_url": "https://github.com/ujjwal313/boombrick",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
