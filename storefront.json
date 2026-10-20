@@ -1126,7 +1126,7 @@
       "id": "pK2yD5qS7g",
       "storefront_name": "Dreamcast (Flycast)",
       "name": "DC",
-      "version": "0.6.3",
+      "version": "0.6.4",
       "type": "EMU",
       "description": "Runs Flycast in standalone mode for the specified rom",
       "author": "josegonzalez",
