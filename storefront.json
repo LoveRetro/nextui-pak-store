@@ -5832,6 +5832,50 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "oAuomK9hCR",
+      "storefront_name": "Audiobookshelf",
+      "name": "Audiobookshelf",
+      "version": "0.4.1",
+      "type": "TOOL",
+      "description": "Listen to audiobooks and podcasts from your Audiobookshelf server, with the screen off or while you play games.",
+      "author": "ExpandedPlum",
+      "repo_url": "https://github.com/ExpandedPlum/ABS-NextUi",
+      "previous_repo_urls": null,
+      "release_filename": "Audiobookshelf.pak.zip",
+      "changelog": {
+        "v0.1.0": "First release: streaming, downloads, chapters, speed, sleep timer, screen-off and in-game playback.",
+        "v0.2.0": "Podcasts, series, authors, collections, playlists, bookmarks, API-key and phone (QR) sign-in.",
+        "v0.3.0": "Mute or lower game sound while a book plays (FN2 toggles), no volume blip when switching apps, startup diagnostics.",
+        "v0.4.0": "Games are muted while a book plays on the speaker, headphones, USB-C and Bluetooth; the book now plays over USB-C audio and follows output changes."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
