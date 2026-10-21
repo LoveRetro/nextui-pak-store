@@ -1051,6 +1051,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "GBXQV4G5bc",
+      "storefront_name": "Romoogle",
+      "repo_url": "https://github.com/mattcarvercom/romoogle",
+      "categories": [
+        "ROM Management"
+      ]
     }
   ],
   "experimental_paks": [
