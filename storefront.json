@@ -5784,6 +5784,54 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "6N0NccoR38",
+      "storefront_name": "Boombrick",
+      "name": "Boombrick",
+      "version": "v0.3.2",
+      "type": "TOOL",
+      "description": "Your music, Spotify and YouTube Music in one player for the TrimUI Brick, with album art, synced lyrics and music that keeps playing while you game.\n\nFeatures:\n- Your music: MP3, FLAC, Opus and M4A (AAC) from the SD card, gapless, with ReplayGain levelling\n- Browse by album, artist or song; the queue has shuffle and repeat and is kept between launches\n- Covers from the files, folder pictures or the Cover Art Archive, with the screen's colours taken from the album playing\n- Synced lyrics from the files, .lrc files or LRCLIB, with the line being sung highlighted\n- YouTube Music: search, browse albums and artists, and download songs as tagged Opus files with covers and lyrics; a song still downloading plays as soon as it lands\n- Spotify (Premium): sign in with a code on your phone, then play Liked Songs and your playlists at 96, 160 or 320 kbps\n- Spotify import: download your playlists' songs from YouTube Music to keep them offline, matched by ISRC or by title, artist and length\n- Play in background from the quick menu: the music goes on while you play a game\n- Sleep timer: 15 to 60 minutes, or the end of the track or album, with a fade\n- Screen off with Power, with skipping and pausing still working\n- Titles in Latin, Cyrillic, Greek and Vietnamese scripts\n- Updates for Boombrick and its downloader from Settings\n\nWi-Fi is used for Spotify, YouTube Music, covers, lyrics and updates; the music on the card plays without it. Your library and settings are kept in .userdata/tg5040/Boombrick and downloads in Music/Boombrick, so updates never touch them.",
+      "author": "ujjwal313",
+      "repo_url": "https://github.com/ujjwal313/boombrick",
+      "previous_repo_urls": null,
+      "release_filename": "Boombrick-PakStore.zip",
+      "changelog": {
+        "v0.3.2": "Plays the music on your SD card gapless, streams your Spotify playlists, downloads songs and albums from YouTube Music, finds covers and synced lyrics, and plays on in the background while you game."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/now-playing.jpg",
+        ".github/resources/screenshots/lyrics.jpg",
+        ".github/resources/screenshots/library.jpg",
+        ".github/resources/screenshots/youtube-music.jpg",
+        ".github/resources/screenshots/downloads.jpg",
+        ".github/resources/screenshots/queue.jpg"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
