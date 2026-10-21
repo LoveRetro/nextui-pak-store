@@ -5876,6 +5876,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "GBXQV4G5bc",
+      "storefront_name": "Romoogle",
+      "name": "Romoogle",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Indexed search for your ROM collection. One walk, then instant searches.",
+      "author": "mattcarvercom",
+      "repo_url": "https://github.com/mattcarvercom/romoogle",
+      "previous_repo_urls": null,
+      "release_filename": "Romoogle.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release: one-pass ROM indexing, live fuzzy search, multi-disc grouping, selected-only artwork, and local Details."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "ROM Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
