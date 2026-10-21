@@ -1043,6 +1043,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "oAuomK9hCR",
+      "storefront_name": "Audiobookshelf",
+      "repo_url": "https://github.com/ExpandedPlum/ABS-NextUi",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
