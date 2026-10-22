@@ -1126,7 +1126,7 @@
       "id": "pK2yD5qS7g",
       "storefront_name": "Dreamcast (Flycast)",
       "name": "DC",
-      "version": "0.6.4",
+      "version": "0.6.5",
       "type": "EMU",
       "description": "Runs Flycast in standalone mode for the specified rom",
       "author": "josegonzalez",
@@ -5693,7 +5693,7 @@
       "id": "O3Bxrde19z",
       "storefront_name": "Pokémon Manager",
       "name": "Pokemon Manager",
-      "version": "v0.2.54",
+      "version": "v0.2.55",
       "type": "TOOL",
       "description": "PKHeX-powered save manager: move Pokémon between games, perform trade evolutions, and inject Mystery Gifts, Mystery Events and e-Reader cards.",
       "author": "ProClifo",
@@ -5701,11 +5701,11 @@
       "previous_repo_urls": null,
       "release_filename": "PokemonManager.pak.zip",
       "changelog": {
-        "v0.2.50": "Save state message wording.",
         "v0.2.51": "Player sprites for Black/White and Black 2/White 2 saves on the saves list.",
         "v0.2.52": "English Black/White and Black 2/White 2 ROMs no longer show Japanese names. Anbernic H700 build uses NextUI v6.15.0.",
         "v0.2.53": "Hidden setting for beta testers: add beta_updates=true to PokemonManager/settings.txt to be offered beta releases in Update.",
-        "v0.2.54": "No more black flash between screens. settings.txt now lists every setting, including beta_updates=false."
+        "v0.2.54": "No more black flash between screens. settings.txt now lists every setting, including beta_updates=false.",
+        "v0.2.55": "Screens switch instantly, like NextUI's own menus. The first save opens faster."
       },
       "previous_names": null,
       "scripts": {
