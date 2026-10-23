@@ -997,7 +997,7 @@
       "id": "bR1mQ7yC2t",
       "storefront_name": "PICO-8",
       "name": "PICO",
-      "version": "0.9.7",
+      "version": "0.10.0",
       "type": "EMU",
       "description": "Runs pico-8 in standalone mode",
       "author": "josegonzalez",
@@ -1024,6 +1024,7 @@
       "screenshots": null,
       "platforms": [
         "h700",
+        "my355",
         "rg35xxplus",
         "tg5040",
         "tg5050"
@@ -1084,7 +1085,7 @@
       "id": "jT8nH4zM1r",
       "storefront_name": "Nintendo 64 (mupen64plus)",
       "name": "N64",
-      "version": "0.8.0",
+      "version": "0.9.0",
       "type": "EMU",
       "description": "Runs mupen64plus in standalone mode for the specified rom",
       "author": "josegonzalez",
@@ -4720,7 +4721,7 @@
       "id": "WEDqOJt3qB",
       "storefront_name": "RA Explorer",
       "name": "RA Explorer",
-      "version": "v1.2.0",
+      "version": "v1.2.1",
       "type": "TOOL",
       "description": "A RetroAchievements browser for NextUI handhelds.",
       "author": "theadurn",
@@ -4730,7 +4731,8 @@
       "changelog": {
         "v1.0.0": "Initial release.",
         "v1.1.0": "Add request caching to improve speed and to allow offline usage.",
-        "v1.2.0": "Adds Anbernic H700 support. One RA.Explorer.pak.zip now installs on every platform, with an universal binary."
+        "v1.2.0": "Adds Anbernic H700 support. One RA.Explorer.pak.zip now installs on every platform, with an universal binary.",
+        "v1.2.1": "Update CA certificates."
       },
       "previous_names": null,
       "scripts": {
@@ -6128,7 +6130,7 @@
       "id": "FKA4skAY1e",
       "storefront_name": "Nintendo DS (DSperate)",
       "name": "DSP",
-      "version": "0.0.3",
+      "version": "0.1.0",
       "type": "EMU",
       "description": "Runs DSperate in standalone mode for the specified rom",
       "author": "josegonzalez",
