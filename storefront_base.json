@@ -1059,6 +1059,14 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "bXl2hSi4JT",
+      "storefront_name": "Status LED",
+      "repo_url": "https://github.com/apommel/nextui-status-led-pak",
+      "categories": [
+        "System"
+      ]
     }
   ],
   "experimental_paks": [
