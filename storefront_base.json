@@ -1059,6 +1059,15 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "iQrRAe1cwr",
+      "storefront_name": "Immich Sync",
+      "repo_url": "https://github.com/amn-96/nextui-immich-screenshot-sync",
+      "categories": [
+        "Media",
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
