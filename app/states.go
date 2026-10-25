@@ -201,7 +201,8 @@ func buildRouter(storefront models.Storefront) *router.Router {
 		config := internal.GetConfig()
 		screen := ui.NewSettingsScreen()
 		result, err := screen.Draw(ui.SettingsInput{
-			Config: config,
+			Config:           config,
+			ExperimentalMode: experimentalUnlocked,
 		})
 		if err != nil {
 			return result, err
@@ -441,6 +442,7 @@ func buildRouter(storefront models.Storefront) *router.Router {
 
 		case screenSettings:
 			r := result.(ui.ScreenResult[ui.SettingsOutput])
+			experimentalUnlocked = r.Value.ExperimentalMode
 			switch r.Action {
 			case ui.ActionBack, ui.ActionSettingsSaved:
 				return screenMainMenu, nil

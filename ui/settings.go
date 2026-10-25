@@ -7,12 +7,16 @@ import (
 	"github.com/LoveRetro/nextui-pak-store/internal"
 )
 
+const ExperimentalWarning = "Use at your own risk!\nMake sure you have backups!"
+
 type SettingsInput struct {
-	Config *internal.Config
+	Config           *internal.Config
+	ExperimentalMode bool
 }
 
 type SettingsOutput struct {
-	Config *internal.Config
+	Config           *internal.Config
+	ExperimentalMode bool
 }
 
 type SettingsScreen struct{}
@@ -23,11 +27,11 @@ func NewSettingsScreen() *SettingsScreen {
 
 func (s *SettingsScreen) Draw(input SettingsInput) (ScreenResult[SettingsOutput], error) {
 	config := input.Config
-	output := SettingsOutput{Config: config}
+	output := SettingsOutput{Config: config, ExperimentalMode: input.ExperimentalMode}
 
 	wasDiscoverEnabled := config.ShouldDiscoverExistingInstalls()
 
-	items := s.buildMenuItems(config)
+	items := s.buildMenuItems(config, input.ExperimentalMode)
 
 	result, err := gaba.OptionsList(
 		"Settings",
@@ -56,6 +60,9 @@ func (s *SettingsScreen) Draw(input SettingsInput) (ScreenResult[SettingsOutput]
 
 	s.applySettings(config, result.Items)
 
+	// Experimental mode only lasts for this session, so it is not saved to the config
+	output.ExperimentalMode = s.resolveExperimentalMode(input.ExperimentalMode, result.Items)
+
 	err = internal.SaveConfig(config)
 	if err != nil {
 		gaba.GetLogger().Error("Error saving settings", "error", err)
@@ -70,7 +77,36 @@ func (s *SettingsScreen) Draw(input SettingsInput) (ScreenResult[SettingsOutput]
 	return withAction(output, ActionSettingsSaved), nil
 }
 
-func (s *SettingsScreen) buildMenuItems(config *internal.Config) []gaba.ItemWithOptions {
+func (s *SettingsScreen) resolveExperimentalMode(wasEnabled bool, items []gaba.ItemWithOptions) bool {
+	enabled := wasEnabled
+	for _, item := range items {
+		if item.Item.Text != "Experimental Paks" {
+			continue
+		}
+		if val, ok := item.Options[item.SelectedOption].Value.(bool); ok {
+			enabled = val
+		}
+	}
+
+	if !enabled || wasEnabled {
+		return enabled
+	}
+
+	_, err := gaba.ConfirmationMessage("Enable Experimental Paks?\n"+ExperimentalWarning, []gaba.FooterHelpItem{
+		{ButtonName: "B", HelpText: "Cancel"},
+		{ButtonName: "A", HelpText: "Enable"},
+	}, gaba.MessageOptions{})
+	if err != nil {
+		if !errors.Is(err, gaba.ErrCancelled) {
+			gaba.GetLogger().Error("Experimental Paks confirmation error", "error", err)
+		}
+		return false
+	}
+
+	return true
+}
+
+func (s *SettingsScreen) buildMenuItems(config *internal.Config, experimentalMode bool) []gaba.ItemWithOptions {
 	return []gaba.ItemWithOptions{
 		{
 			Item: gaba.MenuItem{Text: "Platform Filter"},
@@ -96,6 +132,14 @@ func (s *SettingsScreen) buildMenuItems(config *internal.Config) []gaba.ItemWith
 				{DisplayName: "Off", Value: false},
 			},
 			SelectedOption: discoverExistingInstallsToIndex(config.ShouldDiscoverExistingInstalls()),
+		},
+		{
+			Item: gaba.MenuItem{Text: "Experimental Paks"},
+			Options: []gaba.Option{
+				{DisplayName: "On", Value: true},
+				{DisplayName: "Off", Value: false},
+			},
+			SelectedOption: experimentalModeToIndex(experimentalMode),
 		},
 		{
 			Item:    gaba.MenuItem{Text: "Info"},
@@ -148,6 +192,13 @@ func debugLevelToIndex(level internal.DebugLevel) int {
 }
 
 func discoverExistingInstallsToIndex(enabled bool) int {
+	if enabled {
+		return 0
+	}
+	return 1
+}
+
+func experimentalModeToIndex(enabled bool) int {
 	if enabled {
 		return 0
 	}
