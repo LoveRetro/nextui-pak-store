@@ -1092,6 +1092,15 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "oj1zxF3Qls",
+      "storefront_name": "Play Retro Games Club",
+      "repo_url": "https://github.com/jakesearle/nextui-play-retro-games-club",
+      "categories": [
+        "ROM Management",
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
