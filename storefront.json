@@ -5965,6 +5965,58 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "uAdALnCTR3",
+      "storefront_name": "Immich Sync",
+      "name": "Immich Sync",
+      "version": "v1.1.0",
+      "type": "TOOL",
+      "description": "Sync your screenshots to Immich and browse your Immich albums.",
+      "author": "amn-96",
+      "repo_url": "https://github.com/amn-96/nextui-immich-screenshot-sync",
+      "previous_repo_urls": null,
+      "release_filename": "Immich.Sync.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release.",
+        "v1.1.0": "Validated H700 support, added left and right stick image viewer nav, allow blank match keys in screenshot album name."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "docs/screenshots/01-main.png",
+        "docs/screenshots/02-device.png",
+        "docs/screenshots/03-all.png",
+        "docs/screenshots/10-albums.png",
+        "docs/screenshots/05-info.png",
+        "docs/screenshots/06-controls.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "h700"
+      ],
+      "categories": [
+        "Media",
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
