@@ -44,7 +44,11 @@ func init() {
 	sf, err := gaba.ProcessMessage("",
 		gaba.ProcessMessageOptions{Image: "resources/splash.png", ImageWidth: 1024, ImageHeight: 768}, func() (models.Storefront, error) {
 			time.Sleep(3 * time.Second)
-			return utils.FetchStorefront()
+			sf, err := utils.FetchStorefront()
+			if err != nil {
+				utils.LogNetworkDiagnostics()
+			}
+			return sf, err
 		})
 
 	if experimentalUnlocked {

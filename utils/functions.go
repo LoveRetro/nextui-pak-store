@@ -65,6 +65,7 @@ func GetEmulatorRoot() string {
 }
 
 func LogStandardFatal(msg string, err error) {
+	gabagool.GetLogger().Error(msg, "error", err)
 	log.SetOutput(os.Stderr)
 	log.Fatalf("%s: %v", msg, err)
 }
@@ -76,24 +77,38 @@ func FetchStorefront() (models.Storefront, error) {
 	var err error
 
 	if override := os.Getenv("STOREFRONT_OVERRIDE"); override != "" {
+		logger.Debug("Fetching storefront from override", "url", override)
 		data, err = fetch(override)
 		if err != nil {
+			logger.Error("Failed to fetch storefront override", "url", override, "error", err)
 			return models.Storefront{}, err
 		}
 	} else if os.Getenv("ENVIRONMENT") == "DEV" {
+		logger.Debug("Reading local storefront.json")
 		data, err = os.ReadFile("storefront.json")
 		if err != nil {
+			logger.Error("Failed to read local storefront.json", "error", err)
 			return models.Storefront{}, fmt.Errorf("failed to read local storefront.json: %w", err)
 		}
 	} else {
+		logger.Debug("Fetching storefront", "url", models.StorefrontJsonURL)
 		data, err = fetch(models.StorefrontJsonURL)
 		if err != nil {
+			logger.Error("Failed to fetch storefront", "url", models.StorefrontJsonURL, "error", err)
 			return models.Storefront{}, err
 		}
 	}
 
 	var sf models.Storefront
 	if err := json.Unmarshal(data, &sf); err != nil {
+		preview := data
+		if len(preview) > 512 {
+			preview = preview[:512]
+		}
+		logger.Error("Failed to parse storefront JSON",
+			"error", err,
+			"bytes", len(data),
+			"body_preview", string(preview))
 		return models.Storefront{}, err
 	}
 
@@ -254,17 +269,43 @@ func UnzipPakArchive(pak models.Pak, tmp string) error {
 }
 
 func fetch(url string) ([]byte, error) {
-	resp, err := http.Get(url)
+	logger := gabagool.GetLogger()
+	logger.Debug("HTTP request", "url", url, "timeout", fetchTimeout.String())
+
+	req, err := newTracedRequest(url)
 	if err != nil {
+		logRequestError(url, err)
+		return nil, err
+	}
+
+	client := &http.Client{Timeout: fetchTimeout}
+	resp, err := client.Do(req)
+	if err != nil {
+		logRequestError(url, err)
 		return nil, err
 	}
 	defer resp.Body.Close()
+
+	logger.Debug("HTTP response",
+		"url", url,
+		"status", resp.Status,
+		"proto", resp.Proto,
+		"content_length", resp.ContentLength,
+		"content_type", resp.Header.Get("Content-Type"))
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("HTTP request failed with status code: %d", resp.StatusCode)
 	}
 
-	return io.ReadAll(resp.Body)
+	data, err := io.ReadAll(resp.Body)
+	if err != nil {
+		logRequestError(url, err)
+		return nil, err
+	}
+
+	logger.Debug("HTTP response body read", "url", url, "bytes", len(data))
+
+	return data, nil
 }
 
 func DownloadTempFile(url string) (string, error) {
