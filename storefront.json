@@ -2522,7 +2522,7 @@
       "id": "nQ4wT7bL3j",
       "storefront_name": "Music Player",
       "name": "Music Player",
-      "version": "v1.18.1",
+      "version": "v1.19.0",
       "type": "TOOL",
       "description": "A comprehensive music playback application for NextUI featuring local file playback, online radio streaming, and music downloading.",
       "author": "nborodikhin",
@@ -2539,6 +2539,7 @@
         "v1.16.0": "100% NextUI theme support",
         "v1.17.0": "UI improvements, spectrum on all playing screens, Miyoo jpeg",
         "v1.18.1": "Anbernic H700 support, better HDMI/BT/USB playback, pitch-preserving speedup, better MP3 seeking and OGG metadata support, beta update channel",
+        "v1.19.0": "Improve Unicode and CJK tag support",
         "v1.9.0": "Fix regression in scrolling text display"
       },
       "previous_names": null,
