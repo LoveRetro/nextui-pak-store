@@ -6058,6 +6058,45 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "rDf7Tf1dy0",
+      "storefront_name": "Navidrome",
+      "name": "Navidrome",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "Navidrome / Subsonic music client for NextUI (based on PlexMusicPak by Thwonp)",
+      "author": "AntonyKor",
+      "repo_url": "https://github.com/AntonyKor/navidrome-client-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Navidrome.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
