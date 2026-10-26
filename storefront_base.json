@@ -1076,6 +1076,14 @@
         "Media",
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "FKA4skAY1e",
+      "storefront_name": "Nintendo DS (DSperate)",
+      "repo_url": "https://github.com/josegonzalez/minui-nintendo-dsperate-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
@@ -1110,14 +1118,6 @@
       "repo_url": "https://github.com/lodordev/lodor-nextui",
       "categories": [
         "ROM Management"
-      ]
-    },
-    {
-      "id": "FKA4skAY1e",
-      "storefront_name": "Nintendo DS (DSperate)",
-      "repo_url": "https://github.com/josegonzalez/minui-nintendo-dsperate-pak",
-      "categories": [
-        "Emulators"
       ]
     }
   ]
