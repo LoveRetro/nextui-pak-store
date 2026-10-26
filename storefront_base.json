@@ -1061,6 +1061,23 @@
       ]
     },
     {
+      "id": "bXl2hSi4JT",
+      "storefront_name": "Status LED",
+      "repo_url": "https://github.com/apommel/nextui-status-led-pak",
+      "categories": [
+        "System"
+      ]
+    },
+    {
+      "id": "uAdALnCTR3",
+      "storefront_name": "Immich Sync",
+      "repo_url": "https://github.com/amn-96/nextui-immich-screenshot-sync",
+      "categories": [
+        "Media",
+        "Miscellaneous Tools"
+      ]
+    },
+    {
       "id": "FKA4skAY1e",
       "storefront_name": "Nintendo DS (DSperate)",
       "repo_url": "https://github.com/josegonzalez/minui-nintendo-dsperate-pak",

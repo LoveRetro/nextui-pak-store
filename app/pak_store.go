@@ -12,6 +12,7 @@ import (
 	"github.com/LoveRetro/nextui-pak-store/database"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/state"
+	"github.com/LoveRetro/nextui-pak-store/ui"
 	"github.com/LoveRetro/nextui-pak-store/utils"
 	_ "modernc.org/sqlite"
 )
@@ -43,7 +44,11 @@ func init() {
 	sf, err := gaba.ProcessMessage("",
 		gaba.ProcessMessageOptions{Image: "resources/splash.png", ImageWidth: 1024, ImageHeight: 768}, func() (models.Storefront, error) {
 			time.Sleep(3 * time.Second)
-			return utils.FetchStorefront()
+			sf, err := utils.FetchStorefront()
+			if err != nil {
+				utils.LogNetworkDiagnostics()
+			}
+			return sf, err
 		})
 
 	if experimentalUnlocked {
@@ -56,7 +61,7 @@ func init() {
 			return nil, nil
 		})
 
-		gaba.ConfirmationMessage("Experimental Paks Unlocked.\nUse at your own risk!\nMake sure you have backups!", []gaba.FooterHelpItem{
+		gaba.ConfirmationMessage("Experimental Paks Unlocked.\n"+ui.ExperimentalWarning, []gaba.FooterHelpItem{
 			{ButtonName: "A", HelpText: "Continue"},
 		}, gaba.MessageOptions{})
 	}

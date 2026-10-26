@@ -31,6 +31,8 @@ tasks:
       - docker create --name extract retro-console-arm64 || true
       - docker cp extract:/build/pak-store build/pak-store
       - docker cp extract:/usr/lib/aarch64-linux-gnu/libSDL2_gfx-1.0.so.0.0.2 build/lib/libSDL2_gfx-1.0.so.0
+      - mkdir -p build/lib/h700
+      - docker cp extract:/usr/lib/aarch64-linux-gnu/libSDL2_ttf-2.0.so.0.14.1 build/lib/h700/libSDL2_ttf-2.0.so.0
       - rm -rf "build/Pak Store.pak" || true
       - mkdir -p "build/Pak Store.pak"
       - mkdir -p "build/Pak Store.pak/resources/lib"
