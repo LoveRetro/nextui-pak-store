@@ -1101,6 +1101,15 @@
         "ROM Management",
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "NRcx1mGEHP",
+      "storefront_name": "YouTube Subs",
+      "repo_url": "https://github.com/TheProductAgency/nextui-youtube-subs",
+      "categories": [
+        "Media",
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
