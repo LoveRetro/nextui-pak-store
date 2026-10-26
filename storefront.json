@@ -5924,6 +5924,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "bXl2hSi4JT",
+      "storefront_name": "Status LED",
+      "name": "Status LED",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Choose what the status LEDs show, in the menu, in game and during sleep.",
+      "author": "theadurn",
+      "repo_url": "https://github.com/apommel/nextui-status-led-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Status.LED.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "my355"
+      ],
+      "categories": [
+        "System"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
