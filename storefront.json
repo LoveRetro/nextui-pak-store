@@ -6097,6 +6097,54 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "oj1zxF3Qls",
+      "storefront_name": "Play Retro Games Club",
+      "name": "PRGC Tracker",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "See what the Play Retro Games Club is playing and jump straight into it with your own ROMs.",
+      "author": "jakesearle",
+      "repo_url": "https://github.com/jakesearle/nextui-play-retro-games-club",
+      "previous_repo_urls": null,
+      "release_filename": "PRGC.Tracker.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "img/main-menu.png",
+        "img/game-view.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "ROM Management",
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
