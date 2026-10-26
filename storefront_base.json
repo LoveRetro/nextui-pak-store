@@ -1084,6 +1084,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "rDf7Tf1dy0",
+      "storefront_name": "Navidrome",
+      "repo_url": "https://github.com/AntonyKor/navidrome-client-pak",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
