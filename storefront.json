@@ -5970,7 +5970,7 @@
       "id": "uAdALnCTR3",
       "storefront_name": "Immich Sync",
       "name": "Immich Sync",
-      "version": "v1.1.0",
+      "version": "v1.1.1",
       "type": "TOOL",
       "description": "Sync your screenshots to Immich and browse your Immich albums.",
       "author": "amn-96",
@@ -5979,7 +5979,8 @@
       "release_filename": "Immich.Sync.pak.zip",
       "changelog": {
         "v1.0.0": "Initial release.",
-        "v1.1.0": "Validated H700 support, added left and right stick image viewer nav, allow blank match keys in screenshot album name."
+        "v1.1.0": "Validated H700 support, added left and right stick image viewer nav, allow blank match keys in screenshot album name.",
+        "v1.1.1": "Releases are now tagged and published automatically when pak.json changes on main."
       },
       "previous_names": null,
       "scripts": {
