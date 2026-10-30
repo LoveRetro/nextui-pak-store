@@ -5698,7 +5698,7 @@
       "id": "O3Bxrde19z",
       "storefront_name": "Pokémon Manager",
       "name": "Pokemon Manager",
-      "version": "v0.2.56",
+      "version": "v0.2.57",
       "type": "TOOL",
       "description": "PKHeX-powered save manager: move Pokémon between games, perform trade evolutions, and inject Mystery Gifts, Mystery Events and e-Reader cards.",
       "author": "ProClifo",
@@ -5706,11 +5706,11 @@
       "previous_repo_urls": null,
       "release_filename": "PokemonManager.pak.zip",
       "changelog": {
-        "v0.2.52": "English Black/White and Black 2/White 2 ROMs no longer show Japanese names. Anbernic H700 build uses NextUI v6.15.0.",
         "v0.2.53": "Hidden setting for beta testers: add beta_updates=true to PokemonManager/settings.txt to be offered beta releases in Update.",
         "v0.2.54": "No more black flash between screens. settings.txt now lists every setting, including beta_updates=false.",
         "v0.2.55": "Screens switch instantly, like NextUI's own menus. The first save opens faster.",
-        "v0.2.56": "Reads RetroArch's compressed saves. Each save is checked after writing; if it didn't save correctly, the backup is put back. Shorter decoration message."
+        "v0.2.56": "Reads RetroArch's compressed saves. Each save is checked after writing; if it didn't save correctly, the backup is put back. Shorter decoration message.",
+        "v0.2.57": "Pokémon saves that can't be read are noted in the log, to help find out why a save is missing."
       },
       "previous_names": null,
       "scripts": {
