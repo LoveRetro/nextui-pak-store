@@ -1110,6 +1110,14 @@
         "Media",
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "latdyBVd4L",
+      "storefront_name": "Dreamcast (Deadcast)",
+      "repo_url": "https://github.com/tyrannotorus/emulator-dreamcast-deadcast",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
