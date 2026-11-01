@@ -1118,6 +1118,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "lmwlIooQTW",
+      "storefront_name": "ChooChooTracker",
+      "repo_url": "https://github.com/paiheulevrai/Choochootracker",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
