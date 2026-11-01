@@ -6195,6 +6195,45 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "latdyBVd4L",
+      "storefront_name": "Dreamcast (Deadcast)",
+      "name": "DC-DEADCAST",
+      "version": "1.1.0",
+      "type": "EMU",
+      "description": "A performance-focused Dreamcast emulator with recomp modules.",
+      "author": "tyrannotorus",
+      "repo_url": "https://github.com/tyrannotorus/emulator-dreamcast-deadcast",
+      "previous_repo_urls": null,
+      "release_filename": "DC-DEADCAST.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
