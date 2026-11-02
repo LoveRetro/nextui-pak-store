@@ -6200,14 +6200,16 @@
       "id": "latdyBVd4L",
       "storefront_name": "Dreamcast (Deadcast)",
       "name": "DC-DEADCAST",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "type": "EMU",
       "description": "A performance-focused Dreamcast emulator with recomp modules.",
       "author": "tyrannotorus",
       "repo_url": "https://github.com/tyrannotorus/emulator-dreamcast-deadcast",
       "previous_repo_urls": null,
       "release_filename": "DC-DEADCAST.pak.zip",
-      "changelog": null,
+      "changelog": {
+        "1.1.1": "- Most games tested run at full speed on Brick hardware\n- The screen refreshes at close to the Dreamcast's 59.94 Hz instead of 60.2 Hz\n- Save-state pictures are no longer garbled\n- Daytona USA: car decals display correctly\n- New: Delete Recomp Module (Options \u003e Recomp Options) removes the module, its saves and its settings\n- An interrupted module install is cleaned up at the next start\n- Rez recomp module 1.0.2: opening the menu no longer shows garbled graphics"
+      },
       "previous_names": null,
       "scripts": {
         "post_install": {
