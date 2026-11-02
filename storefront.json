@@ -644,7 +644,7 @@
       "id": "nX9mF5qB2v",
       "storefront_name": "Syncthing",
       "name": "Syncthing",
-      "version": "0.9.1",
+      "version": "0.10.0",
       "type": "TOOL",
       "description": "Manages Syncthing",
       "author": "josegonzalez",
@@ -1041,7 +1041,7 @@
       "id": "fW6pX3kB9v",
       "storefront_name": "Nintendo DS (DraStic)",
       "name": "NDS",
-      "version": "0.15.0",
+      "version": "0.15.1",
       "type": "EMU",
       "description": "Runs drastic in standalone mode for the specified rom",
       "author": "josegonzalez",
@@ -6241,7 +6241,7 @@
       "id": "lmwlIooQTW",
       "storefront_name": "ChooChooTracker",
       "name": "ChooChooTracker",
-      "version": "v1.0.21-alpha",
+      "version": "v1.0.22-alpha",
       "type": "TOOL",
       "description": "A portable music tracker combining classic sound chips, modern synth engines and samples.",
       "author": "ChooChooTracker contributors",
@@ -6249,7 +6249,8 @@
       "previous_repo_urls": null,
       "release_filename": "ChooChooTracker.pak.zip",
       "changelog": {
-        "v1.0.21-alpha": "Initial NextUI release for TrimUI Brick and Smart Pro."
+        "v1.0.21-alpha": "Initial NextUI release for TrimUI Brick and Smart Pro.",
+        "v1.0.22-alpha": "Fix unresponsive controls on NextUI, restore native gamepad bindings for existing installations, and match the TrimUI button labels."
       },
       "previous_names": null,
       "scripts": {
