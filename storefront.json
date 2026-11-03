@@ -6200,7 +6200,7 @@
       "id": "latdyBVd4L",
       "storefront_name": "Dreamcast (Deadcast)",
       "name": "DC-DEADCAST",
-      "version": "1.1.1",
+      "version": "1.2.0",
       "type": "EMU",
       "description": "A performance-focused Dreamcast emulator with recomp modules.",
       "author": "tyrannotorus",
@@ -6208,7 +6208,8 @@
       "previous_repo_urls": null,
       "release_filename": "DC-DEADCAST.pak.zip",
       "changelog": {
-        "1.1.1": "- Most games tested run at full speed on Brick hardware\n- The screen refreshes at close to the Dreamcast's 59.94 Hz instead of 60.2 Hz\n- Save-state pictures are no longer garbled\n- Daytona USA: car decals display correctly\n- New: Delete Recomp Module (Options \u003e Recomp Options) removes the module, its saves and its settings\n- An interrupted module install is cleaned up at the next start\n- Rez recomp module 1.0.2: opening the menu no longer shows garbled graphics"
+        "1.1.1": "- Most games tested run at nearly full speed on Brick hardware\n- The screen refreshes at close to the Dreamcast's 59.94 Hz instead of 60.2 Hz\n- Save-state pictures are no longer garbled\n- Daytona USA: car decals display correctly\n- New: Delete Recomp Module (Options \u003e Recomp Options) removes the module, its saves and its settings\n- An interrupted module install is cleaned up at the next start\n- Rez recomp module 1.0.2: opening the menu no longer shows garbled graphics",
+        "1.2.0": "- In-app Recomp Store\n- Per-module settings and button remapping"
       },
       "previous_names": null,
       "scripts": {
@@ -6241,7 +6242,7 @@
       "id": "lmwlIooQTW",
       "storefront_name": "ChooChooTracker",
       "name": "ChooChooTracker",
-      "version": "v1.0.22-alpha",
+      "version": "v1.0.23-alpha",
       "type": "TOOL",
       "description": "A portable music tracker combining classic sound chips, modern synth engines and samples.",
       "author": "ChooChooTracker contributors",
@@ -6250,7 +6251,8 @@
       "release_filename": "ChooChooTracker.pak.zip",
       "changelog": {
         "v1.0.21-alpha": "Initial NextUI release for TrimUI Brick and Smart Pro.",
-        "v1.0.22-alpha": "Fix unresponsive controls on NextUI, restore native gamepad bindings for existing installations, and match the TrimUI button labels."
+        "v1.0.22-alpha": "Fix unresponsive controls on NextUI, restore native gamepad bindings for existing installations, and match the TrimUI button labels.",
+        "v1.0.23-alpha": "Add Layer instruments, Stereo Width, master EQ, technical EQ presets, animated backgrounds, a Chain minimap, Sintered gate mode and 64 MIDI CC mappings. Improve audio performance, Android background playback, and NextUI controls, suspend and battery reporting."
       },
       "previous_names": null,
       "scripts": {
