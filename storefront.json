@@ -5062,7 +5062,7 @@
       "author": "TSOLfan",
       "repo_url": "https://github.com/tsolfan/dice-libretro-nextui",
       "previous_repo_urls": null,
-      "release_filename": "DICE.pak.zip",
+      "release_filename": "DICE.pakz",
       "changelog": {
         "v1.0.0": "Initial Release."
       },
@@ -5108,7 +5108,7 @@
       "author": "TSOLfan",
       "repo_url": "https://github.com/tsolfan/neocd_libretro-nextui",
       "previous_repo_urls": null,
-      "release_filename": "NEOCD.pak.zip",
+      "release_filename": "NEOCD.pakz",
       "changelog": {
         "v1.0.0": "Initial Release."
       },
@@ -5155,7 +5155,7 @@
       "author": "TSOLfan",
       "repo_url": "https://github.com/tsolfan/beetle-supergrafx-libretro-nextui",
       "previous_repo_urls": null,
-      "release_filename": "SGX.pak.zip",
+      "release_filename": "SGX.pakz",
       "changelog": {
         "v1.0.0": "Initial Release."
       },
@@ -5201,7 +5201,7 @@
       "author": "TSOLfan",
       "repo_url": "https://github.com/tsolfan/libretro-o2em-nextui",
       "previous_repo_urls": null,
-      "release_filename": "O2.pak.zip",
+      "release_filename": "O2.pakz",
       "changelog": {
         "v1.0.0": "Initial Release."
       },
