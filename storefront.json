@@ -5796,7 +5796,7 @@
       "id": "6N0NccoR38",
       "storefront_name": "Boombrick",
       "name": "Boombrick",
-      "version": "v0.4.0",
+      "version": "v0.4.1",
       "type": "TOOL",
       "description": "Your music, Spotify and YouTube Music in one player for the TrimUI Brick, with album art, synced lyrics and music that keeps playing while you game.\n\nFeatures:\n- Your music: MP3, FLAC, Opus and M4A (AAC) from the SD card, gapless, with ReplayGain levelling\n- Browse by album, artist, song or genre; the queue has shuffle and repeat and is kept between launches\n- Covers from the files, folder pictures or the Cover Art Archive, with the screen's colours taken from the album playing\n- Synced lyrics from the files, .lrc files or LRCLIB, with the line being sung highlighted\n- YouTube Music: search, browse albums and artists, and download songs as tagged Opus files with covers and lyrics; a song still downloading plays as soon as it lands\n- Spotify (Premium): sign in with a code on your phone, then play Liked Songs and your playlists at 96, 160 or 320 kbps\n- Spotify import: download your playlists' songs from YouTube Music to keep them offline, matched by ISRC or by title, artist and length\n- Play in background from the quick menu: the music goes on while you play a game\n- Sleep timer: 15 to 60 minutes, or the end of the track or album, with a fade\n- Screen off with Power, with skipping and pausing still working\n- Titles in Latin, Cyrillic, Greek and Vietnamese scripts\n- Updates for Boombrick and its downloader from Settings\n\nWi-Fi is used for Spotify, YouTube Music, covers, lyrics and updates; the music on the card plays without it. Your library and settings are kept in .userdata/tg5040/Boombrick and downloads in Music/Boombrick, so updates never touch them.",
       "author": "ujjwal313",
@@ -5806,7 +5806,8 @@
       "changelog": {
         "v0.3.2": "Plays the music on your SD card gapless, streams your Spotify playlists, downloads songs and albums from YouTube Music, finds covers and synced lyrics, and plays on in the background while you game.",
         "v0.3.3": "Settings no longer jumps up and down when you scroll down to the Downloader card.",
-        "v0.4.0": "Boombrick now runs on Knulli as well as NextUI and CrossMix. Browse your music by genre, and shuffle all of an artist's songs with X."
+        "v0.4.0": "Boombrick now runs on Knulli as well as NextUI and CrossMix. Browse your music by genre, and shuffle all of an artist's songs with X.",
+        "v0.4.1": "Play in background works with a USB-C DAC."
       },
       "previous_names": null,
       "scripts": {
@@ -6201,7 +6202,7 @@
       "id": "latdyBVd4L",
       "storefront_name": "Dreamcast (Deadcast)",
       "name": "DC-DEADCAST",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "type": "EMU",
       "description": "A performance-focused Dreamcast emulator with recomp modules.",
       "author": "tyrannotorus",
@@ -6212,7 +6213,8 @@
         "1.1.1": "- Most games tested run at nearly full speed on Brick hardware\n- The screen refreshes at close to the Dreamcast's 59.94 Hz instead of 60.2 Hz\n- Save-state pictures are no longer garbled\n- Daytona USA: car decals display correctly\n- New: Delete Recomp Module (Options \u003e Recomp Options) removes the module, its saves and its settings\n- An interrupted module install is cleaned up at the next start\n- Rez recomp module 1.0.2: opening the menu no longer shows garbled graphics",
         "1.2.0": "- In-app Recomp Store\n- Per-module settings and button remapping",
         "1.2.1": "- Smoother menus",
-        "1.2.2": "- Armada now playable\n- Fast GD-rom loading by default"
+        "1.2.2": "- Armada now playable\n- Fast GD-rom loading by default",
+        "1.2.3": "- Performance Improvement by moving texture decoding and vertex copies off the render thread"
       },
       "previous_names": null,
       "scripts": {
