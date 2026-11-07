@@ -6204,7 +6204,7 @@
       "id": "latdyBVd4L",
       "storefront_name": "Dreamcast (Deadcast)",
       "name": "DC-DEADCAST",
-      "version": "1.2.3",
+      "version": "1.2.4",
       "type": "EMU",
       "description": "A performance-focused Dreamcast emulator with recomp modules.",
       "author": "tyrannotorus",
@@ -6216,7 +6216,8 @@
         "1.2.0": "- In-app Recomp Store\n- Per-module settings and button remapping",
         "1.2.1": "- Smoother menus",
         "1.2.2": "- Armada now playable\n- Fast GD-rom loading by default",
-        "1.2.3": "- Performance Improvement by moving texture decoding and vertex copies off the render thread"
+        "1.2.3": "- Performance Improvement by moving texture decoding and vertex copies off the render thread",
+        "1.2.4": "- Added Per-game settings\n- Intrepid Izzy fix"
       },
       "previous_names": null,
       "scripts": {
