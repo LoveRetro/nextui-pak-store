@@ -1126,6 +1126,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "foq9nB261e",
+      "storefront_name": "Startup Speeder Upper",
+      "repo_url": "https://github.com/pvaibhav/nextui-startup-speeder-upper-pak",
+      "categories": [
+        "System"
+      ]
     }
   ],
   "experimental_paks": [
