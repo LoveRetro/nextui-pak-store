@@ -6235,7 +6235,11 @@
         }
       },
       "update_ignore": null,
-      "screenshots": null,
+      "screenshots": [
+        "screenshots/sega-rally-2.png",
+        "screenshots/dead-or-alive-2.png",
+        "screenshots/nba-2k2.png"
+      ],
       "platforms": [
         "tg5040"
       ],
