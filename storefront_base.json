@@ -1126,6 +1126,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "WZxgvVtnwF",
+      "storefront_name": "PSP (Deadstation Portable)",
+      "repo_url": "https://github.com/tyrannotorus/emulator-deadstation-portable",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
