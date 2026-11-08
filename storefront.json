@@ -6339,6 +6339,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "Dd5GYkb1aF",
+      "storefront_name": "PSP (Deadstation Portable)",
+      "name": "PSP-DEADSTATION-PORTABLE",
+      "version": "1.0.0",
+      "type": "EMU",
+      "description": "A performance-focused PSP emulator supporting local multiplayer and downloadable recomp modules.",
+      "author": "tyrannotorus",
+      "repo_url": "https://github.com/tyrannotorus/emulator-deadstation-portable",
+      "previous_repo_urls": null,
+      "release_filename": "PSP-DEADSTATION-PORTABLE.pak.zip",
+      "changelog": {
+        "1.0.0": "- Many PSP games run close to full-speed."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
