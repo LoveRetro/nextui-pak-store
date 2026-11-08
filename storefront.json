@@ -6380,6 +6380,53 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "OCLmm3zxWW",
+      "storefront_name": "Playstation (Deadstation 1)",
+      "name": "PS-DEADSTATION-1",
+      "version": "1.0.2",
+      "type": "EMU",
+      "description": "A performance-focused PlayStation emulator with local multiplayer and recomp modules.",
+      "author": "tyrannotorus",
+      "repo_url": "https://github.com/tyrannotorus/emulator-deadstation-1",
+      "previous_repo_urls": null,
+      "release_filename": "PS-DEADSTATION-1.pak.zip",
+      "changelog": {
+        "1.0.0": "- PlayStation games at full speed\n- Local multiplayer: two Bricks over USB-C or Bluetooth\n- In-app Recomp Store: Rally Cross and Tekken 3",
+        "1.0.1": "- Smoother menus",
+        "1.0.2": "- Added Per-game settings\n- Added Fast CD-ROM\n- 1024x768 by default"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "screenshots/tekken-3.png",
+        "screenshots/rally-cross.png",
+        "screenshots/return-fire.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
