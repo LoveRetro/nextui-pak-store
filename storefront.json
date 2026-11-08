@@ -6294,6 +6294,51 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "foq9nB261e",
+      "storefront_name": "Startup Speeder Upper",
+      "name": "Startup Speeder Upper",
+      "version": "1.0.0",
+      "type": "TOOL",
+      "description": "Makes the TrimUI Brick, Brick Hammer and Brick Pro start in under 6 seconds instead of 15. One button to speed up, one button to undo.",
+      "author": "pvaibhav",
+      "repo_url": "https://github.com/pvaibhav/nextui-startup-speeder-upper-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Startup.Speeder.Upper.pakz",
+      "changelog": {
+        "1.0.0": "First release."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": [],
+      "screenshots": [
+        "docs/screenshots/offer.png",
+        "docs/screenshots/keep.png",
+        "docs/screenshots/fast-lane.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "System"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
