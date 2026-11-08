@@ -1142,6 +1142,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "OCLmm3zxWW",
+      "storefront_name": "Playstation (Deadstation 1)",
+      "repo_url": "https://github.com/tyrannotorus/emulator-deadstation-1",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
