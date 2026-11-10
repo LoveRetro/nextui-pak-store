@@ -1376,7 +1376,7 @@
       "id": "sF9zJ2rX6y",
       "storefront_name": "Cloud Backups",
       "name": "Cloud Backups",
-      "version": "2.0.1",
+      "version": "2.0.2",
       "type": "TOOL",
       "description": "A Pak to to back up saves, screenshots and other folders to cloud storage providers like Google Drive and Dropbox.",
       "author": "ben16w",
@@ -1429,7 +1429,7 @@
       "id": "yC4kM7pQ1d",
       "storefront_name": "Favorites",
       "name": "Favorites",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "type": "TOOL",
       "description": "A Pak to manage a Favorites collection.",
       "author": "ben16w",
@@ -4449,7 +4449,7 @@
       "id": "yo3jvTpTvf",
       "storefront_name": "Trimpod Classic",
       "name": "Trimpod Classic",
-      "version": "v1.0.14",
+      "version": "v1.0.15",
       "type": "TOOL",
       "description": "An iPod Classic-inspired, offline music player for the TrimUI Brick/Hammer with winamp-like visualizations.",
       "author": "tyrannotorus",
@@ -4463,6 +4463,7 @@
         "v1.0.12": "- Selecting a song plays only that song\n- Play Shuffled added to folder, artist, album and playlist menus\n- Now Playing Shuffle reshuffles and restarts the queue each time, and is no longer saved\n- Hold up/down to scroll lists",
         "v1.0.13": "- Improved battery life\n- Battery indicator is less pessimistic\n- The press that wakes the screen no longer passes through\n- Visualizers no longer stutter at a low CPU Frequency\n- Volume works with the hold switch on and no longer wakes the screen",
         "v1.0.14": "- Usb Mounting\n- Video playback",
+        "v1.0.15": "- Video sound follows headphones and Bluetooth\n- USB-C headset buttons control playback\n- Leaving a video no longer blacks out the screen\n- Unplugging headphones pauses video and music\n- Volume is kept when headphones or Bluetooth change\n- L1/R1 seek 10 s in videos\n- Resume Playback skips deleted songs\n- Faster startup with large libraries\n- Deleted folders leave the library\n- Failed USB copies report an error\n- Lower idle CPU use with USB-C headphones and Bluetooth",
         "v1.0.3": "Adjusted volume increments, improved performance by reducing redundant cycle burn, added a controls legend to Settings, various bug fixes.",
         "v1.0.4": "Rebuilt the audio output path: direct ALSA output with a hardware/software split volume. Fixes quiet passages dropping to silence at low volume; maximum volume is now full scale.",
         "v1.0.5": "Fixed bug allowing user to escape to file system after song end",
@@ -6206,7 +6207,7 @@
       "id": "latdyBVd4L",
       "storefront_name": "Dreamcast (Deadcast)",
       "name": "DC-DEADCAST",
-      "version": "1.2.4",
+      "version": "1.2.5",
       "type": "EMU",
       "description": "A performance-focused Dreamcast emulator with recomp modules.",
       "author": "tyrannotorus",
@@ -6219,7 +6220,8 @@
         "1.2.1": "- Smoother menus",
         "1.2.2": "- Armada now playable\n- Fast GD-rom loading by default",
         "1.2.3": "- Performance Improvement by moving texture decoding and vertex copies off the render thread",
-        "1.2.4": "- Added Per-game settings\n- Intrepid Izzy fix"
+        "1.2.4": "- Added Per-game settings\n- Intrepid Izzy fix",
+        "1.2.5": "- Faster CPU emulation in all games\n- Faster disc boot\n- Fixed distant textures blanking\n- Fixed save states failing to load"
       },
       "previous_names": null,
       "scripts": {
@@ -6348,7 +6350,7 @@
       "id": "Dd5GYkb1aF",
       "storefront_name": "PSP (Deadstation Portable)",
       "name": "PSP-DEADSTATION-PORTABLE",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "EMU",
       "description": "A performance-focused PSP emulator supporting local multiplayer and downloadable recomp modules.",
       "author": "tyrannotorus",
@@ -6356,7 +6358,8 @@
       "previous_repo_urls": null,
       "release_filename": "PSP-DEADSTATION-PORTABLE.pak.zip",
       "changelog": {
-        "1.0.0": "- Many PSP games run close to full-speed."
+        "1.0.0": "- Many PSP games run close to full-speed.",
+        "1.1.0": "- Faster graphics: quicker vertex decoding and GE command processing.\n- Much faster game starts: compiled shaders kept per game.\n- Consistent emulation: the same game timing on every run.\n- A one-time notice about first-run shader stutter."
       },
       "previous_names": null,
       "scripts": {
