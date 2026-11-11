@@ -5799,7 +5799,7 @@
       "id": "6N0NccoR38",
       "storefront_name": "Boombrick",
       "name": "Boombrick",
-      "version": "v0.5.1",
+      "version": "v0.5.2",
       "type": "TOOL",
       "description": "Your music, Spotify and YouTube Music in one player for the TrimUI Brick, with album art, synced lyrics and music that keeps playing while you game.\n\nFeatures:\n- Your music: MP3, FLAC, Opus and M4A (AAC) from the SD card, gapless, with ReplayGain levelling\n- Browse by album, artist, song or genre; the queue has shuffle and repeat and is kept between launches\n- Covers from the files, folder pictures or the Cover Art Archive, with the screen's colours taken from the album playing\n- Synced lyrics from the files, .lrc files or LRCLIB, with the line being sung highlighted\n- YouTube Music: search, browse albums and artists, and download songs as tagged Opus files with covers and lyrics; a song still downloading plays as soon as it lands\n- Spotify (Premium): sign in with a code on your phone, then play Liked Songs and your playlists at 96, 160 or 320 kbps\n- Spotify import: download your playlists' songs from YouTube Music to keep them offline, matched by ISRC or by title, artist and length\n- Play in background from the quick menu: the music goes on while you play a game\n- Sleep timer: 15 to 60 minutes, or the end of the track or album, with a fade\n- Screen off with Power, with skipping and pausing still working\n- Titles and lyrics in every main script, Japanese, Chinese, Korean, Arabic, Hebrew, Thai and Hindi among them, and emoji; each script's font is downloaded the first time it's needed\n- Updates for Boombrick and its downloader from Settings\n\nWi-Fi is used for Spotify, YouTube Music, covers, lyrics, fonts and updates; the music on the card plays without it. Your library and settings are kept in .userdata/tg5040/Boombrick and downloads in Music/Boombrick, so updates never touch them.",
       "author": "ujjwal313",
@@ -5812,7 +5812,8 @@
         "v0.4.0": "Boombrick now runs on Knulli as well as NextUI and CrossMix. Browse your music by genre, and shuffle all of an artist's songs with X.",
         "v0.4.1": "Play in background works with a USB-C DAC.",
         "v0.5.0": "Titles and lyrics in Japanese, Chinese, Korean, Arabic, Hindi and the other main scripts, and emoji, with each script's font downloaded the first time it's needed. L2 and R2 rewind and fast-forward. Albums on more than one disc stay together and in order.",
-        "v0.5.1": "YouTube Music search answers YouTube's question about cookies in Europe, the UK and Switzerland, where it could show \"No results\" for everything. Spotify songs on a free account are skipped with a message instead of playing nothing."
+        "v0.5.1": "YouTube Music search answers YouTube's question about cookies in Europe, the UK and Switzerland, where it could show \"No results\" for everything. Spotify songs on a free account are skipped with a message instead of playing nothing.",
+        "v0.5.2": "Bluetooth headphones such as AirPods, which could play nothing, now play. Quitting no longer freezes the Brick when the sound card stops answering."
       },
       "previous_names": null,
       "scripts": {
