@@ -5702,7 +5702,7 @@
       "id": "O3Bxrde19z",
       "storefront_name": "Pokémon Manager",
       "name": "Pokemon Manager",
-      "version": "v0.2.57",
+      "version": "v0.2.58",
       "type": "TOOL",
       "description": "PKHeX-powered save manager: move Pokémon between games, perform trade evolutions, and inject Mystery Gifts, Mystery Events and e-Reader cards.",
       "author": "ProClifo",
@@ -5710,11 +5710,11 @@
       "previous_repo_urls": null,
       "release_filename": "PokemonManager.pak.zip",
       "changelog": {
-        "v0.2.53": "Hidden setting for beta testers: add beta_updates=true to PokemonManager/settings.txt to be offered beta releases in Update.",
         "v0.2.54": "No more black flash between screens. settings.txt now lists every setting, including beta_updates=false.",
         "v0.2.55": "Screens switch instantly, like NextUI's own menus. The first save opens faster.",
         "v0.2.56": "Reads RetroArch's compressed saves. Each save is checked after writing; if it didn't save correctly, the backup is put back. Shorter decoration message.",
-        "v0.2.57": "Pokémon saves that can't be read are noted in the log, to help find out why a save is missing."
+        "v0.2.57": "Pokémon saves that can't be read are noted in the log, to help find out why a save is missing.",
+        "v0.2.58": "Gold/Silver/Crystal PC: the box arrows are inside the box name's frame, pointing out."
       },
       "previous_names": null,
       "scripts": {
@@ -6432,6 +6432,53 @@
       ],
       "categories": [
         "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "63smz5pU2S",
+      "storefront_name": "Brick Controller",
+      "name": "Brick Controller",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Bluetooth HID gamepad for the TrimUI Brick and Brick Pro: PC, Xbox, PS4 and Switch identities, no host driver. Brick Pro support is not yet hardware-validated; Smart Pro is not supported.",
+      "author": "Brick Controller contributors",
+      "repo_url": "https://github.com/aaaldo/brick-controller",
+      "previous_repo_urls": null,
+      "release_filename": "Brick.Controller.pak.zip",
+      "changelog": {
+        "v1.0.0": "First public release. Bluetooth HID gamepad for the TrimUI Brick and Brick Pro, with PC, Xbox, PlayStation and Switch identities. Brick Pro support is implemented but not yet hardware-validated. Smart Pro is refused at startup."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "brick-ui-mockups/actual/menu.png",
+        "brick-ui-mockups/actual/pairing.png",
+        "brick-ui-mockups/actual/controller.png",
+        "brick-ui-mockups/actual/profile.png",
+        "brick-ui-mockups/actual/confirm.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
       ],
       "large_pak": false,
       "disabled": false,
