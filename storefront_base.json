@@ -1150,6 +1150,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "63smz5pU2S",
+      "storefront_name": "Brick Controller",
+      "repo_url": "https://github.com/aaaldo/brick-controller",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
