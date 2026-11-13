@@ -1158,6 +1158,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "Q4CZnsZ1Zw",
+      "storefront_name": "Vectrex",
+      "repo_url": "https://github.com/evolver79/nextui-vectrex-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
