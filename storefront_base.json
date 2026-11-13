@@ -1158,6 +1158,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "JnlLfPNC5r",
+      "storefront_name": "ThorTracker",
+      "repo_url": "https://github.com/esko997/thortracker",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
