@@ -1158,6 +1158,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "BLHItL2P0n",
+      "storefront_name": "Mega Duck",
+      "repo_url": "https://github.com/evolver79/nextui-megaduck-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
