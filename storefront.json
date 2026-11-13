@@ -6441,15 +6441,16 @@
       "id": "63smz5pU2S",
       "storefront_name": "Brick Controller",
       "name": "Brick Controller",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "TOOL",
-      "description": "Bluetooth HID gamepad for the TrimUI Brick and Brick Pro: PC, Xbox, PS4 and Switch identities, no host driver. Brick Pro support is not yet hardware-validated; Smart Pro is not supported.",
+      "description": "Bluetooth HID gamepad for the TrimUI Brick and Brick Pro: PC, Xbox, PS4 and Switch identities, on-device settings, no host driver. Brick Pro support is not yet hardware-validated; Smart Pro is not supported.",
       "author": "Brick Controller contributors",
       "repo_url": "https://github.com/aaaldo/brick-controller",
       "previous_repo_urls": null,
       "release_filename": "Brick.Controller.pak.zip",
       "changelog": {
-        "v1.0.0": "First public release. Bluetooth HID gamepad for the TrimUI Brick and Brick Pro, with PC, Xbox, PlayStation and Switch identities. Brick Pro support is implemented but not yet hardware-validated. Smart Pro is refused at startup."
+        "v1.0.0": "First public release. Bluetooth HID gamepad for the TrimUI Brick and Brick Pro, with PC, Xbox, PlayStation and Switch identities. Brick Pro support is implemented but not yet hardware-validated. Smart Pro is refused at startup.",
+        "v1.1.0": "Adds a Settings screen with D-Pad Mode (D-Pad or Left Stick) and Rumble strength (Off, Low, Mid, Strong). Preferences persist across restarts. Refreshes the disconnect overlay and controller hints."
       },
       "previous_names": null,
       "scripts": {
@@ -6469,10 +6470,12 @@
       "update_ignore": null,
       "screenshots": [
         "brick-ui-mockups/actual/menu.png",
+        "brick-ui-mockups/actual/settings.png",
         "brick-ui-mockups/actual/pairing.png",
         "brick-ui-mockups/actual/controller.png",
         "brick-ui-mockups/actual/profile.png",
-        "brick-ui-mockups/actual/confirm.png"
+        "brick-ui-mockups/actual/confirm.png",
+        "brick-ui-mockups/actual/hold.png"
       ],
       "platforms": [
         "tg5040"
