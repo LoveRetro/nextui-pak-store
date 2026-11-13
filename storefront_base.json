@@ -1158,6 +1158,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "hqGpFnp1Bo",
+      "storefront_name": "Netplay",
+      "repo_url": "https://github.com/bmpriest/retro-netplay",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
