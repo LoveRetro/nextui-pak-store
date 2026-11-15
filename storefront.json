@@ -5291,7 +5291,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.77.0",
+      "version": "v2.78.0",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5299,11 +5299,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.74.0": "Stand a node's facts in two columns where there is room; Preview the row under the list's cursor beside it; Name a sender in the tint their avatar wears; Count MQTT and private messages, and record the farthest node heard and weakest signal; Count delivered and undelivered messages (and 169 more).",
         "v2.75.0": "Say the clock is wrong when a certificate is not valid yet; Run on the Miyoo Mini Plus under Onion OS; Give a Mac window a menu bar, and the same chords everywhere else; Say what a window's reader does, not which Brick button to press; Read all 40 of a companion's channel slots, not the first eight (and 47 more).",
         "v2.75.1": "Ship the Miyoo an icon Onion will draw; Refuse a download built for another machine.",
         "v2.76.0": "Speak version 3 of the companion protocol; Speak Tern's companion protocol as a third conversation; Scope message ids to the node, and apply a gap's news live; An expired place's lock binds nobody; Keep a locked place locked against other senders.",
-        "v2.77.0": "Install a Tern node's firmware from the project's feed; Show a Tern node's own fix and receiver, and turn it off; Speak version 9 of the companion protocol; Show a Tern node's presence card on its detail; Speak version 7 of the companion protocol (and 4 more)."
+        "v2.77.0": "Install a Tern node's firmware from the project's feed; Show a Tern node's own fix and receiver, and turn it off; Speak version 9 of the companion protocol; Show a Tern node's presence card on its detail; Speak version 7 of the companion protocol (and 4 more).",
+        "v2.78.0": "An inkos UI backend, and the client as an inkos app."
       },
       "previous_names": null,
       "scripts": {
