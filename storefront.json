@@ -6574,6 +6574,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "Q4CZnsZ1Zw",
+      "storefront_name": "Vectrex",
+      "name": "VECTREX",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "GCE Vectrex using the libretro vecx core. The Vectrex system ROM is built into the core, so no BIOS is needed.",
+      "author": "evolver79",
+      "repo_url": "https://github.com/evolver79/nextui-vectrex-pak",
+      "previous_repo_urls": null,
+      "release_filename": "VECTREX.pak.zip",
+      "changelog": {
+        "v1.0.0": "First release: vecx built for NextUI (software rendering, RGB565, no libGL), buttons 1-4 on B/A/Y/X."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
