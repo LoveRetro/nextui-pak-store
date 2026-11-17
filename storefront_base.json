@@ -1160,6 +1160,54 @@
       ]
     },
     {
+      "id": "hqGpFnp1Bo",
+      "storefront_name": "Netplay",
+      "repo_url": "https://github.com/bmpriest/retro-netplay",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
+    },
+    {
+      "id": "BLHItL2P0n",
+      "storefront_name": "Mega Duck",
+      "repo_url": "https://github.com/evolver79/nextui-megaduck-pak",
+      "categories": [
+        "Emulators"
+      ]
+    },
+    {
+      "id": "Q4CZnsZ1Zw",
+      "storefront_name": "Vectrex",
+      "repo_url": "https://github.com/evolver79/nextui-vectrex-pak",
+      "categories": [
+        "Emulators"
+      ]
+    },
+    {
+      "id": "Zisd0YPwcU",
+      "storefront_name": "Supervision",
+      "repo_url": "https://github.com/evolver79/nextui-supervision-pak",
+      "categories": [
+        "Emulators"
+      ]
+    },
+    {
+      "id": "JnlLfPNC5r",
+      "storefront_name": "ThorTracker",
+      "repo_url": "https://github.com/esko997/thortracker",
+      "categories": [
+        "Media"
+      ]
+    },
+    {
+      "id": "5J5dEkJakZ",
+      "storefront_name": "Tuner",
+      "repo_url": "https://github.com/evolver79/nextui-tuner-pak",
+      "categories": [
+        "Media"
+      ]
+    },
+    {
       "id": "JjjXBkOnG4",
       "storefront_name": "Auto Power Down",
       "repo_url": "https://github.com/lmerriam/nextui-auto-power-off",
