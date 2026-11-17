@@ -1182,6 +1182,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "Zisd0YPwcU",
+      "storefront_name": "Supervision",
+      "repo_url": "https://github.com/evolver79/nextui-supervision-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
