@@ -6486,6 +6486,53 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "hqGpFnp1Bo",
+      "storefront_name": "Netplay",
+      "name": "Netplay",
+      "version": "v1.1.0",
+      "type": "TOOL",
+      "description": "Two-player shared-screen, linked-console and DS local wireless multiplayer over LAN.",
+      "author": "bmpriest",
+      "repo_url": "https://github.com/bmpriest/retro-netplay",
+      "previous_repo_urls": null,
+      "release_filename": "NextUI-Netplay-Complete.zip",
+      "changelog": {
+        "v1.0.0": "First official release. Play together on NextUI or Spruce devices. Check github for previous version notes.",
+        "v1.1.0": "Added initial usb cable support. Best support for TrimUI Bricks. Also added explicit Game Gear Link support via GearSystem."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my282",
+        "my285",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
