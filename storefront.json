@@ -6615,6 +6615,91 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "Zisd0YPwcU",
+      "storefront_name": "Supervision",
+      "name": "SUPERVISION",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "Watara Supervision / Quickshot Supervision using the libretro Potator core. No BIOS needed.",
+      "author": "evolver79",
+      "repo_url": "https://github.com/evolver79/nextui-supervision-pak",
+      "previous_repo_urls": null,
+      "release_filename": "SUPERVISION.pak.zip",
+      "changelog": {
+        "v1.0.0": "First release: Potator core, Game Boy-style controls, integer scaling."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "JnlLfPNC5r",
+      "storefront_name": "ThorTracker",
+      "name": "ThorTracker",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "Controller-first chiptune tracker for NextUI. Write patterns, shape instruments and export music for classic consoles and computers.",
+      "author": "esko997",
+      "repo_url": "https://github.com/esko997/thortracker",
+      "previous_repo_urls": null,
+      "release_filename": "ThorTracker.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "docs/media/brick-pattern.png",
+        "docs/media/brick-gb-sound.png",
+        "docs/media/brick-sid-sound.png",
+        "docs/media/brick-gba-sample.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
