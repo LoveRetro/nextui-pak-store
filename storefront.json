@@ -6533,6 +6533,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "BLHItL2P0n",
+      "storefront_name": "Mega Duck",
+      "name": "MEGADUCK",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "Mega Duck / Cougar Boy (Welback, 1993) using the libretro SameDuck core. No BIOS needed.",
+      "author": "evolver79",
+      "repo_url": "https://github.com/evolver79/nextui-megaduck-pak",
+      "previous_repo_urls": null,
+      "release_filename": "MEGADUCK.pak.zip",
+      "changelog": {
+        "v1.0.0": "First release: SameDuck core, Game Boy-style controls, native scaling."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
