@@ -1158,6 +1158,14 @@
       "categories": [
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "JjjXBkOnG4",
+      "storefront_name": "Auto Power Down",
+      "repo_url": "https://github.com/lmerriam/nextui-auto-power-off",
+      "categories": [
+        "System"
+      ]
     }
   ],
   "experimental_paks": [
