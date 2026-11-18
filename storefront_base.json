@@ -1214,6 +1214,14 @@
       "categories": [
         "System"
       ]
+    },
+    {
+      "id": "8E8n5HoNbo",
+      "storefront_name": "Cheat Manager",
+      "repo_url": "https://github.com/tfournier/nextui-cheat-manager",
+      "categories": [
+        "ROM Management"
+      ]
     }
   ],
   "experimental_paks": [
