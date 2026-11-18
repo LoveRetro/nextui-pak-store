@@ -6796,6 +6796,57 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "8E8n5HoNbo",
+      "storefront_name": "Cheat Manager",
+      "name": "Cheat Manager",
+      "version": "v1.0.1",
+      "type": "TOOL",
+      "description": "Add, edit, toggle, delete and import RetroArch cheats (.cht) for your games, right on your device.",
+      "author": "Thomas Fournier",
+      "repo_url": "https://github.com/tfournier/nextui-cheat-manager",
+      "previous_repo_urls": null,
+      "release_filename": "Cheat.Manager.pak.zip",
+      "changelog": {
+        "Unreleased": "Add support for tg5050 (TrimUI Smart Pro), h700 (Anbernic) and my355 (Miyoo Flip) platforms.",
+        "v1.0.1": "First release:\n- Add, edit, enable/disable and delete the cheats of a game, right on the device.\n- Import cheats from local .cht files or from a URL.\n- Interface in English, German, Spanish, French, Italian, Portuguese and Japanese, chosen on first launch."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "docs/screenshots/cheats.png",
+        "docs/screenshots/edit.png",
+        "docs/screenshots/games.png",
+        "docs/screenshots/systems.png",
+        "docs/screenshots/language.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "h700",
+        "my355"
+      ],
+      "categories": [
+        "ROM Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
