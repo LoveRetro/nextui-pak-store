@@ -5291,7 +5291,7 @@
       "id": "sBzfoJrKA6",
       "storefront_name": "MeshClient",
       "name": "MeshClient",
-      "version": "v2.78.0",
+      "version": "v2.78.1",
       "type": "TOOL",
       "description": "A Meshtastic client for your handheld: read and send messages, browse the mesh, and edit your radio's settings over Bluetooth LE or USB.",
       "author": "mcereal",
@@ -5299,11 +5299,11 @@
       "previous_repo_urls": null,
       "release_filename": "MeshClient.pak.zip",
       "changelog": {
-        "v2.75.0": "Say the clock is wrong when a certificate is not valid yet; Run on the Miyoo Mini Plus under Onion OS; Give a Mac window a menu bar, and the same chords everywhere else; Say what a window's reader does, not which Brick button to press; Read all 40 of a companion's channel slots, not the first eight (and 47 more).",
         "v2.75.1": "Ship the Miyoo an icon Onion will draw; Refuse a download built for another machine.",
         "v2.76.0": "Speak version 3 of the companion protocol; Speak Tern's companion protocol as a third conversation; Scope message ids to the node, and apply a gap's news live; An expired place's lock binds nobody; Keep a locked place locked against other senders.",
         "v2.77.0": "Install a Tern node's firmware from the project's feed; Show a Tern node's own fix and receiver, and turn it off; Speak version 9 of the companion protocol; Show a Tern node's presence card on its detail; Speak version 7 of the companion protocol (and 4 more).",
-        "v2.78.0": "An inkos UI backend, and the client as an inkos app."
+        "v2.78.0": "An inkos UI backend, and the client as an inkos app.",
+        "v2.78.1": "The three warnings clang and GCC raised; A write to a radio that has gone resets the link."
       },
       "previous_names": null,
       "scripts": {
@@ -6259,7 +6259,7 @@
       "id": "lmwlIooQTW",
       "storefront_name": "ChooChooTracker",
       "name": "ChooChooTracker",
-      "version": "v1.0.24-alpha",
+      "version": "v1.0.25-alpha",
       "type": "TOOL",
       "description": "A portable music tracker combining classic sound chips, modern synth engines and samples.",
       "author": "ChooChooTracker contributors",
@@ -6270,7 +6270,8 @@
         "v1.0.21-alpha": "Initial NextUI release for TrimUI Brick and Smart Pro.",
         "v1.0.22-alpha": "Fix unresponsive controls on NextUI, restore native gamepad bindings for existing installations, and match the TrimUI button labels.",
         "v1.0.23-alpha": "Add Layer instruments, Stereo Width, master EQ, technical EQ presets, animated backgrounds, a Chain minimap, Sintered gate mode and 64 MIDI CC mappings. Improve audio performance, Android background playback, and NextUI controls, suspend and battery reporting.",
-        "v1.0.24-alpha": "Add MIDI note recording and browser audition, on-the-fly Simplified editing, track audio cross-modulation and vocoder, Fatty and DigiSophie engines, Echoverb and sequencer FX. Improve handheld remapping and calibration, exports, modulation cleanup and packaging; add experimental universal macOS builds."
+        "v1.0.24-alpha": "Add MIDI note recording and browser audition, on-the-fly Simplified editing, track audio cross-modulation and vocoder, Fatty and DigiSophie engines, Echoverb and sequencer FX. Improve handheld remapping and calibration, exports, modulation cleanup and packaging; add experimental universal macOS builds.",
+        "v1.0.25-alpha": "Add Launchpad Mini MK3 navigation, Link Audio with receive and stereo compensation, MIDI CC recording, curved modulation transitions, NTH loop conditions and bounded undo/redo. Improve track-banked allocation, retained picker destinations, AY Trance Gates and handheld behavior; fix Layer/Tilt clicks and cursor visibility."
       },
       "previous_names": null,
       "scripts": {
