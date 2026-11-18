@@ -1214,6 +1214,14 @@
       "categories": [
         "System"
       ]
+    },
+    {
+      "id": "0l2xGwZ6Kw",
+      "storefront_name": "1Retro Sync",
+      "repo_url": "https://github.com/one-retro/1retro-nextui",
+      "categories": [
+        "File Management"
+      ]
     }
   ],
   "experimental_paks": [
