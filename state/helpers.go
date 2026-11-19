@@ -13,6 +13,7 @@ import (
 	"github.com/LoveRetro/nextui-pak-store/internal"
 	"github.com/LoveRetro/nextui-pak-store/models"
 	"github.com/LoveRetro/nextui-pak-store/utils"
+	"golang.org/x/mod/semver"
 )
 
 func GetInstalledPaks() (map[string]database.InstalledPak, error) {
@@ -343,6 +344,27 @@ func HasUpdate(installed string, latest string) bool {
 }
 
 func compareVersions(a, b string) int {
+	semverA, revisionA := normalizeVersion(a)
+	semverB, revisionB := normalizeVersion(b)
+	if semver.IsValid(semverA) && semver.IsValid(semverB) {
+		coreA, _, _ := strings.Cut(semver.Canonical(semverA), "-")
+		coreB, _, _ := strings.Cut(semver.Canonical(semverB), "-")
+		if result := semver.Compare(coreA, coreB); result != 0 {
+			return result
+		}
+		if len(revisionA) != len(revisionB) {
+			if len(revisionA) < len(revisionB) {
+				return -1
+			}
+			return 1
+		}
+		if result := strings.Compare(revisionA, revisionB); result != 0 {
+			return result
+		}
+		return semver.Compare(semverA, semverB)
+	}
+
+	// Preserve the existing comparison for non-SemVer version strings.
 	a = strings.TrimPrefix(a, "v")
 	b = strings.TrimPrefix(b, "v")
 
@@ -373,4 +395,22 @@ func compareVersions(a, b string) int {
 	}
 
 	return 0
+}
+
+func normalizeVersion(version string) (string, string) {
+	version = "v" + strings.TrimPrefix(version, "v")
+	suffixIndex := strings.IndexAny(version, "-+")
+	if suffixIndex < 0 {
+		suffixIndex = len(version)
+	}
+	parts := strings.Split(version[:suffixIndex], ".")
+	if len(parts) != 4 || parts[3] == "" {
+		return version, ""
+	}
+	for _, c := range parts[3] {
+		if c < '0' || c > '9' {
+			return version, ""
+		}
+	}
+	return strings.Join(parts[:3], ".") + version[suffixIndex:], strings.TrimLeft(parts[3], "0")
 }
