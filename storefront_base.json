@@ -1257,6 +1257,14 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "RH4QGWlmQm",
+      "storefront_name": "Goblin Link",
+      "repo_url": "https://github.com/travis-mcdevitt/goblin-link",
+      "categories": [
+        "Developer Tools"
+      ]
     }
   ]
 }
