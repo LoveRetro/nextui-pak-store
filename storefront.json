@@ -6539,7 +6539,7 @@
       "id": "BLHItL2P0n",
       "storefront_name": "Mega Duck",
       "name": "MEGADUCK",
-      "version": "v1.0.0",
+      "version": "v1.0.1",
       "type": "EMU",
       "description": "Mega Duck / Cougar Boy (Welback, 1993) using the libretro SameDuck core. No BIOS needed.",
       "author": "evolver79",
@@ -6547,7 +6547,8 @@
       "previous_repo_urls": null,
       "release_filename": "MEGADUCK.pak.zip",
       "changelog": {
-        "v1.0.0": "First release: SameDuck core, Game Boy-style controls, native scaling."
+        "v1.0.0": "First release: SameDuck core, Game Boy-style controls, native scaling.",
+        "v1.0.1": "Games run at full speed: the core now outputs sound at 48 kHz instead of 384 kHz, so NextUI no longer has to downsample it, which kept the Brick's CPU maxed out and slowed games down."
       },
       "previous_names": null,
       "scripts": {
