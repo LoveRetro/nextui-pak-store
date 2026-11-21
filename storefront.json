@@ -6709,7 +6709,7 @@
       "name": "Tuner",
       "version": "v1.2.0",
       "type": "TOOL",
-      "description": "Free TV with an old-school look: Pluto TV, Samsung TV Plus and iptv-org channels plus your own M3U playlists and Xtream accounts, a TV guide, favourites, search and hardware video decoding, drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
+      "description": "Free TV channels for the Brick: Pluto TV, Samsung TV Plus and iptv-org channels plus your own M3U playlists and Xtream accounts, a TV guide, favourites, search and hardware video decoding, drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
       "author": "evolver79",
       "repo_url": "https://github.com/evolver79/nextui-tuner-pak",
       "previous_repo_urls": null,
