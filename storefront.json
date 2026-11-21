@@ -6353,7 +6353,7 @@
       "id": "Dd5GYkb1aF",
       "storefront_name": "PSP (Deadstation Portable)",
       "name": "PSP-DEADSTATION-PORTABLE",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "type": "EMU",
       "description": "A performance-focused PSP emulator supporting local multiplayer and downloadable recomp modules.",
       "author": "tyrannotorus",
@@ -6363,7 +6363,8 @@
       "changelog": {
         "1.0.0": "- Many PSP games run close to full-speed.",
         "1.1.0": "- Faster graphics: quicker vertex decoding and GE command processing.\n- Much faster game starts: compiled shaders kept per game.\n- Consistent emulation: the same game timing on every run.\n- A one-time notice about first-run shader stutter.",
-        "1.2.0": "- Faster graphics / vector math.\n- Menu buttons no longer reach the game.\n- Fixed a bug that could crash a game in rare cases."
+        "1.2.0": "- Faster graphics / vector math.\n- Menu buttons no longer reach the game.\n- Fixed a bug that could crash a game in rare cases.",
+        "1.3.0": "- Performance improvements."
       },
       "previous_names": null,
       "scripts": {
