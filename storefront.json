@@ -6353,7 +6353,7 @@
       "id": "Dd5GYkb1aF",
       "storefront_name": "PSP (Deadstation Portable)",
       "name": "PSP-DEADSTATION-PORTABLE",
-      "version": "1.3.0",
+      "version": "1.3.1",
       "type": "EMU",
       "description": "A performance-focused PSP emulator supporting local multiplayer and downloadable recomp modules.",
       "author": "tyrannotorus",
@@ -6364,7 +6364,8 @@
         "1.0.0": "- Many PSP games run close to full-speed.",
         "1.1.0": "- Faster graphics: quicker vertex decoding and GE command processing.\n- Much faster game starts: compiled shaders kept per game.\n- Consistent emulation: the same game timing on every run.\n- A one-time notice about first-run shader stutter.",
         "1.2.0": "- Faster graphics / vector math.\n- Menu buttons no longer reach the game.\n- Fixed a bug that could crash a game in rare cases.",
-        "1.3.0": "- Performance improvements."
+        "1.3.0": "- Performance improvements.",
+        "1.3.1": "- Small performance improvements."
       },
       "previous_names": null,
       "scripts": {
@@ -6709,7 +6710,7 @@
       "id": "5J5dEkJakZ",
       "storefront_name": "Tuner",
       "name": "Tuner",
-      "version": "v1.2.0",
+      "version": "v1.3.0",
       "type": "TOOL",
       "description": "Free TV channels for the Brick: Pluto TV, Samsung TV Plus and iptv-org channels plus your own M3U playlists and Xtream accounts, a TV guide, favourites, search and hardware video decoding, drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
       "author": "evolver79",
@@ -6719,7 +6720,8 @@
       "changelog": {
         "v1.0.0": "First release.",
         "v1.1.0": "Two looks, redone: VCR (an on-screen display over the picture, tape winding and tracking noise) and Teletext (pages that are searched for and arrive, a block-graphics masthead, a listings guide). Hardware video decoding (H.264/H.265) on the Brick's video engine. Stats for nerds (SELECT). Audio tracks: the one in your language, LEFT/RIGHT to switch, remembered per channel. Max quality also picks the stream's quality. Big provider guides read correctly and kept for a day. START or B on the front page: back to the channel. The volume shown when it changes. Smoother 50 fps channels, and fixes.",
-        "v1.2.0": "New look: Dot, the shared look of Kino, Musicdisk and Tuner. Menus and lists are cards on a grey ground, or over the live channel, which tunes in behind the menu as you move. A channel banner with what's on now and next, and the tuning screens and stats for nerds in the same look. The search keyboard fills its card. VCR, Teletext, the Theme setting and L2/R2 are gone; snow and the test card stay."
+        "v1.2.0": "New look: Dot, the shared look of Kino, Musicdisk and Tuner. Menus and lists are cards on a grey ground, or over the live channel, which tunes in behind the menu as you move. A channel banner with what's on now and next, and the tuning screens and stats for nerds in the same look. The search keyboard fills its card. VCR, Teletext, the Theme setting and L2/R2 are gone; snow and the test card stay.",
+        "v1.3.0": "Crop black borders (Settings, or L2/R2 while watching): a 4:3 show or film inside a 16:9 channel fills the screen instead of sitting in black on all four sides. It waits a few seconds before zooming in, so a dark scene doesn't set it off, and zooms back out at once for a full-width ad. Buffering... shows when the picture freezes because the stream ran dry, and Reconnecting (1/3) instead of Loading while a lost channel is retried. Thanks to Travis McDevitt for the idea."
       },
       "previous_names": null,
       "scripts": {
@@ -6804,7 +6806,7 @@
       "id": "8E8n5HoNbo",
       "storefront_name": "Cheat Manager",
       "name": "Cheat Manager",
-      "version": "v1.0.1",
+      "version": "v1.1.0",
       "type": "TOOL",
       "description": "Add, edit, toggle, delete and import RetroArch cheats (.cht) for your games, right on your device.",
       "author": "Thomas Fournier",
@@ -6812,8 +6814,8 @@
       "previous_repo_urls": null,
       "release_filename": "Cheat.Manager.pak.zip",
       "changelog": {
-        "Unreleased": "Add support for tg5050 (TrimUI Smart Pro), h700 (Anbernic) and my355 (Miyoo Flip) platforms.",
-        "v1.0.1": "First release:\n- Add, edit, enable/disable and delete the cheats of a game, right on the device.\n- Import cheats from local .cht files or from a URL.\n- Interface in English, German, Spanish, French, Italian, Portuguese and Japanese, chosen on first launch."
+        "v1.0.1": "First release:\n- Add, edit, enable/disable and delete the cheats of a game, right on the device.\n- Import cheats from local .cht files or from a URL.\n- Interface in English, German, Spanish, French, Italian, Portuguese and Japanese, chosen on first launch.",
+        "v1.1.0": "Installing from the Pak Store works: the release zip now holds the pak at its root (it was nested one folder too deep and the pak did not start). Installing by hand: unzip, name the folder Cheat Manager.pak and copy it into Tools/tg5040.\nAdd support for tg5050 (TrimUI Smart Pro), h700 (Anbernic) and my355 (Miyoo Flip) platforms."
       },
       "previous_names": null,
       "scripts": {
