@@ -6208,7 +6208,7 @@
       "id": "latdyBVd4L",
       "storefront_name": "Dreamcast (Deadcast)",
       "name": "DC-DEADCAST",
-      "version": "1.2.5",
+      "version": "1.2.6",
       "type": "EMU",
       "description": "A performance-focused Dreamcast emulator with recomp modules.",
       "author": "tyrannotorus",
@@ -6222,7 +6222,8 @@
         "1.2.2": "- Armada now playable\n- Fast GD-rom loading by default",
         "1.2.3": "- Performance Improvement by moving texture decoding and vertex copies off the render thread",
         "1.2.4": "- Added Per-game settings\n- Intrepid Izzy fix",
-        "1.2.5": "- Faster CPU emulation in all games\n- Faster disc boot\n- Fixed distant textures blanking\n- Fixed save states failing to load"
+        "1.2.5": "- Faster CPU emulation in all games\n- Faster disc boot\n- Fixed distant textures blanking\n- Fixed save states failing to load",
+        "1.2.6": "- Increased performance"
       },
       "previous_names": null,
       "scripts": {
