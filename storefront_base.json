@@ -1222,6 +1222,15 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "WHz9ewsM6U",
+      "storefront_name": "ReminisLink",
+      "repo_url": "https://github.com/tfournier/ReminisLink",
+      "categories": [
+        "ROM Management",
+        "File Management"
+      ]
     }
   ],
   "experimental_paks": [
