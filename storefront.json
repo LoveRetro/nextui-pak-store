@@ -5799,9 +5799,9 @@
       "id": "6N0NccoR38",
       "storefront_name": "Boombrick",
       "name": "Boombrick",
-      "version": "v0.5.2",
+      "version": "v0.5.3",
       "type": "TOOL",
-      "description": "Your music, Spotify and YouTube Music in one player for the TrimUI Brick, with album art, synced lyrics and music that keeps playing while you game.\n\nFeatures:\n- Your music: MP3, FLAC, Opus and M4A (AAC) from the SD card, gapless, with ReplayGain levelling\n- Browse by album, artist, song or genre; the queue has shuffle and repeat and is kept between launches\n- Covers from the files, folder pictures or the Cover Art Archive, with the screen's colours taken from the album playing\n- Synced lyrics from the files, .lrc files or LRCLIB, with the line being sung highlighted\n- YouTube Music: search, browse albums and artists, and download songs as tagged Opus files with covers and lyrics; a song still downloading plays as soon as it lands\n- Spotify (Premium): sign in with a code on your phone, then play Liked Songs and your playlists at 96, 160 or 320 kbps\n- Spotify import: download your playlists' songs from YouTube Music to keep them offline, matched by ISRC or by title, artist and length\n- Play in background from the quick menu: the music goes on while you play a game\n- Sleep timer: 15 to 60 minutes, or the end of the track or album, with a fade\n- Screen off with Power, with skipping and pausing still working\n- Titles and lyrics in every main script, Japanese, Chinese, Korean, Arabic, Hebrew, Thai and Hindi among them, and emoji; each script's font is downloaded the first time it's needed\n- Updates for Boombrick and its downloader from Settings\n\nWi-Fi is used for Spotify, YouTube Music, covers, lyrics, fonts and updates; the music on the card plays without it. Your library and settings are kept in .userdata/tg5040/Boombrick and downloads in Music/Boombrick, so updates never touch them.",
+      "description": "Your music, Spotify and YouTube Music in one player for the TrimUI Brick, with album art, synced lyrics and music that keeps playing while you game.\n\nFeatures:\n- Your music: MP3, FLAC, Opus and M4A (AAC) from the SD card, gapless, with ReplayGain levelling\n- Browse by album, artist, song or genre; the queue has shuffle and repeat and is kept between launches\n- Covers from the files, folder pictures or the Cover Art Archive, with the screen's colours taken from the album playing\n- Synced lyrics from the files, .lrc files or LRCLIB, with the line being sung highlighted\n- YouTube Music: search, browse albums and artists, and download songs as tagged Opus files with covers and lyrics; a song still downloading plays as soon as it lands\n- Spotify (Premium): sign in with a code on your phone, then play Liked Songs and your playlists at 96, 160 or 320 kbps\n- Spotify import: download your playlists' songs, or a single song, from YouTube Music to keep them offline, matched by ISRC or by title, artist and length\n- Play in background from the quick menu: the music goes on while you play a game\n- Sleep timer: 15 to 60 minutes, or the end of the track or album, with a fade\n- Screen off with Power, with skipping and pausing still working\n- Titles and lyrics in every main script, Japanese, Chinese, Korean, Arabic, Hebrew, Thai and Hindi among them, and emoji; each script's font is downloaded the first time it's needed\n- Switch Spotify or YouTube off in Settings if you don't use them\n- Updates for Boombrick and its downloader from Settings\n\nWi-Fi is used for Spotify, YouTube Music, covers, lyrics, fonts and updates; the music on the card plays without it. Your library and settings are kept in .userdata/tg5040/Boombrick and downloads in Music/Boombrick, so updates never touch them.",
       "author": "ujjwal313",
       "repo_url": "https://github.com/ujjwal313/boombrick",
       "previous_repo_urls": null,
@@ -5813,7 +5813,8 @@
         "v0.4.1": "Play in background works with a USB-C DAC.",
         "v0.5.0": "Titles and lyrics in Japanese, Chinese, Korean, Arabic, Hindi and the other main scripts, and emoji, with each script's font downloaded the first time it's needed. L2 and R2 rewind and fast-forward. Albums on more than one disc stay together and in order.",
         "v0.5.1": "YouTube Music search answers YouTube's question about cookies in Europe, the UK and Switzerland, where it could show \"No results\" for everything. Spotify songs on a free account are skipped with a message instead of playing nothing.",
-        "v0.5.2": "Bluetooth headphones such as AirPods, which could play nothing, now play. Quitting no longer freezes the Brick when the sound card stops answering."
+        "v0.5.2": "Bluetooth headphones such as AirPods, which could play nothing, now play. Quitting no longer freezes the Brick when the sound card stops answering.",
+        "v0.5.3": "Switch Spotify or YouTube off in Settings if you don't use them. Import a single song from a Spotify playlist. The tab row keeps L1 and R1 at the edges and wraps around. Spotify songs of an account Spotify won't stream to are skipped with a message."
       },
       "previous_names": null,
       "scripts": {
@@ -6710,7 +6711,7 @@
       "id": "5J5dEkJakZ",
       "storefront_name": "Tuner",
       "name": "Tuner",
-      "version": "v1.3.0",
+      "version": "v1.3.1",
       "type": "TOOL",
       "description": "Free TV channels for the Brick: Pluto TV, Samsung TV Plus and iptv-org channels plus your own M3U playlists and Xtream accounts, a TV guide, favourites, search and hardware video decoding, drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
       "author": "evolver79",
@@ -6721,7 +6722,8 @@
         "v1.0.0": "First release.",
         "v1.1.0": "Two looks, redone: VCR (an on-screen display over the picture, tape winding and tracking noise) and Teletext (pages that are searched for and arrive, a block-graphics masthead, a listings guide). Hardware video decoding (H.264/H.265) on the Brick's video engine. Stats for nerds (SELECT). Audio tracks: the one in your language, LEFT/RIGHT to switch, remembered per channel. Max quality also picks the stream's quality. Big provider guides read correctly and kept for a day. START or B on the front page: back to the channel. The volume shown when it changes. Smoother 50 fps channels, and fixes.",
         "v1.2.0": "New look: Dot, the shared look of Kino, Musicdisk and Tuner. Menus and lists are cards on a grey ground, or over the live channel, which tunes in behind the menu as you move. A channel banner with what's on now and next, and the tuning screens and stats for nerds in the same look. The search keyboard fills its card. VCR, Teletext, the Theme setting and L2/R2 are gone; snow and the test card stay.",
-        "v1.3.0": "Crop black borders (Settings, or L2/R2 while watching): a 4:3 show or film inside a 16:9 channel fills the screen instead of sitting in black on all four sides. It waits a few seconds before zooming in, so a dark scene doesn't set it off, and zooms back out at once for a full-width ad. Buffering... shows when the picture freezes because the stream ran dry, and Reconnecting (1/3) instead of Loading while a lost channel is retried. Thanks to Travis McDevitt for the idea."
+        "v1.3.0": "Crop black borders (Settings, or L2/R2 while watching): a 4:3 show or film inside a 16:9 channel fills the screen instead of sitting in black on all four sides. It waits a few seconds before zooming in, so a dark scene doesn't set it off, and zooms back out at once for a full-width ad. Buffering... shows when the picture freezes because the stream ran dry, and Reconnecting (1/3) instead of Loading while a lost channel is retried. Thanks to Travis McDevitt for the idea.",
+        "v1.3.1": "Crop black borders no longer zooms in on a dark frame with a logo or titles in the middle (a studio or channel ident): bars thicker than a fifth of the picture are ignored, real ones never are."
       },
       "previous_names": null,
       "scripts": {
@@ -6806,7 +6808,7 @@
       "id": "8E8n5HoNbo",
       "storefront_name": "Cheat Manager",
       "name": "Cheat Manager",
-      "version": "v1.1.0",
+      "version": "v1.2.0",
       "type": "TOOL",
       "description": "Add, edit, toggle, delete and import RetroArch cheats (.cht) for your games, right on your device.",
       "author": "Thomas Fournier",
@@ -6815,7 +6817,8 @@
       "release_filename": "Cheat.Manager.pak.zip",
       "changelog": {
         "v1.0.1": "First release:\n- Add, edit, enable/disable and delete the cheats of a game, right on the device.\n- Import cheats from local .cht files or from a URL.\n- Interface in English, German, Spanish, French, Italian, Portuguese and Japanese, chosen on first launch.",
-        "v1.1.0": "Installing from the Pak Store works: the release zip now holds the pak at its root (it was nested one folder too deep and the pak did not start). Installing by hand: unzip, name the folder Cheat Manager.pak and copy it into Tools/tg5040.\nAdd support for tg5050 (TrimUI Smart Pro), h700 (Anbernic) and my355 (Miyoo Flip) platforms."
+        "v1.1.0": "Installing from the Pak Store works: the release zip now holds the pak at its root (it was nested one folder too deep and the pak did not start). Installing by hand: unzip, name the folder Cheat Manager.pak and copy it into Tools/tg5040.\nAdd support for tg5050 (TrimUI Smart Pro), h700 (Anbernic) and my355 (Miyoo Flip) platforms.",
+        "v1.2.0": "Miyoo Flip (my355): the pak now ships a libSDL2_gfx that works with the glibc 2.28 of its firmware (the bundled one needed glibc 2.29 and the pak could not start). Anbernic (h700): libSDL2_ttf is now bundled, as the Pak Store does. These platforms and tg5050 are still experimental (not tested on hardware)."
       },
       "previous_names": null,
       "scripts": {
