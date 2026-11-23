@@ -6896,6 +6896,55 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "QqMGqha64B",
+      "storefront_name": "Kino – Video Player for SD Card and Jellyfin",
+      "name": "Kino",
+      "version": "v0.9.0",
+      "type": "TOOL",
+      "description": "Video player for the Brick: films and series from the SD card (it starts in Videos) or a Jellyfin server at home, with hardware decoding for H.264 and HEVC, resume, subtitles, picture filters and a cover grid. Drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
+      "author": "evolver79",
+      "repo_url": "https://github.com/evolver79/nextui-kino-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Kino.pak.zip",
+      "changelog": {
+        "v0.9.0": "First release. Films and series from the SD card, starting in Videos with B going up to the whole card (rows, or covers for a folder of films) or from Jellyfin (found on the network, Quick Connect, Continue watching and Next up, a cover grid; the server converts what the Brick can't play). H.264 and 8-bit HEVC up to 1080p on the Brick's video engine. Resume where you stopped. Subtitles from the film, a file next to it or Jellyfin, in Noto Sans on a black box, in four sizes. Picture filters, aspect (with No bars: the film's own black bars cut away, the subtitles moved up into the picture), brightness that keeps black black, contrast, deinterlacing, and the Brick's lights following the picture. Streaming over Wi-Fi: a quality setting, a buffering pill, reconnects when the stream breaks off, and a warning when the Wi-Fi can't keep up. A log to send in when something goes wrong (Jellyfin keys left out)."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "docs/screens/browse-series.png",
+        "docs/screens/local-grid.png",
+        "docs/screens/playing.png",
+        "docs/screens/playing-subtitles.png",
+        "docs/screens/options.png",
+        "docs/screens/jellyfin-connect.png",
+        "docs/screens/help-first-start.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
