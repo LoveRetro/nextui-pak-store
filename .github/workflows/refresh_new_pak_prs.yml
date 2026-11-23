@@ -1,0 +1,110 @@
+name: Refresh New Pak PRs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - storefront_base.json
+  workflow_dispatch:
+
+concurrency:
+  group: refresh-new-pak-prs
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Rebuild open new pak branches on top of main
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          gh pr list --base main --state open --limit 200 \
+            --json number,headRefName,isCrossRepository \
+            --jq '.[] | select(.isCrossRepository | not) | select(.headRefName | startswith("add-pak-")) | "\(.number) \(.headRefName)"' \
+            > "$RUNNER_TEMP/prs.txt"
+
+          while read -r number branch; do
+            echo "::group::#$number $branch"
+
+            git fetch --no-tags origin "+refs/heads/$branch:refs/remotes/origin/$branch"
+            head=$(git rev-parse "origin/$branch")
+
+            if git merge-base --is-ancestor origin/main "$head"; then
+              echo "Already up to date with main"
+              echo "::endgroup::"
+              continue
+            fi
+
+            changed=$(git diff --name-only origin/main..."$head")
+            if [ "$changed" != "storefront_base.json" ]; then
+              echo "::warning::#$number touches files other than storefront_base.json, skipping: $changed"
+              echo "::endgroup::"
+              continue
+            fi
+
+            first=$(git rev-list --no-merges --reverse origin/main.."$head" | head -n 1)
+            if [ -z "$first" ]; then
+              echo "::warning::#$number has no commits to rebuild, skipping"
+              echo "::endgroup::"
+              continue
+            fi
+            git log -1 --format=%B "$first" > "$RUNNER_TEMP/msg.txt"
+            git show "$head:storefront_base.json" > "$RUNNER_TEMP/branch.json"
+
+            git checkout -q -B "$branch" origin/main
+
+            if ! PAK_ID="${branch#add-pak-}" BRANCH_FILE="$RUNNER_TEMP/branch.json" node <<'EOF'
+          const fs = require('fs');
+          const id = process.env.PAK_ID;
+          const branch = JSON.parse(fs.readFileSync(process.env.BRANCH_FILE, 'utf-8'));
+          const main = JSON.parse(fs.readFileSync('storefront_base.json', 'utf-8'));
+
+          const key = ['paks', 'experimental_paks'].find(k => (branch[k] || []).some(p => p.id === id));
+          if (!key) {
+            console.log(`::warning::Pak ${id} not found on branch, skipping`);
+            process.exit(1);
+          }
+          const entry = branch[key].find(p => p.id === id);
+
+          const existing = [...(main.paks || []), ...(main.experimental_paks || [])];
+          if (existing.some(p => p.id === id || p.repo_url === entry.repo_url)) {
+            console.log(`::warning::Pak ${id} (${entry.repo_url}) is already on main, skipping`);
+            process.exit(1);
+          }
+
+          main[key] = main[key] || [];
+          main[key].push(entry);
+          fs.writeFileSync('storefront_base.json', JSON.stringify(main, null, 2) + '\n');
+          EOF
+            then
+              git checkout -q main
+              echo "::endgroup::"
+              continue
+            fi
+
+            git add storefront_base.json
+            git commit -q -F "$RUNNER_TEMP/msg.txt"
+
+            if git push --force-with-lease="$branch:$head" origin "$branch"; then
+              echo "Rebuilt #$number on main"
+            else
+              echo "::warning::Failed to push rebuilt branch for #$number"
+            fi
+
+            git checkout -q main
+            echo "::endgroup::"
+          done < "$RUNNER_TEMP/prs.txt"
