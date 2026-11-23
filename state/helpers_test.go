@@ -34,6 +34,18 @@ func TestCompareVersions(t *testing.T) {
 		{"large fourth numbers", "1.0.0.99999999999999999999", "1.0.0.100000000000000000000", -1},
 		{"legacy leading zeros", "v1.02.3", "v1.2.4", -1},
 		{"legacy malformed component", "v1.0.bad", "v1.0.1", -1},
+		{"non-semver alpha patch update", "v1.0.22-alpha.01", "v1.0.23-alpha.01", -1},
+		{"stable above non-semver prerelease", "v1.0.0-alpha.01", "v1.0.0", -1},
+		{"uppercase prefix", "v2.0.0", "V3.0.0", -1},
+		{"uppercase prefix equal", "V1.2.3", "v1.2.3", 0},
+		{"grout revision before alpha", "v4.9.1.0", "v4.9.1.1-alpha", -1},
+		{"grout alpha before revision", "v4.9.1.1-alpha", "v4.9.1.1", -1},
+		{"empty both", "", "", 0},
+		{"empty below real", "", "v1.0.0", -1},
+		{"whitespace", " v1.0.1 ", "v1.0.1", 0},
+		{"hyphen in prerelease", "v1.0.0-rc-1", "v1.0.0-rc-2", -1},
+		{"hyphen in build", "v1.0.0+build-5", "v1.0.0", 0},
+		{"leading zero prerelease numeric", "v1.0.0-alpha.01", "v1.0.0-alpha.1", 0},
 	}
 
 	for _, tt := range tests {
