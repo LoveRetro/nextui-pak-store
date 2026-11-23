@@ -7294,6 +7294,56 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "RH4QGWlmQm",
+      "storefront_name": "Goblin Link",
+      "name": "Goblin Link",
+      "version": "v0.1.1",
+      "type": "TOOL",
+      "description": "Your AI agent on the Brick: Muse, or a Hermes Agent you run yourself. Chat and voice notes (and calls with Muse), and it can build tools and games for the handheld. Needs a Muse account or your own Hermes.",
+      "author": "travis-mcdevitt",
+      "repo_url": "https://github.com/travis-mcdevitt/goblin-link",
+      "previous_repo_urls": null,
+      "release_filename": "Goblin.Link.pak.zip",
+      "changelog": {
+        "v0.1.0": "Hermes Agent as a second kind of agent: pair with a link, run its commands from Y, hear its replies, and see what a voice note said. Pairing asks which agent first. Starts on boot through a NextUI boot hook. An update or uninstall now stops the old service. Answers to setting requests apply only to the request shown. Licences for all bundled code, and uninstall steps in the README.",
+        "v0.1.0-rc.1": "First release candidate for TrimUI Brick on NextUI. Includes reviewed permission, profile, voice and input fixes. Hardware validation pending.",
+        "v0.1.0-rc.2": "Native Muse choices and D-pad fixes, accurate typing state, Ask first for build installs, standalone game Paks and launch diagnostics, NextUI sleep/wake, and profile/pairing recovery.",
+        "v0.1.1": "First Pak Store release. \"Connect when the handheld starts\" now belongs to the install that turned it on: it is off after a reinstall, kept across updates (turn it on once more if you used it in v0.1.0). An install is offered only where it is shown whole, and what it runs shows each argument. Store screenshots show a new profile's defaults."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "docs/images/store/1-chat.jpg",
+        "docs/images/store/2-pair.jpg",
+        "docs/images/store/3-hermes.jpg",
+        "docs/images/store/4-access.jpg",
+        "docs/images/store/5-install.jpg"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Developer Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ]
 }
