@@ -207,3 +207,122 @@ jobs:
               });
               console.log(`Created issue #${newIssue.data.number}`);
             }
+
+      - name: Check pak versions
+        if: always()
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const issueTitle = 'Invalid Pak Versions';
+            const issueLabel = 'version-verify';
+            const versionPattern = /^[vV]?\d+(\.\d+){2,3}(-[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?(\+[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?$/;
+
+            const storefront = JSON.parse(fs.readFileSync('storefront.json', 'utf-8'));
+            const allPaks = [
+              ...(storefront.paks || []).map(p => ({ ...p, experimental: false })),
+              ...(storefront.experimental_paks || []).map(p => ({ ...p, experimental: true }))
+            ].filter(p => !p.disabled);
+
+            const invalid = allPaks.filter(p => !versionPattern.test(p.version || ''));
+            for (const p of invalid) {
+              console.log(`INVALID  ${p.storefront_name} (${p.version})`);
+            }
+            console.log(`\nChecked: ${allPaks.length}  Invalid: ${invalid.length}`);
+
+            const existingIssues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: issueLabel,
+              state: 'open',
+              per_page: 1
+            });
+
+            const existingIssue = existingIssues.data[0];
+
+            if (invalid.length === 0) {
+              if (existingIssue) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existingIssue.number,
+                  body: `All ${allPaks.length} pak versions are now valid. Closing this issue.`
+                });
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existingIssue.number,
+                  state: 'closed'
+                });
+                console.log(`Closed issue #${existingIssue.number}`);
+              }
+              return;
+            }
+
+            const cell = (s) => String(s).replace(/\|/g, '\\|');
+
+            const now = new Date().toISOString().split('T')[0];
+            let body = `## Invalid Pak Versions
+
+            The following paks have a \`version\` in \`pak.json\` that the Pak Store cannot reliably compare, so update detection may be wrong for them.
+
+            **Last checked:** ${now}
+
+            **Total paks:** ${allPaks.length} | **Invalid:** ${invalid.length}
+
+            ### Invalid versions
+
+            | Pak | Version | Owner | Repository |
+            |-----|---------|-------|------------|
+            `;
+
+            for (const p of invalid) {
+              const tag = p.experimental ? ' (experimental)' : '';
+              const repoLink = `[Link](${p.repo_url})`;
+              const owner = p.repo_url.replace('https://github.com/', '').split('/')[0];
+              body += `| ${cell(p.storefront_name)}${tag} | \`${cell(p.version)}\` | @${owner} | ${repoLink} |\n`;
+            }
+
+            body += `
+            ### What to do
+
+            Versions must look like \`v1.2.3\` or \`v1.2.3.4\`, optionally followed by a prerelease (\`-alpha.1\`) or build (\`+build\`) suffix. Publish a release with a valid tag and set the same value as \`version\` in \`pak.json\`. See the [README](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}#readme).
+
+            ---
+            *This issue is automatically managed by the [Verify Release Artifacts](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/workflows/verify_releases.yml) workflow.*
+            `;
+
+            if (existingIssue) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existingIssue.number,
+                body: body
+              });
+              console.log(`Updated issue #${existingIssue.number}`);
+            } else {
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: issueLabel
+                });
+              } catch {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: issueLabel,
+                  color: 'e11d48',
+                  description: 'Automated pak version verification'
+                });
+              }
+
+              const newIssue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: issueTitle,
+                body: body,
+                labels: [issueLabel]
+              });
+              console.log(`Created issue #${newIssue.data.number}`);
+            }
