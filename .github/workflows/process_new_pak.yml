@@ -112,6 +112,12 @@ jobs:
               return;
             }
 
+            const versionPattern = /^[vV]?\d+(\.\d+){2,3}(-[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?(\+[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?$/;
+            if (!versionPattern.test(pakJson.version)) {
+              core.setFailed(`Invalid version: ${pakJson.version}. Versions must look like v1.2.3 or v1.2.3.4, optionally with a prerelease (-alpha.1) or build (+build) suffix. See the README.`);
+              return;
+            }
+
             // Validate type
             const validTypes = ['TOOL', 'EMU'];
             if (!validTypes.includes(pakJson.type)) {
