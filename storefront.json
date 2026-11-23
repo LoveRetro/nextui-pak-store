@@ -7344,6 +7344,58 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "97vcuVlHAI",
+      "storefront_name": "UIPod",
+      "name": "UIPod",
+      "version": "v0.7.0",
+      "type": "TOOL",
+      "description": "An iPod-inspired offline, Navidrome \u0026 Jellyfin media player for the TrimUI Brick/Hammer with GPU UI and visualizations.",
+      "author": "famiclone",
+      "repo_url": "https://github.com/famiclone/UIPod",
+      "previous_repo_urls": null,
+      "release_filename": "UIPod.pak.zip",
+      "changelog": {
+        "v0.1.0": "- Native 1024x768 HiDPI pure-Rust UI (uipod-ui) with Geologica typography\n- English \u0026 Ukrainian localization\n- Navidrome / Subsonic music streaming, caching \u0026 offline downloads (/mnt/SDCARD/Media/Music/navidrome)\n- Jellyfin video (Movies, TV Shows) \u0026 audio streaming with automatic H.264/AAC transcoding and offline downloads (/mnt/SDCARD/Media/Videos/jellyfin)\n- Built-in AutoEQ headphone database \u0026 10-band parametric EQ\n- 100 Milkdrop GPU visualizers via projectM",
+        "v0.1.1": "- Added UIPod Classic Dark theme (#1E1B1C / #D6D8D5) in Settings -\u003e Display -\u003e Theme",
+        "v0.1.2": "- Monochrome album art now renders in 3 shades of the active theme palette with ordered Bayer dithering\n- Unified UIPod naming across Rust crates and C application modules",
+        "v0.1.3": "- Renamed packaged runtime directory and main executable inside UIPod.pak from trimpod to uipod (with automatic config path migration on launch)",
+        "v0.2.0": "- Unified multi-source library merging local folders, Navidrome, and Jellyfin without duplicates, plus Navidrome Favourites playlist and Offline Mode\n- Non-blocking persistent Downloads queue with header DONE/TOTAL progress and 3-by-3 sliding-window playback queue prefetching\n- Updated 4-shade iPod Mini theme system (bg, fg, fg1, fg2) with 4-shade monochrome album art and live HEX Customize Theme editor\n- Added 6 selectable screen transitions (Slide, Cover, Fade, Pixels, Blinds, Off) in Settings -\u003e Display\n- Redesigned GPU-rendered QWERTY on-screen keyboard and fixed folder back-navigation stability",
+        "v0.3.0": "- Added native Rust (.uipod) plugin runtime \u0026 SDK under Extras -\u003e Plugins with 5 games (Sound Racer, Tetris, Snake, Brick Breaker, 2048), Stopwatch, LCD Plasma, and Text Viewer\n- Replaced Milkdrop with a native 4-shade Bayer-dithered OpenGL ES audio visualizer engine (8 presets synced to speaker \u0026 Bluetooth output latency)\n- Added low-latency iPod Click Wheel menu navigation sound with a Menu Click toggle in Settings -\u003e Sound\n- Added interactive in-app manual in Settings -\u003e About (opened via Text Viewer) and streamlined Sound, Extras, and Settings menus\n- Removed legacy unused code and C++ projectM dependencies, reducing package size and memory footprint",
+        "v0.4.0": "- Added Settings -\u003e Sound -\u003e Effects with Ableton Texture-style granular Speed time-stretching (1/16x–1.5x) and Walkman Tape Mode emulation (Wow \u0026 Flutter, Hiss, Crinkles, Saturation, HF Roll-Off, Pause spin-down/up, and FF/Rewind motor sound)\n- Added Cassette Deck (spinning spools + 28-segment LED meter) and centered Analog Stereo VU Meter 4-shade GPU visualizers, tightened audio/vsync latency sync, and updated visualizer controls (Left/Right to skip or hold to seek, L2/R2 to switch presets)\n- Added Music Quiz local library game under Extras -\u003e Plugins and upgraded Sound Racer with .nsf / chiptune support and drift-free highway sync\n- Promoted Browse to the first Main Menu entry with persistent last-opened folder memory and file management context menu (Delete, Rename, Copy, Move, and Info via Text Viewer)",
+        "v0.5.0": "- Added native Android (arm64-v8a) port for retro handhelds with low-latency AAudio/SDL2 audio, hardware MediaPlayer video layer, physical gamepad + Menu \u0026 volume rocker mapping, and background playback service\n- Added dynamic native-HiDPI multi-screen responsive layout (16:9, 16:10, 3:2, 4:3, 1:1, and portrait) with zero-readback GPU rendering, GPU-to-GPU transitions, and aspect-adaptive 4-shade visualizers\n- Extended native plugin SDK (v6) with responsive full-screen canvas support for Text Viewer, Stopwatch, and Music Quiz while keeping arcade board games aspect-preserved at native sharpness\n- Upgraded interactive WebAssembly studio with TrimUI Brick \u0026 Android installation guides and expanded built-in Y2K / Jungle demo library",
+        "v0.6.0": "- Added pure-Rust Last.fm Scrobbling 2.0 client (Settings -\u003e Accounts -\u003e Last.fm) with on-screen QR Code Sign-In, real-time Now Playing updates, and persistent offline scrobble queue\n- Expanded Settings -\u003e Sound -\u003e Effects into a full stereo DSP suite with Reverb, Ping-Pong Delay, Chorus, Flanger, master Enable Effects switch, Now Playing quick toggle, and header FX indicator\n- Added GPU-rendered 10-band Graphic Equalizer screen with Preamp + vertical band faders and instant X-button Bypass\n- Added Video Settings menu in the video player (Hold A / MENU) with Aspect Mode (Fit / Crop / Stretch), multi-track Audio Track switching, and external .srt Subtitles\n- Synced 1:1 firmware parity in the WebAssembly browser simulator and automated parallel GitHub Actions release builds for TrimUI Brick (.pak), Android (arm64 APK), and GitHub Pages",
+        "v0.7.0": "- Added Dual-Deck Smart DJ Crossfade engine (Settings -\u003e Sound -\u003e Crossfade \u0026 Auto-DJ) with Classic, DJ Vinyl, and pitch-preserving WSOLA DJ Master Tempo modes, center-phrase Bass Swap, Filter Wash fallback, Album Gapless protection, Quick Cut on Next (R1), and live Now Playing telemetry pill\n- Added pure-Rust .nsf/.nsfe NES/Famicom chiptune engine (2A03 + VRC6 + MMC5) with Music/SFX subtrack browser, live Now Playing APU channel telemetry, interactive Hold A -\u003e Channels mute/solo mixer, Endless Loop toggle, and native tick-rate DJ tempo sync\n- Added pure-Rust .gsf/.minigsf GBA Sound Format and .mid/.midi/.kar/.rmi MIDI synthesis with built-in Mobile_0100_base.sf2 and custom .sf2 SoundFont selection (Settings -\u003e Library -\u003e SoundFont Folders \u0026 Hold A -\u003e SoundFont)\n- Added Pulsar Vanguard cosmic music-synced shooter under Extras -\u003e Plugins with 1/4 Beat Pulse, 1/1 Wave Cannon, 1/8 Focus Vulcan auto-fire, and on-beat Perfect Phase EMP dash\n- Eliminated audio dropouts when turning the TrimUI Brick display off/on and synced full 1:1 DJ Crossfade, chiptune/MIDI, and plugin parity in the WebAssembly simulator"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "screenshots/trimpod-amber-main-menu.jpg"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ]
 }
