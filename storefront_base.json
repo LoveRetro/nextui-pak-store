@@ -1222,6 +1222,14 @@
       "categories": [
         "ROM Management"
       ]
+    },
+    {
+      "id": "YRCOohif4P",
+      "storefront_name": "Game & Watch (MAME)",
+      "repo_url": "https://github.com/usasha/nextui-gw-mame-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
