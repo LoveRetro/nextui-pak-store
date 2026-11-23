@@ -7045,6 +7045,51 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "zy5udH7Q6w",
+      "storefront_name": "Twill Studio",
+      "name": "Twill Studio",
+      "version": "v0.6.0",
+      "type": "TOOL",
+      "description": "A piano-roll groovebox: write songs note by note with the d-pad on eight tracks, with twenty-four synth engines and a sampler, then arrange, mix and render them to WAV or stems. Songs and samples are kept in TwillStudio/ on the SD card, outside the pak.",
+      "author": "Liminal Kid",
+      "repo_url": "https://github.com/LiminalKid/TwillStudio",
+      "previous_repo_urls": null,
+      "release_filename": "TwillStudio.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "site/images/screens/arrangement-dark.png",
+        "site/images/screens/roll-dark.png",
+        "site/images/screens/sound-dark.png",
+        "site/images/screens/mixer-dark.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media",
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
