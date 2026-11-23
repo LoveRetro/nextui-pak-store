@@ -6945,6 +6945,53 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "PJPYWzed0C",
+      "storefront_name": "Speed – Wi-Fi Speed Test",
+      "name": "Speed",
+      "version": "v1.0.0",
+      "type": "TOOL",
+      "description": "How fast the Brick's Wi-Fi really is: download, upload and ping against the internet or a PC at home, a walk mode that shows where the Wi-Fi gives out, and a history. Drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
+      "author": "evolver79",
+      "repo_url": "https://github.com/evolver79/nextui-speed-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Speed.pak.zip",
+      "changelog": {
+        "v1.0.0": "First release. Download, upload and ping over four connections, against LibreSpeed's public servers (open source; the quickest that answers) or a PC at home (tools/speed-server.py), drawn second by second as a dot graph, with what the slowest second means for streaming films. Walk mode (with the home server) keeps downloading while you move around and shows where the Wi-Fi gives out and when the Brick switches mesh points. History keeps the last 100 runs."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/test-done.png",
+        ".github/resources/screenshots/test-download.png",
+        ".github/resources/screenshots/walk.png",
+        ".github/resources/screenshots/history.png",
+        ".github/resources/screenshots/test-done-slow.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
