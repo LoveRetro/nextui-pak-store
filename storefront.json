@@ -6855,6 +6855,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "YRCOohif4P",
+      "storefront_name": "Game \u0026 Watch (MAME)",
+      "name": "GW_MAME",
+      "version": "v0.1.0",
+      "type": "EMU",
+      "description": "Native standalone MAME 0.223 for Game \u0026 Watch on TrimUI Brick / Smart Pro (NextUI). G\u0026W-only build with performance patches; requires your own MAME romset zips in Roms/Game \u0026 Watch MAME (GW_MAME)/ and matching artwork zips in its .artwork/ subfolder.",
+      "author": "alex",
+      "repo_url": "https://github.com/usasha/nextui-gw-mame-pak",
+      "previous_repo_urls": null,
+      "release_filename": "GW_MAME.pakz",
+      "changelog": {
+        "v0.1.0": "Initial release: native G\u0026W MAME for NextUI, controls cfg + Internal view presets shipped in the pak"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
