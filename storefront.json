@@ -6992,6 +6992,59 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "WHz9ewsM6U",
+      "storefront_name": "ReminisLink",
+      "name": "ReminisLink",
+      "version": "v1.1.0",
+      "type": "TOOL",
+      "description": "Manage the ROMs, saves, save states, cheats and patches of your handheld from your iPhone, iPad or Mac, over your local Wi-Fi. Bring your own files. Tested on the TrimUI Brick; experimental on the TrimUI Smart Pro S, Anbernic H700 handhelds and Miyoo Flip (testers welcome).",
+      "author": "Thomas Fournier",
+      "repo_url": "https://github.com/tfournier/ReminisLink",
+      "previous_repo_urls": null,
+      "release_filename": "ReminisLink.pak.zip",
+      "changelog": {
+        "v1.0.0": "First release:\n- Pair your iPhone with a QR code (no PIN). The connection is encrypted (HTTPS, pinned to the public-key fingerprint in the QR code); every request except the presence check and the pairing itself is signed. Several devices can be paired; your Apple devices share the pairing through iCloud Keychain.\n- Pairings made with earlier test builds are deleted at the first launch: pair again by scanning the QR code (Settings \u003e Pair a New Device).\n- From the ReminisLink app: browse every game on the SD card, send games and box art, download any file of a game, back up and restore saves, lock save states, edit cheats and apply IPS, BPS and UPS patches.\n- Manage the tools and emulators installed on the handheld (install from a zip, replace, remove) and browse the SD card (read only).\n- The app updates live when the SD card changes and goes back to its list when you close ReminisLink.\n- Nothing is deleted without a copy: deleted and replaced files go to a trash, purged at launch after 30 days of counted age.\n- The handheld never connects to the internet.\n- Interface in English and French.",
+        "v1.0.1": "Maintenance release:\n- Updated libraries (DNS for Bonjour, image) with their security fixes; the handheld behaves the same.\n- The clock file of a save (.rtc) is documented and tested with every save operation: backed up and restored with the save, kept when a save is replaced, and moved to the trash when the game is deleted.",
+        "v1.0.2": "Fixes and small improvements:\n- Installing from the Pak Store works: the release zip now holds the pak at its root (it was nested one folder too deep and did not start). Installing by hand: unzip, then copy the ReminisLink.pak folder into Tools/tg5040.\n- French interface: a non-breaking space before colons, question marks and percent signs, as French typography wants.\n- The presence check documents the oldest app this pak supports, so the app can say whether the app or ReminisLink on the handheld needs an update.",
+        "v1.1.0": "New:\n- Screenshots: the app lists the screenshots taken on the handheld (NextUI: the Screenshots folder; Knulli: /userdata/screenshots), with a preview of each, downloads them and moves them to the trash, from where they can be restored.\n- Restore from the trash: from the app, a deleted game comes back with its save, clock file, save states, cheats and box art, and a deleted or replaced file or app comes back too. A file already on the SD card is never replaced (the app offers a free name instead), except a replaced save, which can take the place of the current save once that one is kept (in the trash, or as a backup copy); a restored app goes through the same checks as an installation.\n- Files of the SD card: from the app, add files to a folder, create folders and move files or folders to the trash (restorable). Nothing is ever replaced; the folders the system needs (NextUI: the hidden folders at the root of the card; Knulli: /userdata/system), the main folders and ReminisLink itself are protected.\n- Rename a game from the app: the game file and everything named after it (save, clock file, save states and their thumbnails, cheats, box art, backups and locks) in one step that a power cut cannot leave half done; a name already taken is refused.\n- The game sheet gives the number of cheats.\n- Shortcuts made by the Shortcuts pak no longer show up in the library: a tool shortcut is not a system, and a game shortcut is neither a game nor a system (the original game stays listed).\nNew handhelds (experimental):\n- Experimental and looking for testers: TrimUI Smart Pro S (tg5050), Anbernic H700 handhelds (h700) and Miyoo Flip (my355) with NextUI. Not tested on these devices yet: please report how it goes.\n- Knulli (experimental, looking for testers too): ReminisLink.knulli.zip is attached to the release, next to ReminisLink.pak.zip; unzip it into /userdata/roms/tools/."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "docs/screenshots/pairing.png",
+        "docs/screenshots/transfer.png",
+        "docs/screenshots/settings.png",
+        "docs/screenshots/language.png"
+      ],
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "h700",
+        "my355"
+      ],
+      "categories": [
+        "ROM Management",
+        "File Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
