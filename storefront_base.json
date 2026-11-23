@@ -1238,6 +1238,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "PJPYWzed0C",
+      "storefront_name": "Speed – Wi-Fi Speed Test",
+      "repo_url": "https://github.com/evolver79/nextui-speed-pak",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
