@@ -6860,15 +6860,16 @@
       "id": "YRCOohif4P",
       "storefront_name": "Game \u0026 Watch (MAME)",
       "name": "GW_MAME",
-      "version": "v0.1.0",
+      "version": "v0.2.0",
       "type": "EMU",
-      "description": "Native standalone MAME 0.223 for Game \u0026 Watch on TrimUI Brick / Smart Pro (NextUI). G\u0026W-only build with performance patches; requires your own MAME romset zips in Roms/Game \u0026 Watch MAME (GW_MAME)/ and matching artwork zips in its .artwork/ subfolder.",
+      "description": "Native standalone MAME 0.223 for Game \u0026 Watch on TrimUI Brick / Smart Pro (NextUI). G\u0026W-only build with performance patches; bundled 56-game NextUI menu artwork (.media) and readable display names (map.txt). Requires your own MAME romset zips in Roms/Game \u0026 Watch MAME (GW_MAME)/ and matching MAME case-artwork zips in its .artwork/ subfolder.",
       "author": "alex",
       "repo_url": "https://github.com/usasha/nextui-gw-mame-pak",
       "previous_repo_urls": null,
       "release_filename": "GW_MAME.pakz",
       "changelog": {
-        "v0.1.0": "Initial release: native G\u0026W MAME for NextUI, controls cfg + Internal view presets shipped in the pak"
+        "v0.1.0": "Initial release: native G\u0026W MAME for NextUI, controls cfg + Internal view presets shipped in the pak",
+        "v0.2.0": "Bundle 56 NextUI menu covers (.media) and map.txt display names; keep MAME case artwork user-supplied"
       },
       "previous_names": null,
       "scripts": {
@@ -7349,7 +7350,7 @@
       "id": "97vcuVlHAI",
       "storefront_name": "UIPod",
       "name": "UIPod",
-      "version": "v0.7.0",
+      "version": "v0.8.1",
       "type": "TOOL",
       "description": "An iPod-inspired offline, Navidrome \u0026 Jellyfin media player for the TrimUI Brick/Hammer with GPU UI and visualizations.",
       "author": "famiclone",
@@ -7366,7 +7367,9 @@
         "v0.4.0": "- Added Settings -\u003e Sound -\u003e Effects with Ableton Texture-style granular Speed time-stretching (1/16x–1.5x) and Walkman Tape Mode emulation (Wow \u0026 Flutter, Hiss, Crinkles, Saturation, HF Roll-Off, Pause spin-down/up, and FF/Rewind motor sound)\n- Added Cassette Deck (spinning spools + 28-segment LED meter) and centered Analog Stereo VU Meter 4-shade GPU visualizers, tightened audio/vsync latency sync, and updated visualizer controls (Left/Right to skip or hold to seek, L2/R2 to switch presets)\n- Added Music Quiz local library game under Extras -\u003e Plugins and upgraded Sound Racer with .nsf / chiptune support and drift-free highway sync\n- Promoted Browse to the first Main Menu entry with persistent last-opened folder memory and file management context menu (Delete, Rename, Copy, Move, and Info via Text Viewer)",
         "v0.5.0": "- Added native Android (arm64-v8a) port for retro handhelds with low-latency AAudio/SDL2 audio, hardware MediaPlayer video layer, physical gamepad + Menu \u0026 volume rocker mapping, and background playback service\n- Added dynamic native-HiDPI multi-screen responsive layout (16:9, 16:10, 3:2, 4:3, 1:1, and portrait) with zero-readback GPU rendering, GPU-to-GPU transitions, and aspect-adaptive 4-shade visualizers\n- Extended native plugin SDK (v6) with responsive full-screen canvas support for Text Viewer, Stopwatch, and Music Quiz while keeping arcade board games aspect-preserved at native sharpness\n- Upgraded interactive WebAssembly studio with TrimUI Brick \u0026 Android installation guides and expanded built-in Y2K / Jungle demo library",
         "v0.6.0": "- Added pure-Rust Last.fm Scrobbling 2.0 client (Settings -\u003e Accounts -\u003e Last.fm) with on-screen QR Code Sign-In, real-time Now Playing updates, and persistent offline scrobble queue\n- Expanded Settings -\u003e Sound -\u003e Effects into a full stereo DSP suite with Reverb, Ping-Pong Delay, Chorus, Flanger, master Enable Effects switch, Now Playing quick toggle, and header FX indicator\n- Added GPU-rendered 10-band Graphic Equalizer screen with Preamp + vertical band faders and instant X-button Bypass\n- Added Video Settings menu in the video player (Hold A / MENU) with Aspect Mode (Fit / Crop / Stretch), multi-track Audio Track switching, and external .srt Subtitles\n- Synced 1:1 firmware parity in the WebAssembly browser simulator and automated parallel GitHub Actions release builds for TrimUI Brick (.pak), Android (arm64 APK), and GitHub Pages",
-        "v0.7.0": "- Added Dual-Deck Smart DJ Crossfade engine (Settings -\u003e Sound -\u003e Crossfade \u0026 Auto-DJ) with Classic, DJ Vinyl, and pitch-preserving WSOLA DJ Master Tempo modes, center-phrase Bass Swap, Filter Wash fallback, Album Gapless protection, Quick Cut on Next (R1), and live Now Playing telemetry pill\n- Added pure-Rust .nsf/.nsfe NES/Famicom chiptune engine (2A03 + VRC6 + MMC5) with Music/SFX subtrack browser, live Now Playing APU channel telemetry, interactive Hold A -\u003e Channels mute/solo mixer, Endless Loop toggle, and native tick-rate DJ tempo sync\n- Added pure-Rust .gsf/.minigsf GBA Sound Format and .mid/.midi/.kar/.rmi MIDI synthesis with built-in Mobile_0100_base.sf2 and custom .sf2 SoundFont selection (Settings -\u003e Library -\u003e SoundFont Folders \u0026 Hold A -\u003e SoundFont)\n- Added Pulsar Vanguard cosmic music-synced shooter under Extras -\u003e Plugins with 1/4 Beat Pulse, 1/1 Wave Cannon, 1/8 Focus Vulcan auto-fire, and on-beat Perfect Phase EMP dash\n- Eliminated audio dropouts when turning the TrimUI Brick display off/on and synced full 1:1 DJ Crossfade, chiptune/MIDI, and plugin parity in the WebAssembly simulator"
+        "v0.7.0": "- Added Dual-Deck Smart DJ Crossfade engine (Settings -\u003e Sound -\u003e Crossfade \u0026 Auto-DJ) with Classic, DJ Vinyl, and pitch-preserving WSOLA DJ Master Tempo modes, center-phrase Bass Swap, Filter Wash fallback, Album Gapless protection, Quick Cut on Next (R1), and live Now Playing telemetry pill\n- Added pure-Rust .nsf/.nsfe NES/Famicom chiptune engine (2A03 + VRC6 + MMC5) with Music/SFX subtrack browser, live Now Playing APU channel telemetry, interactive Hold A -\u003e Channels mute/solo mixer, Endless Loop toggle, and native tick-rate DJ tempo sync\n- Added pure-Rust .gsf/.minigsf GBA Sound Format and .mid/.midi/.kar/.rmi MIDI synthesis with built-in Mobile_0100_base.sf2 and custom .sf2 SoundFont selection (Settings -\u003e Library -\u003e SoundFont Folders \u0026 Hold A -\u003e SoundFont)\n- Added Pulsar Vanguard cosmic music-synced shooter under Extras -\u003e Plugins with 1/4 Beat Pulse, 1/1 Wave Cannon, 1/8 Focus Vulcan auto-fire, and on-beat Perfect Phase EMP dash\n- Eliminated audio dropouts when turning the TrimUI Brick display off/on and synced full 1:1 DJ Crossfade, chiptune/MIDI, and plugin parity in the WebAssembly simulator",
+        "v0.8.0": "- Added pure-Rust ListenBrainz scrobbling client (Settings -\u003e Accounts -\u003e ListenBrainz) with User Token validation, custom Server URL support for self-hosted Maloja/Koito instances, live Now Playing status, and local/chiptune/streaming scrobbling\n- Added independent persistent offline scrobble queue (listenbrainz_queue.tsv) with batched import uploads, exponential retry backoff, and automatic malformed-record isolation so Last.fm and ListenBrainz scrobble concurrently without blocking each other\n- Updated Settings -\u003e Accounts with live right-aligned connection status summaries (@username, Signed in, Invalid token, Off) for both Last.fm and ListenBrainz, plus full English/Ukrainian localization and 1:1 WebAssembly simulator parity",
+        "v0.8.1": "- Added screen-off Pocket Blind Controls when unlocked: short Power press toggles Screen On / Off while keeping first-press transport (A / START play-pause, Left/Right \u0026 L1/R1 track skip or hold to smooth-seek, L2/R2 chapter or ±15s seek) and VOL +/- active without waking the display or clicking invisible menus\n- Redesigned Side Switch into a full pocket Keylock with 3-second Locked Peek: blocks all buttons including hardware volume and headset remotes, clears held/repeat state on lock edge, and ignores accidental \u003e= 1s Power holds while locked\n- Added GPU keylock badge overlay on headerless screens (Now Playing Large Art, Keyboard, full-screen plugins), suppressed background GPU/popup redraws while the panel is dark, and synced 1:1 keylock parity in the WebAssembly simulator"
       },
       "previous_names": null,
       "scripts": {
@@ -7385,7 +7388,7 @@
       },
       "update_ignore": null,
       "screenshots": [
-        "screenshots/trimpod-amber-main-menu.jpg"
+        "screenshots/uipod-main-menu.jpg"
       ],
       "platforms": [
         "tg5040"
