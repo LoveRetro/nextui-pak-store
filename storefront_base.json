@@ -1255,6 +1255,15 @@
         "ROM Management",
         "File Management"
       ]
+    },
+    {
+      "id": "zy5udH7Q6w",
+      "storefront_name": "Twill Studio",
+      "repo_url": "https://github.com/LiminalKid/TwillStudio",
+      "categories": [
+        "Media",
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
