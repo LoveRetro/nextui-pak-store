@@ -1230,6 +1230,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "QqMGqha64B",
+      "storefront_name": "Kino – Video Player for SD Card and Jellyfin",
+      "repo_url": "https://github.com/evolver79/nextui-kino-pak",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
