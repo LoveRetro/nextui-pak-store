@@ -1,11 +1,11 @@
 package state
 
 import (
+	"cmp"
 	"context"
 	"database/sql"
 	"os"
 	"slices"
-	"strconv"
 	"strings"
 
 	"github.com/BrandonKowalski/gabagool/v2/pkg/gabagool"
@@ -343,34 +343,88 @@ func HasUpdate(installed string, latest string) bool {
 }
 
 func compareVersions(a, b string) int {
-	a = strings.TrimPrefix(a, "v")
-	b = strings.TrimPrefix(b, "v")
+	coreA, preA := parseVersion(a)
+	coreB, preB := parseVersion(b)
 
-	partsA := strings.Split(a, ".")
-	partsB := strings.Split(b, ".")
-
-	maxLen := len(partsA)
-	if len(partsB) > maxLen {
-		maxLen = len(partsB)
-	}
-
-	for i := 0; i < maxLen; i++ {
-		var numA, numB int
-
-		if i < len(partsA) {
-			numA, _ = strconv.Atoi(partsA[i])
+	for i := range max(len(coreA), len(coreB)) {
+		var partA, partB string
+		if i < len(coreA) {
+			partA = coreA[i]
 		}
-		if i < len(partsB) {
-			numB, _ = strconv.Atoi(partsB[i])
+		if i < len(coreB) {
+			partB = coreB[i]
 		}
-
-		if numA < numB {
-			return -1
-		}
-		if numA > numB {
-			return 1
+		if result := compareNumeric(partA, partB); result != 0 {
+			return result
 		}
 	}
 
-	return 0
+	switch {
+	case len(preA) == 0 && len(preB) == 0:
+		return 0
+	case len(preA) == 0:
+		return 1
+	case len(preB) == 0:
+		return -1
+	}
+
+	for i := range min(len(preA), len(preB)) {
+		if result := comparePrereleaseIdentifier(preA[i], preB[i]); result != 0 {
+			return result
+		}
+	}
+	return cmp.Compare(len(preA), len(preB))
+}
+
+func parseVersion(version string) ([]string, []string) {
+	version = strings.TrimSpace(version)
+	version = strings.TrimPrefix(version, "v")
+	version = strings.TrimPrefix(version, "V")
+	version, _, _ = strings.Cut(version, "+")
+	coreText, preText, _ := strings.Cut(version, "-")
+
+	core := strings.Split(coreText, ".")
+	for i, part := range core {
+		core[i] = leadingDigits(part)
+	}
+
+	var pre []string
+	if preText != "" {
+		pre = strings.Split(preText, ".")
+	}
+	return core, pre
+}
+
+func leadingDigits(s string) string {
+	end := strings.IndexFunc(s, func(r rune) bool { return r < '0' || r > '9' })
+	if end < 0 {
+		return s
+	}
+	return s[:end]
+}
+
+func isNumeric(s string) bool {
+	return s != "" && leadingDigits(s) == s
+}
+
+func compareNumeric(a, b string) int {
+	a = strings.TrimLeft(a, "0")
+	b = strings.TrimLeft(b, "0")
+	if result := cmp.Compare(len(a), len(b)); result != 0 {
+		return result
+	}
+	return strings.Compare(a, b)
+}
+
+func comparePrereleaseIdentifier(a, b string) int {
+	numericA, numericB := isNumeric(a), isNumeric(b)
+	switch {
+	case numericA && numericB:
+		return compareNumeric(a, b)
+	case numericA:
+		return -1
+	case numericB:
+		return 1
+	}
+	return strings.Compare(a, b)
 }

@@ -50,7 +50,11 @@ Awesome! To get added to Pak Store you have to complete the following steps:
 3. Ensure your release is tagged properly and matches the `version` field in `pak.json`.
     - The tag should be in the format `vX.X.X` where `X` is the major, minor, and patch version. For more details for
       using SemVer, please see the [SemVer Documentation](https://semver.org/).
-    - 4-digit versions (`vX.X.X.X`) are also supported, but 3-digit is preferred.
+    - Prerelease suffixes such as `-alpha` or `-beta.1` are supported and rank below the same version without a suffix.
+    - 4-digit versions (`vX.X.X.X`) are also supported, but 3-digit is preferred. All four numbers are compared before
+      any prerelease suffix.
+    - Versions that do not match `vX.X.X` or `vX.X.X.X`, optionally followed by a prerelease (`-alpha.1`) or build
+      (`+build`) suffix, are rejected on submission.
     - GitHub releases have both tags and titles. The title does not matter in the context of the Pak Store but you
       should have it match the tag and pak.json version.
 4. Make sure the file name of the release artifact matches what is in `pak.json`.
