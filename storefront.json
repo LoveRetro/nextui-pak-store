@@ -7099,6 +7099,56 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "FRMbKLMO3V",
+      "storefront_name": "Musicdisk – Module Player",
+      "name": "Musicdisk",
+      "version": "v0.1.0",
+      "type": "TOOL",
+      "description": "MOD, S3M, XM and IT player in the Dot look: plays your modules from the SD card, with the pattern, real per-channel scopes and VU.",
+      "author": "evolver79",
+      "repo_url": "https://github.com/evolver79/nextui-musicdisk-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Musicdisk.pak.zip",
+      "changelog": {
+        "v0.1.0": "First release: plays MOD, S3M, XM and IT modules from the SD card, with the pattern, real per-channel scopes and VU meters, an Info screen, shuffle, and the Brick's lights following the music. Drawn in Dot, the shared look of Kino, Tuner, Musicdisk and Speed."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "docs/screens/now.png",
+        "docs/screens/browse.png",
+        "docs/screens/pattern.png",
+        "docs/screens/scopes.png",
+        "docs/screens/info.png",
+        "docs/screens/settings.png",
+        "docs/screens/help.png",
+        "docs/screens/demo-1.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
