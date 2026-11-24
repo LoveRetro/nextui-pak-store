@@ -1280,6 +1280,14 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "T2jefMDoZR",
+      "storefront_name": "Pocket Controller",
+      "repo_url": "https://github.com/fnune/pocket-controller",
+      "categories": [
+        "Miscellaneous Tools"
+      ]
     }
   ],
   "experimental_paks": [
