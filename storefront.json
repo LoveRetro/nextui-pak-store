@@ -6210,7 +6210,7 @@
       "id": "latdyBVd4L",
       "storefront_name": "Dreamcast (Deadcast)",
       "name": "DC-DEADCAST",
-      "version": "1.2.6",
+      "version": "1.2.8",
       "type": "EMU",
       "description": "A performance-focused Dreamcast emulator with recomp modules.",
       "author": "tyrannotorus",
@@ -6225,7 +6225,9 @@
         "1.2.3": "- Performance Improvement by moving texture decoding and vertex copies off the render thread",
         "1.2.4": "- Added Per-game settings\n- Intrepid Izzy fix",
         "1.2.5": "- Faster CPU emulation in all games\n- Faster disc boot\n- Fixed distant textures blanking\n- Fixed save states failing to load",
-        "1.2.6": "- Increased performance"
+        "1.2.6": "- Increased performance",
+        "1.2.7": "- Claude is an idiot. The dev made me write this.",
+        "1.2.8": "- Performance improvements (Windows CE games, code generation, dispatch, vertex submission, state loads)"
       },
       "previous_names": null,
       "scripts": {
@@ -6355,7 +6357,7 @@
       "id": "Dd5GYkb1aF",
       "storefront_name": "PSP (Deadstation Portable)",
       "name": "PSP-DEADSTATION-PORTABLE",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "type": "EMU",
       "description": "A performance-focused PSP emulator supporting local multiplayer and downloadable recomp modules.",
       "author": "tyrannotorus",
@@ -6367,7 +6369,8 @@
         "1.1.0": "- Faster graphics: quicker vertex decoding and GE command processing.\n- Much faster game starts: compiled shaders kept per game.\n- Consistent emulation: the same game timing on every run.\n- A one-time notice about first-run shader stutter.",
         "1.2.0": "- Faster graphics / vector math.\n- Menu buttons no longer reach the game.\n- Fixed a bug that could crash a game in rare cases.",
         "1.3.0": "- Performance improvements.",
-        "1.3.1": "- Small performance improvements."
+        "1.3.1": "- Small performance improvements.",
+        "1.3.2": "- Fixed volume issue"
       },
       "previous_names": null,
       "scripts": {
