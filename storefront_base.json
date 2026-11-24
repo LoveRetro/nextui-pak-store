@@ -1331,6 +1331,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "xGfTkw6fqB",
+      "storefront_name": "Kyaraben",
+      "repo_url": "https://github.com/fnune/kyaraben",
+      "categories": [
+        "ROM Management"
+      ]
     }
   ]
 }
