@@ -1272,6 +1272,14 @@
       "categories": [
         "Media"
       ]
+    },
+    {
+      "id": "IIzDaQbr9D",
+      "storefront_name": "Gamate",
+      "repo_url": "https://github.com/evolver79/nextui-gamate-pak",
+      "categories": [
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
