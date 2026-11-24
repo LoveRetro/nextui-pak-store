@@ -5799,9 +5799,9 @@
       "id": "6N0NccoR38",
       "storefront_name": "Boombrick",
       "name": "Boombrick",
-      "version": "v0.5.3",
+      "version": "v0.6.0",
       "type": "TOOL",
-      "description": "Your music, Spotify and YouTube Music in one player for the TrimUI Brick, with album art, synced lyrics and music that keeps playing while you game.\n\nFeatures:\n- Your music: MP3, FLAC, Opus and M4A (AAC) from the SD card, gapless, with ReplayGain levelling\n- Browse by album, artist, song or genre; the queue has shuffle and repeat and is kept between launches\n- Covers from the files, folder pictures or the Cover Art Archive, with the screen's colours taken from the album playing\n- Synced lyrics from the files, .lrc files or LRCLIB, with the line being sung highlighted\n- YouTube Music: search, browse albums and artists, and download songs as tagged Opus files with covers and lyrics; a song still downloading plays as soon as it lands\n- Spotify (Premium): sign in with a code on your phone, then play Liked Songs and your playlists at 96, 160 or 320 kbps\n- Spotify import: download your playlists' songs, or a single song, from YouTube Music to keep them offline, matched by ISRC or by title, artist and length\n- Play in background from the quick menu: the music goes on while you play a game\n- Sleep timer: 15 to 60 minutes, or the end of the track or album, with a fade\n- Screen off with Power, with skipping and pausing still working\n- Titles and lyrics in every main script, Japanese, Chinese, Korean, Arabic, Hebrew, Thai and Hindi among them, and emoji; each script's font is downloaded the first time it's needed\n- Switch Spotify or YouTube off in Settings if you don't use them\n- Updates for Boombrick and its downloader from Settings\n\nWi-Fi is used for Spotify, YouTube Music, covers, lyrics, fonts and updates; the music on the card plays without it. Your library and settings are kept in .userdata/tg5040/Boombrick and downloads in Music/Boombrick, so updates never touch them.",
+      "description": "Your music, Spotify and YouTube Music in one player for the TrimUI Brick, with album art, synced lyrics and music that keeps playing while you game.\n\nFeatures:\n- Your music: MP3, FLAC, Opus and M4A (AAC) from the SD card, gapless, with ReplayGain levelling\n- Browse by album, artist, song or genre; the queue has shuffle and repeat and is kept between launches\n- Covers from the files, folder pictures or the Cover Art Archive, with the screen's colours taken from the album playing\n- Synced lyrics from the files, .lrc files or LRCLIB, with the line being sung highlighted\n- YouTube Music: search, browse albums and artists, and download songs as tagged Opus files with covers and lyrics; a song still downloading plays as soon as it lands\n- Spotify (Premium): sign in with a code on your phone, then play Liked Songs and your playlists at 96, 160 or 320 kbps\n- Spotify import: download your playlists' songs, or a single song, from YouTube Music to keep them offline, matched by ISRC or by title, artist and length\n- Internet radio: browse and search stations from Radio Browser, save your favourites, and see the song a station is playing\n- Play in background from the quick menu: the music goes on while you play a game\n- Sleep timer: 15 to 60 minutes, or the end of the track or album, with a fade\n- Screen off with Power, with skipping and pausing still working\n- Titles and lyrics in every main script, Japanese, Chinese, Korean, Arabic, Hebrew, Thai and Hindi among them, and emoji; each script's font is downloaded the first time it's needed\n- Switch Spotify, YouTube or Radio off in Settings if you don't use them\n- Updates for Boombrick and its downloader from Settings\n\nWi-Fi is used for Spotify, YouTube Music, radio, covers, lyrics, fonts and updates; the music on the card plays without it. Your library and settings are kept in .userdata/tg5040/Boombrick and downloads in Music/Boombrick, so updates never touch them.",
       "author": "ujjwal313",
       "repo_url": "https://github.com/ujjwal313/boombrick",
       "previous_repo_urls": null,
@@ -5814,7 +5814,8 @@
         "v0.5.0": "Titles and lyrics in Japanese, Chinese, Korean, Arabic, Hindi and the other main scripts, and emoji, with each script's font downloaded the first time it's needed. L2 and R2 rewind and fast-forward. Albums on more than one disc stay together and in order.",
         "v0.5.1": "YouTube Music search answers YouTube's question about cookies in Europe, the UK and Switzerland, where it could show \"No results\" for everything. Spotify songs on a free account are skipped with a message instead of playing nothing.",
         "v0.5.2": "Bluetooth headphones such as AirPods, which could play nothing, now play. Quitting no longer freezes the Brick when the sound card stops answering.",
-        "v0.5.3": "Switch Spotify or YouTube off in Settings if you don't use them. Import a single song from a Spotify playlist. The tab row keeps L1 and R1 at the edges and wraps around. Spotify songs of an account Spotify won't stream to are skipped with a message."
+        "v0.5.3": "Switch Spotify or YouTube off in Settings if you don't use them. Import a single song from a Spotify playlist. The tab row keeps L1 and R1 at the edges and wraps around. Spotify songs of an account Spotify won't stream to are skipped with a message.",
+        "v0.6.0": "Internet radio: a new Radio tab plays stations from Radio Browser. Browse the top stations, by country or by genre, search by name, and save favourites, which also get a row on Home. Now Playing shows the station's logo and the song it is playing, and a dropped stream connects again by itself. Radio can be switched off in Settings."
       },
       "previous_names": null,
       "scripts": {
@@ -6711,7 +6712,7 @@
       "id": "5J5dEkJakZ",
       "storefront_name": "Tuner",
       "name": "Tuner",
-      "version": "v1.3.1",
+      "version": "v1.4.0",
       "type": "TOOL",
       "description": "Free TV channels for the Brick: Pluto TV, Samsung TV Plus and iptv-org channels plus your own M3U playlists and Xtream accounts, a TV guide, favourites, search and hardware video decoding, drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
       "author": "evolver79",
@@ -6723,7 +6724,9 @@
         "v1.1.0": "Two looks, redone: VCR (an on-screen display over the picture, tape winding and tracking noise) and Teletext (pages that are searched for and arrive, a block-graphics masthead, a listings guide). Hardware video decoding (H.264/H.265) on the Brick's video engine. Stats for nerds (SELECT). Audio tracks: the one in your language, LEFT/RIGHT to switch, remembered per channel. Max quality also picks the stream's quality. Big provider guides read correctly and kept for a day. START or B on the front page: back to the channel. The volume shown when it changes. Smoother 50 fps channels, and fixes.",
         "v1.2.0": "New look: Dot, the shared look of Kino, Musicdisk and Tuner. Menus and lists are cards on a grey ground, or over the live channel, which tunes in behind the menu as you move. A channel banner with what's on now and next, and the tuning screens and stats for nerds in the same look. The search keyboard fills its card. VCR, Teletext, the Theme setting and L2/R2 are gone; snow and the test card stay.",
         "v1.3.0": "Crop black borders (Settings, or L2/R2 while watching): a 4:3 show or film inside a 16:9 channel fills the screen instead of sitting in black on all four sides. It waits a few seconds before zooming in, so a dark scene doesn't set it off, and zooms back out at once for a full-width ad. Buffering... shows when the picture freezes because the stream ran dry, and Reconnecting (1/3) instead of Loading while a lost channel is retried. Thanks to Travis McDevitt for the idea.",
-        "v1.3.1": "Crop black borders no longer zooms in on a dark frame with a logo or titles in the middle (a studio or channel ident): bars thicker than a fifth of the picture are ignored, real ones never are."
+        "v1.3.1": "Crop black borders no longer zooms in on a dark frame with a logo or titles in the middle (a studio or channel ident): bars thicker than a fifth of the picture are ignored, real ones never are.",
+        "v1.3.2": "No Wi-Fi: Tuner says so on the loading screen and waits, then loads by itself once the Wi-Fi is back. No channel tries to tune without it, and No Wi-Fi shows instead of Buffering when the Wi-Fi drops while you watch.",
+        "v1.4.0": "New look, sized for the Brick's small screen: bigger text, dark glass cards on a teal ground, and the buttons in a bar along the bottom. Bigger channel logos, a cyan dot for live, and the No Wi-Fi and No signal messages in full instead of cut off."
       },
       "previous_names": null,
       "scripts": {
@@ -6902,7 +6905,7 @@
       "id": "QqMGqha64B",
       "storefront_name": "Kino – Video Player for SD Card and Jellyfin",
       "name": "Kino",
-      "version": "v0.9.0",
+      "version": "v1.0.0",
       "type": "TOOL",
       "description": "Video player for the Brick: films and series from the SD card (it starts in Videos) or a Jellyfin server at home, with hardware decoding for H.264 and HEVC, resume, subtitles, picture filters and a cover grid. Drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
       "author": "evolver79",
@@ -6910,7 +6913,11 @@
       "previous_repo_urls": null,
       "release_filename": "Kino.pak.zip",
       "changelog": {
-        "v0.9.0": "First release. Films and series from the SD card, starting in Videos with B going up to the whole card (rows, or covers for a folder of films) or from Jellyfin (found on the network, Quick Connect, Continue watching and Next up, a cover grid; the server converts what the Brick can't play). H.264 and 8-bit HEVC up to 1080p on the Brick's video engine. Resume where you stopped. Subtitles from the film, a file next to it or Jellyfin, in Noto Sans on a black box, in four sizes. Picture filters, aspect (with No bars: the film's own black bars cut away, the subtitles moved up into the picture), brightness that keeps black black, contrast, deinterlacing, and the Brick's lights following the picture. Streaming over Wi-Fi: a quality setting, a buffering pill, reconnects when the stream breaks off, and a warning when the Wi-Fi can't keep up. A log to send in when something goes wrong (Jellyfin keys left out)."
+        "v0.10.0": "New look, sized for the Brick's small screen: bigger text, dark glass cards on a midnight-blue ground, and the buttons in a bar along the bottom. In Jellyfin, the cover you're on fills the background, blurred. Options and the buttons help are in tabs (L1/R1). Long lists show where you are (1–5 of 9) with a scroll track, and the film icon is gone from lists of films so titles fit. Subtitles move above the controls while they're showing.",
+        "v0.10.1": "Subtitles in your language: Prefer and Then choose from about 45 languages, and Kino picks the matching track itself, also from Jellyfin, where a track named \"English\" didn't count as English. Changing them while a film plays switches straight away, and a track you choose yourself is kept. Subtitles keep their shape with 4:3, 16:9 and Stretch, and stay sharp on videos smaller than the screen.",
+        "v0.9.0": "First release. Films and series from the SD card, starting in Videos with B going up to the whole card (rows, or covers for a folder of films) or from Jellyfin (found on the network, Quick Connect, Continue watching and Next up, a cover grid; the server converts what the Brick can't play). H.264 and 8-bit HEVC up to 1080p on the Brick's video engine. Resume where you stopped. Subtitles from the film, a file next to it or Jellyfin, in Noto Sans on a black box, in four sizes. Picture filters, aspect (with No bars: the film's own black bars cut away, the subtitles moved up into the picture), brightness that keeps black black, contrast, deinterlacing, and the Brick's lights following the picture. Streaming over Wi-Fi: a quality setting, a buffering pill, reconnects when the stream breaks off, and a warning when the Wi-Fi can't keep up. A log to send in when something goes wrong (Jellyfin keys left out).",
+        "v0.9.1": "Jellyfin with no Wi-Fi: the Jellyfin row is greyed out and says NO WI-FI, with how to turn it on, instead of opening and failing. It comes back on by itself the moment the Wi-Fi is back and has an address.",
+        "v1.0.0": "Kino 1.0: Up next plays the next episode after a short countdown, from the SD card or Jellyfin (A now, B not now; off in Options). Skip intro, recap and credits on Jellyfin episodes with X, where the server has marked them. A new Audio tab picks the sound track, and Prefer and Then choose the sound language the same way as subtitles, also when Jellyfin converts the film."
       },
       "previous_names": null,
       "scripts": {
@@ -6951,7 +6958,7 @@
       "id": "PJPYWzed0C",
       "storefront_name": "Speed – Wi-Fi Speed Test",
       "name": "Speed",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "TOOL",
       "description": "How fast the Brick's Wi-Fi really is: download, upload and ping against the internet or a PC at home, a walk mode that shows where the Wi-Fi gives out, and a history. Drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
       "author": "evolver79",
@@ -6959,7 +6966,8 @@
       "previous_repo_urls": null,
       "release_filename": "Speed.pak.zip",
       "changelog": {
-        "v1.0.0": "First release. Download, upload and ping over four connections, against LibreSpeed's public servers (open source; the quickest that answers) or a PC at home (tools/speed-server.py), drawn second by second as a dot graph, with what the slowest second means for streaming films. Walk mode (with the home server) keeps downloading while you move around and shows where the Wi-Fi gives out and when the Brick switches mesh points. History keeps the last 100 runs."
+        "v1.0.0": "First release. Download, upload and ping over four connections, against LibreSpeed's public servers (open source; the quickest that answers) or a PC at home (tools/speed-server.py), drawn second by second as a dot graph, with what the slowest second means for streaming films. Walk mode (with the home server) keeps downloading while you move around and shows where the Wi-Fi gives out and when the Brick switches mesh points. History keeps the last 100 runs.",
+        "v1.1.0": "New look, sized for the Brick's small screen: bigger text, dark glass cards on a violet ground, and the buttons in a bar along the bottom. The result screen is laid out for the bigger text, history shows five runs a page, and upload is drawn in blue."
       },
       "previous_names": null,
       "scripts": {
@@ -7051,7 +7059,7 @@
       "id": "zy5udH7Q6w",
       "storefront_name": "Twill Studio",
       "name": "Twill Studio",
-      "version": "v0.6.0",
+      "version": "v0.7.0",
       "type": "TOOL",
       "description": "A piano-roll groovebox: write songs note by note with the d-pad on eight tracks, with twenty-four synth engines and a sampler, then arrange, mix and render them to WAV or stems. Songs and samples are kept in TwillStudio/ on the SD card, outside the pak.",
       "author": "Liminal Kid",
@@ -7350,7 +7358,7 @@
       "id": "97vcuVlHAI",
       "storefront_name": "UIPod",
       "name": "UIPod",
-      "version": "v0.8.1",
+      "version": "v0.9.0",
       "type": "TOOL",
       "description": "An iPod-inspired offline, Navidrome \u0026 Jellyfin media player for the TrimUI Brick/Hammer with GPU UI and visualizations.",
       "author": "famiclone",
@@ -7369,7 +7377,9 @@
         "v0.6.0": "- Added pure-Rust Last.fm Scrobbling 2.0 client (Settings -\u003e Accounts -\u003e Last.fm) with on-screen QR Code Sign-In, real-time Now Playing updates, and persistent offline scrobble queue\n- Expanded Settings -\u003e Sound -\u003e Effects into a full stereo DSP suite with Reverb, Ping-Pong Delay, Chorus, Flanger, master Enable Effects switch, Now Playing quick toggle, and header FX indicator\n- Added GPU-rendered 10-band Graphic Equalizer screen with Preamp + vertical band faders and instant X-button Bypass\n- Added Video Settings menu in the video player (Hold A / MENU) with Aspect Mode (Fit / Crop / Stretch), multi-track Audio Track switching, and external .srt Subtitles\n- Synced 1:1 firmware parity in the WebAssembly browser simulator and automated parallel GitHub Actions release builds for TrimUI Brick (.pak), Android (arm64 APK), and GitHub Pages",
         "v0.7.0": "- Added Dual-Deck Smart DJ Crossfade engine (Settings -\u003e Sound -\u003e Crossfade \u0026 Auto-DJ) with Classic, DJ Vinyl, and pitch-preserving WSOLA DJ Master Tempo modes, center-phrase Bass Swap, Filter Wash fallback, Album Gapless protection, Quick Cut on Next (R1), and live Now Playing telemetry pill\n- Added pure-Rust .nsf/.nsfe NES/Famicom chiptune engine (2A03 + VRC6 + MMC5) with Music/SFX subtrack browser, live Now Playing APU channel telemetry, interactive Hold A -\u003e Channels mute/solo mixer, Endless Loop toggle, and native tick-rate DJ tempo sync\n- Added pure-Rust .gsf/.minigsf GBA Sound Format and .mid/.midi/.kar/.rmi MIDI synthesis with built-in Mobile_0100_base.sf2 and custom .sf2 SoundFont selection (Settings -\u003e Library -\u003e SoundFont Folders \u0026 Hold A -\u003e SoundFont)\n- Added Pulsar Vanguard cosmic music-synced shooter under Extras -\u003e Plugins with 1/4 Beat Pulse, 1/1 Wave Cannon, 1/8 Focus Vulcan auto-fire, and on-beat Perfect Phase EMP dash\n- Eliminated audio dropouts when turning the TrimUI Brick display off/on and synced full 1:1 DJ Crossfade, chiptune/MIDI, and plugin parity in the WebAssembly simulator",
         "v0.8.0": "- Added pure-Rust ListenBrainz scrobbling client (Settings -\u003e Accounts -\u003e ListenBrainz) with User Token validation, custom Server URL support for self-hosted Maloja/Koito instances, live Now Playing status, and local/chiptune/streaming scrobbling\n- Added independent persistent offline scrobble queue (listenbrainz_queue.tsv) with batched import uploads, exponential retry backoff, and automatic malformed-record isolation so Last.fm and ListenBrainz scrobble concurrently without blocking each other\n- Updated Settings -\u003e Accounts with live right-aligned connection status summaries (@username, Signed in, Invalid token, Off) for both Last.fm and ListenBrainz, plus full English/Ukrainian localization and 1:1 WebAssembly simulator parity",
-        "v0.8.1": "- Added screen-off Pocket Blind Controls when unlocked: short Power press toggles Screen On / Off while keeping first-press transport (A / START play-pause, Left/Right \u0026 L1/R1 track skip or hold to smooth-seek, L2/R2 chapter or ±15s seek) and VOL +/- active without waking the display or clicking invisible menus\n- Redesigned Side Switch into a full pocket Keylock with 3-second Locked Peek: blocks all buttons including hardware volume and headset remotes, clears held/repeat state on lock edge, and ignores accidental \u003e= 1s Power holds while locked\n- Added GPU keylock badge overlay on headerless screens (Now Playing Large Art, Keyboard, full-screen plugins), suppressed background GPU/popup redraws while the panel is dark, and synced 1:1 keylock parity in the WebAssembly simulator"
+        "v0.8.1": "- Replaced the legacy blocking \"Nothing to resume\" modal with a non-blocking floating HUD toast that keeps the active menu cursor intact\n- Unified Volume and toast HUD overlays in uipod-ui with shared backdrop/border styling, smooth top-slide entrance/exit curves, and jitter-free timer coexistence across Firmware and WebAssembly",
+        "v0.8.2": "- Fixed Video Settings context menu (Hold A / MENU) input freeze and flicker-free GPU overlay transition during active video playback, with reliable pause/resume and clean Hold-button release handling\n- Hardened hardware video player (tplayerslave / ffprobe / ffmpeg) child process lifecycle with PR_SET_PDEATHSIG, FD_CLOEXEC, and orphan cleanup so background video processes never outlive UIPod\n- Synced 1:1 Video Settings (Aspect Fit, Audio Track, Subtitles) and EN/UA localization parity in the WebAssembly simulator, and hardened deploy-brick.sh process termination \u0026 auto-repackaging",
+        "v0.9.0": "- Added Unified Stacked HUD overlay system with choreographed floating cards for Volume, multi-line Toasts, live Progress bars, and non-destructive Confirmation dialogs across Firmware, Android, and WebAssembly\n- Migrated all remaining video HUD, .srt subtitle, Hold lock, and message screens to crisp vector Geologica typography and pruned ~42 MB of legacy bitmap fonts from TrimUI Brick .pak and Android .apk packages\n- Hardened ListenBrainz authentication and endpoint handling with automatic token sanitization (stripping quotes, whitespace, and scheme prefixes) and canonical API URL normalization\n- Synced 1:1 Stacked HUD confirmation, progress, and toast behavior in the WebAssembly simulator"
       },
       "previous_names": null,
       "scripts": {
@@ -7388,7 +7398,7 @@
       },
       "update_ignore": null,
       "screenshots": [
-        "screenshots/uipod-main-menu.jpg"
+        "screenshots/trimpod-amber-main-menu.jpg"
       ],
       "platforms": [
         "tg5040"
