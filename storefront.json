@@ -7149,6 +7149,47 @@
       "large_pak": false,
       "disabled": false,
       "experimental": false
+    },
+    {
+      "id": "IIzDaQbr9D",
+      "storefront_name": "Gamate",
+      "name": "GAMATE",
+      "version": "v1.0.0",
+      "type": "EMU",
+      "description": "Gamate (Bit Corporation, 1990) with its own libretro core. Needs the Gamate BIOS in Bios/GAMATE.",
+      "author": "evolver79",
+      "repo_url": "https://github.com/evolver79/nextui-gamate-pak",
+      "previous_repo_urls": null,
+      "release_filename": "GAMATE.pak.zip",
+      "changelog": {
+        "v1.0.0": "First release: a new Gamate core (6502, LCD with both window modes, AY-3-8910 sound, all three cartridge types), LCD palettes and ghosting, save states."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Emulators"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
   ],
   "experimental_paks": [
