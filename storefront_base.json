@@ -1264,6 +1264,14 @@
         "Media",
         "Miscellaneous Tools"
       ]
+    },
+    {
+      "id": "FRMbKLMO3V",
+      "storefront_name": "Musicdisk – Module Player",
+      "repo_url": "https://github.com/evolver79/nextui-musicdisk-pak",
+      "categories": [
+        "Media"
+      ]
     }
   ],
   "experimental_paks": [
