@@ -1280,6 +1280,15 @@
       "categories": [
         "Emulators"
       ]
+    },
+    {
+      "id": "FtXYuPyztu",
+      "storefront_name": "Doom Woof! V16.0.0",
+      "repo_url": "https://github.com/Overflask/woof-nextui",
+      "categories": [
+        "Ports",
+        "Emulators"
+      ]
     }
   ],
   "experimental_paks": [
