@@ -3029,7 +3029,7 @@
       "id": "TWZc9jCf7o",
       "storefront_name": "Dronage Terminal",
       "name": "Dronage Terminal",
-      "version": "v3.2.0",
+      "version": "v3.5.0",
       "type": "TOOL",
       "description": "PRO TIP: R1+Select is HELP. Ambient drone synthesizer with 4 macro oscillators, modulation matrix, and effects. Projects, recordings and user scales are stored in DronageTerminal folder at the root of your SD Card. You can check out the 'desktop' version (that contains a very comprehensive README.md) of Dronage Terminal here: https://boorch.itch.io/dronage-terminal Additionally you can search for 'Dronage Terminal Tutorial' on YouTube for a 'Basics Tutorial'.",
       "author": "boorch (Bruce Menace/Cometary Trails)",
@@ -7066,7 +7066,7 @@
       "id": "zy5udH7Q6w",
       "storefront_name": "Twill Studio",
       "name": "Twill Studio",
-      "version": "v0.7.0",
+      "version": "v0.7.1",
       "type": "TOOL",
       "description": "A piano-roll groovebox: write songs note by note with the d-pad on eight tracks, with twenty-four synth engines and a sampler, then arrange, mix and render them to WAV or stems. Songs and samples are kept in TwillStudio/ on the SD card, outside the pak.",
       "author": "Liminal Kid",
@@ -7457,7 +7457,7 @@
       "id": "97vcuVlHAI",
       "storefront_name": "UIPod",
       "name": "UIPod",
-      "version": "v0.9.0",
+      "version": "v0.9.2",
       "type": "TOOL",
       "description": "An iPod-inspired offline, Navidrome \u0026 Jellyfin media player for the TrimUI Brick/Hammer with GPU UI and visualizations.",
       "author": "famiclone",
@@ -7478,7 +7478,9 @@
         "v0.8.0": "- Added pure-Rust ListenBrainz scrobbling client (Settings -\u003e Accounts -\u003e ListenBrainz) with User Token validation, custom Server URL support for self-hosted Maloja/Koito instances, live Now Playing status, and local/chiptune/streaming scrobbling\n- Added independent persistent offline scrobble queue (listenbrainz_queue.tsv) with batched import uploads, exponential retry backoff, and automatic malformed-record isolation so Last.fm and ListenBrainz scrobble concurrently without blocking each other\n- Updated Settings -\u003e Accounts with live right-aligned connection status summaries (@username, Signed in, Invalid token, Off) for both Last.fm and ListenBrainz, plus full English/Ukrainian localization and 1:1 WebAssembly simulator parity",
         "v0.8.1": "- Replaced the legacy blocking \"Nothing to resume\" modal with a non-blocking floating HUD toast that keeps the active menu cursor intact\n- Unified Volume and toast HUD overlays in uipod-ui with shared backdrop/border styling, smooth top-slide entrance/exit curves, and jitter-free timer coexistence across Firmware and WebAssembly",
         "v0.8.2": "- Fixed Video Settings context menu (Hold A / MENU) input freeze and flicker-free GPU overlay transition during active video playback, with reliable pause/resume and clean Hold-button release handling\n- Hardened hardware video player (tplayerslave / ffprobe / ffmpeg) child process lifecycle with PR_SET_PDEATHSIG, FD_CLOEXEC, and orphan cleanup so background video processes never outlive UIPod\n- Synced 1:1 Video Settings (Aspect Fit, Audio Track, Subtitles) and EN/UA localization parity in the WebAssembly simulator, and hardened deploy-brick.sh process termination \u0026 auto-repackaging",
-        "v0.9.0": "- Added Unified Stacked HUD overlay system with choreographed floating cards for Volume, multi-line Toasts, live Progress bars, and non-destructive Confirmation dialogs across Firmware, Android, and WebAssembly\n- Migrated all remaining video HUD, .srt subtitle, Hold lock, and message screens to crisp vector Geologica typography and pruned ~42 MB of legacy bitmap fonts from TrimUI Brick .pak and Android .apk packages\n- Hardened ListenBrainz authentication and endpoint handling with automatic token sanitization (stripping quotes, whitespace, and scheme prefixes) and canonical API URL normalization\n- Synced 1:1 Stacked HUD confirmation, progress, and toast behavior in the WebAssembly simulator"
+        "v0.9.0": "- Added Unified Stacked HUD overlay system with choreographed floating cards for Volume, multi-line Toasts, live Progress bars, and non-destructive Confirmation dialogs across Firmware, Android, and WebAssembly\n- Migrated all remaining video HUD, .srt subtitle, Hold lock, and message screens to crisp vector Geologica typography and pruned ~42 MB of legacy bitmap fonts from TrimUI Brick .pak and Android .apk packages\n- Hardened ListenBrainz authentication and endpoint handling with automatic token sanitization (stripping quotes, whitespace, and scheme prefixes) and canonical API URL normalization\n- Synced 1:1 Stacked HUD confirmation, progress, and toast behavior in the WebAssembly simulator",
+        "v0.9.1": "- Fixed mid-track forward skips, clipped track endings, stuck 0:00 crossfade countdowns, and ~500ms track-switch audio dropouts with lock-safe ring commits, full EOF tail draining, latency-accurate Dual-Deck playhead \u0026 midpoint handoff, and sub-20ms anti-click track splicing\n- Added Direct DAC (hw:0,0) hardware ALSA output and 3.5mm Low-Shelf (Subtle / Warm / Deep) wired headphone bass compensation in Settings -\u003e Sound\n- Added Beat Stack music-synced Stack Attack × Lumines rhythm-puzzle game under Extras -\u003e Plugins and unified background BPM/beat-grid track intelligence across DJ Crossfade, Sound Racer, Pulsar Vanguard, and Beat Stack\n- Added Noto Sans JP CJK vector font fallback for Japanese, Chinese, and Korean metadata and synced 1:1 v0.9.1 parity in the WebAssembly simulator",
+        "v0.9.2": "- Fixed mid-track forward skips, clipped track endings, stuck 0:00 crossfade countdowns, and ~500ms track-switch audio dropouts with lock-safe ring commits, full EOF tail draining, latency-accurate Dual-Deck playhead \u0026 midpoint handoff, and sub-20ms anti-click track splicing\n- Added Direct DAC (hw:0,0) hardware ALSA output and 3.5mm Low-Shelf (Subtle / Warm / Deep) wired headphone bass compensation in Settings -\u003e Sound\n- Added Beat Stack music-synced Stack Attack × Lumines rhythm-puzzle game under Extras -\u003e Plugins and unified background BPM/beat-grid track intelligence across DJ Crossfade, Sound Racer, Pulsar Vanguard, and Beat Stack\n- Added Noto Sans JP CJK vector font fallback for Japanese, Chinese, and Korean metadata, synced 1:1 v0.9.2 parity in the WebAssembly simulator, and fixed wasm-pack release packaging"
       },
       "previous_names": null,
       "scripts": {
