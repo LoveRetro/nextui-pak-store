@@ -6275,7 +6275,7 @@
       "id": "lmwlIooQTW",
       "storefront_name": "ChooChooTracker",
       "name": "ChooChooTracker",
-      "version": "v1.0.25-alpha",
+      "version": "v1.0.26-alpha",
       "type": "TOOL",
       "description": "A portable music tracker combining classic sound chips, modern synth engines and samples.",
       "author": "ChooChooTracker contributors",
@@ -6287,7 +6287,8 @@
         "v1.0.22-alpha": "Fix unresponsive controls on NextUI, restore native gamepad bindings for existing installations, and match the TrimUI button labels.",
         "v1.0.23-alpha": "Add Layer instruments, Stereo Width, master EQ, technical EQ presets, animated backgrounds, a Chain minimap, Sintered gate mode and 64 MIDI CC mappings. Improve audio performance, Android background playback, and NextUI controls, suspend and battery reporting.",
         "v1.0.24-alpha": "Add MIDI note recording and browser audition, on-the-fly Simplified editing, track audio cross-modulation and vocoder, Fatty and DigiSophie engines, Echoverb and sequencer FX. Improve handheld remapping and calibration, exports, modulation cleanup and packaging; add experimental universal macOS builds.",
-        "v1.0.25-alpha": "Add Launchpad Mini MK3 navigation, Link Audio with receive and stereo compensation, MIDI CC recording, curved modulation transitions, NTH loop conditions and bounded undo/redo. Improve track-banked allocation, retained picker destinations, AY Trance Gates and handheld behavior; fix Layer/Tilt clicks and cursor visibility."
+        "v1.0.25-alpha": "Add Launchpad Mini MK3 navigation, Link Audio with receive and stereo compensation, MIDI CC recording, curved modulation transitions, NTH loop conditions and bounded undo/redo. Improve track-banked allocation, retained picker destinations, AY Trance Gates and handheld behavior; fix Layer/Tilt clicks and cursor visibility.",
+        "v1.0.26-alpha": "Add spatial insert effects with track sidechain ducking, browser WAV audition and an experimental SNDStation package. Improve NextUI H700 support, USB audio capture, multiple gamepads, tap tempo and Simplified Song creation; fix Classic pattern allocation and controller navigation."
       },
       "previous_names": null,
       "scripts": {
@@ -7084,7 +7085,7 @@
       "id": "zy5udH7Q6w",
       "storefront_name": "Twill Studio",
       "name": "Twill Studio",
-      "version": "v0.7.2",
+      "version": "v0.8.0",
       "type": "TOOL",
       "description": "A piano-roll groovebox: write songs note by note with the d-pad on eight tracks, with twenty-four synth engines and a sampler, then arrange, mix and render them to WAV or stems. Songs and samples are kept in TwillStudio/ on the SD card, outside the pak.",
       "author": "Liminal Kid",
