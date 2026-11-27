@@ -6309,7 +6309,8 @@
         "tracker/packaging/portmaster/screenshot.png"
       ],
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "h700"
       ],
       "categories": [
         "Media"
@@ -6461,16 +6462,17 @@
       "id": "63smz5pU2S",
       "storefront_name": "Brick Controller",
       "name": "Brick Controller",
-      "version": "v1.1.0",
+      "version": "v1.2.0",
       "type": "TOOL",
-      "description": "Bluetooth HID gamepad for the TrimUI Brick and Brick Pro: PC, Xbox, PS4 and Switch identities, on-device settings, no host driver. Brick Pro support is not yet hardware-validated; Smart Pro is not supported.",
+      "description": "Bluetooth HID gamepad for the TrimUI Brick, Brick Pro and Anbernic RG40XX H on NextUI: PC, Xbox, PS4 and Switch identities, on-device settings, no host driver. Wired USB is temporarily hidden in v1.2.0. Brick Pro support is not yet hardware-validated; Smart Pro is not supported.",
       "author": "Brick Controller contributors",
       "repo_url": "https://github.com/aaaldo/brick-controller",
       "previous_repo_urls": null,
       "release_filename": "Brick.Controller.pak.zip",
       "changelog": {
         "v1.0.0": "First public release. Bluetooth HID gamepad for the TrimUI Brick and Brick Pro, with PC, Xbox, PlayStation and Switch identities. Brick Pro support is implemented but not yet hardware-validated. Smart Pro is refused at startup.",
-        "v1.1.0": "Adds a Settings screen with D-Pad Mode (D-Pad or Left Stick) and Rumble strength (Off, Low, Mid, Strong). Preferences persist across restarts. Refreshes the disconnect overlay and controller hints."
+        "v1.1.0": "Adds a Settings screen with D-Pad Mode (D-Pad or Left Stick) and Rumble strength (Off, Low, Mid, Strong). Preferences persist across restarts. Refreshes the disconnect overlay and controller hints.",
+        "v1.2.0": "Adds RG40XX H support on NextUI (h700): H700 input mapping, display blanking, HDMI handling and launch wiring. Hides the wired USB option from Devices while the H700/ADB backend is validated. Improves Bluetooth profile switching and stale-marker recovery. Brick and Brick Pro behavior is unchanged."
       },
       "previous_names": null,
       "scripts": {
@@ -6498,7 +6500,8 @@
         "brick-ui-mockups/actual/hold.png"
       ],
       "platforms": [
-        "tg5040"
+        "tg5040",
+        "h700"
       ],
       "categories": [
         "Miscellaneous Tools"
@@ -6682,7 +6685,7 @@
       "id": "JnlLfPNC5r",
       "storefront_name": "ThorTracker",
       "name": "ThorTracker",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "type": "TOOL",
       "description": "Controller-first chiptune tracker for NextUI. Write patterns, shape instruments and export music for classic consoles and computers.",
       "author": "esko997",
@@ -6726,9 +6729,9 @@
       "id": "5J5dEkJakZ",
       "storefront_name": "Tuner",
       "name": "Tuner",
-      "version": "v1.5.0",
+      "version": "v1.6.2",
       "type": "TOOL",
-      "description": "Free TV channels for the TrimUI Brick and Smart Pro: Pluto TV, Samsung TV Plus and iptv-org channels plus your own M3U playlists and Xtream accounts, a TV guide, favourites, search and hardware video decoding, drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
+      "description": "Free TV channels for the TrimUI Brick and Smart Pro: Pluto TV, Samsung TV Plus and iptv-org channels plus your own M3U playlists and Xtream accounts, a TV guide, favourites, search, subtitles and hardware video decoding, drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
       "author": "evolver79",
       "repo_url": "https://github.com/evolver79/nextui-tuner-pak",
       "previous_repo_urls": null,
@@ -6741,7 +6744,10 @@
         "v1.3.1": "Crop black borders no longer zooms in on a dark frame with a logo or titles in the middle (a studio or channel ident): bars thicker than a fifth of the picture are ignored, real ones never are.",
         "v1.3.2": "No Wi-Fi: Tuner says so on the loading screen and waits, then loads by itself once the Wi-Fi is back. No channel tries to tune without it, and No Wi-Fi shows instead of Buffering when the Wi-Fi drops while you watch.",
         "v1.4.0": "New look, sized for the Brick's small screen: bigger text, dark glass cards on a teal ground, and the buttons in a bar along the bottom. Bigger channel logos, a cyan dot for live, and the No Wi-Fi and No signal messages in full instead of cut off.",
-        "v1.5.0": "Runs on the TrimUI Smart Pro too, laid out for its wide screen, and 16:9 channels fill it. Tested on the Brick and the Smart Pro."
+        "v1.5.0": "Runs on the TrimUI Smart Pro too, laid out for its wide screen, and 16:9 channels fill it. Tested on the Brick and the Smart Pro.",
+        "v1.6.0": "Subtitles: LEFT/RIGHT while watching opens a picker for audio and subtitles, remembered per channel. Subtitles from HLS streams (Pluto TV has them on many channels), closed captions and DVB subtitles. Sound and picture stay in step through ad breaks and Wi-Fi hiccups, and switching audio track no longer jumps. Standard-definition channels in their right shape with hardware decoding. New motion: lists slide, the next row peeks out, the channel info slides up from the bottom and the tuning card rises in. Settings \u003e Your playlists to leave your own playlists out. Channels with AC-3 audio in separate files now play.",
+        "v1.6.1": "Lists move a little smoother: the next channel peeks out fading at the bottom, the one before peeks out under the header once you've scrolled, logos fade with them, and a channel name too long for its row scrolls when it's focused.",
+        "v1.6.2": "Long channel lists: past channel 4096 the list was empty, and scrolling over a playing channel works the CPU less, so lists move smoothly. Logos appear on the rows just past the screen."
       },
       "previous_names": null,
       "scripts": {
@@ -6767,7 +6773,8 @@
         ".github/resources/screenshots/genres.png",
         ".github/resources/screenshots/search-keyboard.png",
         ".github/resources/screenshots/settings.png",
-        ".github/resources/screenshots/setup.png"
+        ".github/resources/screenshots/setup.png",
+        ".github/resources/screenshots/picker.png"
       ],
       "platforms": [
         "tg5040"
@@ -6920,7 +6927,7 @@
       "id": "QqMGqha64B",
       "storefront_name": "Kino – Video Player for SD Card and Jellyfin",
       "name": "Kino",
-      "version": "v1.1.0",
+      "version": "v1.2.0",
       "type": "TOOL",
       "description": "Video player for the TrimUI Brick and Smart Pro: films and series from the SD card (it starts in Videos) or a Jellyfin server at home, with hardware decoding for H.264 and HEVC, resume, subtitles, picture filters and a cover grid. Drawn in Dot, the shared look of Kino, Musicdisk and Tuner.",
       "author": "evolver79",
@@ -6933,7 +6940,8 @@
         "v0.9.0": "First release. Films and series from the SD card, starting in Videos with B going up to the whole card (rows, or covers for a folder of films) or from Jellyfin (found on the network, Quick Connect, Continue watching and Next up, a cover grid; the server converts what the Brick can't play). H.264 and 8-bit HEVC up to 1080p on the Brick's video engine. Resume where you stopped. Subtitles from the film, a file next to it or Jellyfin, in Noto Sans on a black box, in four sizes. Picture filters, aspect (with No bars: the film's own black bars cut away, the subtitles moved up into the picture), brightness that keeps black black, contrast, deinterlacing, and the Brick's lights following the picture. Streaming over Wi-Fi: a quality setting, a buffering pill, reconnects when the stream breaks off, and a warning when the Wi-Fi can't keep up. A log to send in when something goes wrong (Jellyfin keys left out).",
         "v0.9.1": "Jellyfin with no Wi-Fi: the Jellyfin row is greyed out and says NO WI-FI, with how to turn it on, instead of opening and failing. It comes back on by itself the moment the Wi-Fi is back and has an address.",
         "v1.0.0": "Kino 1.0: Up next plays the next episode after a short countdown, from the SD card or Jellyfin (A now, B not now; off in Options). Skip intro, recap and credits on Jellyfin episodes with X, where the server has marked them. A new Audio tab picks the sound track, and Prefer and Then choose the sound language the same way as subtitles, also when Jellyfin converts the film.",
-        "v1.1.0": "Runs on the TrimUI Smart Pro too, laid out for its wide screen, and 16:9 films fill it. Paused subtitles move above the controls at once. The Lights setting is gone: Kino leaves the LEDs to NextUI. Jellyfin films log the Wi-Fi (node, channel, signal, resends) for reports. Tested on the Brick and the Smart Pro."
+        "v1.1.0": "Runs on the TrimUI Smart Pro too, laid out for its wide screen, and 16:9 films fill it. Paused subtitles move above the controls at once. The Lights setting is gone: Kino leaves the LEDs to NextUI. Jellyfin films log the Wi-Fi (node, channel, signal, resends) for reports. Tested on the Brick and the Smart Pro.",
+        "v1.2.0": "Kino moves the Dot way: lists and the cover grid slide, the next and previous rows peek out fading, and long titles scroll when focused. The controls are a band that slides up from the bottom edge. Starting, buffering and reconnecting show as a card in the middle, and filter, aspect and sort changes as a notice. ▲ while playing opens a picker for the sound track and subtitles. Menus run at 60 frames a second. On the Smart Pro the picture on the info card fills its width."
       },
       "previous_names": null,
       "scripts": {
@@ -7467,7 +7475,7 @@
       "id": "97vcuVlHAI",
       "storefront_name": "UIPod",
       "name": "UIPod",
-      "version": "v0.10.2",
+      "version": "v0.11.0",
       "type": "TOOL",
       "description": "An iPod-inspired offline, Navidrome \u0026 Jellyfin media player for the TrimUI Brick/Hammer with GPU UI and visualizations.",
       "author": "famiclone",
@@ -7482,6 +7490,8 @@
         "v0.10.0": "- Upgraded Text Viewer into a 4-shade E-Book \u0026 Document Reader supporting .epub, .fb2 / .fb2.zip (UTF-8 \u0026 Windows-1251), DRM-free .mobi, .md, and .txt with Bayer-dithered covers \u0026 illustrations, interactive Footnote popup cards, and navigable Chapters (TOC)\n- Added switchable book typography (Geologica Sans \u003c-\u003e Noto Serif) in Reader Options (MENU / Hold A), SELECT Paginated \u003c-\u003e Scroll mode toggle at the exact reading spot, Hide UI top-bar toggle, permanent full-width bottom progress strip (% or READ / TOTAL pages), and background music controls\n- Bundled Pan-CJK + full Ukrainian Cyrillic vector fonts (NotoSansCJK-Regular.ttf and Noto Serif Regular/Bold/Italic/BoldItalic + NotoSerifCJK-Regular.ttf) for crisp Latin, Slavic/Ukrainian, Japanese, Chinese, and Korean rendering\n- Hardened .epub opening from Browse with VFS-to-host path resolution, UTF-8 entity \u0026 relative manifest normalization, DRM detection with non-blocking HUD error toasts, and 1:1 WebAssembly simulator parity",
         "v0.10.1": "- Eliminated ~10-second freezes when opening .epub, .fb2 / .fb2.zip, and .mobi books via lazy single-chapter opening (\u003c150ms cold) and persistent SD-card binary book index caching (\u003c20ms warm re-open)\n- Eliminated ~10-second freezes when switching Font Size, Font Family (Geologica Sans \u003c-\u003e Noto Serif), or Paginated \u003c-\u003e Scroll mode (\u003c30ms) with lock-free O(1) glyph advance lookup tables and active-chapter pagination\n- Fixed background music cutouts and stutters while opening books, flipping chapters, decoding cover art, or resizing fonts by offloading archive/chapter indexing to a background OS worker thread with cooperative scheduler yields\n- Added a two-tier 8 MB LRU grayscale \u0026 4-shade dithered illustration cache so font resizes and mode switches never re-decode embedded JPEG/PNG images, synced across TrimUI Brick, Android, and the WebAssembly simulator",
         "v0.10.2": "- Added DJ Mixer under Extras -\u003e Plugins with live Dual-Deck mixing, 4-beat discrete bar waveforms, seamless playlist handoff, crossfader Bass Swap, bipolar LPF/HPF DJ filter, RAM Cue/Stutter, 4/2/1/0.5 Beat Loops, Master Tempo/Vinyl Beat Sync, and Quick Track Loader\n- Added Y-button quick Audio Visualizer toggle on Now Playing (Y or B returns to Now Playing) and Invert Visualizer palette toggle in Settings -\u003e Appearance and Visualizer MENU options\n- Refined Cassette Deck visualizer with compact TDK-style flush slotted reel clamps, lowered head-shield housing, top-only corner screws, a distinct 8-segment peak zone on the stereo L/R LED meter, and stronger stereo VU/PPM meter calibration\n- Attenuated Tape Mode fast-forward / rewind motor whir volume (-8 dB) for smoother seeking and synced 1:1 v0.10.2 parity across TrimUI Brick, Android, and the WebAssembly simulator",
+        "v0.10.3": "- Upgraded Sound Racer with 3/4 perspective side-lane and scaled center car sprites (fixing the left-lane sprite cache collision), OutRun-style beat-synced roadside poles \u0026 geometric highway billboards, and spaced bass-triggered pseudo-3D road crests \u0026 dips\n- Improved DJ Mixer audio fidelity and seamless Rockbox \u003c-\u003e Dual-Deck handoff with zero-gap deck pre-buffering, Opus (.opus) deck decoding, anti-aliased downsampling, and high-precision WSOLA \u0026 Vinyl resampling\n- Synced 1:1 v0.10.3 Sound Racer and Dual-Deck DJ parity across TrimUI Brick, Android, and the WebAssembly simulator",
+        "v0.11.0": "- Added Minimize to Background daemon mode on TrimUI Brick / NextUI (MENU + START or Main Menu / Now Playing -\u003e Minimize to Background), keeping local, chiptune, Navidrome/Jellyfin, AutoEQ, and Smart DJ playback running while browsing NextUI and playing games\n- Added instant zero-interruption UI re-attach on re-launch, shared ALSA Playback mixing alongside emulator audio, and collision-free background media chords during gameplay (MENU + R2/L2 track skip, MENU + START play/pause, MENU + Up/Down independent music volume)\n- Added Quit UIPod on the Main Menu plus a 15-minute idle/paused background battery guard, hardware sleep/XRUN recovery, and clean display/governor handoff back to NextUI",
         "v0.2.0": "- Unified multi-source library merging local folders, Navidrome, and Jellyfin without duplicates, plus Navidrome Favourites playlist and Offline Mode\n- Non-blocking persistent Downloads queue with header DONE/TOTAL progress and 3-by-3 sliding-window playback queue prefetching\n- Updated 4-shade iPod Mini theme system (bg, fg, fg1, fg2) with 4-shade monochrome album art and live HEX Customize Theme editor\n- Added 6 selectable screen transitions (Slide, Cover, Fade, Pixels, Blinds, Off) in Settings -\u003e Display\n- Redesigned GPU-rendered QWERTY on-screen keyboard and fixed folder back-navigation stability",
         "v0.3.0": "- Added native Rust (.uipod) plugin runtime \u0026 SDK under Extras -\u003e Plugins with 5 games (Sound Racer, Tetris, Snake, Brick Breaker, 2048), Stopwatch, LCD Plasma, and Text Viewer\n- Replaced Milkdrop with a native 4-shade Bayer-dithered OpenGL ES audio visualizer engine (8 presets synced to speaker \u0026 Bluetooth output latency)\n- Added low-latency iPod Click Wheel menu navigation sound with a Menu Click toggle in Settings -\u003e Sound\n- Added interactive in-app manual in Settings -\u003e About (opened via Text Viewer) and streamlined Sound, Extras, and Settings menus\n- Removed legacy unused code and C++ projectM dependencies, reducing package size and memory footprint",
         "v0.4.0": "- Added Settings -\u003e Sound -\u003e Effects with Ableton Texture-style granular Speed time-stretching (1/16x–1.5x) and Walkman Tape Mode emulation (Wow \u0026 Flutter, Hiss, Crinkles, Saturation, HF Roll-Off, Pause spin-down/up, and FF/Rewind motor sound)\n- Added Cassette Deck (spinning spools + 28-segment LED meter) and centered Analog Stereo VU Meter 4-shade GPU visualizers, tightened audio/vsync latency sync, and updated visualizer controls (Left/Right to skip or hold to seek, L2/R2 to switch presets)\n- Added Music Quiz local library game under Extras -\u003e Plugins and upgraded Sound Racer with .nsf / chiptune support and drift-free highway sync\n- Promoted Browse to the first Main Menu entry with persistent last-opened folder memory and file management context menu (Delete, Rename, Copy, Move, and Info via Text Viewer)",
